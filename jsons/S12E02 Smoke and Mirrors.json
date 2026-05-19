@@ -1,0 +1,317 @@
+{
+  "preBuiltDecks": {
+    "Smoke and Mirrors Scenario": {
+      "label": "Smoke and Mirrors Scenario",
+      "cards": [],
+      "postLoadActionList": [
+        ["SCENARIO_INIT", "Brethren of Ash", "Brethren of Ash", "Smoke and Mirrors", null, "Smoke and Mirrors Scenario Early Init"]
+      ]
+    },
+    "Smoke and Mirrors": {
+      "hideFromSearch": true,
+      "label": "Smoke and Mirrors",
+      "cards": [
+        {
+          "databaseId": "12133",
+          "quantity": 1,
+          "loadGroupId": "sharedScenarioReference"
+        },
+        {
+          "databaseId": "12134",
+          "quantity": 1,
+          "loadGroupId": "sharedAgendaStory"
+        },
+        {
+          "databaseId": "12135",
+          "quantity": 1,
+          "loadGroupId": "sharedAgendaStory"
+        },
+        {
+          "databaseId": "12136",
+          "quantity": 1,
+          "loadGroupId": "sharedActStory"
+        },
+        {
+          "databaseId": "12137",
+          "quantity": 4,
+          "loadGroupId": "sharedNotInPlay"
+        },
+        {
+          "databaseId": "12153",
+          "quantity": 1,
+          "loadGroupId": "sharedLocations",
+          "left": "40%",
+          "top": "70%"
+        },
+        {
+          "databaseId": "12149",
+          "quantity": 1,
+          "loadGroupId": "sharedLocations",
+          "left": "10%",
+          "top": "10%"
+        },
+        {
+          "databaseId": "12150",
+          "quantity": 1,
+          "loadGroupId": "sharedLocations",
+          "left": "70%",
+          "top": "10%"
+        },
+        {
+          "databaseId": "12151",
+          "quantity": 1,
+          "loadGroupId": "sharedLocations",
+          "left": "40%",
+          "top": "40%"
+        },
+        {
+          "databaseId": "12152",
+          "quantity": 1,
+          "loadGroupId": "sharedLocations",
+          "left": "70%",
+          "top": "40%"
+        },
+        {
+          "databaseId": "12154",
+          "quantity": 1,
+          "loadGroupId": "sharedLocations",
+          "left": "70%",
+          "top": "70%"
+        },
+        {
+          "databaseId": "12115",
+          "quantity": 1,
+          "loadGroupId": "sharedNotInPlay"
+        },
+        {
+          "databaseId": "12129",
+          "quantity": 5,
+          "loadGroupId": "sharedNotInPlay"
+        }
+      ]
+    }
+  },
+  "actionLists": {
+    "Smoke and Mirrors Scenario Early Init": [
+      ["CALCULATOR_PROMPT", "$GAME.firstPlayer", "Miskatonic University state? 1 = In Flames, 2 = Quiet", 1, 2, 1, "MISKATONIC_STATE_CALLBACK", "$GAME.firstPlayer", "", ""]
+    ],
+    "Smoke and Mirrors Scenario Init": [
+      ["DO_LOAD_CARDS_SCN", "Smoke and Mirrors"],
+      ["LOAD_CARDS", "Add 2 Cultists to Chaos Bag"],
+      ["LOG", "Added 2 Cultist tokens to the chaos bag."],
+      [
+        "COND",
+        ["EQUAL", "$GAME.arkham.scenarioMiskatonicUniversityState", 2],
+        ["ACTION_LIST", "Smoke and Mirrors - Miskatonic In Flames"],
+        ["TRUE"],
+        ["ACTION_LIST", "Smoke and Mirrors - Miskatonic Quiet"]
+      ],
+      ["LOAD_CARDS", "randomDowntown"],
+      ["SHUFFLE_GROUP", "randomDowntown"],
+      [
+        "DEFINE",
+        "$LOCATION_ID",
+        ["GET_CARD_ID", "randomDowntown", 0, 0]
+      ],
+      ["MOVE_CARD", "$LOCATION_ID", "sharedLocations", -1],
+      ["DO_SET_CARD_LOCATION", "$LOCATION_ID", 40, 10],
+      ["LOG", "Random Downtown location selected."],
+      ["LOAD_CARDS", "randomUptown"],
+      ["SHUFFLE_GROUP", "randomUptown"],
+      [
+        "DEFINE",
+        "$LOCATION_ID",
+        ["GET_CARD_ID", "randomUptown", 0, 0]
+      ],
+      ["MOVE_CARD", "$LOCATION_ID", "sharedLocations", -1],
+      ["DO_SET_CARD_LOCATION", "$LOCATION_ID", 10, 70],
+      ["LOG", "Random Uptown location selected."],
+      ["LOAD_CARDS", "People of Arkham Random Pool"],
+      ["SHUFFLE_GROUP", "peopleOfArkhamPool"],
+      [
+        "DEFINE",
+        "$PERSON_ID",
+        ["GET_CARD_ID", "peopleOfArkhamPool", 0, 0]
+      ],
+      ["MOVE_CARD", "$PERSON_ID", "sharedNotInPlay", -1],
+      ["LOAD_CARDS", "Servant of Flame Hidden Setup"],
+      ["SHUFFLE_GROUP", "peopleOfArkhamPool"],
+      ["ACTION_LIST", "Smoke and Mirrors - Attach Hidden Card to Northside"],
+      ["ACTION_LIST", "Smoke and Mirrors - Attach Hidden Card to Downtown"],
+      ["ACTION_LIST", "Smoke and Mirrors - Attach Hidden Card to Southside"],
+      ["ACTION_LIST", "Smoke and Mirrors - Attach Hidden Card to French Hill"],
+      ["ACTION_LIST", "Smoke and Mirrors - Attach Hidden Card to Uptown"],
+      ["ACTION_LIST", "Smoke and Mirrors - Attach Hidden Card to Waterfront District"],
+      ["DO_LOAD_CARDS_SCN", "Bad Weather"],
+      ["DO_LOAD_CARDS_SCN", "Gangs of Arkham"],
+      ["DO_LOAD_CARDS_SCN", "Arcane Lock"],
+      ["DO_LOAD_CARDS_SCN", "Dead Ends"],
+      ["DO_LOAD_CARDS_SCN", "Flying Terrors"],
+      ["DO_LOAD_CARDS_SCN", "BoA_Whippoorwills"],
+      ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Miskatonic University", 5, 7, 3, 0],
+      ["ACTION_LIST", "Smoke and Mirrors - Add Doom Per Investigator"],
+      ["SCENARIO_INIT_CONTINUE", null]
+    ],
+    "Smoke and Mirrors - Attach Hidden Card to Northside": [
+      [
+        "DEFINE",
+        "$HIDDEN_CARD_ID",
+        ["GET_CARD_ID", "peopleOfArkhamPool", 0, 0]
+      ],
+      [
+        "VAR",
+        "$LOCATION_CARD",
+        ["GET_NAMED_MAP_LOCATION", "Northside"]
+      ],
+      ["MOVE_CARD", "$HIDDEN_CARD_ID", "sharedLocations", -1],
+      ["DO_ATTACH_CARD", "$GAME.firstPlayer", "$HIDDEN_CARD_ID", "$LOCATION_CARD.id", false, null],
+      ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$HIDDEN_CARD_ID", false, null]
+    ],
+    "Smoke and Mirrors - Attach Hidden Card to Downtown": [
+      [
+        "DEFINE",
+        "$HIDDEN_CARD_ID",
+        ["GET_CARD_ID", "peopleOfArkhamPool", 0, 0]
+      ],
+      [
+        "VAR",
+        "$LOCATION_CARD",
+        ["GET_NAMED_MAP_LOCATION", "Downtown"]
+      ],
+      ["MOVE_CARD", "$HIDDEN_CARD_ID", "sharedLocations", -1],
+      ["DO_ATTACH_CARD", "$GAME.firstPlayer", "$HIDDEN_CARD_ID", "$LOCATION_CARD.id", false, null],
+      ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$HIDDEN_CARD_ID", false, null]
+    ],
+    "Smoke and Mirrors - Attach Hidden Card to Southside": [
+      [
+        "DEFINE",
+        "$HIDDEN_CARD_ID",
+        ["GET_CARD_ID", "peopleOfArkhamPool", 0, 0]
+      ],
+      [
+        "VAR",
+        "$LOCATION_CARD",
+        ["GET_NAMED_MAP_LOCATION", "Southside"]
+      ],
+      ["MOVE_CARD", "$HIDDEN_CARD_ID", "sharedLocations", -1],
+      ["DO_ATTACH_CARD", "$GAME.firstPlayer", "$HIDDEN_CARD_ID", "$LOCATION_CARD.id", false, null],
+      ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$HIDDEN_CARD_ID", false, null]
+    ],
+    "Smoke and Mirrors - Attach Hidden Card to French Hill": [
+      [
+        "DEFINE",
+        "$HIDDEN_CARD_ID",
+        ["GET_CARD_ID", "peopleOfArkhamPool", 0, 0]
+      ],
+      [
+        "VAR",
+        "$LOCATION_CARD",
+        ["GET_NAMED_MAP_LOCATION", "French Hill"]
+      ],
+      ["MOVE_CARD", "$HIDDEN_CARD_ID", "sharedLocations", -1],
+      ["DO_ATTACH_CARD", "$GAME.firstPlayer", "$HIDDEN_CARD_ID", "$LOCATION_CARD.id", false, null],
+      ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$HIDDEN_CARD_ID", false, null]
+    ],
+    "Smoke and Mirrors - Attach Hidden Card to Uptown": [
+      [
+        "DEFINE",
+        "$HIDDEN_CARD_ID",
+        ["GET_CARD_ID", "peopleOfArkhamPool", 0, 0]
+      ],
+      [
+        "VAR",
+        "$LOCATION_CARD",
+        ["GET_NAMED_MAP_LOCATION", "Uptown"]
+      ],
+      ["MOVE_CARD", "$HIDDEN_CARD_ID", "sharedLocations", -1],
+      ["DO_ATTACH_CARD", "$GAME.firstPlayer", "$HIDDEN_CARD_ID", "$LOCATION_CARD.id", false, null],
+      ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$HIDDEN_CARD_ID", false, null]
+    ],
+    "Smoke and Mirrors - Attach Hidden Card to Waterfront District": [
+      [
+        "DEFINE",
+        "$HIDDEN_CARD_ID",
+        ["GET_CARD_ID", "peopleOfArkhamPool", 0, 0]
+      ],
+      [
+        "VAR",
+        "$LOCATION_CARD",
+        ["GET_NAMED_MAP_LOCATION", "Waterfront District"]
+      ],
+      ["MOVE_CARD", "$HIDDEN_CARD_ID", "sharedLocations", -1],
+      ["DO_ATTACH_CARD", "$GAME.firstPlayer", "$HIDDEN_CARD_ID", "$LOCATION_CARD.id", false, null],
+      ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$HIDDEN_CARD_ID", false, null]
+    ],
+    "Smoke and Mirrors Scenario Early Init Continue 1": [
+      ["ACTION_LIST", "Smoke and Mirrors Scenario Init"]
+    ],
+    "Smoke and Mirrors - Miskatonic In Flames": [
+      ["LOAD_CARDS", "Miskatonic University In Flames"],
+      ["DO_SET_SPAWN_LOCATION", "12155", 45, 43]
+    ],
+    "Smoke and Mirrors - Miskatonic Quiet": [
+      ["LOAD_CARDS", "Miskatonic University Quiet"],
+      ["DO_SET_SPAWN_LOCATION", "12156", 45, 43]
+    ],
+    "Smoke and Mirrors - Add Doom Per Investigator": [
+      [
+        "DEFINE",
+        "$INVESTIGATOR_ID",
+        ["GET_CARD_ID", "player1Investigator", 0, 0]
+      ],
+      [
+        "COND",
+        ["NOT_EQUAL", "$INVESTIGATOR_ID", null],
+        ["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1]
+      ],
+      [
+        "DEFINE",
+        "$INVESTIGATOR_ID",
+        ["GET_CARD_ID", "player2Investigator", 0, 0]
+      ],
+      [
+        "COND",
+        ["NOT_EQUAL", "$INVESTIGATOR_ID", null],
+        ["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1]
+      ],
+      [
+        "DEFINE",
+        "$INVESTIGATOR_ID",
+        ["GET_CARD_ID", "player3Investigator", 0, 0]
+      ],
+      [
+        "COND",
+        ["NOT_EQUAL", "$INVESTIGATOR_ID", null],
+        ["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1]
+      ],
+      [
+        "DEFINE",
+        "$INVESTIGATOR_ID",
+        ["GET_CARD_ID", "player4Investigator", 0, 0]
+      ],
+      [
+        "COND",
+        ["NOT_EQUAL", "$INVESTIGATOR_ID", null],
+        ["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1]
+      ]
+    ]
+  },
+  "functions": {
+    "MISKATONIC_STATE_CALLBACK": {
+      "args": ["$TARGET_PLAYER", "$TARGET_CARD_ID", "$ARGS", "$ACTOR_PLAYER", "$SELECTED_VALUE"],
+      "code": [
+        ["VALIDATE_PLAYER", "$TARGET_PLAYER", "MISKATONIC_STATE_CALLBACK.TARGET_PLAYER"],
+        ["VALIDATE_NOT_NULL", "$ARGS", "MISKATONIC_STATE_CALLBACK.ARGS"],
+        ["VALIDATE_NOT_EMPTY", "$SELECTED_VALUE", "MISKATONIC_STATE_CALLBACK.SELECTED_VALUE"],
+        [
+          "VAR",
+          "$VALUE",
+          ["CALC", "{{$SELECTED_VALUE}}"]
+        ],
+        ["SET", "/arkham/scenarioMiskatonicUniversityState", "$VALUE"],
+        ["LOGF", "{0}{1} set Miskatonic University state to {2}.", "$ARGS", "$TARGET_PLAYER", "$VALUE"],
+        ["ACTION_LIST", "Smoke and Mirrors Scenario Early Init Continue 1"]
+      ]
+    }
+  }
+}

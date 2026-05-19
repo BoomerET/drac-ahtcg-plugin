@@ -82,6 +82,12 @@
         "sharedPileC":             {"groupType": "pile",       "label": "id:sharedPileC",             "tableLabel": "id:sharedPileCShort"},
         "sharedPileD":             {"groupType": "pile",       "label": "id:sharedPileD",             "tableLabel": "id:sharedPileDShort"},
         "sharedPileE":             {"groupType": "pile",       "label": "id:sharedPileE",             "tableLabel": "id:sharedPileEShort"},
+        "randomDowntown":          {"groupType": "deck",       "label": "id:randomDowntown",          "tableLabel": "Random Downtown"},
+        "randomUptown":            {"groupType": "deck",       "label": "id:randomUptown",            "tableLabel": "Random Uptown"},
+        "peopleOfArkhamPool":      {"groupType": "deck",       "label": "id:peopleOfArkhamPool",      "tableLabel": "id:peopleOfArkhamPoolShort"},
+        "randomSewers":            {"groupType": "deck",       "label": "id:randomSewers",            "tableLabel": "id:randomSewersShort"},
+        "randomCultists":          {"groupType": "deck",       "label": "id:randomCultists",          "tableLabel": "id:randomCultistsShort"},
+        "servantOfFlameSetAside":  {"groupType": "deck",       "label": "id:servantOfFlameSetAside",  "tableLabel": "id:servantOfFlameSetAsideShort"},
         "sharedChaosBag":          {"groupType": "chaosBag",   "label": "id:sharedChaosBag",          "tableLabel": "id:sharedChaosBagShort"},
         "player4Aside":            {"groupType": "aside",      "label": "id:player4Aside",            "tableLabel": "id:playerAsideShort"},
         "player4Removed":          {"groupType": "removed",    "label": "id:player4Removed",          "tableLabel": "id:playerRemovedShort"},
@@ -444,6 +450,36 @@
         "sharedPileEShort": {
             "English": "Pile E"
         },
+        "randomDowntown": {
+            "groupType": "deck",
+            "label": "id:randomDowntown",
+            "tableLabel": "Random Downtown"
+        },
+        "randomUptown": {
+            "groupType": "deck",
+            "label": "id:randomUptown",
+            "tableLabel": "Random Uptown"
+        },
+        "peopleOfArkhamPool": {
+            "groupType": "deck",
+            "label": "id:peopleOfArkhamPool",
+            "tableLabel": "id:peopleOfArkhamPoolShort"
+        },
+        "randomSewers": {
+            "groupType": "deck",
+            "label": "id:randomSewers",
+            "tableLabel": "id:randomSewersShort"
+        },
+        "randomCultists": {
+            "groupType": "deck",
+            "label": "id:randomCultists",
+            "tableLabel": "id:randomCultistsShort"
+        },
+        "servantOfFlameSetAside": {
+            "groupType": "deck",
+            "label": "id:servantOfFlameSetAside",
+            "tableLabel": "id:servantOfFlameSetAsideShort"
+        },
         "sharedChaosBag": {
             "English": "Chaos Bag"
         },
@@ -455,6 +491,36 @@
         },
         "sharedRemovedShort": {
             "English": "Removed"
+        },
+        "randomDowntown": {
+            "English": "Random Downtown"
+        },
+        "randomUptown": {
+            "English": "Random Uptown"
+        },
+        "peopleOfArkhamPool": {
+            "English": "People of Arkham Pool"
+        },
+        "peopleOfArkhamPoolShort": {
+            "English": "People"
+        },
+        "randomSewers": {
+            "English": "Random Sewers"
+        },
+        "randomSewersShort": {
+            "English": "Sewers"
+        },
+        "randomCultists": {
+            "English": "Random Cultists"
+        },
+        "randomCultistsShort": {
+            "English": "Cultists"
+        },
+        "servantOfFlameSetAside": {
+            "English": "Servant of Flame Set Aside"
+        },
+        "servantOfFlameSetAsideShort": {
+            "English": "Servant of Flame"
         }
     }
 }

@@ -139,6 +139,14 @@
                             {"label": "id:isabelleBarnesChapter2StarterDeck", "deckListId": "Isabelle Barnes (Chapter 2) Starter Deck"}
                         ]
                     },
+		    {
+			"label": "id:brethrenOfAsh", 
+			"deckLists": [
+			    {"label": "id:spreadingFlames", "deckListId": "Spreading Flames Scenario"},
+                            {"label": "id:smokeAndMirrors", "deckListId": "Smoke and Mirrors Scenario"},
+                            {"label": "id:queenOfAsh", "deckListId": "Queen of Ash Scenario"}
+                        ]
+                    },
                     {
                         "label": "id:standaloneDecks",
                         "deckLists": [
@@ -278,6 +286,14 @@
                         "deckLists": [
                             {"label": "id:riddlesAndRain", "deckListId": "Riddles and Rain Scenario"},
                             {"label": "id:deadHeat", "deckListId": "Dead Heat Scenario"}
+                        ]
+                    },
+		    {
+                        "label": "id:brethrenOfAsh",
+                        "deckLists": [
+                            {"label": "id:spreadingFlames", "deckListId": "Spreading Flames Scenario"},
+                            {"label": "id:smokeAndMirrors", "deckListId": "Smoke and Mirrors Scenario"},
+                            {"label": "id:queenOfAsh", "deckListId": "Queen of Ash Scenario"}
                         ]
                     }
                 ]
@@ -881,6 +897,18 @@
         },
         "theDrownedCity": {
             "English": "The Drowned City"
+        },
+        "brethrenOfAsh": {
+            "English": "Brethren of Ash"
+        },
+        "spreadingFlames": {
+            "English": "Spreading Flames"
+        },
+        "smokeAndMirrors": {
+            "English": "Smoke and Mirrors"
+        },
+        "queenOfAsh": {
+            "English": "Queen of Ash"
         },
         "returnToCampaigns": {
             "English": "Return to... Campaigns"

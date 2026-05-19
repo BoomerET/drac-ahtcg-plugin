@@ -1,0 +1,545 @@
+{
+  "preBuiltDecks": {
+    "Queen of Ash Scenario": {
+      "label": "Queen of Ash Scenario",
+      "cards": [],
+      "postLoadActionList": [
+        ["SCENARIO_INIT", "Brethren of Ash", "Brethren of Ash", "Queen of Ash", null, "Queen of Ash Scenario Early Init 1"]
+      ]
+    },
+    "Queen of Ash": {
+      "hideFromSearch": true,
+      "label": "Queen of Ash",
+      "cards": [
+        {
+          "databaseId": "12168",
+          "quantity": 1,
+          "loadGroupId": "sharedScenarioReference"
+        },
+        {
+          "databaseId": "12169",
+          "quantity": 1,
+          "loadGroupId": "sharedAgendaStory"
+        },
+        {
+          "databaseId": "12170",
+          "quantity": 1,
+          "loadGroupId": "sharedAgendaStory"
+        },
+        {
+          "databaseId": "12171",
+          "quantity": 1,
+          "loadGroupId": "sharedAgendaStory"
+        },
+        {
+          "databaseId": "12172",
+          "quantity": 1,
+          "loadGroupId": "sharedActStory"
+        },
+        {
+          "databaseId": "12173",
+          "quantity": 1,
+          "loadGroupId": "sharedActStory"
+        },
+        {
+          "databaseId": "12182",
+          "quantity": 1,
+          "loadGroupId": "sharedLocations",
+          "left": "35%",
+          "top": "75%"
+        },
+        {
+          "databaseId": "12174",
+          "quantity": 1,
+          "loadGroupId": "sharedLocations",
+          "left": "35%",
+          "top": "10%"
+        },
+        {
+          "databaseId": "12183",
+          "quantity": 1,
+          "loadGroupId": "sharedLocations",
+          "left": "05%",
+          "top": "50%"
+        },
+        {
+          "databaseId": "12184",
+          "quantity": 1,
+          "loadGroupId": "sharedLocations",
+          "left": "20%",
+          "top": "50%"
+        },
+        {
+          "databaseId": "12185",
+          "quantity": 1,
+          "loadGroupId": "sharedLocations",
+          "left": "35%",
+          "top": "50%"
+        },
+        {
+          "databaseId": "12186",
+          "quantity": 1,
+          "loadGroupId": "sharedLocations",
+          "left": "50%",
+          "top": "50%"
+        },
+        {
+          "databaseId": "12187",
+          "quantity": 1,
+          "loadGroupId": "sharedLocations",
+          "left": "65%",
+          "top": "50%"
+        },
+        {
+          "databaseId": "12180",
+          "quantity": 1,
+          "loadGroupId": "servantOfFlameSetAside"
+        },
+        {
+          "databaseId": "12175",
+          "quantity": 1,
+          "loadGroupId": "sharedNotInPlay"
+        },
+        {
+          "databaseId": "12129",
+          "quantity": 5,
+          "loadGroupId": "sharedNotInPlay"
+        },
+        {
+          "databaseId": "12177",
+          "quantity": 1,
+          "loadGroupId": "sharedNotInPlay"
+        },
+        {
+          "databaseId": "12178",
+          "quantity": 1,
+          "loadGroupId": "sharedNotInPlay"
+        },
+        {
+          "databaseId": "12179",
+          "quantity": 1,
+          "loadGroupId": "sharedNotInPlay"
+        },
+        {
+          "databaseId": "12181",
+          "quantity": 2,
+          "loadGroupId": "sharedNotInPlay"
+        }
+      ]
+    },
+    "Random Sewers": {
+      "hideFromSearch": true,
+      "label": "Random Sewers",
+      "cards": [
+        {
+          "databaseId": "12183",
+          "quantity": 1,
+          "loadGroupId": "randomSewers"
+        },
+        {
+          "databaseId": "12184",
+          "quantity": 1,
+          "loadGroupId": "randomSewers"
+        },
+        {
+          "databaseId": "12185",
+          "quantity": 1,
+          "loadGroupId": "randomSewers"
+        },
+        {
+          "databaseId": "12186",
+          "quantity": 1,
+          "loadGroupId": "randomSewers"
+        },
+        {
+          "databaseId": "12187",
+          "quantity": 1,
+          "loadGroupId": "randomSewers"
+        }
+      ]
+    },
+    "Stirred Up Trouble Cultist Pool": {
+      "hideFromSearch": true,
+      "label": "Stirred Up Trouble Cultist Pool",
+      "cards": [
+        {
+          "databaseId": "12121",
+          "quantity": 1,
+          "loadGroupId": "randomCultists"
+        },
+        {
+          "databaseId": "12188",
+          "quantity": 2,
+          "loadGroupId": "randomCultists"
+        },
+        {
+          "databaseId": "12189",
+          "quantity": 1,
+          "loadGroupId": "randomCultists"
+        }
+      ]
+    }
+  },
+  "actionLists": {
+    "Queen of Ash Scenario Early Init 1": [
+      ["CALCULATOR_PROMPT", "$GAME.firstPlayer", "Scoured Arkham for Answers? 1 = Yes, 2 = No", 1, 2, 1, "ARKHAM_SCOURED_CALLBACK", "$GAME.firstPlayer", "", ""]
+    ],
+    "Queen of Ash Scenario Early Init 2": [
+      ["CALCULATOR_PROMPT", "$GAME.firstPlayer", "Stirred up trouble? 1 = Yes, 2 = No", 1, 2, 1, "STIRRED_UP_TROUBLE_CALLBACK", "$GAME.firstPlayer", "", ""]
+    ],
+    "Queen of Ash Scenario Early Init 3": [
+      ["CALCULATOR_PROMPT", "$GAME.firstPlayer", "Killed the Servant of Flame? 1 = Yes, 2 = No", 1, 2, 1, "SERVANT_OF_FLAME_KILLED_CALLBACK", "$GAME.firstPlayer", "", ""]
+    ],
+    "Queen of Ash Scenario Init": [
+      ["DO_LOAD_CARDS_SCN", "Queen of Ash"],
+      ["DO_LOAD_CARDS_SCN", "BoA_Queen of Ash"],
+      ["LOAD_CARDS", "Add 2 Cultists to Chaos Bag"],
+      ["LOG", "Added 2 Cultist tokens to the chaos bag."],
+      [
+        "DEFINE",
+        "$SERVANT_CARD_ID",
+        ["GET_CARD_ID", "sharedNotInPlay", 0, 0]
+      ],
+      ["SET", "/arkham/servantOfFlameCardId", "$SERVANT_CARD_ID"],
+      ["DO_SET_SPAWN_LOCATION", "12182", 45, 43],
+      [
+        "COND",
+        ["EQUAL", "$GAME.arkham.scenarioArkhamScouredState", 1],
+        ["ACTION_LIST", "Add 1 Clue to Each Investigator"],
+        ["TRUE"],
+        ["LOG", "No bonus clues added."]
+      ],
+      [
+        "COND",
+        ["EQUAL", "$GAME.arkham.scenarioStirredUpTroubleState", 1],
+        ["ACTION_LIST", "Setup Stirred Up Trouble Cultists"],
+        ["TRUE"],
+        ["LOG", "The investigators did not stir up trouble."]
+      ],
+      [
+        "COND",
+        ["EQUAL", "$GAME.arkham.servantOfFlameKilled", 1],
+        ["ACTION_LIST", "Remove Servant of Flame"],
+        ["TRUE"],
+        ["ACTION_LIST", "Keep Servant of Flame Set Aside"]
+      ],
+      ["DO_LOAD_CARDS_SCN", "Cultists"],
+      ["DO_LOAD_CARDS_SCN", "Reeking Decay"],
+      ["DO_LOAD_CARDS_SCN", "Torment"],
+      ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Sewer Culvert", 5, 7, 3, 0],
+      [
+        "COND",
+        ["EQUAL", "$GAME.arkham.scenarioDifficulty", "Easy"],
+        ["ACTION_LIST", "Add Easy Chaos Tokens"],
+        ["EQUAL", "$GAME.arkham.scenarioDifficulty", "Standard"],
+        ["ACTION_LIST", "Add Standard Chaos Tokens"],
+        ["EQUAL", "$GAME.arkham.scenarioDifficulty", "Hard"],
+        ["ACTION_LIST", "Add Hard Chaos Tokens"],
+        ["EQUAL", "$GAME.arkham.scenarioDifficulty", "Expert"],
+        ["ACTION_LIST", "Add Expert Chaos Tokens"]
+      ],
+      ["LOAD_CARDS", "Random Sewers"],
+      ["SHUFFLE_GROUP", "randomSewers"],
+      ["ACTION_LIST", "Place Random Sewer 1"],
+      ["ACTION_LIST", "Place Random Sewer 2"],
+      ["ACTION_LIST", "Place Random Sewer 3"],
+      ["ACTION_LIST", "Place Random Sewer 4"],
+      ["ACTION_LIST", "Place Random Sewer 5"],
+      ["ACTION_LIST", "Queen of Ash - Add Doom For 3+ Players"],
+      ["SCENARIO_INIT_CONTINUE", null]
+    ],
+    "Place Random Sewer 1": [
+      [
+        "DEFINE",
+        "$SEWER_ID",
+        ["GET_CARD_ID", "randomSewers", 0, 0]
+      ],
+      ["MOVE_CARD", "$SEWER_ID", "sharedLocations", -1],
+      ["DO_SET_CARD_LOCATION", "$SEWER_ID", 5, 50]
+    ],
+    "Place Random Sewer 2": [
+      [
+        "DEFINE",
+        "$SEWER_ID",
+        ["GET_CARD_ID", "randomSewers", 0, 0]
+      ],
+      ["MOVE_CARD", "$SEWER_ID", "sharedLocations", -1],
+      ["DO_SET_CARD_LOCATION", "$SEWER_ID", 20, 50]
+    ],
+    "Place Random Sewer 3": [
+      [
+        "DEFINE",
+        "$SEWER_ID",
+        ["GET_CARD_ID", "randomSewers", 0, 0]
+      ],
+      ["MOVE_CARD", "$SEWER_ID", "sharedLocations", -1],
+      ["DO_SET_CARD_LOCATION", "$SEWER_ID", 35, 50]
+    ],
+    "Place Random Sewer 4": [
+      [
+        "DEFINE",
+        "$SEWER_ID",
+        ["GET_CARD_ID", "randomSewers", 0, 0]
+      ],
+      ["MOVE_CARD", "$SEWER_ID", "sharedLocations", -1],
+      ["DO_SET_CARD_LOCATION", "$SEWER_ID", 50, 50]
+    ],
+    "Place Random Sewer 5": [
+      [
+        "DEFINE",
+        "$SEWER_ID",
+        ["GET_CARD_ID", "randomSewers", 0, 0]
+      ],
+      ["MOVE_CARD", "$SEWER_ID", "sharedLocations", -1],
+      ["DO_SET_CARD_LOCATION", "$SEWER_ID", 65, 50]
+    ],
+    "Place Cultists Per Investigator": [
+      [
+        "DEFINE",
+        "$INVESTIGATOR_ID",
+        ["GET_CARD_ID", "player1Investigator", 0, 0]
+      ],
+      [
+        "COND",
+        ["NOT_EQUAL", "$INVESTIGATOR_ID", null],
+        ["ACTION_LIST", "Place Random Cultist at Sewer 1"]
+      ],
+      [
+        "DEFINE",
+        "$INVESTIGATOR_ID",
+        ["GET_CARD_ID", "player2Investigator", 0, 0]
+      ],
+      [
+        "COND",
+        ["NOT_EQUAL", "$INVESTIGATOR_ID", null],
+        ["ACTION_LIST", "Place Random Cultist at Sewer 2"]
+      ],
+      [
+        "DEFINE",
+        "$INVESTIGATOR_ID",
+        ["GET_CARD_ID", "player3Investigator", 0, 0]
+      ],
+      [
+        "COND",
+        ["NOT_EQUAL", "$INVESTIGATOR_ID", null],
+        ["ACTION_LIST", "Place Random Cultist at Sewer 3"]
+      ],
+      [
+        "DEFINE",
+        "$INVESTIGATOR_ID",
+        ["GET_CARD_ID", "player4Investigator", 0, 0]
+      ],
+      [
+        "COND",
+        ["NOT_EQUAL", "$INVESTIGATOR_ID", null],
+        ["ACTION_LIST", "Place Random Cultist at Sewer 4"]
+      ]
+    ],
+    "Setup Stirred Up Trouble Cultists": [
+      ["LOAD_CARDS", "Stirred Up Trouble Cultist Pool"],
+      ["SHUFFLE_GROUP", "randomCultists"],
+      ["ACTION_LIST", "Place Cultists Per Investigator"]
+    ],
+    "Place Random Cultist at Sewer 1": [
+      [
+        "DEFINE",
+        "$CULTIST_ID",
+        ["GET_CARD_ID", "randomCultists", 0, 0]
+      ],
+      ["MOVE_CARD", "$CULTIST_ID", "sharedLocations", -1],
+      ["DO_SET_CARD_LOCATION", "$CULTIST_ID", 5, 30]
+    ],
+    "Place Random Cultist at Sewer 2": [
+      [
+        "DEFINE",
+        "$CULTIST_ID",
+        ["GET_CARD_ID", "randomCultists", 0, 0]
+      ],
+      ["MOVE_CARD", "$CULTIST_ID", "sharedLocations", -1],
+      ["DO_SET_CARD_LOCATION", "$CULTIST_ID", 20, 30]
+    ],
+    "Place Random Cultist at Sewer 3": [
+      [
+        "DEFINE",
+        "$CULTIST_ID",
+        ["GET_CARD_ID", "randomCultists", 0, 0]
+      ],
+      ["MOVE_CARD", "$CULTIST_ID", "sharedLocations", -1],
+      ["DO_SET_CARD_LOCATION", "$CULTIST_ID", 50, 30]
+    ],
+    "Place Random Cultist at Sewer 4": [
+      [
+        "DEFINE",
+        "$CULTIST_ID",
+        ["GET_CARD_ID", "randomCultists", 0, 0]
+      ],
+      ["MOVE_CARD", "$CULTIST_ID", "sharedLocations", -1],
+      ["DO_SET_CARD_LOCATION", "$CULTIST_ID", 65, 30]
+    ],
+    "Queen of Ash Scenario Early Init Continue 1": [
+      ["ACTION_LIST", "Queen of Ash Scenario Early Init 2"]
+    ],
+    "Queen of Ash Scenario Early Init Continue 2": [
+      ["ACTION_LIST", "Queen of Ash Scenario Early Init 3"]
+    ],
+    "Queen of Ash Scenario Early Init Continue 3": [
+      ["ACTION_LIST", "Queen of Ash Scenario Init"]
+    ],
+    "Add Easy Chaos Tokens": [
+      ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_elder_thing", 1]
+    ],
+    "Add Standard Chaos Tokens": [
+      ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_elder_thing", 1],
+      ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_tablet", 1]
+    ],
+    "Add Hard Chaos Tokens": [
+      ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_elder_thing", 1],
+      ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_tablet", 1],
+      ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_skull", 1]
+    ],
+    "Add Expert Chaos Tokens": [
+      ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_elder_thing", 1],
+      ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_tablet", 1],
+      ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_skull", 1],
+      ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_cultist", 1]
+    ],
+    "Queen of Ash - Arkham Scoured": [
+      ["LOAD_CARDS", "Miskatonic University In Flames"],
+      ["DO_SET_SPAWN_LOCATION", "12155", 45, 43]
+    ],
+    "Add 1 Clue to Each Investigator": [
+      [
+        "FOR_EACH_VAL",
+        "$PLAYER_I",
+        "$PLAYER_ORDER",
+        [
+          [
+            "VAR",
+            "$INVESTIGATOR",
+            ["GET_INVESTIGATOR", "$PLAYER_I"]
+          ],
+          ["DO_PLACE_CLUES_ON_CARD", "$PLAYER_I", "$INVESTIGATOR.id", 1, true, null]
+        ]
+      ]
+    ],
+    "Remove Servant of Flame": [
+      [
+        "DEFINE",
+        "$CARD_ID",
+        ["GET_CARD_ID", "servantOfFlameSetAside", 0, 0]
+      ],
+      [
+        "COND",
+        ["NOT_EQUAL", "$CARD_ID", null],
+        ["MOVE_CARD", "$CARD_ID", "sharedRemoved", -1]
+      ]
+    ],
+    "Keep Servant of Flame Set Aside": [
+      [
+        "DEFINE",
+        "$CARD_ID",
+        ["GET_CARD_ID", "servantOfFlameSetAside", 0, 0]
+      ],
+      [
+        "COND",
+        ["NOT_EQUAL", "$CARD_ID", null],
+        ["MOVE_CARD", "$CARD_ID", "sharedNotInPlay", -1]
+      ]
+    ],
+    "Queen of Ash - Add Doom For 3+ Players": [
+      ["VAR", "$PLAYER_COUNT", 0],
+      [
+        "DEFINE",
+        "$INVESTIGATOR_ID",
+        ["GET_CARD_ID", "player1Investigator", 0, 0]
+      ],
+      [
+        "COND",
+        ["NOT_EQUAL", "$INVESTIGATOR_ID", null],
+        ["INCREASE_VAR", "$PLAYER_COUNT", 1]
+      ],
+      [
+        "DEFINE",
+        "$INVESTIGATOR_ID",
+        ["GET_CARD_ID", "player2Investigator", 0, 0]
+      ],
+      [
+        "COND",
+        ["NOT_EQUAL", "$INVESTIGATOR_ID", null],
+        ["INCREASE_VAR", "$PLAYER_COUNT", 1]
+      ],
+      [
+        "DEFINE",
+        "$INVESTIGATOR_ID",
+        ["GET_CARD_ID", "player3Investigator", 0, 0]
+      ],
+      [
+        "COND",
+        ["NOT_EQUAL", "$INVESTIGATOR_ID", null],
+        ["INCREASE_VAR", "$PLAYER_COUNT", 1]
+      ],
+      [
+        "DEFINE",
+        "$INVESTIGATOR_ID",
+        ["GET_CARD_ID", "player4Investigator", 0, 0]
+      ],
+      [
+        "COND",
+        ["NOT_EQUAL", "$INVESTIGATOR_ID", null],
+        ["INCREASE_VAR", "$PLAYER_COUNT", 1]
+      ],
+      [
+        "COND",
+        ["GREATER_EQUAL", "$PLAYER_COUNT", 3],
+        ["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1]
+      ]
+    ]
+  },
+  "functions": {
+    "ARKHAM_SCOURED_CALLBACK": {
+      "args": ["$TARGET_PLAYER", "$TARGET_CARD_ID", "$ARGS", "$ACTOR_PLAYER", "$SELECTED_VALUE"],
+      "code": [
+        ["VALIDATE_PLAYER", "$TARGET_PLAYER", "ARKHAM_SCOURED_CALLBACK.TARGET_PLAYER"],
+        ["VALIDATE_NOT_NULL", "$ARGS", "ARKHAM_SCOURED_CALLBACK.ARGS"],
+        ["VALIDATE_NOT_EMPTY", "$SELECTED_VALUE", "ARKHAM_SCOURED_CALLBACK.SELECTED_VALUE"],
+        [
+          "VAR",
+          "$VALUE",
+          ["CALC", "{{$SELECTED_VALUE}}"]
+        ],
+        ["SET", "/arkham/scenarioArkhamScouredState", "$VALUE"],
+        ["LOGF", "{0}{1} set Arkham Scoured state to {2}.", "$ARGS", "$TARGET_PLAYER", "$VALUE"],
+        ["ACTION_LIST", "Queen of Ash Scenario Early Init Continue 1"]
+      ]
+    },
+    "STIRRED_UP_TROUBLE_CALLBACK": {
+      "args": ["$TARGET_PLAYER", "$TARGET_CARD_ID", "$ARGS", "$ACTOR_PLAYER", "$SELECTED_VALUE"],
+      "code": [
+        ["VALIDATE_PLAYER", "$TARGET_PLAYER", "STIRRED_UP_TROUBLE_CALLBACK.TARGET_PLAYER"],
+        ["VALIDATE_NOT_NULL", "$ARGS", "STIRRED_UP_TROUBLE_CALLBACK.ARGS"],
+        ["VALIDATE_NOT_EMPTY", "$SELECTED_VALUE", "STIRRED_UP_TROUBLE_CALLBACK.SELECTED_VALUE"],
+        [
+          "VAR",
+          "$VALUE",
+          ["CALC", "{{$SELECTED_VALUE}}"]
+        ],
+        ["SET", "/arkham/scenarioStirredUpTroubleState", "$VALUE"],
+        ["LOGF", "{0}{1} set Stirred up Trouble state to {2}.", "$ARGS", "$TARGET_PLAYER", "$VALUE"],
+        ["ACTION_LIST", "Queen of Ash Scenario Early Init Continue 2"]
+      ]
+    },
+    "SERVANT_OF_FLAME_KILLED_CALLBACK": {
+      "args": ["$TARGET_PLAYER", "$TARGET_CARD_ID", "$ARGS", "$ACTOR_PLAYER", "$SELECTED_VALUE"],
+      "code": [
+        ["VALIDATE_NOT_EMPTY", "$SELECTED_VALUE", "SERVANT_OF_FLAME_KILLED_CALLBACK.SELECTED_VALUE"],
+        [
+          "VAR",
+          "$VALUE",
+          ["CALC", "{{$SELECTED_VALUE}}"]
+        ],
+        ["SET", "/arkham/servantOfFlameKilled", "$VALUE"],
+        ["ACTION_LIST", "Queen of Ash Scenario Early Init Continue 3"]
+      ]
+    }
+  }
+}
