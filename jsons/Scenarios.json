@@ -140,14 +140,6 @@
             ]
           },
           {
-            "label": "id:brethrenOfAsh",
-            "deckLists": [
-              { "label": "id:spreadingFlames", "deckListId": "Spreading Flames Scenario" },
-              { "label": "id:smokeAndMirrors", "deckListId": "Smoke and Mirrors Scenario" },
-              { "label": "id:queenOfAsh", "deckListId": "Queen of Ash Scenario" }
-            ]
-          },
-          {
             "label": "id:standaloneDecks",
             "deckLists": [
               { "label": "id:nathanielChoStarterDeck", "deckListId": "Nathaniel Cho Starter Deck" },
