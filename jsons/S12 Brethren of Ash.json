@@ -267,5 +267,46 @@
         { "databaseId": "chaos_elder_thing", "quantity": 1, "loadGroupId": "sharedChaosBag" }
       ]
     }
+  },
+  "groups": {
+    "randomDowntown":          {"groupType": "deck",       "label": "id:randomDowntown",          "tableLabel": "Random Downtown"},
+    "randomUptown":            {"groupType": "deck",       "label": "id:randomUptown",            "tableLabel": "Random Uptown"},
+    "peopleOfArkhamPool":      {"groupType": "deck",       "label": "id:peopleOfArkhamPool",      "tableLabel": "id:peopleOfArkhamPoolShort"},
+    "randomSewers":            {"groupType": "deck",       "label": "id:randomSewers",            "tableLabel": "id:randomSewersShort"},
+    "randomCultists":          {"groupType": "deck",       "label": "id:randomCultists",          "tableLabel": "id:randomCultistsShort"},
+    "servantOfFlameSetAside":  {"groupType": "deck",       "label": "id:servantOfFlameSetAside",  "tableLabel": "id:servantOfFlameSetAsideShort"}
+  },
+  "labels": {
+          "randomDowntown": {
+            "English": "Random Downtown"
+        },
+        "randomUptown": {
+            "English": "Random Uptown"
+        },
+        "peopleOfArkhamPool": {
+            "English": "People of Arkham Pool"
+        },
+        "peopleOfArkhamPoolShort": {
+            "English": "People"
+        },
+        "randomSewers": {
+            "English": "Random Sewers"
+        },
+        "randomSewersShort": {
+            "English": "Sewers"
+        },
+        "randomCultists": {
+            "English": "Random Cultists"
+        },
+        "randomCultistsShort": {
+            "English": "Cultists"
+        },
+        "servantOfFlameSetAside": {
+            "English": "Servant of Flame Set Aside"
+        },
+        "servantOfFlameSetAsideShort": {
+            "English": "Servant of Flame"
+        }
   }
 }
+// kate: syntax Dragnlang; scheme Arkham Dark;
