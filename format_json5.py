@@ -142,6 +142,17 @@ def is_primitive_array(node):
         and all(not item.get("trailing") for item in node["items"])
     )
 
+def is_simple_object(obj):
+    return (
+        obj["type"] == "object"
+        and all(
+            item["value"]["type"] == "primitive"
+            and not item["value"].get("leading")
+            and not item.get("comments")
+            and not item.get("trailing")
+            for item in obj["items"]
+        )
+    )
 
 def fmt(node, level=0):
     pad = " " * (level * INDENT)
@@ -180,7 +191,19 @@ def fmt(node, level=0):
         if not node["items"]:
             return prefix + "{}"
 
+        # Inline simple objects
+        if is_simple_object(node):
+            parts = []
+
+            for item in node["items"]:
+                parts.append(
+                    f'{item["key"]}: {item["value"]["value"]}'
+                )
+
+            return prefix + "{ " + ", ".join(parts) + " }"
+
         lines = []
+
         for idx, item in enumerate(node["items"]):
             for c in item["comments"]:
                 lines.append(inner + c)
