@@ -11,78 +11,20 @@
       "hideFromSearch": true,
       "label": "Spreading Flames",
       "cards": [
-        {
-          "databaseId": "12105",
-          "quantity": 1,
-          "loadGroupId": "sharedScenarioReference"
-        },
-        {
-          "databaseId": "12106",
-          "quantity": 1,
-          "loadGroupId": "sharedAgendaStory"
-        },
-        {
-          "databaseId": "12107",
-          "quantity": 1,
-          "loadGroupId": "sharedAgendaStory"
-        },
-        {
-          "databaseId": "12108",
-          "quantity": 1,
-          "loadGroupId": "sharedAgendaStory"
-        },
-        {
-          "databaseId": "12109",
-          "quantity": 1,
-          "loadGroupId": "sharedActStory"
-        },
-        {
-          "databaseId": "12110",
-          "quantity": 1,
-          "loadGroupId": "sharedActStory"
-        },
-        {
-          "databaseId": "12111",
-          "quantity": 1,
-          "loadGroupId": "sharedActStory"
-        },
-        {
-          "databaseId": "12112",
-          "quantity": 1,
-          "loadGroupId": "sharedActStory"
-        },
-        {
-          "databaseId": "12113",
-          "quantity": 1,
-          "loadGroupId": "sharedLocations",
-          "left": "10%",
-          "top": "40%"
-        },
-        {
-          "databaseId": "12116",
-          "quantity": 1,
-          "loadGroupId": "sharedNotInPlay"
-        },
-        {
-          "databaseId": "12117",
-          "quantity": 1,
-          "loadGroupId": "sharedNotInPlay"
-        },
-        {
-          "databaseId": "12118",
-          "quantity": 1,
-          "loadGroupId": "sharedNotInPlay"
-        },
-        {
-          "databaseId": "12119",
-          "quantity": 1,
-          "loadGroupId": "sharedNotInPlay"
-        },
-        {
-          "databaseId": "12120",
-          "quantity": 1,
-          "loadGroupId": "sharedNotInPlay"
-        }
+        { "databaseId": "12105", "quantity": 1, "loadGroupId": "sharedScenarioReference" },
+        { "databaseId": "12106", "quantity": 1, "loadGroupId": "sharedAgendaStory" },
+        { "databaseId": "12107", "quantity": 1, "loadGroupId": "sharedAgendaStory" },
+        { "databaseId": "12108", "quantity": 1, "loadGroupId": "sharedAgendaStory" },
+        { "databaseId": "12109", "quantity": 1, "loadGroupId": "sharedActStory" },
+        { "databaseId": "12110", "quantity": 1, "loadGroupId": "sharedActStory" },
+        { "databaseId": "12111", "quantity": 1, "loadGroupId": "sharedActStory" },
+        { "databaseId": "12112", "quantity": 1, "loadGroupId": "sharedActStory" },
+        { "databaseId": "12113", "quantity": 1, "loadGroupId": "sharedLocations", "left": "10%", "top": "40%" },
+        { "databaseId": "12116", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
+        { "databaseId": "12117", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
+        { "databaseId": "12118", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
+        { "databaseId": "12119", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
+        { "databaseId": "12120", "quantity": 1, "loadGroupId": "sharedNotInPlay" }
       ]
     }
   },
