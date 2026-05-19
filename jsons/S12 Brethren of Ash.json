@@ -277,36 +277,16 @@
     "servantOfFlameSetAside":  {"groupType": "deck",       "label": "id:servantOfFlameSetAside",  "tableLabel": "id:servantOfFlameSetAsideShort"}
   },
   "labels": {
-          "randomDowntown": {
-            "English": "Random Downtown"
-        },
-        "randomUptown": {
-            "English": "Random Uptown"
-        },
-        "peopleOfArkhamPool": {
-            "English": "People of Arkham Pool"
-        },
-        "peopleOfArkhamPoolShort": {
-            "English": "People"
-        },
-        "randomSewers": {
-            "English": "Random Sewers"
-        },
-        "randomSewersShort": {
-            "English": "Sewers"
-        },
-        "randomCultists": {
-            "English": "Random Cultists"
-        },
-        "randomCultistsShort": {
-            "English": "Cultists"
-        },
-        "servantOfFlameSetAside": {
-            "English": "Servant of Flame Set Aside"
-        },
-        "servantOfFlameSetAsideShort": {
-            "English": "Servant of Flame"
-        }
+    "randomDowntown": {"English": "Random Downtown"},
+    "randomUptown": {"English": "Random Uptown"},
+    "peopleOfArkhamPool": {"English": "People of Arkham Pool"},
+    "peopleOfArkhamPoolShort": {"English": "People"},
+    "randomSewers": {"English": "Random Sewers"},
+    "randomSewersShort": {"English": "Sewers"},
+    "randomCultists": {"English": "Random Cultists"},
+    "randomCultistsShort": {"English": "Cultists"},
+    "servantOfFlameSetAside": {"English": "Servant of Flame Set Aside"},
+    "servantOfFlameSetAsideShort": {"English": "Servant of Flame"}
   }
 }
 // kate: syntax Dragnlang; scheme Arkham Dark;
