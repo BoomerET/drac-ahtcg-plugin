@@ -4,7 +4,14 @@
       "label": "Queen of Ash Scenario",
       "cards": [],
       "postLoadActionList": [
-        ["SCENARIO_INIT", "Brethren of Ash", "Brethren of Ash", "Queen of Ash", null, "Queen of Ash Scenario Early Init 1"]
+        [
+          "SCENARIO_INIT",
+          "Brethren of Ash",
+          "Brethren of Ash",
+          "Queen of Ash",
+          null,
+          "Queen of Ash Scenario Early Init 1"
+        ]
       ]
     },
     "Queen of Ash": {
@@ -182,24 +189,53 @@
   },
   "actionLists": {
     "Queen of Ash Scenario Early Init 1": [
-      ["CALCULATOR_PROMPT", "$GAME.firstPlayer", "Scoured Arkham for Answers? 1 = Yes, 2 = No", 1, 2, 1, "ARKHAM_SCOURED_CALLBACK", "$GAME.firstPlayer", "", ""]
+      [
+        "CALCULATOR_PROMPT",
+        "$GAME.firstPlayer",
+        "Scoured Arkham for Answers? 1 = Yes, 2 = No",
+        1,
+        2,
+        1,
+        "ARKHAM_SCOURED_CALLBACK",
+        "$GAME.firstPlayer",
+        "",
+        ""
+      ]
     ],
     "Queen of Ash Scenario Early Init 2": [
-      ["CALCULATOR_PROMPT", "$GAME.firstPlayer", "Stirred up trouble? 1 = Yes, 2 = No", 1, 2, 1, "STIRRED_UP_TROUBLE_CALLBACK", "$GAME.firstPlayer", "", ""]
+      [
+        "CALCULATOR_PROMPT",
+        "$GAME.firstPlayer",
+        "Stirred up trouble? 1 = Yes, 2 = No",
+        1,
+        2,
+        1,
+        "STIRRED_UP_TROUBLE_CALLBACK",
+        "$GAME.firstPlayer",
+        "",
+        ""
+      ]
     ],
     "Queen of Ash Scenario Early Init 3": [
-      ["CALCULATOR_PROMPT", "$GAME.firstPlayer", "Killed the Servant of Flame? 1 = Yes, 2 = No", 1, 2, 1, "SERVANT_OF_FLAME_KILLED_CALLBACK", "$GAME.firstPlayer", "", ""]
+      [
+        "CALCULATOR_PROMPT",
+        "$GAME.firstPlayer",
+        "Killed the Servant of Flame? 1 = Yes, 2 = No",
+        1,
+        2,
+        1,
+        "SERVANT_OF_FLAME_KILLED_CALLBACK",
+        "$GAME.firstPlayer",
+        "",
+        ""
+      ]
     ],
     "Queen of Ash Scenario Init": [
       ["DO_LOAD_CARDS_SCN", "Queen of Ash"],
       ["DO_LOAD_CARDS_SCN", "BoA_Queen of Ash"],
       ["LOAD_CARDS", "Add 2 Cultists to Chaos Bag"],
       ["LOG", "Added 2 Cultist tokens to the chaos bag."],
-      [
-        "DEFINE",
-        "$SERVANT_CARD_ID",
-        ["GET_CARD_ID", "sharedNotInPlay", 0, 0]
-      ],
+      ["DEFINE", "$SERVANT_CARD_ID", ["GET_CARD_ID", "sharedNotInPlay", 0, 0]],
       ["SET", "/arkham/servantOfFlameCardId", "$SERVANT_CARD_ID"],
       ["DO_SET_SPAWN_LOCATION", "12182", 45, 43],
       [
@@ -249,47 +285,27 @@
       ["SCENARIO_INIT_CONTINUE", null]
     ],
     "Place Random Sewer 1": [
-      [
-        "DEFINE",
-        "$SEWER_ID",
-        ["GET_CARD_ID", "randomSewers", 0, 0]
-      ],
+      ["DEFINE", "$SEWER_ID", ["GET_CARD_ID", "randomSewers", 0, 0]],
       ["MOVE_CARD", "$SEWER_ID", "sharedLocations", -1],
       ["DO_SET_CARD_LOCATION", "$SEWER_ID", 5, 50]
     ],
     "Place Random Sewer 2": [
-      [
-        "DEFINE",
-        "$SEWER_ID",
-        ["GET_CARD_ID", "randomSewers", 0, 0]
-      ],
+      ["DEFINE", "$SEWER_ID", ["GET_CARD_ID", "randomSewers", 0, 0]],
       ["MOVE_CARD", "$SEWER_ID", "sharedLocations", -1],
       ["DO_SET_CARD_LOCATION", "$SEWER_ID", 20, 50]
     ],
     "Place Random Sewer 3": [
-      [
-        "DEFINE",
-        "$SEWER_ID",
-        ["GET_CARD_ID", "randomSewers", 0, 0]
-      ],
+      ["DEFINE", "$SEWER_ID", ["GET_CARD_ID", "randomSewers", 0, 0]],
       ["MOVE_CARD", "$SEWER_ID", "sharedLocations", -1],
       ["DO_SET_CARD_LOCATION", "$SEWER_ID", 35, 50]
     ],
     "Place Random Sewer 4": [
-      [
-        "DEFINE",
-        "$SEWER_ID",
-        ["GET_CARD_ID", "randomSewers", 0, 0]
-      ],
+      ["DEFINE", "$SEWER_ID", ["GET_CARD_ID", "randomSewers", 0, 0]],
       ["MOVE_CARD", "$SEWER_ID", "sharedLocations", -1],
       ["DO_SET_CARD_LOCATION", "$SEWER_ID", 50, 50]
     ],
     "Place Random Sewer 5": [
-      [
-        "DEFINE",
-        "$SEWER_ID",
-        ["GET_CARD_ID", "randomSewers", 0, 0]
-      ],
+      ["DEFINE", "$SEWER_ID", ["GET_CARD_ID", "randomSewers", 0, 0]],
       ["MOVE_CARD", "$SEWER_ID", "sharedLocations", -1],
       ["DO_SET_CARD_LOCATION", "$SEWER_ID", 65, 50]
     ],
@@ -341,38 +357,22 @@
       ["ACTION_LIST", "Place Cultists Per Investigator"]
     ],
     "Place Random Cultist at Sewer 1": [
-      [
-        "DEFINE",
-        "$CULTIST_ID",
-        ["GET_CARD_ID", "randomCultists", 0, 0]
-      ],
+      ["DEFINE", "$CULTIST_ID", ["GET_CARD_ID", "randomCultists", 0, 0]],
       ["MOVE_CARD", "$CULTIST_ID", "sharedLocations", -1],
       ["DO_SET_CARD_LOCATION", "$CULTIST_ID", 5, 30]
     ],
     "Place Random Cultist at Sewer 2": [
-      [
-        "DEFINE",
-        "$CULTIST_ID",
-        ["GET_CARD_ID", "randomCultists", 0, 0]
-      ],
+      ["DEFINE", "$CULTIST_ID", ["GET_CARD_ID", "randomCultists", 0, 0]],
       ["MOVE_CARD", "$CULTIST_ID", "sharedLocations", -1],
       ["DO_SET_CARD_LOCATION", "$CULTIST_ID", 20, 30]
     ],
     "Place Random Cultist at Sewer 3": [
-      [
-        "DEFINE",
-        "$CULTIST_ID",
-        ["GET_CARD_ID", "randomCultists", 0, 0]
-      ],
+      ["DEFINE", "$CULTIST_ID", ["GET_CARD_ID", "randomCultists", 0, 0]],
       ["MOVE_CARD", "$CULTIST_ID", "sharedLocations", -1],
       ["DO_SET_CARD_LOCATION", "$CULTIST_ID", 50, 30]
     ],
     "Place Random Cultist at Sewer 4": [
-      [
-        "DEFINE",
-        "$CULTIST_ID",
-        ["GET_CARD_ID", "randomCultists", 0, 0]
-      ],
+      ["DEFINE", "$CULTIST_ID", ["GET_CARD_ID", "randomCultists", 0, 0]],
       ["MOVE_CARD", "$CULTIST_ID", "sharedLocations", -1],
       ["DO_SET_CARD_LOCATION", "$CULTIST_ID", 65, 30]
     ],
@@ -413,21 +413,20 @@
         "$PLAYER_I",
         "$PLAYER_ORDER",
         [
+          ["VAR", "$INVESTIGATOR", ["GET_INVESTIGATOR", "$PLAYER_I"]],
           [
-            "VAR",
-            "$INVESTIGATOR",
-            ["GET_INVESTIGATOR", "$PLAYER_I"]
-          ],
-          ["DO_PLACE_CLUES_ON_CARD", "$PLAYER_I", "$INVESTIGATOR.id", 1, true, null]
+            "DO_PLACE_CLUES_ON_CARD",
+            "$PLAYER_I",
+            "$INVESTIGATOR.id",
+            1,
+            true,
+            null
+          ]
         ]
       ]
     ],
     "Remove Servant of Flame": [
-      [
-        "DEFINE",
-        "$CARD_ID",
-        ["GET_CARD_ID", "servantOfFlameSetAside", 0, 0]
-      ],
+      ["DEFINE", "$CARD_ID", ["GET_CARD_ID", "servantOfFlameSetAside", 0, 0]],
       [
         "COND",
         ["NOT_EQUAL", "$CARD_ID", null],
@@ -435,11 +434,7 @@
       ]
     ],
     "Keep Servant of Flame Set Aside": [
-      [
-        "DEFINE",
-        "$CARD_ID",
-        ["GET_CARD_ID", "servantOfFlameSetAside", 0, 0]
-      ],
+      ["DEFINE", "$CARD_ID", ["GET_CARD_ID", "servantOfFlameSetAside", 0, 0]],
       [
         "COND",
         ["NOT_EQUAL", "$CARD_ID", null],
@@ -497,46 +492,84 @@
   },
   "functions": {
     "ARKHAM_SCOURED_CALLBACK": {
-      "args": ["$TARGET_PLAYER", "$TARGET_CARD_ID", "$ARGS", "$ACTOR_PLAYER", "$SELECTED_VALUE"],
+      "args": [
+        "$TARGET_PLAYER",
+        "$TARGET_CARD_ID",
+        "$ARGS",
+        "$ACTOR_PLAYER",
+        "$SELECTED_VALUE"
+      ],
       "code": [
-        ["VALIDATE_PLAYER", "$TARGET_PLAYER", "ARKHAM_SCOURED_CALLBACK.TARGET_PLAYER"],
-        ["VALIDATE_NOT_NULL", "$ARGS", "ARKHAM_SCOURED_CALLBACK.ARGS"],
-        ["VALIDATE_NOT_EMPTY", "$SELECTED_VALUE", "ARKHAM_SCOURED_CALLBACK.SELECTED_VALUE"],
         [
-          "VAR",
-          "$VALUE",
-          ["CALC", "{{$SELECTED_VALUE}}"]
+          "VALIDATE_PLAYER",
+          "$TARGET_PLAYER",
+          "ARKHAM_SCOURED_CALLBACK.TARGET_PLAYER"
         ],
+        ["VALIDATE_NOT_NULL", "$ARGS", "ARKHAM_SCOURED_CALLBACK.ARGS"],
+        [
+          "VALIDATE_NOT_EMPTY",
+          "$SELECTED_VALUE",
+          "ARKHAM_SCOURED_CALLBACK.SELECTED_VALUE"
+        ],
+        ["VAR", "$VALUE", ["CALC", "{{$SELECTED_VALUE}}"]],
         ["SET", "/arkham/scenarioArkhamScouredState", "$VALUE"],
-        ["LOGF", "{0}{1} set Arkham Scoured state to {2}.", "$ARGS", "$TARGET_PLAYER", "$VALUE"],
+        [
+          "LOGF",
+          "{0}{1} set Arkham Scoured state to {2}.",
+          "$ARGS",
+          "$TARGET_PLAYER",
+          "$VALUE"
+        ],
         ["ACTION_LIST", "Queen of Ash Scenario Early Init Continue 1"]
       ]
     },
     "STIRRED_UP_TROUBLE_CALLBACK": {
-      "args": ["$TARGET_PLAYER", "$TARGET_CARD_ID", "$ARGS", "$ACTOR_PLAYER", "$SELECTED_VALUE"],
+      "args": [
+        "$TARGET_PLAYER",
+        "$TARGET_CARD_ID",
+        "$ARGS",
+        "$ACTOR_PLAYER",
+        "$SELECTED_VALUE"
+      ],
       "code": [
-        ["VALIDATE_PLAYER", "$TARGET_PLAYER", "STIRRED_UP_TROUBLE_CALLBACK.TARGET_PLAYER"],
-        ["VALIDATE_NOT_NULL", "$ARGS", "STIRRED_UP_TROUBLE_CALLBACK.ARGS"],
-        ["VALIDATE_NOT_EMPTY", "$SELECTED_VALUE", "STIRRED_UP_TROUBLE_CALLBACK.SELECTED_VALUE"],
         [
-          "VAR",
-          "$VALUE",
-          ["CALC", "{{$SELECTED_VALUE}}"]
+          "VALIDATE_PLAYER",
+          "$TARGET_PLAYER",
+          "STIRRED_UP_TROUBLE_CALLBACK.TARGET_PLAYER"
         ],
+        ["VALIDATE_NOT_NULL", "$ARGS", "STIRRED_UP_TROUBLE_CALLBACK.ARGS"],
+        [
+          "VALIDATE_NOT_EMPTY",
+          "$SELECTED_VALUE",
+          "STIRRED_UP_TROUBLE_CALLBACK.SELECTED_VALUE"
+        ],
+        ["VAR", "$VALUE", ["CALC", "{{$SELECTED_VALUE}}"]],
         ["SET", "/arkham/scenarioStirredUpTroubleState", "$VALUE"],
-        ["LOGF", "{0}{1} set Stirred up Trouble state to {2}.", "$ARGS", "$TARGET_PLAYER", "$VALUE"],
+        [
+          "LOGF",
+          "{0}{1} set Stirred up Trouble state to {2}.",
+          "$ARGS",
+          "$TARGET_PLAYER",
+          "$VALUE"
+        ],
         ["ACTION_LIST", "Queen of Ash Scenario Early Init Continue 2"]
       ]
     },
     "SERVANT_OF_FLAME_KILLED_CALLBACK": {
-      "args": ["$TARGET_PLAYER", "$TARGET_CARD_ID", "$ARGS", "$ACTOR_PLAYER", "$SELECTED_VALUE"],
+      "args": [
+        "$TARGET_PLAYER",
+        "$TARGET_CARD_ID",
+        "$ARGS",
+        "$ACTOR_PLAYER",
+        "$SELECTED_VALUE"
+      ],
       "code": [
-        ["VALIDATE_NOT_EMPTY", "$SELECTED_VALUE", "SERVANT_OF_FLAME_KILLED_CALLBACK.SELECTED_VALUE"],
         [
-          "VAR",
-          "$VALUE",
-          ["CALC", "{{$SELECTED_VALUE}}"]
+          "VALIDATE_NOT_EMPTY",
+          "$SELECTED_VALUE",
+          "SERVANT_OF_FLAME_KILLED_CALLBACK.SELECTED_VALUE"
         ],
+        ["VAR", "$VALUE", ["CALC", "{{$SELECTED_VALUE}}"]],
         ["SET", "/arkham/servantOfFlameKilled", "$VALUE"],
         ["ACTION_LIST", "Queen of Ash Scenario Early Init Continue 3"]
       ]
