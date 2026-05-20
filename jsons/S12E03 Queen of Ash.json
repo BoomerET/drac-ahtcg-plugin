@@ -56,19 +56,19 @@
   },
   "actionLists": {
     "Queen of Ash Scenario Early Init 1": [
-      ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Check Campaign Log.", ["LIST", "Scoured Arkham for answers.", "The above is NOT true."], "Queen of Ash Scenario Early Init Continue 1"]
+      ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Check Campaign Log.", ["LIST", "Scoured Arkham for answers.", "The above is NOT true."], "Queen of Ash Scenario Early Init 2"]
     ],
     "Queen of Ash Scenario Early Init 2": [
-      ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Check Campaign Log.", ["LIST", "Stirred up trouble.", "The above is NOT true."], "Queen of Ash Scenario Early Init Continue 2"]
+      ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Check Campaign Log.", ["LIST", "Stirred up trouble.", "The above is NOT true."], "Queen of Ash Scenario Early Init 3"]
     ],
     "Queen of Ash Scenario Early Init 3": [
-      ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Check Campaign Log.", ["LIST", "Killed the Servant of Flame.", "The above is NOT true."], "Queen of Ash Scenario Early Init Continue 3"]
+      ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Check Campaign Log.", ["LIST", "Killed the Servant of Flame.", "The above is NOT true."], "Queen of Ash Scenario Early Init 4"]
     ],
     "Queen of Ash Scenario Early Init 4": [
-      ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Who is the Harbinger of Elokoss.", ["LIST", "David Renfield", "Cornelia Akely", "Naomi O'Bannion", "Sgt. Earl Monroe", "Abigail Foreman", "Margaret Lui"], "Queen of Ash Scenario Early Init Continue 4"]
+      ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Who is the Harbinger of Elokoss.", ["LIST", "David Renfield", "Cornelia Akely", "Naomi O'Bannion", "Sgt. Earl Monroe", "Abigail Foreman", "Margaret Lui"], "Queen of Ash Scenario Early Init 5"]
     ],
     "Queen of Ash Scenario Early Init 5": [
-      ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Check Campaign Log.", ["LIST", "Discovered cult's whereabouts.", "The above is NOT true."], "Log so we can come back"]
+      ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Check Campaign Log.", ["LIST", "Discovered cult's whereabouts.", "The above is NOT true."], "Queen of Ash Scenario Init"]
     ],
     "Queen of Ash Scenario Init": [
       ["DO_LOAD_CARDS_SCN", "Queen of Ash"],
@@ -104,8 +104,12 @@
       ["ACTION_LIST", "Place Random Sewer 3"],
       ["ACTION_LIST", "Place Random Sewer 4"],
       ["ACTION_LIST", "Place Random Sewer 5"],
+      ["ACTION_LIST", "Queen of Ash - Arkham Scoured"],
+      ["ACTION_LIST", "Stirred up trouble"],
+      ["ACTION_LIST", "Remove Servant of Flame"],
       ["ACTION_LIST", "Queen of Ash - Add Doom For 3+ Players"],
-      ["ACTION_LIST", "Queen of Ash Scenario Early Init Continue 5"],
+      ["ACTION_LIST", "Queen of Ash Cult Unknown Whereabouts"],
+      ["ACTION_LIST", "Who is the Harbinger of Elokoss"],
       ["SCENARIO_INIT_CONTINUE", null]
     ],
     "Place Random Sewer 1": [
@@ -236,31 +240,31 @@
       ["MOVE_CARD", "$CULTIST_ID", "sharedLocations", -1],
       ["DO_SET_CARD_LOCATION", "$CULTIST_ID", 65, 30]
     ],
-    "Queen of Ash Scenario Early Init Continue 1": [
+    "Queen of Ash - Arkham Scoured": [
       [
         "COND",
         ["EQUAL", "$GAME.arkham.scenarioAnswer1", "A"],
         ["ACTION_LIST", "Add 1 Clue to Each Investigator"]
-      ],
-      ["ACTION_LIST", "Queen of Ash Scenario Early Init 2"]
+      ]
+      //["ACTION_LIST", "Queen of Ash Scenario Early Init 2"]
     ],
-    "Queen of Ash Scenario Early Init Continue 2": [
+    "Stirred up trouble": [
       [
         "COND",
         ["EQUAL", "$GAME.arkham.scenarioAnswer2", "A"],
         ["ACTION_LIST", "Setup Stirred Up Trouble Cultists"]
-      ],
-      ["ACTION_LIST", "Queen of Ash Scenario Early Init 3"]
+      ]
     ],
-    "Queen of Ash Scenario Early Init Continue 3": [
+    "Remove Servant of Flame": [
       [
         "COND",
         ["EQUAL", "$GAME.arkham.scenarioAnswer3", "A"],
-        ["ACTION_LIST", "Remove Servant of Flame"]
-      ],
-      ["ACTION_LIST", "Queen of Ash Scenario Early Init 4"]
+        ["ACTION_LIST", "Remove Servant of Flame Actions"],
+        ["EQUAL", "$GAME.arkham.scenarioAnswer3", "B"],
+        ["ACTION_LIST", "Keep Servant of Flame Set Aside"]
+      ]
     ],
-    "Queen of Ash Scenario Early Init Continue 4": [
+    "Who is the Harbinger of Elokoss": [
       [
         "COND",
         ["EQUAL", "$GAME.arkham.scenarioAnswer4", "A"],
@@ -275,19 +279,15 @@
         ["ACTION_LIST", "Abigail is HoE"],
         ["EQUAL", "$GAME.arkham.scenarioAnswer4", "F"],
         ["ACTION_LIST", "Margaret is HoE"]
-      ],
-      ["ACTION_LIST", "Queen of Ash Scenario Early Init 5"]
+      ]
+      //["ACTION_LIST", "Queen of Ash Scenario Early Init 5"]
     ],
-    "Queen of Ash Scenario Early Init Continue 5": [
+    "Queen of Ash Cult Unknown Whereabouts": [
       [
         "COND",
-        ["EQUAL", "$GAME.arkham.scenarioAnswer5", "A"],
+        ["EQUAL", "$GAME.arkham.scenarioAnswer5", "B"],
         ["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1]
       ]
-    ],
-    "Log so we can come back": [
-      ["LOG", "This is a log entry to help us find where we are in the scenario when we come back to it later."],
-      ["ACTION_LIST", "Queen of Ash Scenario Init"]
     ],
     "David is HoE": [
       ["LOGF", "David is the Harbinger of Elokoss."]
@@ -325,10 +325,6 @@
       ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_skull", 1],
       ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_cultist", 1]
     ],
-    "Queen of Ash - Arkham Scoured": [
-      ["LOAD_CARDS", "Miskatonic University In Flames"],
-      ["DO_SET_SPAWN_LOCATION", "12155", 45, 43]
-    ],
     "Add 1 Clue to Each Investigator": [
       [
         "FOR_EACH_VAL",
@@ -344,7 +340,7 @@
         ]
       ]
     ],
-    "Remove Servant of Flame": [
+    "Remove Servant of Flame Actions": [
       [
         "DEFINE",
         "$CARD_ID",
