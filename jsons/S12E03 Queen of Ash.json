@@ -19,11 +19,11 @@
         { "databaseId": "12173", "quantity": 1, "loadGroupId": "sharedActStory" },
         { "databaseId": "12182", "quantity": 1, "loadGroupId": "sharedLocations", "left": "35%", "top": "75%" },
         { "databaseId": "12174", "quantity": 1, "loadGroupId": "sharedLocations", "left": "35%", "top": "10%" },
-        { "databaseId": "12183", "quantity": 1, "loadGroupId": "sharedLocations", "left": "05%", "top": "50%" },
-        { "databaseId": "12184", "quantity": 1, "loadGroupId": "sharedLocations", "left": "20%", "top": "50%" },
-        { "databaseId": "12185", "quantity": 1, "loadGroupId": "sharedLocations", "left": "35%", "top": "50%" },
-        { "databaseId": "12186", "quantity": 1, "loadGroupId": "sharedLocations", "left": "50%", "top": "50%" },
-        { "databaseId": "12187", "quantity": 1, "loadGroupId": "sharedLocations", "left": "65%", "top": "50%" },
+        //{ "databaseId": "12183", "quantity": 1, "loadGroupId": "sharedLocations", "left": "05%", "top": "50%" },
+        //{ "databaseId": "12184", "quantity": 1, "loadGroupId": "sharedLocations", "left": "20%", "top": "50%" },
+        //{ "databaseId": "12185", "quantity": 1, "loadGroupId": "sharedLocations", "left": "35%", "top": "50%" },
+        //{ "databaseId": "12186", "quantity": 1, "loadGroupId": "sharedLocations", "left": "50%", "top": "50%" },
+        //{ "databaseId": "12187", "quantity": 1, "loadGroupId": "sharedLocations", "left": "65%", "top": "50%" },
         { "databaseId": "12180", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
         { "databaseId": "12129", "quantity": 5, "loadGroupId": "sharedNotInPlay" },
         { "databaseId": "12175", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
@@ -32,27 +32,27 @@
         { "databaseId": "12179", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
         { "databaseId": "12181", "quantity": 2, "loadGroupId": "sharedNotInPlay" }
       ]
-    },
-    "Random Sewers": {
-      "hideFromSearch": true,
-      "label": "Random Sewers",
-      "cards": [
-        { "databaseId": "12183", "quantity": 1, "loadGroupId": "randomSewers" },
-        { "databaseId": "12184", "quantity": 1, "loadGroupId": "randomSewers" },
-        { "databaseId": "12185", "quantity": 1, "loadGroupId": "randomSewers" },
-        { "databaseId": "12186", "quantity": 1, "loadGroupId": "randomSewers" },
-        { "databaseId": "12187", "quantity": 1, "loadGroupId": "randomSewers" }
-      ]
-    },
-    "Stirred Up Trouble Cultist Pool": {
-      "hideFromSearch": true,
-      "label": "Stirred Up Trouble Cultist Pool",
-      "cards": [
-        { "databaseId": "12121", "quantity": 1, "loadGroupId": "randomCultists" },
-        { "databaseId": "12188", "quantity": 2, "loadGroupId": "randomCultists" },
-        { "databaseId": "12189", "quantity": 1, "loadGroupId": "randomCultists" }
-      ]
     }
+    //"Random Sewers": {
+    //  "hideFromSearch": true,
+    //  "label": "Random Sewers",
+    //  "cards": [
+    //    { "databaseId": "12183", "quantity": 1, "loadGroupId": "sharedPileB" },
+    //    { "databaseId": "12184", "quantity": 1, "loadGroupId": "sharedPileB" },
+    //    { "databaseId": "12185", "quantity": 1, "loadGroupId": "sharedPileB" },
+    //    { "databaseId": "12186", "quantity": 1, "loadGroupId": "sharedPileB" },
+    //    { "databaseId": "12187", "quantity": 1, "loadGroupId": "sharedPileB" }
+    //  ]
+    //},
+    //"Stirred Up Trouble Cultist Pool": {
+    //  "hideFromSearch": true,
+    //  "label": "Stirred Up Trouble Cultist Pool",
+    //  "cards": [
+    //    { "databaseId": "12121", "quantity": 2, "loadGroupId": "sharedPileA" },
+    //    { "databaseId": "12188", "quantity": 3, "loadGroupId": "sharedPileA" },
+    //    { "databaseId": "12189", "quantity": 1, "loadGroupId": "sharedPileA" }
+    //  ]
+    //}
   },
   "actionLists": {
     "Queen of Ash Scenario Early Init 1": [
@@ -75,12 +75,12 @@
       ["DO_LOAD_CARDS_SCN", "BoA_Queen of Ash"],
       ["LOAD_CARDS", "Add 2 Cultists to Chaos Bag"],
       ["LOG", "Added 2 Cultist tokens to the chaos bag."],
-      [
-        "DEFINE",
-        "$SERVANT_CARD_ID",
-        ["GET_CARD_ID", "sharedNotInPlay", 0, 0]
-      ],
-      ["SET", "/arkham/servantOfFlameCardId", "$SERVANT_CARD_ID"],
+      //[
+      //  "DEFINE",
+      //  "$SERVANT_CARD_ID",
+      //  ["GET_CARD_ID", "sharedNotInPlay", 0, 0]
+      //],
+      //["SET", "/arkham/servantOfFlameCardId", "$SERVANT_CARD_ID"],
       ["DO_SET_SPAWN_LOCATION", "12182", 45, 43],
       ["DO_LOAD_CARDS_SCN", "Cultists"],
       ["DO_LOAD_CARDS_SCN", "Reeking Decay"],
@@ -97,13 +97,7 @@
         ["EQUAL", "$GAME.arkham.scenarioDifficulty", "Expert"],
         ["ACTION_LIST", "Add Expert Chaos Tokens"]
       ],
-      ["LOAD_CARDS", "Random Sewers"],
-      ["SHUFFLE_GROUP", "randomSewers"],
-      ["ACTION_LIST", "Place Random Sewer 1"],
-      ["ACTION_LIST", "Place Random Sewer 2"],
-      ["ACTION_LIST", "Place Random Sewer 3"],
-      ["ACTION_LIST", "Place Random Sewer 4"],
-      ["ACTION_LIST", "Place Random Sewer 5"],
+      ["ACTION_LIST", "Elegant place random sewers"],
       ["ACTION_LIST", "Queen of Ash - Arkham Scoured"],
       ["ACTION_LIST", "Stirred up trouble"],
       ["ACTION_LIST", "Remove Servant of Flame"],
@@ -112,51 +106,51 @@
       ["ACTION_LIST", "Queen of Ash - Add Doom For 3+ Players"],
       ["SCENARIO_INIT_CONTINUE", null]
     ],
-    "Place Random Sewer 1": [
-      [
-        "DEFINE",
-        "$SEWER_ID",
-        ["GET_CARD_ID", "randomSewers", 0, 0]
-      ],
-      ["MOVE_CARD", "$SEWER_ID", "sharedLocations", -1],
-      ["DO_SET_CARD_LOCATION", "$SEWER_ID", 5, 50]
-    ],
-    "Place Random Sewer 2": [
-      [
-        "DEFINE",
-        "$SEWER_ID",
-        ["GET_CARD_ID", "randomSewers", 0, 0]
-      ],
-      ["MOVE_CARD", "$SEWER_ID", "sharedLocations", -1],
-      ["DO_SET_CARD_LOCATION", "$SEWER_ID", 20, 50]
-    ],
-    "Place Random Sewer 3": [
-      [
-        "DEFINE",
-        "$SEWER_ID",
-        ["GET_CARD_ID", "randomSewers", 0, 0]
-      ],
-      ["MOVE_CARD", "$SEWER_ID", "sharedLocations", -1],
-      ["DO_SET_CARD_LOCATION", "$SEWER_ID", 35, 50]
-    ],
-    "Place Random Sewer 4": [
-      [
-        "DEFINE",
-        "$SEWER_ID",
-        ["GET_CARD_ID", "randomSewers", 0, 0]
-      ],
-      ["MOVE_CARD", "$SEWER_ID", "sharedLocations", -1],
-      ["DO_SET_CARD_LOCATION", "$SEWER_ID", 50, 50]
-    ],
-    "Place Random Sewer 5": [
-      [
-        "DEFINE",
-        "$SEWER_ID",
-        ["GET_CARD_ID", "randomSewers", 0, 0]
-      ],
-      ["MOVE_CARD", "$SEWER_ID", "sharedLocations", -1],
-      ["DO_SET_CARD_LOCATION", "$SEWER_ID", 65, 50]
-    ],
+    //"Place Random Sewer 1": [
+    //  [
+    //    "DEFINE",
+    //    "$SEWER_ID",
+    //    ["GET_CARD_ID", "randomSewers", 0, 0]
+    //  ],
+    //  ["MOVE_CARD", "$SEWER_ID", "sharedLocations", -1],
+    //  ["DO_SET_CARD_LOCATION", "$SEWER_ID", 5, 50]
+    //],
+    //"Place Random Sewer 2": [
+    //  [
+    //    "DEFINE",
+    //    "$SEWER_ID",
+    //    ["GET_CARD_ID", "randomSewers", 0, 0]
+    //  ],
+    //  ["MOVE_CARD", "$SEWER_ID", "sharedLocations", -1],
+    //  ["DO_SET_CARD_LOCATION", "$SEWER_ID", 20, 50]
+    //],
+    //"Place Random Sewer 3": [
+    //  [
+    //    "DEFINE",
+    //    "$SEWER_ID",
+    //    ["GET_CARD_ID", "randomSewers", 0, 0]
+    //  ],
+    //  ["MOVE_CARD", "$SEWER_ID", "sharedLocations", -1],
+    //  ["DO_SET_CARD_LOCATION", "$SEWER_ID", 35, 50]
+    //],
+    //"Place Random Sewer 4": [
+    //  [
+    //    "DEFINE",
+    //    "$SEWER_ID",
+    //    ["GET_CARD_ID", "randomSewers", 0, 0]
+    //  ],
+    //  ["MOVE_CARD", "$SEWER_ID", "sharedLocations", -1],
+    //  ["DO_SET_CARD_LOCATION", "$SEWER_ID", 50, 50]
+    //],
+    //"Place Random Sewer 5": [
+    //  [
+    //    "DEFINE",
+    //    "$SEWER_ID",
+    //    ["GET_CARD_ID", "randomSewers", 0, 0]
+    //  ],
+    //  ["MOVE_CARD", "$SEWER_ID", "sharedLocations", -1],
+    //  ["DO_SET_CARD_LOCATION", "$SEWER_ID", 65, 50]
+    //],
     "Place Cultists Per Investigator": [
       [
         "DEFINE",
@@ -199,47 +193,106 @@
         ["ACTION_LIST", "Place Random Cultist at Sewer 4"]
       ]
     ],
-    "Setup Stirred Up Trouble Cultists": [
-      ["LOAD_CARDS", "Stirred Up Trouble Cultist Pool"],
-      ["SHUFFLE_GROUP", "randomCultists"],
-      ["ACTION_LIST", "Place Cultists Per Investigator"]
+
+    // Collect cultists into a pool, shuffle, and then place one at each sewer based on number of players
+    "Elegant place random cultists": [
+      ["LOG", "Shuffling Cultists for Stirred Up Trouble."],
+      ["VAR", "$CULTISTS", ["SHUFFLE_LIST", ["LIST", "12121", "12121", "12188", "12188", "12188", "12189"]]],
+      ["VAR", "$SEWERS", ["SHUFFLE_LIST", ["LIST", "12183", "12184", "12185", "12186", "12187"]]],
+      ["VAR", "$NUM_INVESTIGATORS", "$GAME.arkham.numPlayers"],
+      ["LOGF", "Sewer: {0}", "$SEWERS.[0]"],
+      ["LOGF", "Sewer: {0}", "$SEWERS.[1]"],
+      ["LOGF", "Sewer: {0}", "$SEWERS.[2]"],
+      ["LOGF", "Sewer: {0}", "$SEWERS.[3]"],
+      ["LOGF", "Sewer: {0}", "$SEWERS.[4]"],
+      ["LOGF", "Cultist: {0}", "$CULTISTS.[0]"],
+      ["LOGF", "Cultist: {0}", "$CULTISTS.[1]"],
+      ["LOGF", "Cultist: {0}", "$CULTISTS.[2]"],
+      ["LOGF", "Cultist: {0}", "$CULTISTS.[3]"],
+      ["LOGF", "Cultist: {0}", "$CULTISTS.[4]"],
+      ["LOGF", "Cultist: {0}", "$CULTISTS.[5]"],
+
+      //["COND", ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 1], [
+      //  ["DO_SPAWN_ENCOUNTER_AT_LOCATION_SCN", "$CULTISTS.[0]", "$SEWERS.[0]", 0, -20, 1]
+      //]],
+      //["COND", ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 2], [
+      //  ["DO_SPAWN_ENCOUNTER_AT_LOCATION_SCN", "$CULTISTS.[1]", "$SEWERS.[1]", 0, -20, 1]
+      //]],
+      //["COND", ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 3], [
+      //  ["DO_SPAWN_ENCOUNTER_AT_LOCATION_SCN", "$CULTISTS.[2]", "$SEWERS.[2]", 0, -20, 1]
+      //]],
+      //["COND", ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 4], [
+      //  ["DO_SPAWN_ENCOUNTER_AT_LOCATION_SCN", "$CULTISTS.[3]", "$SEWERS.[3]", 0, -20, 1]
+      //]]
+      ["COND", 
+        ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 1], 
+        ["DO_SPAWN_ENCOUNTER_AT_LOCATION_SCN", "$CULTISTS.[0]", "$SEWERS.[0]", 0, -20, 1],
+        ["TRUE"],
+        ["LOG", "Not enough investigators to place cultist at sewer 1."]
+      ],      
+      ["COND",
+        ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 2],
+        ["DO_SPAWN_ENCOUNTER_AT_LOCATION_SCN", "$CULTISTS.[1]", "$SEWERS.[1]", 0, -20, 1],
+        ["TRUE"],
+        ["LOG", "Not enough investigators to place cultist at sewer 2."]
+      ],      
+      ["COND",
+        ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 3], 
+        ["DO_SPAWN_ENCOUNTER_AT_LOCATION_SCN", "$CULTISTS.[2]", "$SEWERS.[2]", 0, -20, 1],
+        ["TRUE"],
+        ["LOG", "Not enough investigators to place cultist at sewer 3."]
+      ],      
+      ["COND",
+        ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 4],
+        ["DO_SPAWN_ENCOUNTER_AT_LOCATION_SCN", "$CULTISTS.[3]", "$SEWERS.[3]", 0, -20, 1],
+        ["TRUE"],
+        ["LOG", "Not enough investigators to place cultist at sewer 4."]
+      ]
     ],
-    "Place Random Cultist at Sewer 1": [
-      [
-        "DEFINE",
-        "$CULTIST_ID",
-        ["GET_CARD_ID", "randomCultists", 0, 0]
-      ],
-      ["MOVE_CARD", "$CULTIST_ID", "sharedLocations", -1],
-      ["DO_SET_CARD_LOCATION", "$CULTIST_ID", 5, 30]
+    "Elegant place random sewers": [
+      ["VAR", "$SEWERS", ["SHUFFLE_LIST", ["LIST", "12183", "12184", "12185", "12186", "12187"]]],  //Infested Pipes, Overgrown Tunnels, Flooded Crypt, SMuggler's Cache, Toxic Waste Pit
+      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$SEWERS.[0]", 5, 50],
+      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$SEWERS.[1]", 20, 50],
+      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$SEWERS.[2]", 35, 50],
+      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$SEWERS.[3]", 50, 50],
+      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$SEWERS.[4]", 65, 50]
     ],
-    "Place Random Cultist at Sewer 2": [
-      [
-        "DEFINE",
-        "$CULTIST_ID",
-        ["GET_CARD_ID", "randomCultists", 0, 0]
-      ],
-      ["MOVE_CARD", "$CULTIST_ID", "sharedLocations", -1],
-      ["DO_SET_CARD_LOCATION", "$CULTIST_ID", 20, 30]
-    ],
-    "Place Random Cultist at Sewer 3": [
-      [
-        "DEFINE",
-        "$CULTIST_ID",
-        ["GET_CARD_ID", "randomCultists", 0, 0]
-      ],
-      ["MOVE_CARD", "$CULTIST_ID", "sharedLocations", -1],
-      ["DO_SET_CARD_LOCATION", "$CULTIST_ID", 50, 30]
-    ],
-    "Place Random Cultist at Sewer 4": [
-      [
-        "DEFINE",
-        "$CULTIST_ID",
-        ["GET_CARD_ID", "randomCultists", 0, 0]
-      ],
-      ["MOVE_CARD", "$CULTIST_ID", "sharedLocations", -1],
-      ["DO_SET_CARD_LOCATION", "$CULTIST_ID", 65, 30]
-    ],
+    //"Place Random Cultist at Sewer 1": [
+    //  [
+    //    "DEFINE",
+    //    "$CULTIST_ID",
+    //    ["GET_CARD_ID", "randomCultists", 0, 0]
+    //  ],
+    //  ["MOVE_CARD", "$CULTIST_ID", "sharedLocations", -1],
+    //  ["DO_SET_CARD_LOCATION", "$CULTIST_ID", 5, 30]
+    //],
+    //"Place Random Cultist at Sewer 2": [
+    //  [
+    //    "DEFINE",
+    //    "$CULTIST_ID",
+    //    ["GET_CARD_ID", "randomCultists", 0, 0]
+    //  ],
+    //  ["MOVE_CARD", "$CULTIST_ID", "sharedLocations", -1],
+    //  ["DO_SET_CARD_LOCATION", "$CULTIST_ID", 20, 30]
+    //],
+    //"Place Random Cultist at Sewer 3": [
+    //  [
+    //    "DEFINE",
+    //    "$CULTIST_ID",
+    //    ["GET_CARD_ID", "randomCultists", 0, 0]
+    //  ],
+    //  ["MOVE_CARD", "$CULTIST_ID", "sharedLocations", -1],
+    //  ["DO_SET_CARD_LOCATION", "$CULTIST_ID", 50, 30]
+    //],
+    //"Place Random Cultist at Sewer 4": [
+    //  [
+    //    "DEFINE",
+    //    "$CULTIST_ID",
+    //    ["GET_CARD_ID", "randomCultists", 0, 0]
+    //  ],
+    //  ["MOVE_CARD", "$CULTIST_ID", "sharedLocations", -1],
+    //  ["DO_SET_CARD_LOCATION", "$CULTIST_ID", 65, 30]
+    //],
     "Queen of Ash - Arkham Scoured": [
       [
         "COND",
@@ -252,16 +305,15 @@
       [
         "COND",
         ["EQUAL", "$GAME.arkham.scenarioAnswer2", "A"],
-        ["ACTION_LIST", "Setup Stirred Up Trouble Cultists"]
+        ["ACTION_LIST", "Elegant place random cultists"]
       ]
     ],
     "Remove Servant of Flame": [
       [
         "COND",
         ["EQUAL", "$GAME.arkham.scenarioAnswer3", "A"],
-        ["ACTION_LIST", "Remove Servant of Flame Actions"]
-        //["EQUAL", "$GAME.arkham.scenarioAnswer3", "B"],
-        //["ACTION_LIST", "Keep Servant of Flame Set Aside"]
+        //["ACTION_LIST", "Remove Servant of Flame Actions"]
+        ["DO_MOVE_NAMED_DECK_CARDS_SCN", "Servant of Flame: A Willing Sacrifice", "sharedNotInPlay", 1, "sharedRemoved"]
       ]
     ],
     "Who is the Harbinger of Elokoss": [
@@ -289,22 +341,22 @@
       ]
     ],
     "David is HoE": [
-      ["LOGF", "David is the Harbinger of Elokoss."]
+      ["LOG", "David is the Harbinger of Elokoss."]
     ],
     "Cornelia is HoE": [
-      ["LOGF", "Cornelia is the Harbinger of Elokoss."]
+      ["LOG", "Cornelia is the Harbinger of Elokoss."]
     ],
     "Naomi is HoE": [
-      ["LOGF", "Naomi is the Harbinger of Elokoss."]
+      ["LOG", "Naomi is the Harbinger of Elokoss."]
     ],
     "Earl is HoE": [
-      ["LOGF", "Earl is the Harbinger of Elokoss.oE"]
+      ["LOG", "Earl is the Harbinger of Elokoss.oE"]
     ],
     "Abigail is HoE": [
-      ["LOGF", "Abigail is the Harbinger of Elokoss."]
+      ["LOG", "Abigail is the Harbinger of Elokoss."]
     ],
     "Margaret is HoE": [
-      ["LOGF", "Margaret is the Harbinger of Elokoss."]
+      ["LOG", "Margaret is the Harbinger of Elokoss."]
     ],
     "Add Easy Chaos Tokens": [
       ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_elder_thing", 1]
@@ -339,31 +391,9 @@
         ]
       ]
     ],
-    "Remove Servant of Flame Actions": [
-      //[
-      //  "DEFINE",
-      //  "$CARD_ID",
-      //  ["GET_CARD_ID", "servantOfFlameSetAside", 0, 0]
-      //],
-      //[
-      //  "COND",
-      //  ["NOT_EQUAL", "$CARD_ID", null],
-      //  ["MOVE_CARD", "$CARD_ID", "sharedRemoved", -1]
-      //],
-      ["DO_MOVE_NAMED_DECK_CARDS_SCN", "Servant of Flame: A Willing Sacrifice", "sharedNotInPlay", 1, "sharedRemoved"]
-    ],
-    "Keep Servant of Flame Set Aside": [
-      [
-        "DEFINE",
-        "$CARD_ID",
-        ["GET_CARD_ID", "servantOfFlameSetAside", 0, 0]
-      ],
-      [
-        "COND",
-        ["NOT_EQUAL", "$CARD_ID", null],
-        ["MOVE_CARD", "$CARD_ID", "sharedNotInPlay", -1]
-      ]
-    ],
+    //"Remove Servant of Flame Actions": [
+    //  ["DO_MOVE_NAMED_DECK_CARDS_SCN", "Servant of Flame: A Willing Sacrifice", "sharedNotInPlay", 1, "sharedRemoved"]
+    //],
     "Queen of Ash - Add Doom For 3+ Players": [
       [
         "COND",
