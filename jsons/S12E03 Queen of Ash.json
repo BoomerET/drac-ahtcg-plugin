@@ -24,7 +24,7 @@
         { "databaseId": "12185", "quantity": 1, "loadGroupId": "sharedLocations", "left": "35%", "top": "50%" },
         { "databaseId": "12186", "quantity": 1, "loadGroupId": "sharedLocations", "left": "50%", "top": "50%" },
         { "databaseId": "12187", "quantity": 1, "loadGroupId": "sharedLocations", "left": "65%", "top": "50%" },
-        { "databaseId": "12180", "quantity": 1, "loadGroupId": "servantOfFlameSetAside" },
+        { "databaseId": "12180", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
         { "databaseId": "12129", "quantity": 5, "loadGroupId": "sharedNotInPlay" },
         { "databaseId": "12175", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
         { "databaseId": "12177", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
@@ -107,9 +107,9 @@
       ["ACTION_LIST", "Queen of Ash - Arkham Scoured"],
       ["ACTION_LIST", "Stirred up trouble"],
       ["ACTION_LIST", "Remove Servant of Flame"],
-      ["ACTION_LIST", "Queen of Ash - Add Doom For 3+ Players"],
-      ["ACTION_LIST", "Queen of Ash Cult Unknown Whereabouts"],
       ["ACTION_LIST", "Who is the Harbinger of Elokoss"],
+      ["ACTION_LIST", "Queen of Ash Cult Unknown Whereabouts"],
+      ["ACTION_LIST", "Queen of Ash - Add Doom For 3+ Players"],
       ["SCENARIO_INIT_CONTINUE", null]
     ],
     "Place Random Sewer 1": [
@@ -259,9 +259,9 @@
       [
         "COND",
         ["EQUAL", "$GAME.arkham.scenarioAnswer3", "A"],
-        ["ACTION_LIST", "Remove Servant of Flame Actions"],
-        ["EQUAL", "$GAME.arkham.scenarioAnswer3", "B"],
-        ["ACTION_LIST", "Keep Servant of Flame Set Aside"]
+        ["ACTION_LIST", "Remove Servant of Flame Actions"]
+        //["EQUAL", "$GAME.arkham.scenarioAnswer3", "B"],
+        //["ACTION_LIST", "Keep Servant of Flame Set Aside"]
       ]
     ],
     "Who is the Harbinger of Elokoss": [
@@ -280,7 +280,6 @@
         ["EQUAL", "$GAME.arkham.scenarioAnswer4", "F"],
         ["ACTION_LIST", "Margaret is HoE"]
       ]
-      //["ACTION_LIST", "Queen of Ash Scenario Early Init 5"]
     ],
     "Queen of Ash Cult Unknown Whereabouts": [
       [
@@ -341,16 +340,17 @@
       ]
     ],
     "Remove Servant of Flame Actions": [
-      [
-        "DEFINE",
-        "$CARD_ID",
-        ["GET_CARD_ID", "servantOfFlameSetAside", 0, 0]
-      ],
-      [
-        "COND",
-        ["NOT_EQUAL", "$CARD_ID", null],
-        ["MOVE_CARD", "$CARD_ID", "sharedRemoved", -1]
-      ]
+      //[
+      //  "DEFINE",
+      //  "$CARD_ID",
+      //  ["GET_CARD_ID", "servantOfFlameSetAside", 0, 0]
+      //],
+      //[
+      //  "COND",
+      //  ["NOT_EQUAL", "$CARD_ID", null],
+      //  ["MOVE_CARD", "$CARD_ID", "sharedRemoved", -1]
+      //],
+      ["DO_MOVE_NAMED_DECK_CARDS_SCN", "Servant of Flame: A Willing Sacrifice", "sharedNotInPlay", 1, "sharedRemoved"]
     ],
     "Keep Servant of Flame Set Aside": [
       [
