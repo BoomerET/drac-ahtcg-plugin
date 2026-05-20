@@ -151,103 +151,24 @@
     //  ["MOVE_CARD", "$SEWER_ID", "sharedLocations", -1],
     //  ["DO_SET_CARD_LOCATION", "$SEWER_ID", 65, 50]
     //],
-    "Place Cultists Per Investigator": [
-      [
-        "DEFINE",
-        "$INVESTIGATOR_ID",
-        ["GET_CARD_ID", "player1Investigator", 0, 0]
-      ],
-      [
-        "COND",
-        ["NOT_EQUAL", "$INVESTIGATOR_ID", null],
-        ["ACTION_LIST", "Place Random Cultist at Sewer 1"]
-      ],
-      [
-        "DEFINE",
-        "$INVESTIGATOR_ID",
-        ["GET_CARD_ID", "player2Investigator", 0, 0]
-      ],
-      [
-        "COND",
-        ["NOT_EQUAL", "$INVESTIGATOR_ID", null],
-        ["ACTION_LIST", "Place Random Cultist at Sewer 2"]
-      ],
-      [
-        "DEFINE",
-        "$INVESTIGATOR_ID",
-        ["GET_CARD_ID", "player3Investigator", 0, 0]
-      ],
-      [
-        "COND",
-        ["NOT_EQUAL", "$INVESTIGATOR_ID", null],
-        ["ACTION_LIST", "Place Random Cultist at Sewer 3"]
-      ],
-      [
-        "DEFINE",
-        "$INVESTIGATOR_ID",
-        ["GET_CARD_ID", "player4Investigator", 0, 0]
-      ],
-      [
-        "COND",
-        ["NOT_EQUAL", "$INVESTIGATOR_ID", null],
-        ["ACTION_LIST", "Place Random Cultist at Sewer 4"]
-      ]
-    ],
+    
 
     // Collect cultists into a pool, shuffle, and then place one at each sewer based on number of players
     "Elegant place random cultists": [
       ["LOG", "Shuffling Cultists for Stirred Up Trouble."],
       ["VAR", "$CULTISTS", ["SHUFFLE_LIST", ["LIST", "12121", "12121", "12188", "12188", "12188", "12189"]]],
-      ["VAR", "$SEWERS", ["SHUFFLE_LIST", ["LIST", "12183", "12184", "12185", "12186", "12187"]]],
+      //["VAR", "$SEWERS", ["SHUFFLE_LIST", ["LIST", "12183", "12184", "12185", "12186", "12187"]]],
       ["VAR", "$NUM_INVESTIGATORS", "$GAME.arkham.numPlayers"],
-      ["LOGF", "Sewer: {0}", "$SEWERS.[0]"],
-      ["LOGF", "Sewer: {0}", "$SEWERS.[1]"],
-      ["LOGF", "Sewer: {0}", "$SEWERS.[2]"],
-      ["LOGF", "Sewer: {0}", "$SEWERS.[3]"],
-      ["LOGF", "Sewer: {0}", "$SEWERS.[4]"],
-      ["LOGF", "Cultist: {0}", "$CULTISTS.[0]"],
-      ["LOGF", "Cultist: {0}", "$CULTISTS.[1]"],
-      ["LOGF", "Cultist: {0}", "$CULTISTS.[2]"],
-      ["LOGF", "Cultist: {0}", "$CULTISTS.[3]"],
-      ["LOGF", "Cultist: {0}", "$CULTISTS.[4]"],
-      ["LOGF", "Cultist: {0}", "$CULTISTS.[5]"],
 
-      //["COND", ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 1], [
-      //  ["DO_SPAWN_ENCOUNTER_AT_LOCATION_SCN", "$CULTISTS.[0]", "$SEWERS.[0]", 0, -20, 1]
-      //]],
-      //["COND", ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 2], [
-      //  ["DO_SPAWN_ENCOUNTER_AT_LOCATION_SCN", "$CULTISTS.[1]", "$SEWERS.[1]", 0, -20, 1]
-      //]],
-      //["COND", ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 3], [
-      //  ["DO_SPAWN_ENCOUNTER_AT_LOCATION_SCN", "$CULTISTS.[2]", "$SEWERS.[2]", 0, -20, 1]
-      //]],
-      //["COND", ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 4], [
-      //  ["DO_SPAWN_ENCOUNTER_AT_LOCATION_SCN", "$CULTISTS.[3]", "$SEWERS.[3]", 0, -20, 1]
-      //]]
-      ["COND", 
-        ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 1], 
-        ["DO_SPAWN_ENCOUNTER_AT_LOCATION_SCN", "$CULTISTS.[0]", "$SEWERS.[0]", 0, -20, 1],
-        ["TRUE"],
-        ["LOG", "Not enough investigators to place cultist at sewer 1."]
-      ],      
-      ["COND",
-        ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 2],
-        ["DO_SPAWN_ENCOUNTER_AT_LOCATION_SCN", "$CULTISTS.[1]", "$SEWERS.[1]", 0, -20, 1],
-        ["TRUE"],
-        ["LOG", "Not enough investigators to place cultist at sewer 2."]
-      ],      
-      ["COND",
-        ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 3], 
-        ["DO_SPAWN_ENCOUNTER_AT_LOCATION_SCN", "$CULTISTS.[2]", "$SEWERS.[2]", 0, -20, 1],
-        ["TRUE"],
-        ["LOG", "Not enough investigators to place cultist at sewer 3."]
-      ],      
-      ["COND",
-        ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 4],
-        ["DO_SPAWN_ENCOUNTER_AT_LOCATION_SCN", "$CULTISTS.[3]", "$SEWERS.[3]", 0, -20, 1],
-        ["TRUE"],
-        ["LOG", "Not enough investigators to place cultist at sewer 4."]
+      [
+        "COND",
+        ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 1],
+        ["DO_SPAWN_ENCOUNTER_SCN", "$CULTISTS.[0]", 5, 30, 1]
+      //  [
+      //    ["DO_SPAWN_ENCOUNTER_AT_LOCATION_SCN", "$CULTISTS.[0]", "$GAME.arkham.locationName1", 0, -20, 1]
+      //  ]
       ]
+
     ],
     "Elegant place random sewers": [
       ["VAR", "$SEWERS", ["SHUFFLE_LIST", ["LIST", "12183", "12184", "12185", "12186", "12187"]]],  //Infested Pipes, Overgrown Tunnels, Flooded Crypt, SMuggler's Cache, Toxic Waste Pit
