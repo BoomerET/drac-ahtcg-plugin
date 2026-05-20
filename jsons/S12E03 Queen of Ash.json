@@ -25,8 +25,8 @@
         { "databaseId": "12186", "quantity": 1, "loadGroupId": "sharedLocations", "left": "50%", "top": "50%" },
         { "databaseId": "12187", "quantity": 1, "loadGroupId": "sharedLocations", "left": "65%", "top": "50%" },
         { "databaseId": "12180", "quantity": 1, "loadGroupId": "servantOfFlameSetAside" },
-        { "databaseId": "12175", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
         { "databaseId": "12129", "quantity": 5, "loadGroupId": "sharedNotInPlay" },
+        { "databaseId": "12175", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
         { "databaseId": "12177", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
         { "databaseId": "12178", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
         { "databaseId": "12179", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
@@ -56,13 +56,19 @@
   },
   "actionLists": {
     "Queen of Ash Scenario Early Init 1": [
-      ["CALCULATOR_PROMPT", "$GAME.firstPlayer", "Scoured Arkham for Answers? 1 = Yes, 2 = No", 1, 2, 1, "ARKHAM_SCOURED_CALLBACK", "$GAME.firstPlayer", "", ""]
+      ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Check Campaign Log.", ["LIST", "Scoured Arkham for answers.", "The above is NOT true."], "Queen of Ash Scenario Early Init Continue 1"]
     ],
     "Queen of Ash Scenario Early Init 2": [
-      ["CALCULATOR_PROMPT", "$GAME.firstPlayer", "Stirred up trouble? 1 = Yes, 2 = No", 1, 2, 1, "STIRRED_UP_TROUBLE_CALLBACK", "$GAME.firstPlayer", "", ""]
+      ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Check Campaign Log.", ["LIST", "Stirred up trouble.", "The above is NOT true."], "Queen of Ash Scenario Early Init Continue 2"]
     ],
     "Queen of Ash Scenario Early Init 3": [
-      ["CALCULATOR_PROMPT", "$GAME.firstPlayer", "Killed the Servant of Flame? 1 = Yes, 2 = No", 1, 2, 1, "SERVANT_OF_FLAME_KILLED_CALLBACK", "$GAME.firstPlayer", "", ""]
+      ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Check Campaign Log.", ["LIST", "Killed the Servant of Flame.", "The above is NOT true."], "Queen of Ash Scenario Early Init Continue 3"]
+    ],
+    "Queen of Ash Scenario Early Init 4": [
+      ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Who is the Harbinger of Elokoss.", ["LIST", "David Renfield", "Cornelia Akely", "Naomi O'Bannion", "Sgt. Earl Monroe", "Abigail Foreman", "Margaret Lui"], "Queen of Ash Scenario Early Init Continue 4"]
+    ],
+    "Queen of Ash Scenario Early Init 5": [
+      ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Check Campaign Log.", ["LIST", "Discovered cult's whereabouts.", "The above is NOT true."], "Log so we can come back"]
     ],
     "Queen of Ash Scenario Init": [
       ["DO_LOAD_CARDS_SCN", "Queen of Ash"],
@@ -76,27 +82,6 @@
       ],
       ["SET", "/arkham/servantOfFlameCardId", "$SERVANT_CARD_ID"],
       ["DO_SET_SPAWN_LOCATION", "12182", 45, 43],
-      [
-        "COND",
-        ["EQUAL", "$GAME.arkham.scenarioArkhamScouredState", 1],
-        ["ACTION_LIST", "Add 1 Clue to Each Investigator"],
-        ["TRUE"],
-        ["LOG", "No bonus clues added."]
-      ],
-      [
-        "COND",
-        ["EQUAL", "$GAME.arkham.scenarioStirredUpTroubleState", 1],
-        ["ACTION_LIST", "Setup Stirred Up Trouble Cultists"],
-        ["TRUE"],
-        ["LOG", "The investigators did not stir up trouble."]
-      ],
-      [
-        "COND",
-        ["EQUAL", "$GAME.arkham.servantOfFlameKilled", 1],
-        ["ACTION_LIST", "Remove Servant of Flame"],
-        ["TRUE"],
-        ["ACTION_LIST", "Keep Servant of Flame Set Aside"]
-      ],
       ["DO_LOAD_CARDS_SCN", "Cultists"],
       ["DO_LOAD_CARDS_SCN", "Reeking Decay"],
       ["DO_LOAD_CARDS_SCN", "Torment"],
@@ -120,6 +105,7 @@
       ["ACTION_LIST", "Place Random Sewer 4"],
       ["ACTION_LIST", "Place Random Sewer 5"],
       ["ACTION_LIST", "Queen of Ash - Add Doom For 3+ Players"],
+      ["ACTION_LIST", "Queen of Ash Scenario Early Init Continue 5"],
       ["SCENARIO_INIT_CONTINUE", null]
     ],
     "Place Random Sewer 1": [
@@ -251,13 +237,75 @@
       ["DO_SET_CARD_LOCATION", "$CULTIST_ID", 65, 30]
     ],
     "Queen of Ash Scenario Early Init Continue 1": [
+      [
+        "COND",
+        ["EQUAL", "$GAME.arkham.scenarioAnswer1", "A"],
+        ["ACTION_LIST", "Add 1 Clue to Each Investigator"]
+      ],
       ["ACTION_LIST", "Queen of Ash Scenario Early Init 2"]
     ],
     "Queen of Ash Scenario Early Init Continue 2": [
+      [
+        "COND",
+        ["EQUAL", "$GAME.arkham.scenarioAnswer2", "A"],
+        ["ACTION_LIST", "Setup Stirred Up Trouble Cultists"]
+      ],
       ["ACTION_LIST", "Queen of Ash Scenario Early Init 3"]
     ],
     "Queen of Ash Scenario Early Init Continue 3": [
+      [
+        "COND",
+        ["EQUAL", "$GAME.arkham.scenarioAnswer3", "A"],
+        ["ACTION_LIST", "Remove Servant of Flame"]
+      ],
+      ["ACTION_LIST", "Queen of Ash Scenario Early Init 4"]
+    ],
+    "Queen of Ash Scenario Early Init Continue 4": [
+      [
+        "COND",
+        ["EQUAL", "$GAME.arkham.scenarioAnswer4", "A"],
+        ["ACTION_LIST", "David is HoE"],
+        ["EQUAL", "$GAME.arkham.scenarioAnswer4", "B"],
+        ["ACTION_LIST", "Cornelia is HoE"],
+        ["EQUAL", "$GAME.arkham.scenarioAnswer4", "C"],
+        ["ACTION_LIST", "Naomi is HoE"],
+        ["EQUAL", "$GAME.arkham.scenarioAnswer4", "D"],
+        ["ACTION_LIST", "Earl is HoE"],
+        ["EQUAL", "$GAME.arkham.scenarioAnswer4", "E"],
+        ["ACTION_LIST", "Abigail is HoE"],
+        ["EQUAL", "$GAME.arkham.scenarioAnswer4", "F"],
+        ["ACTION_LIST", "Margaret is HoE"]
+      ],
+      ["ACTION_LIST", "Queen of Ash Scenario Early Init 5"]
+    ],
+    "Queen of Ash Scenario Early Init Continue 5": [
+      [
+        "COND",
+        ["EQUAL", "$GAME.arkham.scenarioAnswer5", "A"],
+        ["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1]
+      ]
+    ],
+    "Log so we can come back": [
+      ["LOG", "This is a log entry to help us find where we are in the scenario when we come back to it later."],
       ["ACTION_LIST", "Queen of Ash Scenario Init"]
+    ],
+    "David is HoE": [
+      ["LOGF", "David is the Harbinger of Elokoss."]
+    ],
+    "Cornelia is HoE": [
+      ["LOGF", "Cornelia is the Harbinger of Elokoss."]
+    ],
+    "Naomi is HoE": [
+      ["LOGF", "Naomi is the Harbinger of Elokoss."]
+    ],
+    "Earl is HoE": [
+      ["LOGF", "Earl is the Harbinger of Elokoss.oE"]
+    ],
+    "Abigail is HoE": [
+      ["LOGF", "Abigail is the Harbinger of Elokoss."]
+    ],
+    "Margaret is HoE": [
+      ["LOGF", "Margaret is the Harbinger of Elokoss."]
     ],
     "Add Easy Chaos Tokens": [
       ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_elder_thing", 1]
@@ -321,99 +369,12 @@
       ]
     ],
     "Queen of Ash - Add Doom For 3+ Players": [
-      ["VAR", "$PLAYER_COUNT", 0],
-      [
-        "DEFINE",
-        "$INVESTIGATOR_ID",
-        ["GET_CARD_ID", "player1Investigator", 0, 0]
-      ],
       [
         "COND",
-        ["NOT_EQUAL", "$INVESTIGATOR_ID", null],
-        ["INCREASE_VAR", "$PLAYER_COUNT", 1]
-      ],
-      [
-        "DEFINE",
-        "$INVESTIGATOR_ID",
-        ["GET_CARD_ID", "player2Investigator", 0, 0]
-      ],
-      [
-        "COND",
-        ["NOT_EQUAL", "$INVESTIGATOR_ID", null],
-        ["INCREASE_VAR", "$PLAYER_COUNT", 1]
-      ],
-      [
-        "DEFINE",
-        "$INVESTIGATOR_ID",
-        ["GET_CARD_ID", "player3Investigator", 0, 0]
-      ],
-      [
-        "COND",
-        ["NOT_EQUAL", "$INVESTIGATOR_ID", null],
-        ["INCREASE_VAR", "$PLAYER_COUNT", 1]
-      ],
-      [
-        "DEFINE",
-        "$INVESTIGATOR_ID",
-        ["GET_CARD_ID", "player4Investigator", 0, 0]
-      ],
-      [
-        "COND",
-        ["NOT_EQUAL", "$INVESTIGATOR_ID", null],
-        ["INCREASE_VAR", "$PLAYER_COUNT", 1]
-      ],
-      [
-        "COND",
-        ["GREATER_EQUAL", "$PLAYER_COUNT", 3],
+        ["GREATER_THAN", "$GAME.arkham.numPlayers", 2],
         ["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1]
       ]
     ]
-  },
-  "functions": {
-    "ARKHAM_SCOURED_CALLBACK": {
-      "args": ["$TARGET_PLAYER", "$TARGET_CARD_ID", "$ARGS", "$ACTOR_PLAYER", "$SELECTED_VALUE"],
-      "code": [
-        ["VALIDATE_PLAYER", "$TARGET_PLAYER", "ARKHAM_SCOURED_CALLBACK.TARGET_PLAYER"],
-        ["VALIDATE_NOT_NULL", "$ARGS", "ARKHAM_SCOURED_CALLBACK.ARGS"],
-        ["VALIDATE_NOT_EMPTY", "$SELECTED_VALUE", "ARKHAM_SCOURED_CALLBACK.SELECTED_VALUE"],
-        [
-          "VAR",
-          "$VALUE",
-          ["CALC", "{{$SELECTED_VALUE}}"]
-        ],
-        ["SET", "/arkham/scenarioArkhamScouredState", "$VALUE"],
-        ["LOGF", "{0}{1} set Arkham Scoured state to {2}.", "$ARGS", "$TARGET_PLAYER", "$VALUE"],
-        ["ACTION_LIST", "Queen of Ash Scenario Early Init Continue 1"]
-      ]
-    },
-    "STIRRED_UP_TROUBLE_CALLBACK": {
-      "args": ["$TARGET_PLAYER", "$TARGET_CARD_ID", "$ARGS", "$ACTOR_PLAYER", "$SELECTED_VALUE"],
-      "code": [
-        ["VALIDATE_PLAYER", "$TARGET_PLAYER", "STIRRED_UP_TROUBLE_CALLBACK.TARGET_PLAYER"],
-        ["VALIDATE_NOT_NULL", "$ARGS", "STIRRED_UP_TROUBLE_CALLBACK.ARGS"],
-        ["VALIDATE_NOT_EMPTY", "$SELECTED_VALUE", "STIRRED_UP_TROUBLE_CALLBACK.SELECTED_VALUE"],
-        [
-          "VAR",
-          "$VALUE",
-          ["CALC", "{{$SELECTED_VALUE}}"]
-        ],
-        ["SET", "/arkham/scenarioStirredUpTroubleState", "$VALUE"],
-        ["LOGF", "{0}{1} set Stirred up Trouble state to {2}.", "$ARGS", "$TARGET_PLAYER", "$VALUE"],
-        ["ACTION_LIST", "Queen of Ash Scenario Early Init Continue 2"]
-      ]
-    },
-    "SERVANT_OF_FLAME_KILLED_CALLBACK": {
-      "args": ["$TARGET_PLAYER", "$TARGET_CARD_ID", "$ARGS", "$ACTOR_PLAYER", "$SELECTED_VALUE"],
-      "code": [
-        ["VALIDATE_NOT_EMPTY", "$SELECTED_VALUE", "SERVANT_OF_FLAME_KILLED_CALLBACK.SELECTED_VALUE"],
-        [
-          "VAR",
-          "$VALUE",
-          ["CALC", "{{$SELECTED_VALUE}}"]
-        ],
-        ["SET", "/arkham/servantOfFlameKilled", "$VALUE"],
-        ["ACTION_LIST", "Queen of Ash Scenario Early Init Continue 3"]
-      ]
-    }
   }
 }
+// kate: syntax Dragnlang; scheme Arkham Dark;
