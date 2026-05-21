@@ -68,7 +68,9 @@
       ["COND", ["EQUAL", "$GAME.arkham.scenarioAnswer1", "A"], ["ACTION_LIST", "Smoke and Mirrors - Miskatonic In Flames"], ["TRUE"], ["ACTION_LIST", "Smoke and Mirrors - Miskatonic Quiet"] ]
     ],
     "Smoke and Mirrors - Attach Hidden Card to Northside": [
-      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$ARKPEEPS.[0]", 23, 13],
+      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$ARKPEEPS.[0]", 23, 13], // DO_SPAWN_ENCOUNTER_AT_LOCATION
+      // ["DO_SPAWN_ENCOUNTER_AT_LOCATION_SCN", "$ARKPEEPS.[0].id", "$GAME.arkham.scenarioHorrorInHighGearRearmostLocation", 0, -12, 0],
+      ["LOGF", "{0} spawned at Northside", "$ARKPEEPS.[0].id"],
       ["VAR", "$ENEMY_ID", "$DO_SPAWN_LOCATION_RESULT"],
       ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
     ],
