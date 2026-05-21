@@ -120,17 +120,7 @@
       "hideFromSearch": true,
       "label": "BoA_Queen of Ash",
       "cards": [
-        { "databaseId": "12176", "quantity": 2, "loadGroupId": "sharedEncounterDeck" },
-        { "databaseId": "12180", "quantity": 1, "loadGroupId": "sharedEncounterDeck" }
-      ]
-    },
-    "Cultists": {
-      "hideFromSearch": true,
-      "label": "Cultists",
-      "cards": [
-        { "databaseId": "12188", "quantity": 3, "loadGroupId": "sharedEncounterDeck" },
-        { "databaseId": "12189", "quantity": 1, "loadGroupId": "sharedEncounterDeck" },
-        { "databaseId": "12190", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
+        { "databaseId": "12176", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
       ]
     },
     "Reeking Decay": {
@@ -192,13 +182,6 @@
         { "databaseId": "12144", "quantity": 1, "loadGroupId": "peopleOfArkhamPool" }
       ]
     },
-    //"Servant of Flame Hidden Setup": {
-    //  "hideFromSearch": true,
-    //  "label": "Servant of Flame Hidden Setup",
-    //  "cards": [
-    //    { "databaseId": "12138", "quantity": 1, "loadGroupId": "peopleOfArkhamPool" }
-    //  ]
-    //},
     "Brethren of Ash Chaos Bag - Easy": {
       "hideFromSearch": true,
       "label": "Brethren of Ash Chaos Bag - Easy",
