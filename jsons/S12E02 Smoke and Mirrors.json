@@ -63,17 +63,41 @@
       //["ACTION_LIST", "Smoke and Mirrors - Attach Hidden Card to French Hill"],
       //["ACTION_LIST", "Smoke and Mirrors - Attach Hidden Card to Uptown"],
       //["ACTION_LIST", "Smoke and Mirrors - Attach Hidden Card to Waterfront District"],
-      ["VAR", "$ARKHAM_PEOPLE", ["SHUFFLE_LIST", ["LIST", "12139", "12140", "12141", "12142", "12143", "12144"]]],
-      ["VAR", "$HARBINGER", "$ARKHAM_PEOPLE.[0]"],
-      ["VAR", "$REMAINING", ["REMOVE_FIRST_FROM_LIST_BY_VALUE", "$ARKHAM_PEOPLE", "$HARBINGER"]],
-      ["VAR", "$INSERT_INDEX", ["RANDOM_INT", 0, 4]],
-      ["VAR", "$FINAL_LIST", ["INSERT_AT", "$REMAINING", "$INSERT_INDEX", "12138"]],
-      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$FINAL_LIST.[0]", 23, 13],
-      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$FINAL_LIST.[1]", 48, 13],
-      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$FINAL_LIST.[2]", 73, 46],
-      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$FINAL_LIST.[3]", 23, 76],
-      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$FINAL_LIST.[4]", 48, 76],
-      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$FINAL_LIST.[5]", 73, 76],
+      ["VAR", "$ARKPEEPS", ["SHUFFLE_LIST", ["LIST", "12139", "12140", "12141", "12142", "12143", "12144", "12138"]]],
+      ["COND", 
+        ["EQUAL", "$ARKPEEPS.[6]", "12138"], [
+          ["VAR", "$ARKPEEPS", ["LIST", "$ARKPEEPS.[6]", "$ARKPEEPS.[1]", "$ARKPEEPS.[2]", "$ARKPEEPS.[3]", "$ARKPEEPS.[4]", "$ARKPEEPS.[5]", "$ARKPEEPS.[0]"]]
+        ]
+      ],
+      ["VAR", "$HARGINGER", "$ARKPEEPS.[6]"], //Harbinger
+      
+      //["VAR", "$HARBINGER", "$ARKHAM_PEOPLE.[0]"],
+      //["VAR", "$REMAINING", ["REMOVE_FIRST_FROM_LIST_BY_VALUE", "$ARKHAM_PEOPLE", "$HARBINGER"]],
+      //["VAR", "$INSERT_INDEX", ["RANDOM_INT", 0, 4]],
+      //["VAR", "$FINAL_LIST", ["INSERT_AT", "$REMAINING", "$INSERT_INDEX", "12138"]],
+      //["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$ARKPEEPS.[0]", 23, 13],
+      //["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$ARKPEEPS.[1]", 48, 13],
+      //["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$ARKPEEPS.[2]", 73, 46],
+      //["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$ARKPEEPS.[3]", 23, 79],
+      //["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$ARKPEEPS.[4]", 48, 79],
+      //["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$ARKPEEPS.[5]", 73, 79],
+      //["DEFINE", "$HIDDEN_CARD_ID", "$ARKPEEPS.[0]"],
+      //["VAR", "$LOCATION_CARD", ["GET_NAMED_MAP_LOCATION", "Northside"]],
+      //["MOVE_CARD", "$HIDDEN_CARD_ID", "sharedLocations", -1],
+      //["DO_ATTACH_CARD", "$GAME.firstPlayer", "$HIDDEN_CARD_ID", "$LOCATION_CARD.id", false, null],
+      //["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$HIDDEN_CARD_ID", false, null],
+      //["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[0]", 1, "sharedNotInPlay"],
+      //["VAR", "$HIDDEN_CARD_ID", "$GAME.lastLoadedCardIds.[0]"],
+      //["VAR", "$LOCATION_CARD", ["GET_NAMED_MAP_LOCATION", "Northside"]],
+      //["MOVE_CARD", "$HIDDEN_CARD_ID", "sharedLocations", -1],
+      //["DO_ATTACH_CARD", "$GAME.firstPlayer", "$HIDDEN_CARD_ID", "$LOCATION_CARD.id", false, null],
+      //["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$HIDDEN_CARD_ID", false, null],
+      ["ACTION_LIST", "Smoke and Mirrors - Attach Hidden Card to Northside"],
+      ["ACTION_LIST", "Smoke and Mirrors - Attach Hidden Card to Downtown"],
+      ["ACTION_LIST", "Smoke and Mirrors - Attach Hidden Card to Southside"],
+      ["ACTION_LIST", "Smoke and Mirrors - Attach Hidden Card to French Hill"],
+      ["ACTION_LIST", "Smoke and Mirrors - Attach Hidden Card to Uptown"],
+      ["ACTION_LIST", "Smoke and Mirrors - Attach Hidden Card to Waterfront District"],
       ["DO_LOAD_CARDS_SCN", "Bad Weather"],
       ["DO_LOAD_CARDS_SCN", "Gangs of Arkham"],
       ["DO_LOAD_CARDS_SCN", "Arcane Lock"],
@@ -85,54 +109,58 @@
       ["SCENARIO_INIT_CONTINUE", null]
     ],
     "Smoke and Mirrors - Attach Hidden Card to Northside": [
-      ["DEFINE", "$HIDDEN_CARD_ID",["GET_CARD_ID", "peopleOfArkhamPool", 0, 0]],
+      ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[0]", 1, "sharedNotInPlay"],
+      ["VAR", "$HIDDEN_CARD_ID", "$GAME.lastLoadedCardIds.[0]"],
       ["VAR", "$LOCATION_CARD", ["GET_NAMED_MAP_LOCATION", "Northside"]],
       ["MOVE_CARD", "$HIDDEN_CARD_ID", "sharedLocations", -1],
       ["DO_ATTACH_CARD", "$GAME.firstPlayer", "$HIDDEN_CARD_ID", "$LOCATION_CARD.id", false, null],
       ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$HIDDEN_CARD_ID", false, null]
     ],
-    "Smoke and Mirrors - Attach Hidden Card to Downtown": [
-      ["DEFINE", "$HIDDEN_CARD_ID", ["GET_CARD_ID", "peopleOfArkhamPool", 0, 0]],
+    "Smoke and Mirrors - Attach Hidden Card to Downtown":  [
+      ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[1]", 1, "sharedNotInPlay"],
+      ["VAR", "$HIDDEN_CARD_ID", "$GAME.lastLoadedCardIds.[0]"],
       ["VAR", "$LOCATION_CARD", ["GET_NAMED_MAP_LOCATION", "Downtown"]],
       ["MOVE_CARD", "$HIDDEN_CARD_ID", "sharedLocations", -1],
       ["DO_ATTACH_CARD", "$GAME.firstPlayer", "$HIDDEN_CARD_ID", "$LOCATION_CARD.id", false, null],
       ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$HIDDEN_CARD_ID", false, null]
     ],
-    "Smoke and Mirrors - Attach Hidden Card to Southside": [
-      ["DEFINE", "$HIDDEN_CARD_ID", ["GET_CARD_ID", "peopleOfArkhamPool", 0, 0]],
+    "Smoke and Mirrors - Attach Hidden Card to Southside":  [
+      ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[2]", 1, "sharedNotInPlay"],
+      ["VAR", "$HIDDEN_CARD_ID", "$GAME.lastLoadedCardIds.[0]"],
       ["VAR", "$LOCATION_CARD", ["GET_NAMED_MAP_LOCATION", "Southside"]],
       ["MOVE_CARD", "$HIDDEN_CARD_ID", "sharedLocations", -1],
       ["DO_ATTACH_CARD", "$GAME.firstPlayer", "$HIDDEN_CARD_ID", "$LOCATION_CARD.id", false, null],
       ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$HIDDEN_CARD_ID", false, null]
     ],
-    "Smoke and Mirrors - Attach Hidden Card to French Hill": [
-      ["DEFINE", "$HIDDEN_CARD_ID",["GET_CARD_ID", "peopleOfArkhamPool", 0, 0]],
+    "Smoke and Mirrors - Attach Hidden Card to French Hill":  [
+      ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[3]", 1, "sharedNotInPlay"],
+      ["VAR", "$HIDDEN_CARD_ID", "$GAME.lastLoadedCardIds.[0]"],
       ["VAR", "$LOCATION_CARD", ["GET_NAMED_MAP_LOCATION", "French Hill"]],
       ["MOVE_CARD", "$HIDDEN_CARD_ID", "sharedLocations", -1],
       ["DO_ATTACH_CARD", "$GAME.firstPlayer", "$HIDDEN_CARD_ID", "$LOCATION_CARD.id", false, null],
       ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$HIDDEN_CARD_ID", false, null]
     ],
-    "Smoke and Mirrors - Attach Hidden Card to Uptown": [
-      ["DEFINE", "$HIDDEN_CARD_ID",["GET_CARD_ID", "peopleOfArkhamPool", 0, 0]],
+    "Smoke and Mirrors - Attach Hidden Card to Uptown":  [
+      ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[4]", 1, "sharedNotInPlay"],
+      ["VAR", "$HIDDEN_CARD_ID", "$GAME.lastLoadedCardIds.[0]"],
       ["VAR", "$LOCATION_CARD", ["GET_NAMED_MAP_LOCATION", "Uptown"]],
       ["MOVE_CARD", "$HIDDEN_CARD_ID", "sharedLocations", -1],
-      ["DO_ATTACH_CARD", "$GAME.firstPlayer", "$HIDDEN_CARD_ID", "$LOCATION_CARD.id",false,null],
+      ["DO_ATTACH_CARD", "$GAME.firstPlayer", "$HIDDEN_CARD_ID", "$LOCATION_CARD.id", false, null],
       ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$HIDDEN_CARD_ID", false, null]
     ],
-    "Smoke and Mirrors - Attach Hidden Card to Waterfront District": [
-      ["DEFINE", "$HIDDEN_CARD_ID",["GET_CARD_ID", "peopleOfArkhamPool", 0, 0]],
-      ["VAR", "$LOCATION_CARD",["GET_NAMED_MAP_LOCATION", "Waterfront District"]],
+    "Smoke and Mirrors - Attach Hidden Card to Waterfront District":  [
+      ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[5]", 1, "sharedNotInPlay"],
+      ["VAR", "$HIDDEN_CARD_ID", "$GAME.lastLoadedCardIds.[0]"],
+      ["VAR", "$LOCATION_CARD", ["GET_NAMED_MAP_LOCATION", "Waterfront District"]],
       ["MOVE_CARD", "$HIDDEN_CARD_ID", "sharedLocations", -1],
-      ["DO_ATTACH_CARD", "$GAME.firstPlayer", "$HIDDEN_CARD_ID", "$LOCATION_CARD.id",false,null],
+      ["DO_ATTACH_CARD", "$GAME.firstPlayer", "$HIDDEN_CARD_ID", "$LOCATION_CARD.id", false, null],
       ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$HIDDEN_CARD_ID", false, null]
     ],
     "Smoke and Mirrors - Miskatonic In Flames": [
-      ["LOAD_CARDS", "Miskatonic University In Flames"],
-      ["DO_SET_SPAWN_LOCATION", "12155", 20, 43]
+      ["DO_SPAWN_LOCATION_SCN", "Miskatonic University In Flames", "12156", 20, 43]
     ],
     "Smoke and Mirrors - Miskatonic Quiet": [
-      ["LOAD_CARDS", "Miskatonic University Quiet"],
-      ["DO_SET_SPAWN_LOCATION", "12156", 20, 43]
+      ["DO_SPAWN_LOCATION_SCN", "Miskatonic University Quiet", "12155", 20, 43]
     ],
     "Smoke and Mirrors - Add Doom Per Investigator": [
       ["DEFINE", "$INVESTIGATOR_ID",["GET_CARD_ID", "player1Investigator", 0, 0]],
