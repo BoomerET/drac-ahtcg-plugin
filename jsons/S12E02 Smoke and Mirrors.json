@@ -29,11 +29,11 @@
   },
   "actionLists": {
     "Smoke and Mirrors Scenario Early Init": [
-      ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Check Campaign Log.", ["LIST", "Miskatonic University burned.", "The above is NOT true."], "Smoke and Mirrors Scenario Early Init Continue 1"]
+      ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Check Campaign Log.", ["LIST", "Miskatonic University burned.", "The above is NOT true."], "Smoke and Mirrors Scenario Init"]
     ],
-    "Smoke and Mirrors Scenario Early Init Continue 1": [
-      ["COND", ["EQUAL", "$GAME.arkham.scenarioAnswer1", "A"], ["ACTION_LIST", "Smoke and Mirrors - Miskatonic Quiet"], ["TRUE"], ["ACTION_LIST", "Smoke and Mirrors - Miskatonic In Flames"] ],
-      ["ACTION_LIST", "Smoke and Mirrors Scenario Init"]
+    "Smoke and Mirrors Scenario University Status": [
+      ["COND", ["EQUAL", "$GAME.arkham.scenarioAnswer1", "A"], ["ACTION_LIST", "Smoke and Mirrors - Miskatonic In Flames"], ["TRUE"], ["ACTION_LIST", "Smoke and Mirrors - Miskatonic Quiet"] ]
+      //["ACTION_LIST", "Smoke and Mirrors Scenario Init"]
     ],
     "Smoke and Mirrors Scenario Init": [
       ["DO_LOAD_CARDS_SCN", "Smoke and Mirrors"],
@@ -49,6 +49,7 @@
         ]
       ],
       ["VAR", "$HARGINGER", "$ARKPEEPS.[6]"], //Harbinger
+      ["ACTION_LIST", "Smoke and Mirrors Scenario University Status"],
       ["ACTION_LIST", "Smoke and Mirrors - Attach Hidden Card to Northside"],
       ["ACTION_LIST", "Smoke and Mirrors - Attach Hidden Card to Downtown"],
       ["ACTION_LIST", "Smoke and Mirrors - Attach Hidden Card to Southside"],
@@ -66,46 +67,40 @@
       ["SCENARIO_INIT_CONTINUE", null]
     ],
     "Smoke and Mirrors - Attach Hidden Card to Northside": [
-      //["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[0]", 1, "sharedNotInPlay"],
       ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$ARKPEEPS.[0]", 23, 13],
       ["VAR", "$ENEMY_ID", "$DO_SPAWN_LOCATION_RESULT"],
       ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
     ],
     "Smoke and Mirrors - Attach Hidden Card to Downtown": [
-      //["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[1]", 1, "sharedNotInPlay"],
       ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$ARKPEEPS.[1]", 48, 13],
       ["VAR", "$ENEMY_ID", "$DO_SPAWN_LOCATION_RESULT"],
       ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
     ],
     "Smoke and Mirrors - Attach Hidden Card to Southside": [
-      //["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[2]", 1, "sharedNotInPlay"],
       ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$ARKPEEPS.[2]", 48, 79],
       ["VAR", "$ENEMY_ID", "$DO_SPAWN_LOCATION_RESULT"],
       ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
     ],
     "Smoke and Mirrors - Attach Hidden Card to French Hill": [
-      //["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[3]", 1, "sharedNotInPlay"],
       ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$ARKPEEPS.[3]", 73, 79],
       ["VAR", "$ENEMY_ID", "$DO_SPAWN_LOCATION_RESULT"],
       ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
     ],
     "Smoke and Mirrors - Attach Hidden Card to Uptown": [
-      //["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[4]", 1, "sharedNotInPlay"],
       ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$ARKPEEPS.[4]", 23, 79],
       ["VAR", "$ENEMY_ID", "$DO_SPAWN_LOCATION_RESULT"],
       ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
     ],
     "Smoke and Mirrors - Attach Hidden Card to Waterfront District": [
-      //["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[5]", 1, "sharedNotInPlay"],
       ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$ARKPEEPS.[5]", 73, 46],
       ["VAR", "$ENEMY_ID", "$DO_SPAWN_LOCATION_RESULT"],
       ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
     ],
     "Smoke and Mirrors - Miskatonic In Flames": [
-      ["DO_SPAWN_LOCATION_SCN", "Miskatonic University In Flames", "12156", 20, 43]
+      ["DO_SPAWN_LOCATION_SCN", "Miskatonic University In Flames", "12155", 20, 43]
     ],
     "Smoke and Mirrors - Miskatonic Quiet": [
-      ["DO_SPAWN_LOCATION_SCN", "Miskatonic University Quiet", "12155", 20, 43],
+      ["DO_SPAWN_LOCATION_SCN", "Miskatonic University Quiet", "12156", 20, 43],
       ["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1]
     ],
     "Smoke and Mirrors - Add Doom Per Investigator": [
