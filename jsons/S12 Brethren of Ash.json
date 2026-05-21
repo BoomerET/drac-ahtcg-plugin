@@ -264,14 +264,11 @@
   },
   "groups": {
     "randomDowntown":          {"groupType": "deck",       "label": "id:randomDowntown",          "tableLabel": "Random Downtown"},
-    "randomUptown":            {"groupType": "deck",       "label": "id:randomUptown",            "tableLabel": "Random Uptown"},
-    "peopleOfArkhamPool":      {"groupType": "deck",       "label": "id:peopleOfArkhamPool",      "tableLabel": "id:peopleOfArkhamPoolShort"}
+    "randomUptown":            {"groupType": "deck",       "label": "id:randomUptown",            "tableLabel": "Random Uptown"}
   },
   "labels": {
     "randomDowntown": {"English": "Random Downtown"},
-    "randomUptown": {"English": "Random Uptown"},
-    "peopleOfArkhamPool": {"English": "People of Arkham Pool"},
-    "peopleOfArkhamPoolShort": {"English": "People"}
+    "randomUptown": {"English": "Random Uptown"}
   }
 }
 // kate: syntax Dragnlang; scheme Arkham Dark;
