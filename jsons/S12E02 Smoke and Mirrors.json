@@ -21,9 +21,9 @@
         { "databaseId": "12151", "quantity": 1, "loadGroupId": "sharedLocations", "left": "45%", "top": "43%" }, //Merchant District
         { "databaseId": "12152", "quantity": 1, "loadGroupId": "sharedLocations", "left": "70%", "top": "43%" }, //Waterfront District
         { "databaseId": "12154", "quantity": 1, "loadGroupId": "sharedLocations", "left": "70%", "top": "76%" }, //French Hill
-        { "databaseId": "12137", "quantity": 4, "loadGroupId": "sharedNotInPlay" }, 
-        { "databaseId": "12115", "quantity": 1, "loadGroupId": "sharedNotInPlay" }, 
-        { "databaseId": "12129", "quantity": 5, "loadGroupId": "sharedNotInPlay" }
+        { "databaseId": "12137", "quantity": 4, "loadGroupId": "sharedNotInPlay" }, //Mark of Elokoss
+        { "databaseId": "12115", "quantity": 1, "loadGroupId": "sharedNotInPlay" } //Dr. Henry Armitage
+        //{ "databaseId": "12129", "quantity": 5, "loadGroupId": "sharedNotInPlay" }
       ]
     }
   },
@@ -66,38 +66,38 @@
       ["SCENARIO_INIT_CONTINUE", null]
     ],
     "Smoke and Mirrors - Attach Hidden Card to Northside": [
-      ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[0]", 1, "sharedNotInPlay"],
+      //["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[0]", 1, "sharedNotInPlay"],
       ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$ARKPEEPS.[0]", 23, 13],
       ["VAR", "$ENEMY_ID", "$DO_SPAWN_LOCATION_RESULT"],
       ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
     ],
     "Smoke and Mirrors - Attach Hidden Card to Downtown": [
-      ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[1]", 1, "sharedNotInPlay"],
-      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$ARKPEEPS.[0]", 48, 13],
+      //["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[1]", 1, "sharedNotInPlay"],
+      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$ARKPEEPS.[1]", 48, 13],
       ["VAR", "$ENEMY_ID", "$DO_SPAWN_LOCATION_RESULT"],
       ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
     ],
     "Smoke and Mirrors - Attach Hidden Card to Southside": [
-      ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[2]", 1, "sharedNotInPlay"],
-      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$ARKPEEPS.[0]", 48, 79],
+      //["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[2]", 1, "sharedNotInPlay"],
+      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$ARKPEEPS.[2]", 48, 79],
       ["VAR", "$ENEMY_ID", "$DO_SPAWN_LOCATION_RESULT"],
       ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
     ],
     "Smoke and Mirrors - Attach Hidden Card to French Hill": [
-      ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[3]", 1, "sharedNotInPlay"],
-      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$ARKPEEPS.[0]", 73, 79],
+      //["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[3]", 1, "sharedNotInPlay"],
+      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$ARKPEEPS.[3]", 73, 79],
       ["VAR", "$ENEMY_ID", "$DO_SPAWN_LOCATION_RESULT"],
       ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
     ],
     "Smoke and Mirrors - Attach Hidden Card to Uptown": [
-      ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[4]", 1, "sharedNotInPlay"],
-      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$ARKPEEPS.[0]", 23, 79],
+      //["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[4]", 1, "sharedNotInPlay"],
+      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$ARKPEEPS.[4]", 23, 79],
       ["VAR", "$ENEMY_ID", "$DO_SPAWN_LOCATION_RESULT"],
       ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
     ],
     "Smoke and Mirrors - Attach Hidden Card to Waterfront District": [
-      ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[5]", 1, "sharedNotInPlay"],
-      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$ARKPEEPS.[0]", 73, 46],
+      //["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[5]", 1, "sharedNotInPlay"],
+      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$ARKPEEPS.[5]", 73, 46],
       ["VAR", "$ENEMY_ID", "$DO_SPAWN_LOCATION_RESULT"],
       ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
     ],
@@ -105,7 +105,8 @@
       ["DO_SPAWN_LOCATION_SCN", "Miskatonic University In Flames", "12156", 20, 43]
     ],
     "Smoke and Mirrors - Miskatonic Quiet": [
-      ["DO_SPAWN_LOCATION_SCN", "Miskatonic University Quiet", "12155", 20, 43]
+      ["DO_SPAWN_LOCATION_SCN", "Miskatonic University Quiet", "12155", 20, 43],
+      ["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1]
     ],
     "Smoke and Mirrors - Add Doom Per Investigator": [
       ["DEFINE", "$INVESTIGATOR_ID",["GET_CARD_ID", "player1Investigator", 0, 0]],
