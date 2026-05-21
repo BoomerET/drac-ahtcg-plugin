@@ -144,30 +144,30 @@
       "hideFromSearch": true,
       "label": "Random Downtown",
       "cards": [
-        { "databaseId": "12145", "quantity": 1, "loadGroupId": "randomDowntown", "left": "10%", "top": "10%" },
-        { "databaseId": "12146", "quantity": 1, "loadGroupId": "randomDowntown", "left": "10%", "top": "10%" }
+        { "databaseId": "12145", "quantity": 1, "loadGroupId": "randomDowntown", "left": "45%", "top": "10%" },
+        { "databaseId": "12146", "quantity": 1, "loadGroupId": "randomDowntown", "left": "45%", "top": "10%" }
       ]
     },
     "randomUptown": {
       "hideFromSearch": true,
       "label": "Random Uptown",
       "cards": [
-        { "databaseId": "12147", "quantity": 1, "loadGroupId": "randomUptown", "left": "10%", "top": "70%" },
-        { "databaseId": "12148", "quantity": 1, "loadGroupId": "randomUptown", "left": "10%", "top": "70%" }
+        { "databaseId": "12147", "quantity": 1, "loadGroupId": "randomUptown", "left": "20%", "top": "76%" },
+        { "databaseId": "12148", "quantity": 1, "loadGroupId": "randomUptown", "left": "20%", "top": "76%" }
       ]
     },
     "Miskatonic University Quiet": {
       "hideFromSearch": true,
       "label": "Miskatonic University Quiet",
       "cards": [
-        { "databaseId": "12155", "quantity": 1, "loadGroupId": "sharedLocations", "left": "10%", "top": "40%" }
+        { "databaseId": "12155", "quantity": 1, "loadGroupId": "sharedLocations", "left": "20%", "top": "43%" }
       ]
     },
     "Miskatonic University In Flames": {
       "hideFromSearch": true,
       "label": "Miskatonic University In Flames",
       "cards": [
-        { "databaseId": "12156", "quantity": 1, "loadGroupId": "sharedLocations", "left": "10%", "top": "40%" }
+        { "databaseId": "12156", "quantity": 1, "loadGroupId": "sharedLocations", "left": "20%", "top": "43%" }
       ]
     },
     "People of Arkham Random Pool": {
