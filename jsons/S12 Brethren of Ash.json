@@ -140,59 +140,6 @@
         { "databaseId": "12195", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
       ]
     },
-    //"randomDowntown": {
-    //  "hideFromSearch": true,
-    //  "label": "Random Downtown",
-    //  "cards": [
-    //    { "databaseId": "12145", "quantity": 1, "loadGroupId": "randomDowntown", "left": "45%", "top": "10%" },
-    //    { "databaseId": "12146", "quantity": 1, "loadGroupId": "randomDowntown", "left": "45%", "top": "10%" }
-    //  ]
-    //},
-    //"randomUptown": {
-    //  "hideFromSearch": true,
-    //  "label": "Random Uptown",
-    //  "cards": [
-    //    { "databaseId": "12147", "quantity": 1, "loadGroupId": "randomUptown", "left": "20%", "top": "76%" },
-    //    { "databaseId": "12148", "quantity": 1, "loadGroupId": "randomUptown", "left": "20%", "top": "76%" }
-    //  ]
-    //},
-    //"Miskatonic University Quiet": {
-    //  "hideFromSearch": true,
-    //  "label": "Miskatonic University Quiet",
-    //  "cards": [
-    //    { "databaseId": "12155", "quantity": 1, "loadGroupId": "sharedLocations", "left": "20%", "top": "43%" }
-    //  ]
-    //},
-    //"Miskatonic University In Flames": {
-    //  "hideFromSearch": true,
-    //  "label": "Miskatonic University In Flames",
-    //  "cards": [
-    //    { "databaseId": "12156", "quantity": 1, "loadGroupId": "sharedLocations", "left": "20%", "top": "43%" }
-    //  ]
-    //},
-    //"People of Arkham Random Pool": {
-    //  "hideFromSearch": true,
-    //  "label": "People of Arkham Random Pool",
-    //  "cards": [
-    //    { "databaseId": "12139", "quantity": 1, "loadGroupId": "peopleOfArkhamPool" },
-    //    { "databaseId": "12140", "quantity": 1, "loadGroupId": "peopleOfArkhamPool" },
-    //    { "databaseId": "12141", "quantity": 1, "loadGroupId": "peopleOfArkhamPool" },
-    //    { "databaseId": "12142", "quantity": 1, "loadGroupId": "peopleOfArkhamPool" },
-    //    { "databaseId": "12143", "quantity": 1, "loadGroupId": "peopleOfArkhamPool" },
-    //    { "databaseId": "12144", "quantity": 1, "loadGroupId": "peopleOfArkhamPool" }
-    //  ]
-    //},
-    //"Servant of Flame Hidden Setup": {
-    //  "hideFromSearch": true,
-    //  "label": "Servant of Flame Hidden Setup",
-    //  "cards": [
-    //    {
-    //      "databaseId": "12138",
-    //      "quantity": 1,
-    //      "loadGroupId": "peopleOfArkhamPool"
-    //    }
-    //  ]
-    //},
     "Brethren of Ash Chaos Bag - Easy": {
       "hideFromSearch": true,
       "label": "Brethren of Ash Chaos Bag - Easy",
@@ -262,13 +209,5 @@
       ]
     }
   }
-  //"groups": {
-  //  "randomDowntown":          {"groupType": "deck",       "label": "id:randomDowntown",          "tableLabel": "Random Downtown"},
-  //  "randomUptown":            {"groupType": "deck",       "label": "id:randomUptown",            "tableLabel": "Random Uptown"}
-  //},
-  //"labels": {
-  //  "randomDowntown": {"English": "Random Downtown"},
-  //  "randomUptown": {"English": "Random Uptown"}
-  //}
 }
 // kate: syntax Dragnlang; scheme Arkham Dark;
