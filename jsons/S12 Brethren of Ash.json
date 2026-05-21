@@ -140,22 +140,22 @@
         { "databaseId": "12195", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
       ]
     },
-    "randomDowntown": {
-      "hideFromSearch": true,
-      "label": "Random Downtown",
-      "cards": [
-        { "databaseId": "12145", "quantity": 1, "loadGroupId": "randomDowntown", "left": "45%", "top": "10%" },
-        { "databaseId": "12146", "quantity": 1, "loadGroupId": "randomDowntown", "left": "45%", "top": "10%" }
-      ]
-    },
-    "randomUptown": {
-      "hideFromSearch": true,
-      "label": "Random Uptown",
-      "cards": [
-        { "databaseId": "12147", "quantity": 1, "loadGroupId": "randomUptown", "left": "20%", "top": "76%" },
-        { "databaseId": "12148", "quantity": 1, "loadGroupId": "randomUptown", "left": "20%", "top": "76%" }
-      ]
-    },
+    //"randomDowntown": {
+    //  "hideFromSearch": true,
+    //  "label": "Random Downtown",
+    //  "cards": [
+    //    { "databaseId": "12145", "quantity": 1, "loadGroupId": "randomDowntown", "left": "45%", "top": "10%" },
+    //    { "databaseId": "12146", "quantity": 1, "loadGroupId": "randomDowntown", "left": "45%", "top": "10%" }
+    //  ]
+    //},
+    //"randomUptown": {
+    //  "hideFromSearch": true,
+    //  "label": "Random Uptown",
+    //  "cards": [
+    //    { "databaseId": "12147", "quantity": 1, "loadGroupId": "randomUptown", "left": "20%", "top": "76%" },
+    //    { "databaseId": "12148", "quantity": 1, "loadGroupId": "randomUptown", "left": "20%", "top": "76%" }
+    //  ]
+    //},
     //"Miskatonic University Quiet": {
     //  "hideFromSearch": true,
     //  "label": "Miskatonic University Quiet",
@@ -261,14 +261,14 @@
         { "databaseId": "chaos_elder_thing", "quantity": 1, "loadGroupId": "sharedChaosBag" }
       ]
     }
-  },
-  "groups": {
-    "randomDowntown":          {"groupType": "deck",       "label": "id:randomDowntown",          "tableLabel": "Random Downtown"},
-    "randomUptown":            {"groupType": "deck",       "label": "id:randomUptown",            "tableLabel": "Random Uptown"}
-  },
-  "labels": {
-    "randomDowntown": {"English": "Random Downtown"},
-    "randomUptown": {"English": "Random Uptown"}
   }
+  //"groups": {
+  //  "randomDowntown":          {"groupType": "deck",       "label": "id:randomDowntown",          "tableLabel": "Random Downtown"},
+  //  "randomUptown":            {"groupType": "deck",       "label": "id:randomUptown",            "tableLabel": "Random Uptown"}
+  //},
+  //"labels": {
+  //  "randomDowntown": {"English": "Random Downtown"},
+  //  "randomUptown": {"English": "Random Uptown"}
+  //}
 }
 // kate: syntax Dragnlang; scheme Arkham Dark;
