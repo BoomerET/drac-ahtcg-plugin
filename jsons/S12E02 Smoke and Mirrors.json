@@ -18,83 +18,19 @@
       "hideFromSearch": true,
       "label": "Smoke and Mirrors",
       "cards": [
-        {
-          "databaseId": "12133",
-          "quantity": 1,
-          "loadGroupId": "sharedScenarioReference"
-        },
-        {
-          "databaseId": "12134",
-          "quantity": 1,
-          "loadGroupId": "sharedAgendaStory"
-        },
-        {
-          "databaseId": "12135",
-          "quantity": 1,
-          "loadGroupId": "sharedAgendaStory"
-        },
-        {
-          "databaseId": "12136",
-          "quantity": 1,
-          "loadGroupId": "sharedActStory"
-        },
-        {
-          "databaseId": "12153",
-          "quantity": 1,
-          "loadGroupId": "sharedLocations",
-          "left": "40%",
-          "top": "70%"
-        },
-        {
-          "databaseId": "12149",
-          "quantity": 1,
-          "loadGroupId": "sharedLocations",
-          "left": "10%",
-          "top": "10%"
-        },
-        {
-          "databaseId": "12150",
-          "quantity": 1,
-          "loadGroupId": "sharedLocations",
-          "left": "70%",
-          "top": "10%"
-        },
-        {
-          "databaseId": "12151",
-          "quantity": 1,
-          "loadGroupId": "sharedLocations",
-          "left": "40%",
-          "top": "40%"
-        },
-        {
-          "databaseId": "12152",
-          "quantity": 1,
-          "loadGroupId": "sharedLocations",
-          "left": "70%",
-          "top": "40%"
-        },
-        {
-          "databaseId": "12154",
-          "quantity": 1,
-          "loadGroupId": "sharedLocations",
-          "left": "70%",
-          "top": "70%"
-        },
-        {
-          "databaseId": "12137",
-          "quantity": 4,
-          "loadGroupId": "sharedNotInPlay"
-        },
-        {
-          "databaseId": "12115",
-          "quantity": 1,
-          "loadGroupId": "sharedNotInPlay"
-        },
-        {
-          "databaseId": "12129",
-          "quantity": 5,
-          "loadGroupId": "sharedNotInPlay"
-        }
+        {"databaseId": "12133", "quantity": 1, "loadGroupId": "sharedScenarioReference" }, 
+        { "databaseId": "12134", "quantity": 1, "loadGroupId": "sharedAgendaStory" }, 
+        { "databaseId": "12135", "quantity": 1, "loadGroupId": "sharedAgendaStory" }, 
+        { "databaseId": "12136", "quantity": 1, "loadGroupId": "sharedActStory" }, 
+        { "databaseId": "12153", "quantity": 1, "loadGroupId": "sharedLocations", "left": "35%", "top": "76%" }, //Southside
+        { "databaseId": "12149", "quantity": 1, "loadGroupId": "sharedLocations", "left": "15%", "top": "10%" }, //Northside
+        { "databaseId": "12150", "quantity": 1, "loadGroupId": "sharedLocations", "left": "75%", "top": "10%" }, //Easttown
+        { "databaseId": "12151", "quantity": 1, "loadGroupId": "sharedLocations", "left": "35%", "top": "43%" }, //Merchant District
+        { "databaseId": "12152", "quantity": 1, "loadGroupId": "sharedLocations", "left": "75%", "top": "43%" }, //Waterfront District
+        { "databaseId": "12154", "quantity": 1, "loadGroupId": "sharedLocations", "left": "75%", "top": "76%" }, //French Hill
+        { "databaseId": "12137", "quantity": 4, "loadGroupId": "sharedNotInPlay" }, 
+        { "databaseId": "12115", "quantity": 1, "loadGroupId": "sharedNotInPlay" }, 
+        { "databaseId": "12129", "quantity": 5, "loadGroupId": "sharedNotInPlay" }
       ]
     }
   },

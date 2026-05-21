@@ -182,6 +182,17 @@
         { "databaseId": "12144", "quantity": 1, "loadGroupId": "peopleOfArkhamPool" }
       ]
     },
+    "Servant of Flame Hidden Setup": {
+      "hideFromSearch": true,
+      "label": "Servant of Flame Hidden Setup",
+      "cards": [
+        {
+          "databaseId": "12138",
+          "quantity": 1,
+          "loadGroupId": "peopleOfArkhamPool"
+        }
+      ]
+    },
     "Brethren of Ash Chaos Bag - Easy": {
       "hideFromSearch": true,
       "label": "Brethren of Ash Chaos Bag - Easy",
