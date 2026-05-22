@@ -46,7 +46,8 @@
           ["VAR", "$ARKPEEPS", ["LIST", "$ARKPEEPS.[6]", "$ARKPEEPS.[1]", "$ARKPEEPS.[2]", "$ARKPEEPS.[3]", "$ARKPEEPS.[4]", "$ARKPEEPS.[5]", "$ARKPEEPS.[0]"]]
         ]
       ],
-      ["VAR", "$HARGINGER", "$ARKPEEPS.[6]"], //Harbinger
+      //Move Harbinger to Not In Play
+      ["DO_CREATE_CARDS_SCN", "Harbinger", "$ARKPEEPS.[6]", 1, "sharedNotInPlay"],
       ["ACTION_LIST", "Smoke and Mirrors Scenario University Status"],
       ["ACTION_LIST", "Smoke and Mirrors - Attach Hidden Card to Northside"],
       ["ACTION_LIST", "Smoke and Mirrors - Attach Hidden Card to Downtown"],
