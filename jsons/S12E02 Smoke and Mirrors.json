@@ -41,6 +41,7 @@
       ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$UPTOWN.[0]", 20, 76],
       ["DO_CREATE_CARDS_SCN", "Set Aside", "$UPTOWN.[1]", 1, "sharedRemoved"],
       ["VAR", "$ARKPEEPS", ["SHUFFLE_LIST", ["LIST", "12139", "12140", "12141", "12142", "12143", "12144", "12138"]]],
+      // This ensure that Harbinger is always last in the list, so that we can move it to Not In Play and spawn the other 6 Arkham Citizens before it.
       ["COND", 
         ["EQUAL", "$ARKPEEPS.[6]", "12138"], [
           ["VAR", "$ARKPEEPS", ["LIST", "$ARKPEEPS.[6]", "$ARKPEEPS.[1]", "$ARKPEEPS.[2]", "$ARKPEEPS.[3]", "$ARKPEEPS.[4]", "$ARKPEEPS.[5]", "$ARKPEEPS.[0]"]]
