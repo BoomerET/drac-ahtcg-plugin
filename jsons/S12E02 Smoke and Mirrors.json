@@ -68,9 +68,20 @@
       ["COND", ["EQUAL", "$GAME.arkham.scenarioAnswer1", "A"], ["ACTION_LIST", "Smoke and Mirrors - Miskatonic In Flames"], ["TRUE"], ["ACTION_LIST", "Smoke and Mirrors - Miskatonic Quiet"] ]
     ],
     "Smoke and Mirrors - Attach Hidden Card to Northside": [
-      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$ARKPEEPS.[0]", 23, 13],
-      ["VAR", "$ENEMY_ID", "$DO_SPAWN_LOCATION_RESULT"],
-      ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
+      ["VAR", "$CARD_ID", "$ARKPEEPS.[0]"],
+      ["VAR", "$CARD_NAME", "$CARD_DB.{{$CARD_ID}}.A.name"],
+      ["VAR", "$LOCATION_ID", "12149"],
+      ["VAR", "$LOCATION_NAME", "$CARD_DB.{{$LOCATION_ID}}.A.name"],
+       //["DO_SPAWN_ENCOUNTER_AT_LOCATION_SCN", "$CARD_NAME", "Northside", 3, 3, 1],
+       ["DO_SPAWN_NAMED_AT_LOCATION_SCN", "$CARD_NAME", "$LOCATION_NAME", 3, 3, 1],
+
+
+      ["LOGF", "Card name is {0}.",  "$CARD_NAME"],
+      ["LOGF", "Location name is {0}.",  "$LOCATION_NAME"]
+      //["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$ARKPEEPS.[0]", 23, 13],
+      //["VAR", "$ENEMY_ID", "$DO_SPAWN_LOCATION_RESULT"],
+      //["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
+
     ],
     "Smoke and Mirrors - Attach Hidden Card to Downtown": [
       ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$ARKPEEPS.[1]", 48, 13],
