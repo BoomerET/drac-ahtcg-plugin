@@ -19,15 +19,28 @@
                 {"databaseId": "11506", "quantity": 1, "loadGroupId": "sharedActStory"},
                 {"databaseId": "11507", "quantity": 1, "loadGroupId": "sharedActStory"},
                 {"databaseId": "11508", "quantity": 1, "loadGroupId": "sharedActStory"},
-                {"databaseId": "11509", "quantity": 1, "loadGroupId": "sharedLocations","left": "15%", "top": "43%"}
+                {"databaseId": "11509", "quantity": 1, "loadGroupId": "sharedLocations","left": "15%", "top": "43%"},
+                { "databaseId": "01125", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
+                { "databaseId": "01129", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
+                { "databaseId": "01130", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
+                { "databaseId": "01132", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
+                { "databaseId": "01134", "quantity": 1, "loadGroupId": "sharedNotInPlay" }
             ]
         }
     },
     "actionLists": {
         "One Last Job Scenario Init": [
             ["DO_LOAD_CARDS_SCN", "One Last Job"],
-            ["DO_SET_SPAWN_LOCATION", "12116", 55, 43], //Miskatonic Quad
+            ["DO_SET_SPAWN_LOCATION", "01125", 55, 43], //Rivertown
+            ["DO_SET_SPAWN_LOCATION", "01129", 35, 43], //Miskatonic University
+            ["DO_SET_SPAWN_LOCATION", "01130", 55, 10], //Downtown
+            ["DO_SET_SPAWN_LOCATION", "01132", 75, 10], //Easttown
+            ["DO_SET_SPAWN_LOCATION", "01134", 35, 10], //Northside
             ["DO_LOAD_CARDS_SCN", "TDC - Dreams"],
+            ["DO_LOAD_CARDS_SCN", "Chilling Cold"],
+            ["DO_LOAD_CARDS_SCN", "Locked Doors"],
+            ["DO_LOAD_CARDS_SCN", "Rats"],
+            ["DO_LOAD_CARDS_SCN", "Striking Fear"],
             ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Tillinghast Esoterica", 5, 7, 3, 0],
             ["SCENARIO_INIT_CONTINUE", null]
         ]
