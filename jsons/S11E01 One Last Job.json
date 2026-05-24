@@ -14,35 +14,48 @@
                 {"databaseId": "11501", "quantity": 1, "loadGroupId": "sharedScenarioReference"},
                 {"databaseId": "11502", "quantity": 1, "loadGroupId": "sharedAgendaStory"},
                 {"databaseId": "11503", "quantity": 1, "loadGroupId": "sharedAgendaStory"},
-                {"databaseId": "11504", "quantity": 1, "loadGroupId": "sharedActStory"},
-                {"databaseId": "11505", "quantity": 1, "loadGroupId": "sharedActStory"},
-                {"databaseId": "11506", "quantity": 1, "loadGroupId": "sharedActStory"},
-                {"databaseId": "11507", "quantity": 1, "loadGroupId": "sharedActStory"},
-                {"databaseId": "11508", "quantity": 1, "loadGroupId": "sharedActStory"},
-                {"databaseId": "11509", "quantity": 1, "loadGroupId": "sharedLocations","left": "15%", "top": "43%"},
-                { "databaseId": "01125", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
-                { "databaseId": "01129", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
-                { "databaseId": "01130", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
-                { "databaseId": "01132", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
-                { "databaseId": "01134", "quantity": 1, "loadGroupId": "sharedNotInPlay" }
+                //{"databaseId": "11504", "quantity": 1, "loadGroupId": "sharedActStory"},
+                //{"databaseId": "11505", "quantity": 1, "loadGroupId": "sharedActStory"},
+                //{"databaseId": "11506", "quantity": 1, "loadGroupId": "sharedActStory"},
+                //{"databaseId": "11507", "quantity": 1, "loadGroupId": "sharedActStory"},
+                //{"databaseId": "11508", "quantity": 1, "loadGroupId": "sharedActStory"},
+                {"databaseId": "11509", "quantity": 1, "loadGroupId": "sharedLocations", "left": "15%", "top": "43%"},
+                {"databaseId": "01125", "quantity": 1, "loadGroupId": "sharedLocations", "left": "55%", "top": "43%"},
+                {"databaseId": "01129", "quantity": 1, "loadGroupId": "sharedLocations", "left": "35%", "top": "43%"},
+                {"databaseId": "01132", "quantity": 1, "loadGroupId": "sharedLocations", "left": "75%", "top": "10%"},
+                {"databaseId": "01134", "quantity": 1, "loadGroupId": "sharedLocations", "left": "35%", "top": "10%"},
+                {"databaseId": "11510", "quantity": 1, "loadGroupId": "sharedNotInPlay"},
+                {"databaseId": "11511", "quantity": 1, "loadGroupId": "sharedNotInPlay"},
+                //{"databaseId": "11512", "quantity": 1, "loadGroupId": "sharedNotInPlay"},
+                {"databaseId": "11513", "quantity": 2, "loadGroupId": "sharedNotInPlay"}
             ]
         }
     },
     "actionLists": {
         "One Last Job Scenario Init": [
             ["DO_LOAD_CARDS_SCN", "One Last Job"],
-            ["DO_SET_SPAWN_LOCATION", "01125", 55, 43], //Rivertown
-            ["DO_SET_SPAWN_LOCATION", "01129", 35, 43], //Miskatonic University
-            ["DO_SET_SPAWN_LOCATION", "01130", 55, 10], //Downtown
-            ["DO_SET_SPAWN_LOCATION", "01132", 75, 10], //Easttown
-            ["DO_SET_SPAWN_LOCATION", "01134", 35, 10], //Northside
+            ["ACTION_LIST", "Random Midnight Mask Downtown"],
+            ["ACTION_LIST", "Choose Random Act 1a"],
             ["DO_LOAD_CARDS_SCN", "TDC - Dreams"],
             ["DO_LOAD_CARDS_SCN", "Chilling Cold"],
             ["DO_LOAD_CARDS_SCN", "Locked Doors"],
             ["DO_LOAD_CARDS_SCN", "Rats"],
             ["DO_LOAD_CARDS_SCN", "Striking Fear"],
+            
             ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Tillinghast Esoterica", 5, 7, 3, 0],
             ["SCENARIO_INIT_CONTINUE", null]
+        ],
+        "Random Midnight Mask Downtown": [
+            ["VAR", "$MM_DOWNTOWN", ["SHUFFLE_LIST", ["LIST", "01130", "01131"]]],
+            ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$MM_DOWNTOWN.[0]", 55, 10]
+        ],
+        "Choose Random Act 1a": [
+            ["VAR", "$TDC_Act1a", ["SHUFFLE_LIST", ["LIST", "11504", "11505"]]],
+            ["LOGF", "Which Act: {0}", "$TDC_Act1a.[0]"],
+            //["VAR", "$TDC_Act1a_Id", ["GET_NAMED_CARD_ID", "$TDC_Act1a.[0]"]],
+            //["LOGF", "Which Act: {0}", "$TDC_Act1a_Id"],
+            //["MOVE_CARD", "$TDC_Act1a_Id", "sharedActStory", -1]
+            ["DO_CREATE_CARDS", "$GAME.firstPlayer", "Act 1a", "$TDC_Act1a.[0]", 1, "sharedActStory", true, null]
         ]
     }
 }
