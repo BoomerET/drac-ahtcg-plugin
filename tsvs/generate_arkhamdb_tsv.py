@@ -3,22 +3,21 @@
 Generate a DragnCards-style Arkham Horror LCG TSV from ArkhamDB, filtered to
 one or more packs and/or encounter sets/scenarios.
 
-This version deliberately uses Python's csv module for both reading and writing
-TSV, so quoted multiline card text is treated as one record instead of being
-split into bogus rows. It can also flatten card text to one physical line per
-card if your downstream parser is line-oriented.
+This version deliberately writes escaped text newlines (literal \n) so every
+card is one physical TSV line, which matches line-oriented DragnCards import
+workflows.
+
+Location fix: for double-sided locations, shroud/clues/cluesFixed are written
+only on side B (revealed/in-play), not side A (hidden).
 
 Examples:
-  python generate_arkhamdb_filtered_tsv_fixed.py --list-packs
-  python generate_arkhamdb_filtered_tsv_fixed.py --list-encounter-sets drowned
-  python generate_arkhamdb_filtered_tsv_fixed.py --scenario "Dreams" -o dreams.tsv
-  python generate_arkhamdb_filtered_tsv_fixed.py --pack-code tdcc -o drowned_city_campaign.tsv
-
-  # Avoid physical continuation lines in the TSV text column:
-  python generate_arkhamdb_filtered_tsv_fixed.py --scenario "Dreams" --one-line-text -o dreams.tsv
+  python generate_arkhamdb_filtered_tsv_location_fix.py --list-packs
+  python generate_arkhamdb_filtered_tsv_location_fix.py --list-encounter-sets drowned
+  python generate_arkhamdb_filtered_tsv.py --scenario "Dreams" -o dreams.tsv
+  python generate_arkhamdb_filtered_tsv.py --pack-code tdcc -o drowned_city_campaign.tsv
 
   # Append missing rows to an existing master TSV, preserving existing rows:
-  python generate_arkhamdb_filtered_tsv_fixed.py --scenario "Dreams" --append-to-template arkhamhorrorlcg.tsv -o merged.tsv
+  python generate_arkhamdb_filtered_tsv.py --scenario "Dreams" --append-to-template arkhamhorrorlcg.tsv -o merged.tsv
 """
 from __future__ import annotations
 
@@ -64,7 +63,7 @@ ENCOUNTER_TYPES = {"enemy", "treachery", "location", "act", "agenda", "scenario"
 
 
 def fetch_json(url: str) -> Any:
-    req = urllib.request.Request(url, headers={"User-Agent": "dragncards-arkhamdb-tsv/1.1"})
+    req = urllib.request.Request(url, headers={"User-Agent": "dragncards-arkhamdb-tsv/1.3"})
     with urllib.request.urlopen(req, timeout=60) as response:
         charset = response.headers.get_content_charset() or "utf-8"
         return json.loads(response.read().decode(charset))
@@ -116,6 +115,22 @@ def image_url(path: Optional[str]) -> str:
 
 def has_b_side(card: Dict[str, Any]) -> bool:
     return bool(card.get("backimagesrc") or card.get("back_text") or card.get("back_name"))
+
+
+def location_stats_belong_on_this_side(card: Dict[str, Any], side: str) -> bool:
+    """ArkhamDB stores location shroud/clue values on the card record.
+
+    For double-sided locations, those values describe the revealed/in-play
+    location side, which is side B in the DragnCards TSV. If we copy them to
+    side A, DragnCards displays clue values while the location is still hidden.
+
+    Single-sided/custom locations keep their stats on their only row.
+    """
+    if s(card, "type_code") not in {"location", "enemy_location"}:
+        return True
+    if not has_b_side(card):
+        return True
+    return side == "B"
 
 
 def card_back(card: Dict[str, Any]) -> str:
@@ -187,10 +202,10 @@ def build_row(card: Dict[str, Any], *, side: str, image_key: str, newline_mode: 
         "enemyHorror": n(card, "enemy_horror"),
         "enemyFight": n(card, "enemy_fight"),
         "enemyEvade": n(card, "enemy_evade"),
-        "shroud": n(card, "shroud"),
+        "shroud": n(card, "shroud") if location_stats_belong_on_this_side(card, side) else "",
         "doom": n(card, "doom"),
-        "clues": n(card, "clues"),
-        "cluesFixed": "1" if card.get("clues_fixed") else "0",
+        "clues": n(card, "clues") if location_stats_belong_on_this_side(card, side) else "",
+        "cluesFixed": ("1" if card.get("clues_fixed") else "0") if location_stats_belong_on_this_side(card, side) else "0",
         "victoryPoints": n(card, "victory"),
         "vengeance": n(card, "vengeance"),
         "stage": n(card, "stage"),
@@ -344,8 +359,6 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     p.add_argument("--scenario", action="append", help="Scenario/encounter set code or name substring to include. May be repeated.")
     p.add_argument("--encounter-set", action="append", help="Alias for --scenario. May be repeated.")
     p.add_argument("--append-to-template", metavar="TSV", help="Read an existing master TSV and append only missing generated rows.")
-    p.add_argument("--text-newlines", choices=("actual", "escaped", "space"), default="actual", help="How to write newlines inside card text. Default: actual quoted newlines.")
-    p.add_argument("--one-line-text", action="store_true", help="Shortcut for --text-newlines escaped; keeps every card on one physical line.")
     p.add_argument("--list-packs", action="store_true", help="List ArkhamDB pack codes and exit")
     p.add_argument("--list-encounter-sets", nargs="?", const="", metavar="FILTER", help="List encounter set codes/names, optionally filtered")
     return p.parse_args(argv)
@@ -353,9 +366,6 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
 
 def main(argv: Optional[Sequence[str]] = None) -> int:
     args = parse_args(argv)
-    if args.one_line_text:
-        args.text_newlines = "escaped"
-
     if args.list_packs:
         list_packs()
         return 0
@@ -372,7 +382,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
 
     generated_rows: List[Dict[str, str]] = []
     for card in selected:
-        generated_rows.extend(rows_for_card(card, newline_mode=args.text_newlines))
+        generated_rows.extend(rows_for_card(card, newline_mode="escaped"))
 
     if args.append_to_template:
         header, template_rows = read_template_rows(args.append_to_template)
