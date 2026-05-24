@@ -1,0 +1,35 @@
+{
+    "preBuiltDecks": {
+        "One Last Job Scenario": {
+            "label": "One Last Job",
+            "cards": [],
+            "postLoadActionList": [
+                ["SCENARIO_INIT", "The Drowned City", "The Drowned City", "One Last Job", null, "One Last Job Scenario Init"]
+            ]
+        },
+        "One Last Job": {
+            "hideFromSearch": true,
+            "label": "One Last Job",
+            "cards": [
+                {"databaseId": "11501", "quantity": 1, "loadGroupId": "sharedScenarioReference"},
+                {"databaseId": "11502", "quantity": 1, "loadGroupId": "sharedAgendaStory"},
+                {"databaseId": "11503", "quantity": 1, "loadGroupId": "sharedAgendaStory"},
+                {"databaseId": "11504", "quantity": 1, "loadGroupId": "sharedActStory"},
+                {"databaseId": "11505", "quantity": 1, "loadGroupId": "sharedActStory"},
+                {"databaseId": "11506", "quantity": 1, "loadGroupId": "sharedActStory"},
+                {"databaseId": "11507", "quantity": 1, "loadGroupId": "sharedActStory"},
+                {"databaseId": "11508", "quantity": 1, "loadGroupId": "sharedActStory"},
+                {"databaseId": "11509", "quantity": 1, "loadGroupId": "sharedLocations","left": "15%", "top": "43%"}
+            ]
+        }
+    },
+    "actionLists": {
+        "One Last Job Scenario Init": [
+            ["DO_LOAD_CARDS_SCN", "One Last Job"],
+            ["DO_SET_SPAWN_LOCATION", "12116", 55, 43], //Miskatonic Quad
+            ["DO_LOAD_CARDS_SCN", "TDC - Dreams"],
+            ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Tillinghast Esoterica", 5, 7, 3, 0],
+            ["SCENARIO_INIT_CONTINUE", null]
+        ]
+    }
+}

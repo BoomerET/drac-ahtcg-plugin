@@ -281,6 +281,12 @@
             ]
           },
           {
+            "label": "id:theDrownedCity",
+            "deckLists": [
+              { "label": "id:oneLastJob", "deckListId": "One Last Job Scenario" }
+            ]
+          },
+          {
             "label": "id:brethrenOfAsh",
             "deckLists": [
               { "label": "id:spreadingFlames", "deckListId": "Spreading Flames Scenario" },
@@ -568,6 +574,7 @@
     "deadHeat": { "English": "Dead Heat" },
     "theFeastOfHemlockVale": { "English": "The Feast of Hemlock Vale" },
     "theDrownedCity": { "English": "The Drowned City" },
+    "oneLastJob": { "English": "One Last Job" },
     "brethrenOfAsh": { "English": "Brethren of Ash" },
     "spreadingFlames": { "English": "Spreading Flames" },
     "smokeAndMirrors": { "English": "Smoke and Mirrors" },
