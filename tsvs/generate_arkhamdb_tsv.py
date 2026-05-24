@@ -14,6 +14,7 @@ Examples:
   python generate_arkhamdb_filtered_tsv_location_fix.py --list-packs
   python generate_arkhamdb_filtered_tsv_location_fix.py --list-encounter-sets drowned
   python generate_arkhamdb_filtered_tsv.py --scenario "Dreams" -o dreams.tsv
+  python generate_arkhamdb_filtered_tsv.py --scenario "Dreams" --no-header >> arkhamhorrorlcg.tsv
   python generate_arkhamdb_filtered_tsv.py --pack-code tdcc -o drowned_city_campaign.tsv
 
   # Append missing rows to an existing master TSV, preserving existing rows:
@@ -315,9 +316,10 @@ def read_template_rows(path: str) -> Tuple[List[str], List[Dict[str, str]]]:
     return list(reader.fieldnames), rows
 
 
-def write_tsv(rows: List[Dict[str, str]], output: str, *, header: Sequence[str]) -> None:
+def write_tsv(rows: List[Dict[str, str]], output: Optional[str], *, header: Sequence[str], include_header: bool) -> None:
     validate_rows(rows)
-    with open(output, "w", newline="", encoding="utf-8") as f:
+
+    def write_to_handle(f) -> None:
         writer = csv.DictWriter(
             f,
             fieldnames=list(header),
@@ -327,8 +329,15 @@ def write_tsv(rows: List[Dict[str, str]], output: str, *, header: Sequence[str])
             quoting=csv.QUOTE_MINIMAL,
             doublequote=True,
         )
-        writer.writeheader()
+        if include_header:
+            writer.writeheader()
         writer.writerows(rows)
+
+    if output:
+        with open(output, "w", newline="", encoding="utf-8") as f:
+            write_to_handle(f)
+    else:
+        write_to_handle(sys.stdout)
 
 
 def list_packs() -> None:
@@ -353,7 +362,8 @@ def list_encounter_sets(cards: List[Dict[str, Any]], term: Optional[str]) -> Non
 
 def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     p = argparse.ArgumentParser(description="Generate selected DragnCards-style TSV rows from ArkhamDB.")
-    p.add_argument("-o", "--output", default="arkhamhorrorlcg.filtered.tsv", help="Output TSV path")
+    p.add_argument("-o", "--output", help="Output TSV path. If omitted, TSV rows are written to stdout.")
+    p.add_argument("--no-header", action="store_true", help="Do not write the TSV header row. Useful when appending stdout to an existing file.")
     p.add_argument("--pack-code", action="append", help="ArkhamDB pack code to include, e.g. tdcc. May be repeated.")
     p.add_argument("--pack-name", action="append", help="Pack name substring to include. May be repeated.")
     p.add_argument("--scenario", action="append", help="Scenario/encounter set code or name substring to include. May be repeated.")
@@ -395,11 +405,13 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
                 new_rows.append(normalized)
                 existing.add(row_key(normalized))
         output_rows = template_rows + new_rows
-        write_tsv(output_rows, args.output, header=header)
-        print(f"Wrote {args.output} with {len(template_rows)} existing row(s) + {len(new_rows)} new row(s).")
+        write_tsv(output_rows, args.output, header=header, include_header=not args.no_header)
+        if args.output:
+            print(f"Wrote {args.output} with {len(template_rows)} existing row(s) + {len(new_rows)} new row(s).", file=sys.stderr)
     else:
-        write_tsv(generated_rows, args.output, header=HEADER)
-        print(f"Wrote {args.output} with {len(generated_rows)} TSV row(s) from {len(selected)} ArkhamDB card record(s).")
+        write_tsv(generated_rows, args.output, header=HEADER, include_header=not args.no_header)
+        if args.output:
+            print(f"Wrote {args.output} with {len(generated_rows)} TSV row(s) from {len(selected)} ArkhamDB card record(s).", file=sys.stderr)
 
     return 0
 
