@@ -173,7 +173,8 @@
         ]
     },
     "imageUrlPrefix": {
-        "Default": "https://dragncards-ahlcg.s3.amazonaws.com/images/",
+        //"Default": "https://dragncards-ahlcg.s3.amazonaws.com/images/",
+	"Default": "https://www.ai6k.com/TDC/",
         "English": "https://www.ai6k.com/TDC/",
 	//"English": "https://dragncards-ahlcg.s3.amazonaws.com/images/",
         "Italian": "https://arkham-horror-lcg-dragncards.s3.eu-north-1.amazonaws.com/"
