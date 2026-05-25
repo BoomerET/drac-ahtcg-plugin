@@ -14,7 +14,7 @@
                 {"databaseId": "11501", "quantity": 1, "loadGroupId": "sharedScenarioReference"},
                 {"databaseId": "11502", "quantity": 1, "loadGroupId": "sharedAgendaStory"},
                 {"databaseId": "11503", "quantity": 1, "loadGroupId": "sharedAgendaStory"},
-                //{"databaseId": "11504", "quantity": 1, "loadGroupId": "sharedActStory"},
+                {"databaseId": "11504", "quantity": 1, "loadGroupId": "sharedActStory"},
                 //{"databaseId": "11505", "quantity": 1, "loadGroupId": "sharedActStory"},
                 //{"databaseId": "11506", "quantity": 1, "loadGroupId": "sharedActStory"},
                 //{"databaseId": "11507", "quantity": 1, "loadGroupId": "sharedActStory"},
@@ -35,7 +35,7 @@
         "One Last Job Scenario Init": [
             ["DO_LOAD_CARDS_SCN", "One Last Job"],
             ["ACTION_LIST", "Random Midnight Mask Downtown"],
-            ["ACTION_LIST", "Choose Random Act 1a"],
+            //["ACTION_LIST", "Choose Random Act 1a"],
             ["DO_LOAD_CARDS_SCN", "TDC - Dreams"],
             ["DO_LOAD_CARDS_SCN", "Chilling Cold"],
             ["DO_LOAD_CARDS_SCN", "Locked Doors"],
@@ -50,12 +50,12 @@
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$MM_DOWNTOWN.[0]", 55, 10]
         ],
         "Choose Random Act 1a": [
-            ["VAR", "$TDC_Act1a", ["SHUFFLE_LIST", ["LIST", "11504", "11505"]]],
-            ["LOGF", "Which Act: {0}", "$TDC_Act1a.[0]"],
+            ["VAR", "$TDC_Act1a", ["SHUFFLE_LIST", ["LIST", "11504", "11505"]]]
+            //["LOGF", "Which Act: {0}", "$TDC_Act1a.[0]"]
             //["VAR", "$TDC_Act1a_Id", ["GET_NAMED_CARD_ID", "$TDC_Act1a.[0]"]],
             //["LOGF", "Which Act: {0}", "$TDC_Act1a_Id"],
             //["MOVE_CARD", "$TDC_Act1a_Id", "sharedActStory", -1]
-            ["DO_CREATE_CARDS", "$GAME.firstPlayer", "Act 1a", "$TDC_Act1a.[0]", 1, "sharedActStory", true, null]
+            //["DO_CREATE_CARDS", "$GAME.firstPlayer", "Act 1a", "$TDC_Act1a.[0]", 1, "sharedActStory", true, null]
         ]
     }
 }
