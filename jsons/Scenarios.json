@@ -281,6 +281,12 @@
             ]
           },
           {
+            "label": "id:theHemlockVale",
+            "deckLists": [
+              { "label": "id:preludeWelcomeToHemlockVale", "deckListId": "Prelude - Welcome to Hemlock Vale Scenario" }
+            ]
+          },
+          {
             "label": "id:theDrownedCity",
             "deckLists": [
               { "label": "id:oneLastJob", "deckListId": "One Last Job Scenario" }
@@ -573,6 +579,8 @@
     "riddlesAndRain": { "English": "Riddles and Rain" },
     "deadHeat": { "English": "Dead Heat" },
     "theFeastOfHemlockVale": { "English": "The Feast of Hemlock Vale" },
+    "theHemlockVale": { "English": "The Feast of Hemlock Vale" },
+    "preludeWelcomeToHemlockVale": { "English": "Prelude: Welcome to Hemlock Vale" },
     "theDrownedCity": { "English": "The Drowned City" },
     "oneLastJob": { "English": "One Last Job" },
     "brethrenOfAsh": { "English": "Brethren of Ash" },
