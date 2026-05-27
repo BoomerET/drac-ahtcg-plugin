@@ -11,7 +11,7 @@
       "hideFromSearch": true,
       "label": "Prelude - Welcome to Hemlock Vale",
       "cards": [
-        {"databaseId": "10704", "quantity": 1, "loadGroupId": "sharedScenarioReference" }, 
+        { "databaseId": "10704", "quantity": 1, "loadGroupId": "sharedScenarioReference" }, 
         { "databaseId": "10681", "quantity": 1, "loadGroupId": "sharedAgendaStory" },
         { "databaseId": "10682", "quantity": 1, "loadGroupId": "sharedActStory" }, 
         { "databaseId": "10705", "quantity": 1, "loadGroupId": "sharedLocations", "left": "45%", "top": "76%" }, //Boarding House
@@ -76,65 +76,65 @@
       //["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Miskatonic University", 5, 7, 3, 0],
       //["ACTION_LIST", "Prelude - Welcome to Hemlock Vale - Add Doom Per Investigator"],
       //["SCENARIO_INIT_CONTINUE", null]
-    ],
-    "Prelude - Welcome to Hemlock Vale Scenario University Status": [
-      ["COND", ["EQUAL", "$GAME.arkham.scenarioAnswer1", "A"], ["ACTION_LIST", "Prelude - Welcome to Hemlock Vale - Miskatonic In Flames"], ["TRUE"], ["ACTION_LIST", "Prelude - Welcome to Hemlock Vale - Miskatonic Quiet"] ]
-    ],
-    "Prelude - Welcome to Hemlock Vale - Attach Hidden Card to Northside": [
-      ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[0]", 1, "sharedNotInPlay"],
-      ["VAR", "$ENEMY_ID", "$GAME.lastLoadedCardIds.[0]"],
-      ["DO_PUT_INTO_PLAY_AT_SCN", "$ENEMY_ID", 23, 13],
-      ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
-    ],
-    "Prelude - Welcome to Hemlock Vale - Attach Hidden Card to Downtown": [
-      ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[1]", 1, "sharedNotInPlay"],
-      ["VAR", "$ENEMY_ID", "$GAME.lastLoadedCardIds.[0]"],
-      ["DO_PUT_INTO_PLAY_AT_SCN", "$ENEMY_ID", 48, 13],
-      ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
-    ],
-    "Prelude - Welcome to Hemlock Vale - Attach Hidden Card to Southside": [
-      ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[2]", 1, "sharedNotInPlay"],
-      ["VAR", "$ENEMY_ID", "$GAME.lastLoadedCardIds.[0]"],
-      ["DO_PUT_INTO_PLAY_AT_SCN", "$ENEMY_ID", 48, 79],
-      ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
-    ],
-    "Prelude - Welcome to Hemlock Vale - Attach Hidden Card to French Hill": [
-      ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[3]", 1, "sharedNotInPlay"],
-      ["VAR", "$ENEMY_ID", "$GAME.lastLoadedCardIds.[0]"],
-      ["DO_PUT_INTO_PLAY_AT_SCN", "$ENEMY_ID", 73, 79],
-      ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
-    ],
-    "Prelude - Welcome to Hemlock Vale - Attach Hidden Card to Uptown": [
-      ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[4]", 1, "sharedNotInPlay"],
-      ["VAR", "$ENEMY_ID", "$GAME.lastLoadedCardIds.[0]"],
-      ["DO_PUT_INTO_PLAY_AT_SCN", "$ENEMY_ID", 23, 79],
-      ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
-    ],
-    "Prelude - Welcome to Hemlock Vale - Attach Hidden Card to Waterfront District": [
-      ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[5]", 1, "sharedNotInPlay"],
-      ["VAR", "$ENEMY_ID", "$GAME.lastLoadedCardIds.[0]"],
-      ["DO_PUT_INTO_PLAY_AT_SCN", "$ENEMY_ID", 73, 46],
-      ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
-    ],
-    "Prelude - Welcome to Hemlock Vale - Miskatonic In Flames": [
-      ["DO_SPAWN_LOCATION_SCN", "Miskatonic University In Flames", "12155", 20, 43],
-      ["DO_CREATE_CARDS_SCN", "Set Aside", "12156", 1, "sharedRemoved"]
-    ],
-    "Prelude - Welcome to Hemlock Vale - Miskatonic Quiet": [
-      ["DO_SPAWN_LOCATION_SCN", "Miskatonic University Quiet", "12156", 20, 43],
-      ["DO_CREATE_CARDS_SCN", "Set Aside", "12155", 1, "sharedRemoved"],
-      ["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1]
-    ],
-    "Prelude - Welcome to Hemlock Vale - Add Doom Per Investigator": [
-      ["DEFINE", "$INVESTIGATOR_ID",["GET_CARD_ID", "player1Investigator", 0, 0]],
-      ["COND",["NOT_EQUAL", "$INVESTIGATOR_ID", null],["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1]],
-      ["DEFINE", "$INVESTIGATOR_ID",["GET_CARD_ID", "player2Investigator", 0, 0]],
-      ["COND",["NOT_EQUAL", "$INVESTIGATOR_ID", null],["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1]],
-      ["DEFINE", "$INVESTIGATOR_ID",["GET_CARD_ID", "player3Investigator", 0, 0]],
-      ["COND",["NOT_EQUAL", "$INVESTIGATOR_ID", null],["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1]],
-      ["DEFINE", "$INVESTIGATOR_ID",["GET_CARD_ID", "player4Investigator", 0, 0]],
-      ["COND",["NOT_EQUAL", "$INVESTIGATOR_ID", null],["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1]]
     ]
+    //"Prelude - Welcome to Hemlock Vale Scenario University Status": [
+    //  ["COND", ["EQUAL", "$GAME.arkham.scenarioAnswer1", "A"], ["ACTION_LIST", "Prelude - Welcome to Hemlock Vale - Miskatonic In Flames"], ["TRUE"], ["ACTION_LIST", "Prelude - Welcome to Hemlock Vale - Miskatonic Quiet"] ]
+    //],
+    //"Prelude - Welcome to Hemlock Vale - Attach Hidden Card to Northside": [
+    //  ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[0]", 1, "sharedNotInPlay"],
+    //  ["VAR", "$ENEMY_ID", "$GAME.lastLoadedCardIds.[0]"],
+    //  ["DO_PUT_INTO_PLAY_AT_SCN", "$ENEMY_ID", 23, 13],
+    //  ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
+    //],
+    //"Prelude - Welcome to Hemlock Vale - Attach Hidden Card to Downtown": [
+    //  ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[1]", 1, "sharedNotInPlay"],
+    //  ["VAR", "$ENEMY_ID", "$GAME.lastLoadedCardIds.[0]"],
+    //  ["DO_PUT_INTO_PLAY_AT_SCN", "$ENEMY_ID", 48, 13],
+    //  ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
+    //],
+    //"Prelude - Welcome to Hemlock Vale - Attach Hidden Card to Southside": [
+    //  ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[2]", 1, "sharedNotInPlay"],
+    //  ["VAR", "$ENEMY_ID", "$GAME.lastLoadedCardIds.[0]"],
+    //  ["DO_PUT_INTO_PLAY_AT_SCN", "$ENEMY_ID", 48, 79],
+    //  ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
+    //],
+    //"Prelude - Welcome to Hemlock Vale - Attach Hidden Card to French Hill": [
+    //  ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[3]", 1, "sharedNotInPlay"],
+    //  ["VAR", "$ENEMY_ID", "$GAME.lastLoadedCardIds.[0]"],
+    //  ["DO_PUT_INTO_PLAY_AT_SCN", "$ENEMY_ID", 73, 79],
+    //  ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
+    //],
+    //"Prelude - Welcome to Hemlock Vale - Attach Hidden Card to Uptown": [
+    //  ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[4]", 1, "sharedNotInPlay"],
+    //  ["VAR", "$ENEMY_ID", "$GAME.lastLoadedCardIds.[0]"],
+    //  ["DO_PUT_INTO_PLAY_AT_SCN", "$ENEMY_ID", 23, 79],
+    //  ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
+    //],
+    //"Prelude - Welcome to Hemlock Vale - Attach Hidden Card to Waterfront District": [
+    //  ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[5]", 1, "sharedNotInPlay"],
+    //  ["VAR", "$ENEMY_ID", "$GAME.lastLoadedCardIds.[0]"],
+    //  ["DO_PUT_INTO_PLAY_AT_SCN", "$ENEMY_ID", 73, 46],
+    //  ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
+    //],
+    //"Prelude - Welcome to Hemlock Vale - Miskatonic In Flames": [
+    //  ["DO_SPAWN_LOCATION_SCN", "Miskatonic University In Flames", "12155", 20, 43],
+    //  ["DO_CREATE_CARDS_SCN", "Set Aside", "12156", 1, "sharedRemoved"]
+    //],
+    //"Prelude - Welcome to Hemlock Vale - Miskatonic Quiet": [
+    //  ["DO_SPAWN_LOCATION_SCN", "Miskatonic University Quiet", "12156", 20, 43],
+    //  ["DO_CREATE_CARDS_SCN", "Set Aside", "12155", 1, "sharedRemoved"],
+    //  ["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1]
+    //],
+    //"Prelude - Welcome to Hemlock Vale - Add Doom Per Investigator": [
+    //  ["DEFINE", "$INVESTIGATOR_ID",["GET_CARD_ID", "player1Investigator", 0, 0]],
+    //  ["COND",["NOT_EQUAL", "$INVESTIGATOR_ID", null],["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1]],
+    //  ["DEFINE", "$INVESTIGATOR_ID",["GET_CARD_ID", "player2Investigator", 0, 0]],
+    //  ["COND",["NOT_EQUAL", "$INVESTIGATOR_ID", null],["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1]],
+    //  ["DEFINE", "$INVESTIGATOR_ID",["GET_CARD_ID", "player3Investigator", 0, 0]],
+    //  ["COND",["NOT_EQUAL", "$INVESTIGATOR_ID", null],["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1]],
+    //  ["DEFINE", "$INVESTIGATOR_ID",["GET_CARD_ID", "player4Investigator", 0, 0]],
+    //  ["COND",["NOT_EQUAL", "$INVESTIGATOR_ID", null],["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1]]
+    //]
   }
 }
 // kate: syntax Dragnlang; scheme Arkham Dark;
