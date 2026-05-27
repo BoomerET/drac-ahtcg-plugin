@@ -1,0 +1,165 @@
+{
+    "preBuiltDecks": {
+        "DM - Rats": {
+            "hideFromSearch": true,
+            "label": "Rats",
+            "cards": [
+                {"databaseId": "01159", "quantity": 3, "loadGroupId": "sharedEncounterDeck"}    //Swarm of Rats
+            ]
+        },
+        "DM - Ghouls": {
+            "hideFromSearch": true,
+            "label": "Ghouls",
+            "cards": [
+                {"databaseId": "01160", "quantity": 3, "loadGroupId": "sharedEncounterDeck"},   //Ghoul Minion
+                {"databaseId": "01161", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},   //Ravenous Ghoul
+                {"databaseId": "01162", "quantity": 3, "loadGroupId": "sharedEncounterDeck"}    //Grasping Hands
+            ]
+        },
+        "DM - Striking Fear": {
+            "hideFromSearch": true,
+            "label": "Striking Fear",
+            "cards": [
+                {"databaseId": "01163", "quantity": 3, "loadGroupId": "sharedEncounterDeck"},   //Rotting Remains
+                {"databaseId": "01164", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},   //Frozen in Fear
+                {"databaseId": "01165", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}    //Dissonant Voices
+            ]
+        },
+        "DM - Ancient Evils": {
+            "hideFromSearch": true,
+            "label": "Ancient Evils",
+            "cards": [
+                {"databaseId": "01166", "quantity": 3, "loadGroupId": "sharedEncounterDeck"}    //Ancient Evils
+            ]
+        },
+        "DM - Chilling Cold": {
+            "hideFromSearch": true,
+            "label": "Chilling Cold",
+            "cards": [
+                {"databaseId": "01167", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},   //Crypt Chill
+                {"databaseId": "01168", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}    //Obscuring Fog
+            ]
+        },
+        "DM - Dark Cult": {
+            "hideFromSearch": true,
+            "label": "Dark Cult",
+            "cards": [
+                {"databaseId": "01169", "quantity": 3, "loadGroupId": "sharedEncounterDeck"},   //Acolyte
+                {"databaseId": "01170", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},   //Wizard of the Order
+                {"databaseId": "01171", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}    //Mysterious Chanting
+            ]
+        },
+        "DM - Nightgaunts": {
+            "hideFromSearch": true,
+            "label": "Nightgaunts",
+            "cards": [
+                {"databaseId": "01172", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},   //Hunting Nightgaunt
+                {"databaseId": "01173", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}    //On Wings of Darkness
+            ]
+        },
+        "DM - Locked Doors": {
+            "hideFromSearch": true,
+            "label": "Locked Doors",
+            "cards": [
+                {"databaseId": "01174", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}    //Locked Door
+            ]
+        },
+        "DM - Agents of Hastur": {
+            "hideFromSearch": true,
+            "label": "Agents of Hastur",
+            "cards": [
+                {"databaseId": "01175", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},   //Screeching Byakhee
+                {"databaseId": "01176", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}    //The Yellow Sign
+            ]
+        },
+        "DM - Agents of Yog-Sothoth": {
+            "hideFromSearch": true,
+            "label": "Agents of Yog-Sothoth",
+            "cards": [
+                {"databaseId": "01177", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},   //Yithian Observer
+                {"databaseId": "01178", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}    //Offer of Power
+            ]
+        },
+        "DM - Agents of Shub-Niggurath": {
+            "hideFromSearch": true,
+            "label": "Agents of Shub-Niggurath",
+            "cards": [
+                {"databaseId": "01179", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},   //Relentless Dark Young
+                {"databaseId": "01180", "quantity": 3, "loadGroupId": "sharedEncounterDeck"}    //Goat Spawn
+            ]
+        },
+        "DM - Agents of Cthulhu": {
+            "hideFromSearch": true,
+            "label": "Agents of Cthulhu",
+            "cards": [
+                {"databaseId": "01181", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},   //Young Deep One
+                {"databaseId": "01182", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}    //Dreams of R'lyeh
+            ]
+        },
+        "Dark Matter Chaos Bag - Easy": {
+            "hideFromSearch": true,
+            "label": "Dark Matter Chaos Bag - Easy",
+            "cards": [
+                {"databaseId": "chaos_p1", "quantity": 2, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_p0", "quantity": 3, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_m1", "quantity": 2, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_m2", "quantity": 2, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_skull", "quantity": 2, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_cultist", "quantity": 2, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_auto_fail", "quantity": 1, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_elder_sign", "quantity": 1, "loadGroupId": "sharedChaosBag"}
+
+            ]
+        },
+        "Dark Matter Chaos Bag - Standard": {
+            "hideFromSearch": true,
+            "label": "Dark Matter Chaos Bag - Standard",
+            "cards": [
+                {"databaseId": "chaos_p1", "quantity": 1, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_p0", "quantity": 2, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_m1", "quantity": 3, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_m2", "quantity": 2, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_m3", "quantity": 1, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_m4", "quantity": 1, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_skull", "quantity": 2, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_cultist", "quantity": 2, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_auto_fail", "quantity": 1, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_elder_sign", "quantity": 1, "loadGroupId": "sharedChaosBag"}
+            ]
+        },
+        "Dark Matter Chaos Bag - Hard": {
+            "hideFromSearch": true,
+            "label": "Dark Matter Chaos Bag - Hard",
+            "cards": [
+                {"databaseId": "chaos_p0", "quantity": 3, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_m1", "quantity": 2, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_m2", "quantity": 2, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_m3", "quantity": 2, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_m4", "quantity": 1, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_m5", "quantity": 1, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_skull", "quantity": 2, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_cultist", "quantity": 2, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_auto_fail", "quantity": 1, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_elder_sign", "quantity": 1, "loadGroupId": "sharedChaosBag"}
+            ]
+        },
+        "Dark Matter Chaos Bag - Expert": {
+            "hideFromSearch": true,
+            "label": "Dark Matter Chaos Bag - Expert",
+            "cards": [
+                {"databaseId": "chaos_p0", "quantity": 1, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_m1", "quantity": 1, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_m2", "quantity": 2, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_m3", "quantity": 2, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_m4", "quantity": 2, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_m5", "quantity": 1, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_m6", "quantity": 1, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_m8", "quantity": 1, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_skull", "quantity": 2, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_cultist", "quantity": 2, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_auto_fail", "quantity": 1, "loadGroupId": "sharedChaosBag"},
+                {"databaseId": "chaos_elder_sign", "quantity": 1, "loadGroupId": "sharedChaosBag"}
+            ]
+        }
+    }
+}
