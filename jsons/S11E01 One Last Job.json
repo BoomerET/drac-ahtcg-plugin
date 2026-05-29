@@ -14,11 +14,11 @@
                 {"databaseId": "11501", "quantity": 1, "loadGroupId": "sharedScenarioReference"},
                 {"databaseId": "11502", "quantity": 1, "loadGroupId": "sharedAgendaStory"}, //Arkham Nightlife
                 {"databaseId": "11503", "quantity": 1, "loadGroupId": "sharedAgendaStory"}, //Long Night
-                {"databaseId": "11504", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //Questioning the Gangs/Hibbs Roadhouse
-                {"databaseId": "11505", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //Questioning the Gangs/La Bella Luna
-                {"databaseId": "11506", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //The Sheldon Gang
-                {"databaseId": "11507", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //The O'Bannion Gang
-                {"databaseId": "11508", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //Face the Music
+                //{"databaseId": "11504", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //Questioning the Gangs/Hibbs Roadhouse
+                //{"databaseId": "11505", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //Questioning the Gangs/La Bella Luna
+                //{"databaseId": "11506", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //The Sheldon Gang
+                //{"databaseId": "11507", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //The O'Bannion Gang
+                //{"databaseId": "11508", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //Face the Music
                 {"databaseId": "11509", "quantity": 1, "loadGroupId": "sharedLocations", "left": "15%", "top": "43%"}, //Tillinghast Esoterica: Assorted Curiosities
                 {"databaseId": "01125", "quantity": 1, "loadGroupId": "sharedLocations", "left": "55%", "top": "43%"}, //Rivertown
                 {"databaseId": "01129", "quantity": 1, "loadGroupId": "sharedLocations", "left": "35%", "top": "43%"}, //Miskatonic University
@@ -50,12 +50,12 @@
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$MM_DOWNTOWN.[0]", 55, 10]
         ],
         "Choose Random Act 1a": [
-            ["VAR", "$TDC_Act1a", ["SHUFFLE_LIST", ["LIST", "11504", "11505"]]],
-            //["COND", "$TDC_Act1a.[0] == '11504'", ["ACTION_LIST", "Set Act 2a - The Sheldon Gang"]],
-            //["COND", "$TDC_Act1a.[0] == '11505'", ["ACTION_LIST", "Set Act 2a - The O'Bannion Gang"]],
-            ["COND", ["EQUAL", "$TDC_Act1a.[0]", 11504], ["ACTION_LIST", "Set Act 2a - The Sheldon Gang"]],
-            ["COND", ["EQUAL", "$TDC_Act1a.[0]", 11505], ["ACTION_LIST", "Set Act 2a - The O'Bannion Gang"]],
-            ["LOGF", "Which Act: {0}", "$TDC_Act1a.[0]"]
+            //["VAR", "$TDC_Act1a", ["SHUFFLE_LIST", ["LIST", "11504", "11505"]]], 
+            ["VAR", "$FIRST_ACT", ["SHUFFLE_LIST", ["LIST", "11504", "11505"]]],
+            ["DO_CREATE_STORY_CARD_SCN", "Act 1a", "$FIRST_ACT.[0]", 1, "sharedActStory"],
+            ["COND", ["EQUAL", "$FIRST_ACT.[0]", "11504"], ["ACTION_LIST", "Set Act 2a - The Sheldon Gang"]],
+            ["COND", ["EQUAL", "$FIRST_ACT.[0]", "11505"], ["ACTION_LIST", "Set Act 2a - The O'Bannion Gang"]]
+            //["LOGF", "Which Act: {0}", "$TDC_Act1a.[0]"]
             //["VAR", "$TDC_Act1a_Id", ["GET_NAMED_CARD_ID", "$TDC_Act1a.[0]"]],
             //["LOGF", "Which Act: {0}", "$TDC_Act1a_Id"],
             //["MOVE_CARD", "$TDC_Act1a_Id", "sharedActStory", -1]
@@ -67,17 +67,14 @@
             //Put La Bella Luna into play,  connected to Downtown. Spawn Naomi at La Bella Luna.
         ],
         "Set Act 2a - The Sheldon Gang": [
-            ["LOG", "Act 2: The Sheldon Gang"]
-            //["DO_CREATE_CARDS", "$GAME.firstPlayer", "Act 1", "11504", 1, "sharedActStory", true, null],
-            //["MOVE_CARD", "Act 1", "sharedActStory", -1],
-            //["DO_CREATE_CARDS", "$GAME.firstPlayer", "Act 2", "11506", 1, "sharedActStory", true, null],
-            //["DO_CREATE_CARDS", "$GAME.firstPlayer", "Act 3", "11508", 1, "sharedActStory", true, null]
+            ["LOG", "Act 2: The Sheldon Gang"],
+            ["DO_CREATE_STORY_CARD_SCN", "Act 2a", "11506", 1, "sharedActStory"],
+            ["DO_CREATE_STORY_CARD_SCN", "Act 3a", "11508", 1, "sharedActStory"]
         ],
         "Set Act 2a - The O'Bannion Gang": [
-            ["LOG", "Act 2: The O'Bannion Gang"]
-            //["DO_CREATE_CARDS", "$GAME.firstPlayer", "Act 1", "11505", 1, "sharedActStory", true, null],
-            //["DO_CREATE_CARDS", "$GAME.firstPlayer", "Act 2", "11507", 1, "sharedActStory", true, null],
-            //["DO_CREATE_CARDS", "$GAME.firstPlayer", "Act 3", "11508", 1, "sharedActStory", true, null]
+            ["LOG", "Act 2: The O'Bannion Gang"],
+            ["DO_CREATE_STORY_CARD_SCN", "Act 2a", "11507", 1, "sharedActStory"],
+            ["DO_CREATE_STORY_CARD_SCN", "Act 3a", "11508", 1, "sharedActStory"]
         ]
     }
 }
