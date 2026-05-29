@@ -86,6 +86,8 @@
                     "Curse",
                     ["EQUAL", "$CHAOS_TOKEN_DATABASE_ID", "chaos_frost"],
                     "Frost",
+		    ["EQUAL", "$CHAOS_TOKEN_DATABASE_ID", "chaos_blood"],
+		    "Blood",
                     ["TRUE"],
                     null
                 ]
@@ -134,6 +136,8 @@
                     10,
                     ["EQUAL", "$CHAOS_TOKEN_DATABASE_ID", "chaos_frost"],
                     8,
+		    ["EQUAL", "$CHAOS_TOKEN_DATABASE_ID", "chaos_blood"],
+		    3,
                     ["TRUE"],
                     0
                 ]
@@ -537,6 +541,13 @@
                         ["PROMPT", "$PLAYER_N", "nameChaosTokenNumeric"]
                     ]
                 },
+		{
+		    "label": "Blood.",
+		    "hotkey": "R",
+		    "code": [
+		       ["DO_NAME_CHAOS_TOKEN", "$PLAYER_N", "chaos_blood", true, "$PLAYER_N"]
+		    ]
+		},
                 {
                     "label": "Cancel.",
                     "hotkey": "X"
