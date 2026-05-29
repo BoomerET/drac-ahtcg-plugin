@@ -7,6 +7,4 @@ upload.sh
 sync_arkham_build.sh
 sync_images.sh
 unused_code*.txt
-*.tsv
 
-/tsv
