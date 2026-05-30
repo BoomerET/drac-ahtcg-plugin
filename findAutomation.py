@@ -88,14 +88,21 @@ def walk_tree(value: Any, prefix: str = "") -> list[str]:
 
 def find_automations(root: Path) -> None:
 
+    EXCLUDE = [
+        "starter",
+        "generated",
+        "backup",
+    ]
+
     files = sorted(
-       path
-       for path in (
-          list(root.rglob("*.json")) +
-          list(root.rglob("*.jsonc"))
-       )
-       if "Starter" not in path.name
+        path
+        for path in (
+            list(root.rglob("*.json")) +
+            list(root.rglob("*.jsonc"))
+        )
+        if not any(x in path.name.lower() for x in EXCLUDE)
     )
+    
     for path in files:
         try:
             data = load_jsonc(path)
