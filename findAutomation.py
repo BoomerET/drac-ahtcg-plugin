@@ -92,6 +92,7 @@ def find_automations(root: Path) -> None:
         "starter",
         "generated",
         "backup",
+        "core",
     ]
 
     files = sorted(
