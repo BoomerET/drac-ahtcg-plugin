@@ -4,130 +4,146 @@
             "label": "One Last Job",
             "cards": [],
             "postLoadActionList": [
-                ["SCENARIO_INIT", "The Drowned City", "The Drowned City", "One Last Job", null, "One Last Job Scenario Init"]
+                [
+                    "SCENARIO_INIT",
+                    "The Drowned City",
+                    "The Drowned City",
+                    "One Last Job",
+                    null,
+                    "One Last Job Scenario Init"
+                ]
             ]
         },
         "One Last Job": {
             "hideFromSearch": true,
             "label": "One Last Job",
             "cards": [
-                {"databaseId": "11501", "quantity": 1, "loadGroupId": "sharedScenarioReference"},
-                {"databaseId": "11502", "quantity": 1, "loadGroupId": "sharedAgendaStory"}, //Arkham Nightlife
-                {"databaseId": "11503", "quantity": 1, "loadGroupId": "sharedAgendaStory"}, //Long Night
-                //{"databaseId": "11504", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //Questioning the Gangs/Hibbs Roadhouse
-                //{"databaseId": "11505", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //Questioning the Gangs/La Bella Luna
-                //{"databaseId": "11506", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //The Sheldon Gang
-                //{"databaseId": "11507", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //The O'Bannion Gang
-                //{"databaseId": "11508", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //Face the Music
-                {"databaseId": "11509", "quantity": 1, "loadGroupId": "sharedLocations", "left": "15%", "top": "76%"}, //Tillinghast Esoterica: Assorted Curiosities
-                {"databaseId": "01125", "quantity": 1, "loadGroupId": "sharedLocations", "left": "55%", "top": "76%"}, //Rivertown
-                {"databaseId": "01129", "quantity": 1, "loadGroupId": "sharedLocations", "left": "35%", "top": "76%"}, //Miskatonic University
-                {"databaseId": "01132", "quantity": 1, "loadGroupId": "sharedLocations", "left": "75%", "top": "43%"}, //Easttown
-                {"databaseId": "01134", "quantity": 1, "loadGroupId": "sharedLocations", "left": "35%", "top": "43%"}, //Northside
-                {"databaseId": "11510", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //Sadie Sheldon
-                {"databaseId": "11511", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //Naomi O'Bannion
-                {"databaseId": "11512", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //Gang Soldier
-                {"databaseId": "11513", "quantity": 2, "loadGroupId": "sharedNotInPlay"}, //Gang Enforcer
-                {"databaseId": "11504b", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //Hibbs Roadhouse
-                {"databaseId": "11505b", "quantity": 1, "loadGroupId": "sharedNotInPlay"} //La Bella Luna
+                {"databaseId": "11501","quantity": 1,"loadGroupId": "sharedScenarioReference"},
+                {"databaseId": "11502","quantity": 1,"loadGroupId": "sharedAgendaStory"},//Arkham Nightlife
+                {"databaseId": "11503","quantity": 1,"loadGroupId": "sharedAgendaStory"},//Long Night
+                //{"databaseId": "11504","quantity": 1,"loadGroupId": "sharedNotInPlay"},//Questioning the Gangs/Hibbs Roadhouse
+                //{"databaseId": "11505","quantity": 1,"loadGroupId": "sharedNotInPlay"},//Questioning the Gangs/La Bella Luna
+                //{"databaseId": "11506","quantity": 1,"loadGroupId": "sharedNotInPlay"},//The Sheldon Gang
+                //{"databaseId": "11507","quantity": 1,"loadGroupId": "sharedNotInPlay"},//The O'Bannion Gang
+                //{"databaseId": "11508","quantity": 1,"loadGroupId": "sharedNotInPlay"},//Face the Music
+                {"databaseId": "11509","quantity": 1,"loadGroupId": "sharedLocations","left": "15%","top": "76%"},//Tillinghast Esoterica: Assorted Curiosities
+                {"databaseId": "01125","quantity": 1,"loadGroupId": "sharedLocations","left": "55%","top": "76%"},//Rivertown
+                {"databaseId": "01129","quantity": 1,"loadGroupId": "sharedLocations","left": "35%","top": "76%"},//Miskatonic University
+                {"databaseId": "01132","quantity": 1,"loadGroupId": "sharedLocations","left": "75%","top": "43%"},//Easttown
+                {"databaseId": "01134","quantity": 1,"loadGroupId": "sharedLocations","left": "35%","top": "43%"},//Northside
+                {"databaseId": "11510","quantity": 1,"loadGroupId": "sharedNotInPlay"},//Sadie Sheldon
+                {"databaseId": "11511","quantity": 1,"loadGroupId": "sharedNotInPlay"},//Naomi O'Bannion
+                {"databaseId": "11512","quantity": 1,"loadGroupId": "sharedNotInPlay"},//Gang Soldier
+                {"databaseId": "11513","quantity": 2,"loadGroupId": "sharedNotInPlay"},//Gang Enforcer
+                {"databaseId": "11504b","quantity": 1,"loadGroupId": "sharedNotInPlay"},//Hibbs Roadhouse
+                {"databaseId": "11505b","quantity": 1,"loadGroupId": "sharedNotInPlay"} //La Bella Luna
             ]
         }
     },
     "actionLists": {
         "One Last Job Scenario Init": [
-            ["DO_LOAD_CARDS_SCN", "One Last Job"],
-            ["DO_SET_SPAWN_LOCATION", "11504b", 75, 76],
-            ["DO_SET_SPAWN_LOCATION", "11505b", 55, 10],
-            ["ACTION_LIST", "Random Midnight Mask Downtown"],
-            ["ACTION_LIST", "Choose Random Act 1a"],
-            ["DO_LOAD_CARDS_SCN", "TDC - Dreams"],
-            ["DO_LOAD_CARDS_SCN", "Chilling Cold"],
-            ["DO_LOAD_CARDS_SCN", "Locked Doors"],
-            ["DO_LOAD_CARDS_SCN", "Rats"],
-            ["DO_LOAD_CARDS_SCN", "Striking Fear"],
-
-            // Trying automation start
-            ["SET", "/arkham/oneLastJobAct2Setup", false],
-            // Trying automation end
-
-            ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Tillinghast Esoterica", 5, 7, 3, 0],
-            ["SCENARIO_INIT_CONTINUE", null]
+            ["DO_LOAD_CARDS_SCN","One Last Job"],
+            ["DO_SET_SPAWN_LOCATION","11504b",75,76],
+            ["DO_SET_SPAWN_LOCATION","11505b",55,10],
+            ["ACTION_LIST","Random Midnight Mask Downtown"],
+            ["ACTION_LIST","Choose Random Act 1a"],
+            ["DO_LOAD_CARDS_SCN","TDC - Dreams"],
+            ["DO_LOAD_CARDS_SCN","Chilling Cold"],
+            ["DO_LOAD_CARDS_SCN","Locked Doors"],
+            ["DO_LOAD_CARDS_SCN","Rats"],
+            ["DO_LOAD_CARDS_SCN","Striking Fear"],// Trying automation start            
+            ["SET","/arkham/oneLastJobAct2Setup",false],// Trying automation end 
+            ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION","Tillinghast Esoterica",5,7,3,0],
+            ["SCENARIO_INIT_CONTINUE",null]
         ],
         "Random Midnight Mask Downtown": [
-            ["VAR", "$MM_DOWNTOWN", ["SHUFFLE_LIST", ["LIST", "01130", "01131"]]],
-            ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$MM_DOWNTOWN.[0]", 55, 43]
-        ],
+            // Randomize which Downtown to use
+            ["VAR","$MM_DOWNTOWN",["SHUFFLE_LIST",["LIST","01130","01131"]]],
+            ["DO_SPAWN_LOCATION_SCN","sharedLocations","$MM_DOWNTOWN.[0]",55,43]],
         "Choose Random Act 1a": [
-            //["VAR", "$TDC_Act1a", ["SHUFFLE_LIST", ["LIST", "11504", "11505"]]], 
-            ["VAR", "$FIRST_ACT", ["SHUFFLE_LIST", ["LIST", "11504", "11505"]]],
-            ["DO_CREATE_STORY_CARD_SCN", "Questioning the Gangs", "$FIRST_ACT.[0]", 1, "sharedActStory"],
+            // Randomize which Questioning the Gangs
+            ["VAR","$FIRST_ACT",["SHUFFLE_LIST",["LIST","11504","11505"]]],
+            ["DO_CREATE_STORY_CARD_SCN","Questioning the Gangs","$FIRST_ACT.[0]",1,"sharedActStory"],
+            //["VAR","$QUEST_GANGS",["GET_NAMED_DECK_CARD","Questioning the Gangs",["GET_CONTROLLER_PLAY","$PLAYER_N"]]],
+            //["LOGF","Quest Gangs: {0}","$QUEST_GANGS"],
+            //["SET","/cardById/$QUEST_GANGS.id/disableSideChange",true],
+            //["LOGF","Quest Gangs ID: {0}","$QUEST_GANGS.id"],
+
+            // Which Act 2a to use based on which Act 1 was used
             [
-                "COND", 
-                ["EQUAL", "$FIRST_ACT.[0]", "11504"], 
-                ["DO_CREATE_STORY_CARD_SCN", "The Sheldon Gang", "11506", 2, "sharedActStory"],
+                "COND",
+                ["EQUAL","$FIRST_ACT.[0]","11504"],
+                ["DO_CREATE_STORY_CARD_SCN","The Sheldon Gang","11506",2,"sharedActStory"],
                 ["TRUE"],
-                ["DO_CREATE_STORY_CARD_SCN", "The O'Bannion Gang", "11507", 2, "sharedActStory"]
+                ["DO_CREATE_STORY_CARD_SCN","The O'Bannion Gang","11507",2,"sharedActStory"]
             ],
-            ["DO_CREATE_STORY_CARD_SCN", "Face the Music", "11508", 3, "sharedActStory"]
-            //["DO_CREATE_STORY_CARD_SCN", "loadGroupId", "11508", 1, "sharedActStory"]
-            //["LOGF", "Which Act: {0}", "$TDC_Act1a.[0]"]
-            //["VAR", "$TDC_Act1a_Id", ["GET_NAMED_CARD_ID", "$TDC_Act1a.[0]"]],
-            //["LOGF", "Which Act: {0}", "$TDC_Act1a_Id"],
-            //["MOVE_CARD", "$TDC_Act1a_Id", "sharedActStory", -1]
-            //["DO_CREATE_CARDS", "$GAME.firstPlayer", "Act 1a", "$TDC_Act1a.[0]", 1, "sharedActStory", true, null]
-            // Depending on which Act 1a card is drawn, we need to choose act 2 and 3.
-            //11504, Act 2 is The Sheldon Gang, Act 3 is Face the Music; 
-            //Put Hibbs Roadhouse into play, connected to Easttown. Spawn Sadie at Hibbs.
-            //11505, Act 2 is The O'Bannion Gang, Act 3 is Face the Music. 
-            //Put La Bella Luna into play,  connected to Downtown. Spawn Naomi at La Bella Luna.
+            // Create Act 3
+            ["DO_CREATE_STORY_CARD_SCN","Face the Music","11508",3,"sharedActStory"]
+            //["DO_CREATE_STORY_CARD_SCN","loadGroupId","11508",1,"sharedActStory"]
+            //["LOGF","Which Act: {0}","$TDC_Act1a.[0]"]
+            //["VAR","$TDC_Act1a_Id",["GET_NAMED_CARD_ID","$TDC_Act1a.[0]"]],
+            //["LOGF","Which Act: {0}","$TDC_Act1a_Id"],
+            //["MOVE_CARD","$TDC_Act1a_Id","sharedActStory",-1]
+            //["DO_CREATE_CARDS","$GAME.firstPlayer","Act 1a","$TDC_Act1a.[0]",1,"sharedActStory",true,null]
+            // Depending on which Act 1a card is drawn,we need to choose act 2 and 3.
+            //11504,Act 2 is The Sheldon Gang,Act 3 is Face the Music; 
+            //Put Hibbs Roadhouse into play,connected to Easttown. Spawn Sadie at Hibbs.
+            //11505,Act 2 is The O'Bannion Gang,Act 3 is Face the Music. 
+            //Put La Bella Luna into play,connected to Downtown. Spawn Naomi at La Bella Luna.
         ]
     },
     //"functions": {
     //    "ONE_LAST_JOB_ACT_2_SETUP": {
     //        "args": ["$TARGET_PLAYER"],
     //        "code": [
-    //            ["CHECK_REF", "TARGET_ACT", "TARGET_LOCATION", "TASK_ID", "ACT_LOG_ENTRY"],
-    //            ["VAR", "$FIRST_ACT", ["SHUFFLE_LIST", ["LIST", "11504", "11505"]]],
-    //            ["DO_CREATE_STORY_CARD_SCN", "Act 2a", "$FIRST_ACT.[0]", 1, "sharedActStory"]
+    //            ["CHECK_REF","TARGET_ACT","TARGET_LOCATION","TASK_ID","ACT_LOG_ENTRY"],
+    //            ["VAR","$FIRST_ACT",["SHUFFLE_LIST",["LIST","11504","11505"]]],
+    //            ["DO_CREATE_STORY_CARD_SCN","Act 2a","$FIRST_ACT.[0]",1,"sharedActStory"]
     //        ]
     //    }
     //},
     "automation": {
         "cards": {
-            "11504": { //Questioning the Gangs
+            "11502": { //Arkham Nightlift
+                "rules": {
+                    "11502b": {
+                        "type": "trigger",
+                        "priority": 10,
+                        "listenTo": ["/cardById/$THIS_ID/currentSide"],
+                        "condition": [
+                            "AND",
+                            ["EQUAL", "/cardById/$THIS_ID/currentSide", "B"],
+                            ["EQUAL", "$CARD.currentFace.type", "Act"],
+                            ["EQUAL", "$THIS.sides.A.databaseId", "11504"]
+                        ],
+                        "then": [
+                            ["LOG", "Holy Crap, we got here."]
+                        ]
+                    }
+                }
+            },
+            "11505": {//Questioning the Gangs
                 "ability" : {
-                    "B": [
-                        ["LOG", "Automation for 11504"]
+                    "A": [
+                        ["LOG","Automation for 11505"],
+                        ["SET", "/cardById/$THIS.id/currentSide", "B"],
+                        ["DO_ADVANCE_STORY_FINAL", "$PLAYER_N", "sharedActStory", "$THIS.id", true, "$PLAYER_N"],
+                        ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "11505b", 55, 10],
+                        ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "11511", 58, 13]
                     ]
                 }
             },
-            "11505": { //Questioning the Gangs
+            "11504": {//Questioning the Gangs
                 "ability" : {
-                    "B": [
-                        ["LOG", "Automation for 11505"]
+                    "A": [
+                        ["LOG","Automation for 11504"],
+                        ["SET", "/cardById/$THIS.id/currentSide", "B"],
+                        ["DO_ADVANCE_STORY_FINAL", "$PLAYER_N", "sharedActStory", "$THIS.id", true, "$PLAYER_N"],
+                        ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "11504b", 75, 10],
+                        ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "11510", 78, 13]
                     ]
                 }
             }
-
         }
     }
-    //"prompts": {
-    //    "oneLastJobQuestioningTheGangsAbilityB": {
-    //        "args": [],
-    //        "message": "Do you want to setup Act 2?",
-    //        "options": [
-    //            {
-    //                "label": "Yes.",
-    //                "hotkey": "Y",
-    //                "code": [
-    //                    ["ONE_LAST_JOB_ACT_2_SETUP", "$PLAYER_N"]
-    //                ]
-    //            },
-    //            {
-    //                "label": "No.",
-    //                "hotkey": "N"
-    //            }
-    //        ]
-    //    }
-    //}
 }
