@@ -532,33 +532,9 @@
                 ["VAR", "$TOP_CARD", ["GET_CARD_AND_VALIDATE", "$TOP_CARD_ID", "DO_ADVANCE_STORY_FINAL.TOP_CARD_ID"]],
                 ["VALIDATE_BOOLEAN", "$LOG_EVENT", "DO_ADVANCE_STORY_FINAL.LOG_EVENT"],
                 ["DO_LOG", "$LOG_EVENT", "$ACTOR_PLAYER", "$TARGET_PLAYER", "advance {{$TOP_CARD.currentFace.name}}.", "advances {{$TOP_CARD.currentFace.name}}."],
-                //["COND",
-                //    ["EQUAL", "$TOP_CARD.currentSide", "A"],
-                //    ["SET", "/cardById/$TOP_CARD_ID/currentSide", "B"],
-                //    ["TRUE"],
-                //    [
-                //        ["COND",
-                //            ["GREATER_THAN", ["LENGTH", "$TARGET_GROUP.stackIds"], 1],
-                //            ["MOVE_CARD", "$TOP_CARD_ID", "$TARGET_GROUP_ID", -1]
-                //        ],
-                //        ["SET", "/cardById/$TOP_CARD_ID/currentSide", "A"]
-                //    ]
-                //],
                 ["COND",
-                    ["AND",
-                        ["EQUAL", "$TOP_CARD.currentSide", "A"],
-                        ["EQUAL", "$TOP_CARD.sides.B.type", "Enemy-Location"]
-                    ],
-                    [
-                        ["SET", "/cardById/$TOP_CARD_ID/currentSide", "B"],
-                        ["MOVE_CARD", "$TOP_CARD_ID", "sharedLocations", -1],
-                        ["DO_SET_CARD_LOCATION", "$TOP_CARD_ID", "$TOP_CARD.spawnLeft", "$TOP_CARD.spawnTop"],
-                        ["LOG", "└── {{$TOP_CARD.sides.B.name}} is placed into play."]
-                    ],
-                
                     ["EQUAL", "$TOP_CARD.currentSide", "A"],
                     ["SET", "/cardById/$TOP_CARD_ID/currentSide", "B"],
-                
                     ["TRUE"],
                     [
                         ["COND",
