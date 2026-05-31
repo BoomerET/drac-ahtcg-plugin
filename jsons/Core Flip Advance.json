@@ -525,65 +525,69 @@
             ]
         },
         "DO_ADVANCE_STORY_FINAL": {
-            "args": ["$TARGET_PLAYER", "$TARGET_GROUP_ID", "$TOP_CARD_ID", "$LOG_EVENT", "$ACTOR_PLAYER"],
-            "code": [
-                ["VAR", "$ADVANCE_HANDLED", false],
+    "args": ["$TARGET_PLAYER", "$TARGET_GROUP_ID", "$TOP_CARD_ID", "$LOG_EVENT", "$ACTOR_PLAYER"],
+    "code": [
+        ["VALIDATE_PLAYER", "$TARGET_PLAYER", "DO_ADVANCE_STORY_FINAL.TARGET_PLAYER"],
+        ["VAR", "$TARGET_GROUP", ["GET_GROUP_AND_VALIDATE", "$TARGET_GROUP_ID", "DO_ADVANCE_STORY_FINAL.TARGET_GROUP_ID"]],
+        ["VAR", "$TOP_CARD", ["GET_CARD_AND_VALIDATE", "$TOP_CARD_ID", "DO_ADVANCE_STORY_FINAL.TOP_CARD_ID"]],
+        ["VALIDATE_BOOLEAN", "$LOG_EVENT", "DO_ADVANCE_STORY_FINAL.LOG_EVENT"],
 
+        ["DO_LOG", "$LOG_EVENT", "$ACTOR_PLAYER", "$TARGET_PLAYER", "advance {{$TOP_CARD.currentFace.name}}.", "advances {{$TOP_CARD.currentFace.name}}."],
+
+        ["SET", "/arkham/advanceHandled", false],
+
+        ["COND",
+            ["NOT_EQUAL", "$GAME.arkham.advanceStoryOverrideActionList", null],
+            [
+                ["SET", "/arkham/advanceTopCardId", "$TOP_CARD_ID"],
+                ["SET", "/arkham/advanceTargetGroupId", "$TARGET_GROUP_ID"],
+                ["SET", "/arkham/advanceLogEvent", "$LOG_EVENT"],
+                ["SET", "/arkham/advanceActorPlayer", "$ACTOR_PLAYER"],
+                ["SET", "/arkham/advanceTargetPlayer", "$TARGET_PLAYER"],
+
+                ["ACTION_LIST", "$GAME.arkham.advanceStoryOverrideActionList"],
+
+                ["UNSET", "/arkham/advanceTopCardId"],
+                ["UNSET", "/arkham/advanceTargetGroupId"],
+                ["UNSET", "/arkham/advanceLogEvent"],
+                ["UNSET", "/arkham/advanceActorPlayer"],
+                ["UNSET", "/arkham/advanceTargetPlayer"]
+            ]
+        ],
+
+        ["COND",
+            ["EQUAL", "$GAME.arkham.advanceHandled", false],
+            [
                 ["COND",
-                    ["EQUAL", "$GAME.arkham.advanceStoryOverride", true],
+                    ["EQUAL", "$TOP_CARD.currentSide", "A"],
+                    ["SET", "/cardById/$TOP_CARD_ID/currentSide", "B"],
+                    ["TRUE"],
                     [
-                        ["SET", "/arkham/advanceTopCardId", "$TOP_CARD_ID"],
-                        ["SET", "/arkham/advanceTargetGroupId", "$TARGET_GROUP_ID"],
-                        ["SET", "/arkham/advanceLogEvent", "$LOG_EVENT"],
-                        ["SET", "/arkham/advanceActorPlayer", "$ACTOR_PLAYER"],
-                        ["SET", "/arkham/advanceTargetPlayer", "$TARGET_PLAYER"],
-
-                        ["ACTION_LIST", "$GAME.arkham.advanceStoryOverrideActionList"],
-
-                        ["UNSET", "/arkham/advanceTopCardId"],
-                        ["UNSET", "/arkham/advanceTargetGroupId"],
-                        ["UNSET", "/arkham/advanceLogEvent"],
-                        ["UNSET", "/arkham/advanceActorPlayer"],
-                        ["UNSET", "/arkham/advanceTargetPlayer"]
-                    ]
-                ],
-
-                ["COND",
-                    ["EQUAL", "$ADVANCE_HANDLED", false],
-                    [
-                        ["VALIDATE_PLAYER", "$TARGET_PLAYER", "DO_ADVANCE_STORY_FINAL.TARGET_PLAYER"],
-                        ["VAR", "$TARGET_GROUP", ["GET_GROUP_AND_VALIDATE", "$TARGET_GROUP_ID", "DO_ADVANCE_STORY_FINAL.TARGET_GROUP_ID"]],
-                        ["VAR", "$TOP_CARD", ["GET_CARD_AND_VALIDATE", "$TOP_CARD_ID", "DO_ADVANCE_STORY_FINAL.TOP_CARD_ID"]],
-                        ["VALIDATE_BOOLEAN", "$LOG_EVENT", "DO_ADVANCE_STORY_FINAL.LOG_EVENT"],
-                        ["DO_LOG", "$LOG_EVENT", "$ACTOR_PLAYER", "$TARGET_PLAYER", "advance {{$TOP_CARD.currentFace.name}}.", "advances {{$TOP_CARD.currentFace.name}}."],
                         ["COND",
-                            ["EQUAL", "$TOP_CARD.currentSide", "A"],
-                            ["SET", "/cardById/$TOP_CARD_ID/currentSide", "B"],
-                            ["TRUE"],
-                            [
-                                ["COND",
-                                    ["GREATER_THAN", ["LENGTH", "$TARGET_GROUP.stackIds"], 1],
-                                    ["MOVE_CARD", "$TOP_CARD_ID", "$TARGET_GROUP_ID", -1]
-                                ],
-                                ["SET", "/cardById/$TOP_CARD_ID/currentSide", "A"]
-                            ]
+                            ["GREATER_THAN", ["LENGTH", "$TARGET_GROUP.stackIds"], 1],
+                            ["MOVE_CARD", "$TOP_CARD_ID", "$TARGET_GROUP_ID", -1]
                         ],
-                        ["COND",
-                            ["EQUAL", "$GAME.arkham.advanceAllAgendas", true],
-                            [
-                                ["VAR", "$ADVANCABLE_AGENDAS", ["GET_ADVANCABLE_AGENDAS"]],
-                                ["VAR", "$ADVANCABLE_AGENDAS_COUNT", ["LENGTH", "$ADVANCABLE_AGENDAS"]],
-                                ["COND",
-                                    ["GREATER_THAN", "$ADVANCABLE_AGENDAS_COUNT", 0],
-                                    ["DO_ADVANCE_STORY", "$TARGET_PLAYER", "$ADVANCABLE_AGENDAS.[0].groupId", "$LOG_EVENT", "$ACTOR_PLAYER"]
-                                ]
-                            ]
-                        ]
-
+                        ["SET", "/cardById/$TOP_CARD_ID/currentSide", "A"]
                     ]
                 ]
             ]
-        }
+        ],
+
+        ["UNSET", "/arkham/advanceHandled"],
+
+        ["COND",
+            ["EQUAL", "$GAME.arkham.advanceAllAgendas", true],
+            [
+                ["VAR", "$ADVANCABLE_AGENDAS", ["GET_ADVANCABLE_AGENDAS"]],
+                ["VAR", "$ADVANCABLE_AGENDAS_COUNT", ["LENGTH", "$ADVANCABLE_AGENDAS"]],
+                ["COND",
+                    ["GREATER_THAN", "$ADVANCABLE_AGENDAS_COUNT", 0],
+                    ["DO_ADVANCE_STORY", "$TARGET_PLAYER", "$ADVANCABLE_AGENDAS.[0].groupId", "$LOG_EVENT", "$ACTOR_PLAYER"]
+                ]
+            ]
+        ]
+    ]
+}
     },
     "prompts": {
         "pickAgendaToAdvance": {
