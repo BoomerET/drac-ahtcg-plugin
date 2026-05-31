@@ -38,6 +38,7 @@
     "actionLists": {
         "One Last Job Scenario Init": [
             ["SET", "/arkham/advanceStoryOverride", true],
+            ["SET", "/arkham/advanceStoryOverrideActionList", "One Last Job Advance Story"],
             ["DO_LOAD_CARDS_SCN","One Last Job"],
             ["DO_SET_SPAWN_LOCATION","11504b",75,76],
             ["DO_SET_SPAWN_LOCATION","11505b",55,10],
@@ -68,6 +69,75 @@
             ],
             // Create Act 3
             ["DO_CREATE_STORY_CARD_SCN","Face the Music","11508",3,"sharedActStory"]
+        ],
+        "One Last Job Advance Story": [
+            ["VAR", "$TOP_CARD", ["GET_CARD_AND_VALIDATE", "$GAME.arkham.advanceTopCardId", "One Last Job Advance Story.TOP_CARD_ID"]],
+            ["VAR", "$TARGET_GROUP", ["GET_GROUP_AND_VALIDATE", "$GAME.arkham.advanceTargetGroupId", "One Last Job Advance Story.TARGET_GROUP_ID"]],
+
+            ["COND",
+                ["EQUAL", "$TOP_CARD.sides.A.databaseId", "11504"],
+                [
+                    ["LOG", "└── One Last Job advance override was called for Hibb's Roadhouse."],
+
+                    ["VAR", "$HIBBS_CARDS", ["FILTER_CARDS", "$CARD", ["EQUAL", "$CARD.sides.A.databaseId", "11504b"]]],
+                    ["VAR", "$HIBBS_ID", "$HIBBS_CARDS.[0].id"],
+
+                    ["SET", "/cardById/$HIBBS_ID/currentSide", "A"],
+                    ["MOVE_CARD", "$HIBBS_ID", "sharedLocations", -1],
+                    ["SET", "/cardById/$HIBBS_ID/inPlay", true],
+                    ["DO_SET_CARD_LOCATION", "$HIBBS_ID", "$CARD_BY_ID.$HIBBS_ID.spawnLeft", "$CARD_BY_ID.$HIBBS_ID.spawnTop"],
+
+                    ["COND",
+                        ["GREATER_THAN", ["LENGTH", "$TARGET_GROUP.stackIds"], 1],
+                        [
+                            ["MOVE_CARD", "$TOP_CARD.id", "$TARGET_GROUP.id", -1],
+                            ["VAR", "$NEW_TOP_CARD", ["GET_TOP_CARD", "$TARGET_GROUP.id"]],
+                            ["SET", "/cardById/$NEW_TOP_CARD.id/currentSide", "A"]
+                        ]
+                    ],
+                    ["SET", "/cardById/$TOP_CARD.id/currentSide", "A"]
+                ],
+
+                ["EQUAL", "$TOP_CARD.sides.A.databaseId", "11505"],
+                [
+                    ["LOG", "└── One Last Job advance override was called for La Bella Luna."],
+
+                    ["VAR", "$BELLA_CARDS", ["FILTER_CARDS", "$CARD", ["EQUAL", "$CARD.sides.A.databaseId", "11505b"]]],
+                    ["VAR", "$BELLA_ID", "$BELLA_CARDS.[0].id"],
+
+                    ["SET", "/cardById/$BELLA_ID/currentSide", "A"],
+                    ["MOVE_CARD", "$BELLA_ID", "sharedLocations", -1],
+                    ["SET", "/cardById/$BELLA_ID/inPlay", true],
+                    ["DO_SET_CARD_LOCATION", "$BELLA_ID", "$CARD_BY_ID.$BELLA_ID.spawnLeft", "$CARD_BY_ID.$BELLA_ID.spawnTop"],
+
+                    ["COND",
+                        ["GREATER_THAN", ["LENGTH", "$TARGET_GROUP.stackIds"], 1],
+                        [
+                            ["MOVE_CARD", "$TOP_CARD.id", "$TARGET_GROUP.id", -1],
+                            ["VAR", "$NEW_TOP_CARD", ["GET_TOP_CARD", "$TARGET_GROUP.id"]],
+                            ["SET", "/cardById/$NEW_TOP_CARD.id/currentSide", "A"]
+                        ]
+                    ],
+                    ["SET", "/cardById/$TOP_CARD.id/currentSide", "A"]
+                ],
+
+                ["TRUE"],
+                [
+                    ["LOG", "└── One Last Job advance override did not handle this card; doing normal flip."],
+                    ["COND",
+                        ["EQUAL", "$TOP_CARD.currentSide", "A"],
+                        ["SET", "/cardById/$TOP_CARD.id/currentSide", "B"],
+                        ["TRUE"],
+                        [
+                            ["COND",
+                                ["GREATER_THAN", ["LENGTH", "$TARGET_GROUP.stackIds"], 1],
+                                ["MOVE_CARD", "$TOP_CARD.id", "$TARGET_GROUP.id", -1]
+                            ],
+                            ["SET", "/cardById/$TOP_CARD.id/currentSide", "A"]
+                        ]
+                    ]
+                ]
+            ]
         ]
     },
     //"functions": {
@@ -125,7 +195,7 @@
     //    }
     //},
     "functions": {
-        "DO_SCENARIO_ADVANCE_STORY_FINAL": {
+        "SCENARIO_ADVANCE_STORY": {
             "args": ["$TARGET_PLAYER", "$TARGET_GROUP_ID", "$TOP_CARD_ID", "$LOG_EVENT", "$ACTOR_PLAYER"],
             "code": [
                 ["LOG", "Inside Scenario DO_SCENARIO_ADVANCE_STORY_FINAL"],
