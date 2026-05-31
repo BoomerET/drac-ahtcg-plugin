@@ -77,16 +77,18 @@
             ["COND",
                 ["EQUAL", "$TOP_CARD.sides.A.databaseId", "11504"],
                 [
-                    ["LOG", "└── One Last Job advance override was called for Hibb's Roadhouse."],
-
                     ["VAR", "$HIBBS_CARDS", ["FILTER_CARDS", "$CARD", ["EQUAL", "$CARD.sides.A.databaseId", "11504b"]]],
                     ["VAR", "$HIBBS_ID", "$HIBBS_CARDS.[0].id"],
-
+                
                     ["SET", "/cardById/$HIBBS_ID/currentSide", "A"],
                     ["MOVE_CARD", "$HIBBS_ID", "sharedLocations", -1],
                     ["SET", "/cardById/$HIBBS_ID/inPlay", true],
                     ["DO_SET_CARD_LOCATION", "$HIBBS_ID", "$CARD_BY_ID.$HIBBS_ID.spawnLeft", "$CARD_BY_ID.$HIBBS_ID.spawnTop"],
-
+                
+                    ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "11510", 78, 79],
+                
+                    ["LOG", "└── Hibb's Roadhouse is put into play. Sadie Sheldon spawns at Hibb's Roadhouse."],
+                
                     ["COND",
                         ["GREATER_THAN", ["LENGTH", "$TARGET_GROUP.stackIds"], 1],
                         [
@@ -97,19 +99,21 @@
                     ],
                     ["SET", "/cardById/$TOP_CARD.id/currentSide", "A"]
                 ],
-
+            
                 ["EQUAL", "$TOP_CARD.sides.A.databaseId", "11505"],
                 [
-                    ["LOG", "└── One Last Job advance override was called for La Bella Luna."],
-
                     ["VAR", "$BELLA_CARDS", ["FILTER_CARDS", "$CARD", ["EQUAL", "$CARD.sides.A.databaseId", "11505b"]]],
                     ["VAR", "$BELLA_ID", "$BELLA_CARDS.[0].id"],
-
+                
                     ["SET", "/cardById/$BELLA_ID/currentSide", "A"],
                     ["MOVE_CARD", "$BELLA_ID", "sharedLocations", -1],
                     ["SET", "/cardById/$BELLA_ID/inPlay", true],
                     ["DO_SET_CARD_LOCATION", "$BELLA_ID", "$CARD_BY_ID.$BELLA_ID.spawnLeft", "$CARD_BY_ID.$BELLA_ID.spawnTop"],
-
+                
+                    ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "11511", 58, 13],
+                
+                    ["LOG", "└── La Bella Luna is put into play. Naomi O'Bannion spawns at La Bella Luna."],
+                
                     ["COND",
                         ["GREATER_THAN", ["LENGTH", "$TARGET_GROUP.stackIds"], 1],
                         [
@@ -120,10 +124,9 @@
                     ],
                     ["SET", "/cardById/$TOP_CARD.id/currentSide", "A"]
                 ],
-
+            
                 ["TRUE"],
                 [
-                    ["LOG", "└── One Last Job advance override did not handle this card; doing normal flip."],
                     ["COND",
                         ["EQUAL", "$TOP_CARD.currentSide", "A"],
                         ["SET", "/cardById/$TOP_CARD.id/currentSide", "B"],
@@ -139,137 +142,5 @@
                 ]
             ]
         ]
-    },
-    //"functions": {
-    //    "ONE_LAST_JOB_ACT_2_SETUP": {
-    //        "args": ["$TARGET_PLAYER"],
-    //        "code": [
-    //            ["CHECK_REF","TARGET_ACT","TARGET_LOCATION","TASK_ID","ACT_LOG_ENTRY"],
-    //            ["VAR","$FIRST_ACT",["SHUFFLE_LIST",["LIST","11504","11505"]]],
-    //            ["DO_CREATE_STORY_CARD_SCN","Act 2a","$FIRST_ACT.[0]",1,"sharedActStory"]
-    //        ]
-    //    }
-    //},
-    //"automation": {
-    //    "cards": {
-    //        "11502": { //Arkham Nightlift
-    //            "rules": {
-    //                "11502b": {
-    //                    "type": "trigger",
-    //                    "priority": 10,
-    //                    "listenTo": ["/cardById/$THIS_ID/currentSide"],
-    //                    "condition": [
-    //                        "AND",
-    //                        ["EQUAL", "/cardById/$THIS_ID/currentSide", "B"],
-    //                        ["EQUAL", "$CARD.currentFace.type", "Act"],
-    //                        ["EQUAL", "$THIS.sides.A.databaseId", "11504"]
-    //                    ],
-    //                    "then": [
-    //                        ["LOG", "Holy Crap, we got here."]
-    //                    ]
-    //                }
-    //            }
-    //        },
-    //        "11505": {//Questioning the Gangs
-    //            "ability" : {
-    //                "A": [
-    //                    ["LOG","Automation for 11505"],
-    //                    ["SET", "/cardById/$THIS.id/currentSide", "B"],
-    //                    ["DO_ADVANCE_STORY_FINAL", "$PLAYER_N", "sharedActStory", "$THIS.id", true, "$PLAYER_N"],
-    //                    ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "11505b", 55, 10],
-    //                    ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "11511", 58, 13]
-    //                ]
-    //            }
-    //        },
-    //        "11504": {//Questioning the Gangs
-    //            "ability" : {
-    //                "A": [
-    //                    ["LOG","Automation for 11504"],
-    //                    ["SET", "/cardById/$THIS.id/currentSide", "B"],
-    //                    ["DO_ADVANCE_STORY_FINAL", "$PLAYER_N", "sharedActStory", "$THIS.id", true, "$PLAYER_N"],
-    //                    ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "11504b", 75, 10],
-    //                    ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "11510", 78, 13]
-    //                ]
-    //            }
-    //        }
-    //    }
-    //},
-    "functions": {
-        "SCENARIO_ADVANCE_STORY": {
-            "args": ["$TARGET_PLAYER", "$TARGET_GROUP_ID", "$TOP_CARD_ID", "$LOG_EVENT", "$ACTOR_PLAYER"],
-            "code": [
-                ["LOG", "Inside Scenario DO_SCENARIO_ADVANCE_STORY_FINAL"],
-                ["VAR", "$TOP_CARD", ["GET_CARD_AND_VALIDATE", "$TOP_CARD_ID", "DO_SCENARIO_ADVANCE_STORY_FINAL.TOP_CARD_ID"]],
-                ["VAR", "$HANDLED", false],
-
-                ["COND",
-                    ["EQUAL", "$TOP_CARD.sides.A.databaseId", "11504"],
-                    [
-                        ["VAR", "$HIBBS_CARDS", ["FILTER_CARDS", "$CARD", ["EQUAL", "$CARD.sides.A.databaseId", "11504b"]]],
-                        ["VAR", "$HIBBS_ID", "$HIBBS_CARDS.[0].id"],
-
-                        ["SET", "/cardById/$HIBBS_ID/currentSide", "A"],
-                        ["MOVE_CARD", "$HIBBS_ID", "sharedLocations", -1],
-                        ["SET", "/cardById/$HIBBS_ID/inPlay", true],
-                        ["DO_SET_CARD_LOCATION", "$HIBBS_ID", "$CARD_BY_ID.$HIBBS_ID.spawnLeft", "$CARD_BY_ID.$HIBBS_ID.spawnTop"],
-
-                        ["VAR", "$SADIE_CARDS", ["FILTER_CARDS", "$CARD", ["EQUAL", "$CARD.sides.A.databaseId", "11510"]]],
-                        ["VAR", "$SADIE_ID", "$SADIE_CARDS.[0].id"],
-                        ["MOVE_CARD", "$SADIE_ID", "sharedEncounterDiscard", -1],
-                        ["SET", "/cardById/$SADIE_ID/inPlay", true],
-                        ["SET", "/cardById/$SADIE_ID/currentSide", "A"],
-                        ["ATTACH_CARD", "$SADIE_ID", "$HIBBS_ID"],
-
-                        ["LOG", "└── Hibb's Roadhouse is put into play. Sadie Sheldon spawns at Hibb's Roadhouse."],
-
-                        ["COND",
-                            ["GREATER_THAN", ["LENGTH", "$TARGET_GROUP.stackIds"], 1],
-                            [
-                                ["MOVE_CARD", "$TOP_CARD_ID", "$TARGET_GROUP_ID", -1],
-                                ["VAR", "$NEW_TOP_CARD", ["GET_TOP_CARD", "$TARGET_GROUP_ID"]],
-                                ["SET", "/cardById/$NEW_TOP_CARD.id/currentSide", "A"]
-                            ]
-                        ],
-                        ["SET", "/cardById/$TOP_CARD_ID/currentSide", "A"],
-
-                        ["UPDATE_VAR", "$HANDLED", true]
-                    ],
-
-                    ["EQUAL", "$TOP_CARD.sides.A.databaseId", "11505"],
-                    [
-                        ["VAR", "$BELLA_CARDS", ["FILTER_CARDS", "$CARD", ["EQUAL", "$CARD.sides.A.databaseId", "11505b"]]],
-                        ["VAR", "$BELLA_ID", "$BELLA_CARDS.[0].id"],
-
-                        ["SET", "/cardById/$BELLA_ID/currentSide", "A"],
-                        ["MOVE_CARD", "$BELLA_ID", "sharedLocations", -1],
-                        ["SET", "/cardById/$BELLA_ID/inPlay", true],
-                        ["DO_SET_CARD_LOCATION", "$BELLA_ID", "$CARD_BY_ID.$BELLA_ID.spawnLeft", "$CARD_BY_ID.$BELLA_ID.spawnTop"],
-
-                        ["VAR", "$NAOMI_CARDS", ["FILTER_CARDS", "$CARD", ["EQUAL", "$CARD.sides.A.databaseId", "11511"]]],
-                        ["VAR", "$NAOMI_ID", "$NAOMI_CARDS.[0].id"],
-                        ["MOVE_CARD", "$NAOMI_ID", "sharedEncounterDiscard", -1],
-                        ["SET", "/cardById/$NAOMI_ID/inPlay", true],
-                        ["SET", "/cardById/$NAOMI_ID/currentSide", "A"],
-                        ["ATTACH_CARD", "$NAOMI_ID", "$BELLA_ID"],
-
-                        ["LOG", "└── La Bella Luna is put into play. Naomi O'Bannion spawns at La Bella Luna."],
-
-                        ["COND",
-                            ["GREATER_THAN", ["LENGTH", "$TARGET_GROUP.stackIds"], 1],
-                            [
-                                ["MOVE_CARD", "$TOP_CARD_ID", "$TARGET_GROUP_ID", -1],
-                                ["VAR", "$NEW_TOP_CARD", ["GET_TOP_CARD", "$TARGET_GROUP_ID"]],
-                                ["SET", "/cardById/$NEW_TOP_CARD.id/currentSide", "A"]
-                            ]
-                        ],
-                        ["SET", "/cardById/$TOP_CARD_ID/currentSide", "A"],
-
-                        ["UPDATE_VAR", "$HANDLED", true]
-                    ]
-                ],
-
-                "$HANDLED"
-            ]
-        }
-    }
+    }   
 }
