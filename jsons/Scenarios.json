@@ -289,7 +289,9 @@
           {
             "label": "id:theDrownedCity",
             "deckLists": [
-              { "label": "id:oneLastJob", "deckListId": "One Last Job Scenario" }
+              { "label": "id:oneLastJob", "deckListId": "One Last Job Scenario" },
+              { "label": "id:theWesternExpedition", "deckListId": "The Western Expedition Scenario" },
+              { "label": "id:theEasternExpedition", "deckListId": "The Eastern Expedition Scenario" }
             ]
           },
           {
@@ -583,6 +585,8 @@
     "preludeWelcomeToHemlockVale": { "English": "Prelude: Welcome to Hemlock Vale" },
     "theDrownedCity": { "English": "The Drowned City" },
     "oneLastJob": { "English": "One Last Job" },
+    "theWesternExpedition": { "English": "The Western Expedition" },
+    "theEasternExpedition": { "English": "The Eastern Expedition" },
     "brethrenOfAsh": { "English": "Brethren of Ash" },
     "spreadingFlames": { "English": "Spreading Flames" },
     "smokeAndMirrors": { "English": "Smoke and Mirrors" },

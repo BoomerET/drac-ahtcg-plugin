@@ -1,0 +1,46 @@
+{
+    "preBuiltDecks": {
+        "The Eastern Expedition Scenario": {
+            "label": "The Eastern Expedition",
+            "cards": [],
+            "postLoadActionList": [
+                ["SCENARIO_INIT","The Drowned City", "The Drowned City", "The Eastern Expedition", null, "The Eastern Expedition Scenario Early Init" ]
+            ]
+        },
+        "The Eastern Expedition": {
+            "hideFromSearch": true,
+            "label": "The Eastern Expedition",
+            "cards": [
+                {"databaseId": "11517","quantity": 1,"loadGroupId": "sharedScenarioReference"},
+                {"databaseId": "11518","quantity": 1,"loadGroupId": "sharedAgendaStory"},//Flooded Paths
+                {"databaseId": "11518","quantity": 1,"loadGroupId": "sharedActStory"},//Descend into the Abyss
+                {"databaseId": "11518","quantity": 1,"loadGroupId": "sharedAgendaStory"},//Ascend the Wall
+
+                {"databaseId": "11509","quantity": 1,"loadGroupId": "sharedLocations","left": "15%","top": "76%"},//Tillinghast Esoterica: Assorted Curiosities
+                {"databaseId": "01125","quantity": 1,"loadGroupId": "sharedLocations","left": "55%","top": "76%"},//Rivertown
+                {"databaseId": "01129","quantity": 1,"loadGroupId": "sharedLocations","left": "35%","top": "76%"},//Miskatonic University
+                {"databaseId": "01132","quantity": 1,"loadGroupId": "sharedLocations","left": "75%","top": "43%"},//Easttown
+                {"databaseId": "01134","quantity": 1,"loadGroupId": "sharedLocations","left": "35%","top": "43%"},//Northside
+                {"databaseId": "11765","quantity": 1,"loadGroupId": "sharedNotInPlay"} //Ruby Standish: Master Thief
+            ]
+        }
+    },
+    "actionLists": {
+        "The Eastern Expedition Scenario Early Init": [
+            ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Which Task have you selected?", ["LIST", "No Place Like Home", "Walk in Faith", "Toe the Line", "Good Money", "Prove Your Worth", "Do No Harm", "Dreams of Destruction", "Plumb the Depths"], "The Eastern Expedition Scenario Init"]
+        ],
+        "The Eastern Expedition Scenario Init": [
+            ["DO_LOAD_CARDS_SCN","The Eastern Expedition"],
+            ["DO_SET_SPAWN_LOCATION","11504b",75,10],
+            ["DO_SET_SPAWN_LOCATION","11505b",55,10],
+            ["ACTION_LIST","Random Midnight Mask Downtown"],
+            ["ACTION_LIST","Choose Random Act 1a"],
+            ["DO_LOAD_CARDS_SCN","TDC - Dreams"],
+            ["DO_LOAD_CARDS_SCN","Chilling Cold"],
+            ["DO_LOAD_CARDS_SCN","Locked Doors"],
+            ["DO_LOAD_CARDS_SCN","Rats"],
+            ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION","Tillinghast Esoterica",5,7,3,0],
+            ["SCENARIO_INIT_CONTINUE",null]
+        ]
+    }   
+}

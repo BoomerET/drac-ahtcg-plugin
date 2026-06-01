@@ -1,0 +1,71 @@
+{
+    "preBuiltDecks": {
+        "The Western Expedition Scenario": {
+            "label": "The Western Expedition",
+            "cards": [],
+            "postLoadActionList": [
+                ["SCENARIO_INIT","The Drowned City", "The Drowned City", "The Western Expedition", null, "The Western Expedition Scenario Early Init" ]
+            ]
+        },
+        "The Western Expedition": {
+            "hideFromSearch": true,
+            "label": "The Western Expedition",
+            "cards": [
+                {"databaseId": "11517","quantity": 1,"loadGroupId": "sharedScenarioReference"},
+                {"databaseId": "11518","quantity": 1,"loadGroupId": "sharedAgendaStory"},//Flooded Paths
+                {"databaseId": "11518","quantity": 1,"loadGroupId": "sharedActStory"},//Descend into the Abyss
+                {"databaseId": "11518","quantity": 1,"loadGroupId": "sharedAgendaStory"},//Ascend the Wall
+
+                {"databaseId": "11530","quantity": 1,"loadGroupId": "sharedLocations","left": "45%","top": "5%"}, //Western Wall
+                //{"databaseId": "01125","quantity": 1,"loadGroupId": "sharedLocations","left": "55%","top": "76%"}, //Rivertown
+                //{"databaseId": "01129","quantity": 1,"loadGroupId": "sharedLocations","left": "35%","top": "76%"}, //Miskatonic University
+                //{"databaseId": "01132","quantity": 1,"loadGroupId": "sharedLocations","left": "75%","top": "43%"}, //Easttown
+                //{"databaseId": "01134","quantity": 1,"loadGroupId": "sharedLocations","left": "35%","top": "43%"}, //Northside
+                {"databaseId": "11766","quantity": 1,"loadGroupId": "sharedNotInPlay"}, //Andy Van Nortwick: Ambitious Journalist
+                {"databaseId": "11531","quantity": 1,"loadGroupId": "sharedNotInPlay"}, //Seafloor Frieze
+                {"databaseId": "11535","quantity": 1,"loadGroupId": "sharedNotInPlay"}, //Hunting Parasite
+                {"databaseId": "11727","quantity": 1,"loadGroupId": "sharedNotInPlay"} //Coral Star Spawn
+            ]
+        }
+    },
+    "actionLists": {
+        "The Western Expedition Scenario Early Init": [
+            ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Which Task have you selected?", ["LIST", "No Place Like Home", "Walk in Faith", "Toe the Line", "Good Money", "Prove Your Worth", "Do No Harm", "Dreams of Destruction", "Plumb the Depths"], "The Western Expedition Scenario Init"]
+        ],
+        "The Western Expedition Scenario Init": [
+            ["DO_LOAD_CARDS_SCN","The Western Expedition"],
+            ["DO_REMOVE_CHAOS_TOKENS_SCN", "chaos_tablet", 1],
+            ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_cultist", 1],
+            ["VAR", "$WALKWAY01", ["SHUFFLE_LIST", ["LIST", "11521", "11521", "11522", "11522", "11523", "11524", "11525"]]], 
+            // Hold aside $WALKWAY01.[5] and $WALKWAY01.[6]
+            ["VAR", "$WALKWAY02", ["SHUFFLE_LIST", ["LIST", "$WALKWAY01.[0]", "$WALKWAY01.[1]", "$WALKWAY01.[2]", "$WALKWAY01.[3]", "$WALKWAY01.[4]", "11527", "11526", "11528"]]],
+            // Put 6 of these on levels 2-4
+            ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$WALKWAY02.[0]", 45, 24],
+            ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$WALKWAY02.[1]", 32, 43],
+            ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$WALKWAY02.[2]", 57, 43],
+            ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$WALKWAY02.[3]", 20, 62],
+            ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$WALKWAY02.[4]", 45, 62],
+            ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$WALKWAY02.[5]", 70, 62],
+            ["VAR", "$WALKWAY03", ["SHUFFLE_LIST", ["LIST", "$WALKWAY01.[5]", "$WALKWAY01.[6]", "11529"]]],
+            ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$WALKWAY03.[0]", 20, 81],
+            ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$WALKWAY03.[1]", 45, 81],
+            ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$WALKWAY03.[2]", 70, 81],
+
+            // Obsidian Foundations: 11529
+            // Drowned Shanty: 11527
+            // Sunken Stairway: 11526
+            // Shattered Ruins: 11528
+            // Undersea Vault: 11532
+            //["DO_SET_SPAWN_LOCATION","11504b",75,10],
+            //["DO_SET_SPAWN_LOCATION","11505b",55,10],
+            //["ACTION_LIST","Random Midnight Mask Downtown"],
+            //["ACTION_LIST","Choose Random Act 1a"],
+            //["DO_LOAD_CARDS_SCN","TDC - Dreams"],
+            //["DO_LOAD_CARDS_SCN","Chilling Cold"],
+            //["DO_LOAD_CARDS_SCN","Locked Doors"],
+            //["DO_LOAD_CARDS_SCN","Rats"],
+            ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION","Western Wall",5,7,3,0],
+            ["SCENARIO_INIT_CONTINUE",null]
+        ]
+    }   
+}

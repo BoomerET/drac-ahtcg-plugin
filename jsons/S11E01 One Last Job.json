@@ -40,7 +40,7 @@
             ["SET", "/arkham/advanceStoryOverride", true],
             ["SET", "/arkham/advanceStoryOverrideActionList", "One Last Job Advance Story"],
             ["DO_LOAD_CARDS_SCN","One Last Job"],
-            ["DO_SET_SPAWN_LOCATION","11504b",75,76],
+            ["DO_SET_SPAWN_LOCATION","11504b",75,10],
             ["DO_SET_SPAWN_LOCATION","11505b",55,10],
             ["ACTION_LIST","Random Midnight Mask Downtown"],
             ["ACTION_LIST","Choose Random Act 1a"],
@@ -77,6 +77,7 @@
             ["COND",
                 ["EQUAL", "$TOP_CARD.sides.A.databaseId", "11504"],
                 [
+                    ["SET", "/arkham/advanceHandled", true],
                     ["VAR", "$HIBBS_CARDS", ["FILTER_CARDS", "$CARD", ["EQUAL", "$CARD.sides.A.databaseId", "11504b"]]],
                     ["VAR", "$HIBBS_ID", "$HIBBS_CARDS.[0].id"],
                 
@@ -102,6 +103,7 @@
             
                 ["EQUAL", "$TOP_CARD.sides.A.databaseId", "11505"],
                 [
+                    ["SET", "/arkham/advanceHandled", true],
                     ["VAR", "$BELLA_CARDS", ["FILTER_CARDS", "$CARD", ["EQUAL", "$CARD.sides.A.databaseId", "11505b"]]],
                     ["VAR", "$BELLA_ID", "$BELLA_CARDS.[0].id"],
                 
