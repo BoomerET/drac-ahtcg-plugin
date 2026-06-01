@@ -93,7 +93,7 @@
       ["DO_CREATE_CARDS_SCN", "Cultist", "$CULTISTS.[5]", 1, "sharedEncounterDeck"]
     ],
     "Elegant place random sewers": [
-      ["VAR", "$SEWERS", ["SHUFFLE_LIST", ["LIST", "12183", "12184", "12185", "12186", "12187"]]],  //Infested Pipes, Overgrown Tunnels, Flooded Crypt, SMuggler's Cache, Toxic Waste Pit
+      ["VAR", "$SEWERS", ["SHUFFLE_LIST", ["LIST", "12183", "12184", "12185", "12186", "12187"]]],  //Infested Pipes, Overgrown Tunnels, Flooded Crypt, Smuggler's Cache, Toxic Waste Pit
       ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$SEWERS.[0]", 5, 50],
       ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$SEWERS.[1]", 20, 50],
       ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$SEWERS.[2]", 35, 50],

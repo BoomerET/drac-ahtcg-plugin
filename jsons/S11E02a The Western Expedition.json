@@ -11,20 +11,14 @@
             "hideFromSearch": true,
             "label": "The Western Expedition",
             "cards": [
-                {"databaseId": "11517","quantity": 1,"loadGroupId": "sharedScenarioReference"},
+                {"databaseId": "11517","quantity": 1,"loadGroupId": "sharedScenarioReference"}, //Scenario Reference
                 {"databaseId": "11518","quantity": 1,"loadGroupId": "sharedAgendaStory"},//Flooded Paths
                 {"databaseId": "11519","quantity": 1,"loadGroupId": "sharedActStory"},//Descend into the Abyss
-                {"databaseId": "11520","quantity": 1,"loadGroupId": "sharedAgendaStory"},//Ascend the Wall
+                {"databaseId": "11520","quantity": 1,"loadGroupId": "sharedRemoved"},//Ascend the Wall
 
                 {"databaseId": "11530","quantity": 1,"loadGroupId": "sharedLocations", "left": "45%","top": "5%"}, //Western Wall
-                //{"databaseId": "01125","quantity": 1,"loadGroupId": "sharedLocations","left": "55%","top": "76%"}, //Rivertown
-                //{"databaseId": "01129","quantity": 1,"loadGroupId": "sharedLocations","left": "35%","top": "76%"}, //Miskatonic University
-                //{"databaseId": "01132","quantity": 1,"loadGroupId": "sharedLocations","left": "75%","top": "43%"}, //Easttown
-                //{"databaseId": "01134","quantity": 1,"loadGroupId": "sharedLocations","left": "35%","top": "43%"}, //Northside
-                {"databaseId": "11766","quantity": 1,"loadGroupId": "sharedNotInPlay"}, //Andy Van Nortwick: Ambitious Journalist
-                {"databaseId": "11531","quantity": 1,"loadGroupId": "sharedNotInPlay"}, //Seafloor Frieze
-                {"databaseId": "11535","quantity": 1,"loadGroupId": "sharedNotInPlay"}, //Hunting Parasite
-                {"databaseId": "11727","quantity": 1,"loadGroupId": "sharedNotInPlay"} //Coral Star Spawn
+                {"databaseId": "11766","quantity": 1,"loadGroupId": "sharedNotInPlay"} //Andy Van Nortwick: Ambitious Journalist
+                //{"databaseId": "11766","quantity": 1,"loadGroupId": "sharedNotInPlay"}
             ]
         }
     },
@@ -36,38 +30,86 @@
             ["DO_LOAD_CARDS_SCN","The Western Expedition"],
             ["DO_REMOVE_CHAOS_TOKENS_SCN", "chaos_tablet", 1],
             ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_cultist", 1],
-            //["DO_FLIP_FACEUP", "$GAME.firstPlayer", "The Western Wall", true, null],
-            ["VAR", "$WESTERN_WALL_ID", ["GET_NAMED_CARD_ID", "11530"]],
-            ["SET", "/cardById/$WESTERN_WALL_ID/currentSide", "A"],
             ["VAR", "$WALKWAY01", ["SHUFFLE_LIST", ["LIST", "11521", "11521", "11522", "11522", "11523", "11524", "11525"]]], 
             // Hold aside $WALKWAY01.[5] and $WALKWAY01.[6]
-            ["VAR", "$WALKWAY02", ["SHUFFLE_LIST", ["LIST", "$WALKWAY01.[0]", "$WALKWAY01.[1]", "$WALKWAY01.[2]", "$WALKWAY01.[3]", "$WALKWAY01.[4]", "11527", "11526", "11528"]]],
+            ["VAR", "$WALKWAY02", ["SHUFFLE_LIST", ["LIST", "$WALKWAY01.[0]", "$WALKWAY01.[1]", "$WALKWAY01.[2]", "$WALKWAY01.[3]", "$WALKWAY01.[4]", "11526", "11527", "11528"]]],
             // Put 6 of these on levels 2-4
+            // Level 2
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$WALKWAY02.[0]", 45, 24],
+            ["VAR", "$WALKWAY02_CARD_ID", ["GET_NAMED_CARD_ID", "$WALKWAY02.[0]"]],
+            ["VAR", "$WALKWAY02_CARD", ["GET_CARD_AND_VALIDATE", "$WALKWAY02_CARD_ID", "WALKWAY02_CARD"]],
+            ["DO_SPAWN_ATTACHED_TO_LOCATION_SCN", "Partially Flooded", "flooded", "$WALKWAY02_CARD.currentFace.name"],
+            // Level 3
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$WALKWAY02.[1]", 32, 43],
+            ["VAR", "$WALKWAY02_CARD_ID", ["GET_NAMED_CARD_ID", "$WALKWAY02.[1]"]],
+            ["VAR", "$WALKWAY02_CARD", ["GET_CARD_AND_VALIDATE", "$WALKWAY02_CARD_ID", "WALKWAY02_CARD"]],
+            ["DO_SPAWN_ATTACHED_TO_LOCATION_SCN", "Partially Flooded", "flooded", "$WALKWAY02_CARD.currentFace.name"],
+            
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$WALKWAY02.[2]", 57, 43],
+            ["VAR", "$WALKWAY02_CARD_ID", ["GET_NAMED_CARD_ID", "$WALKWAY02.[2]"]],
+            ["VAR", "$WALKWAY02_CARD", ["GET_CARD_AND_VALIDATE", "$WALKWAY02_CARD_ID", "WALKWAY02_CARD"]],
+            ["DO_SPAWN_ATTACHED_TO_LOCATION_SCN", "Partially Flooded", "flooded", "$WALKWAY02_CARD.currentFace.name"],
+            // Level 4-1
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$WALKWAY02.[3]", 20, 62],
+            ["VAR", "$WALKWAY02_CARD_ID", ["GET_NAMED_CARD_ID", "$WALKWAY02.[3]"]],
+            ["VAR", "$WALKWAY02_CARD", ["GET_CARD_AND_VALIDATE", "$WALKWAY02_CARD_ID", "WALKWAY02_CARD"]],
+            ["DO_SPAWN_ATTACHED_TO_LOCATION_SCN", "Fully Flooded", "flooded", "$WALKWAY02_CARD.currentFace.name"],
+            ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$DO_SPAWN_ATTACHED_TO_LOCATION_RESULT", false, null],
+            // Level 4-2
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$WALKWAY02.[4]", 45, 62],
+            ["VAR", "$WALKWAY02_CARD_ID", ["GET_NAMED_CARD_ID", "$WALKWAY02.[4]"]],
+            ["VAR", "$WALKWAY02_CARD", ["GET_CARD_AND_VALIDATE", "$WALKWAY02_CARD_ID", "WALKWAY02_CARD"]],
+            ["DO_SPAWN_ATTACHED_TO_LOCATION_SCN", "Fully Flooded", "flooded", "$WALKWAY02_CARD.currentFace.name"],
+            ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$DO_SPAWN_ATTACHED_TO_LOCATION_RESULT", false, null],
+            // Level 4-3
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$WALKWAY02.[5]", 70, 62],
+            ["VAR", "$WALKWAY02_CARD_ID", ["GET_NAMED_CARD_ID", "$WALKWAY02.[5]"]],
+            ["VAR", "$WALKWAY02_CARD", ["GET_CARD_AND_VALIDATE", "$WALKWAY02_CARD_ID", "WALKWAY02_CARD"]],
+            ["DO_SPAWN_ATTACHED_TO_LOCATION_SCN", "Fully Flooded", "flooded", "$WALKWAY02_CARD.currentFace.name"],
+            ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$DO_SPAWN_ATTACHED_TO_LOCATION_RESULT", false, null],
+            // Level 5-1
+            ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$WALKWAY03.[0]", 20, 81],
+            ["VAR", "$WALKWAY03_CARD_ID", ["GET_NAMED_CARD_ID", "$WALKWAY03.[0]"]],
+            ["VAR", "$WALKWAY03_CARD", ["GET_CARD_AND_VALIDATE", "$WALKWAY03_CARD_ID", "WALKWAY03_CARD"]],
+            ["DO_SPAWN_ATTACHED_TO_LOCATION_SCN", "Fully Flooded", "flooded", "$WALKWAY03_CARD.currentFace.name"],
+            ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$DO_SPAWN_ATTACHED_TO_LOCATION_RESULT", false, null],
+            // Level 5-2
+            ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$WALKWAY03.[1]", 45, 81],
+            ["VAR", "$WALKWAY03_CARD_ID", ["GET_NAMED_CARD_ID", "$WALKWAY03.[1]"]],
+            ["VAR", "$WALKWAY03_CARD", ["GET_CARD_AND_VALIDATE", "$WALKWAY03_CARD_ID", "WALKWAY03_CARD"]],
+            ["DO_SPAWN_ATTACHED_TO_LOCATION_SCN", "Fully Flooded", "flooded", "$WALKWAY03_CARD.currentFace.name"],
+            ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$DO_SPAWN_ATTACHED_TO_LOCATION_RESULT", false, null],
+            // Level 5-3
+            ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$WALKWAY03.[2]", 70, 81],
+            ["VAR", "$WALKWAY03_CARD_ID", ["GET_NAMED_CARD_ID", "$WALKWAY03.[2]"]],
+            ["VAR", "$WALKWAY03_CARD", ["GET_CARD_AND_VALIDATE", "$WALKWAY03_CARD_ID", "WALKWAY03_CARD"]],
+            ["DO_SPAWN_ATTACHED_TO_LOCATION_SCN", "Fully Flooded", "flooded", "$WALKWAY03_CARD.currentFace.name"],
+            ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$DO_SPAWN_ATTACHED_TO_LOCATION_RESULT", false, null],
+
+
+
+
             ["VAR", "$WALKWAY03", ["SHUFFLE_LIST", ["LIST", "$WALKWAY01.[5]", "$WALKWAY01.[6]", "11529"]]],
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$WALKWAY03.[0]", 20, 81],
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$WALKWAY03.[1]", 45, 81],
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$WALKWAY03.[2]", 70, 81],
-
-            // Obsidian Foundations: 11529
-            // Drowned Shanty: 11527
-            // Sunken Stairway: 11526
-            // Shattered Ruins: 11528
-            // Undersea Vault: 11532
-            //["DO_SET_SPAWN_LOCATION","11504b",75,10],
-            //["DO_SET_SPAWN_LOCATION","11505b",55,10],
-            //["ACTION_LIST","Random Midnight Mask Downtown"],
-            //["ACTION_LIST","Choose Random Act 1a"],
-            //["DO_LOAD_CARDS_SCN","TDC - Dreams"],
-            //["DO_LOAD_CARDS_SCN","Chilling Cold"],
-            //["DO_LOAD_CARDS_SCN","Locked Doors"],
-            //["DO_LOAD_CARDS_SCN","Rats"],
+            ["DO_LOAD_CARDS_SCN","TDC - The Western Wall"],
+            ["DO_LOAD_CARDS_SCN","TDC - Cosmic Legacy"],
+            ["DO_LOAD_CARDS_SCN","TDC - Deep Ones"],
+            ["DO_LOAD_CARDS_SCN","TDC - Flood"],
+            ["DO_LOAD_CARDS_SCN","TDC - R'lyeh"],
+            ["DO_LOAD_CARDS_SCN","TDC - Star Spawn"],
+            ["DO_LOAD_CARDS_SCN","TDC - The Inescapable"],
+            ["DO_LOAD_CARDS_SCN","TDC - Undersea Creatures"],
+            ["DO_LOAD_CARDS_SCN", "Agents of Cthulhu"],
             ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION","Western Wall",5,7,3,0],
+            ["VAR", "$WESTERN_WALL_ID", ["GET_NAMED_CARD_ID", "11530"]],
+            ["SET", "/cardById/$WESTERN_WALL_ID/currentSide", "B"],
+            
+            //["DO_SPAWN_ATTACHED_TO_LOCATION_SCN", "Fully Flooded", "flooded", "Obsidian Foundations"],
+            ["DO_SPAWN_ATTACHED_TO_LOCATION_SCN", "Fully Flooded", "flooded", "Obsidian Foundations"],
+            ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$DO_SPAWN_ATTACHED_TO_LOCATION_RESULT", false, null],
+            ["DO_CREATE_CARDS_SCN", "Flooded", "flooded", 16, "sharedTokens"],
             ["SCENARIO_INIT_CONTINUE",null]
         ]
     }   

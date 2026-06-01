@@ -8,6 +8,88 @@
         {"databaseId": "11750", "quantity": 3, "loadGroupId": "sharedEncounterDeck"}
       ]
     },
+    "TDC - The Western Wall": {
+      "hideFromSearch": true,
+      "label": "TDC - The Western Wall",
+      "cards": [
+        {"databaseId": "11531", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //Seafloor Frieze
+        {"databaseId": "11532", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //Undersea Vault
+        {"databaseId": "11533", "quantity": 1, "loadGroupId": "sharedEncounterDeck"}, //Deep One Matron
+        {"databaseId": "11534", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}, //Look Out
+        {"databaseId": "11535", "quantity": 1, "loadGroupId": "sharedNotInPlay"} //Hunting Parasite
+      ]
+    },
+    "TDC - Cosmic Legacy": {
+      "hideFromSearch": true,
+      "label": "TDC - Cosmic Legacy",
+      "cards": [
+        {"databaseId": "11729", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
+        {"databaseId": "11730", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}
+      ]
+    },
+    "TDC - Deep Ones": {
+      "hideFromSearch": true,
+      "label": "TDC -Deep Ones",
+      "cards": [
+        {"databaseId": "11746", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
+        {"databaseId": "11747", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
+        {"databaseId": "11748", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}
+      ]
+    },
+    "TDC - Flood": {
+      "hideFromSearch": true,
+      "label": "TDC -Flood",
+      "cards": [
+        {"databaseId": "11736", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
+        {"databaseId": "11737", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
+        {"databaseId": "11738", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}
+      ]
+    },
+    "TDC - R'lyeh": {
+      "hideFromSearch": true,
+      "label": "TDC - R'lyeh",
+      "cards": [
+        {"databaseId": "11739", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
+        {"databaseId": "11740", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}
+      ]
+    },
+    "TDC - Star Spawn": {
+      "hideFromSearch": true,
+      "label": "TDC -Star Spawn",
+      "cards": [
+        {"databaseId": "11725", "quantity": 1, "loadGroupId": "sharedRemoved"}, //Monstrous Star Spawn
+        {"databaseId": "11726", "quantity": 1, "loadGroupId": "sharedRemoved"}, //Infected Star Spawn
+        {"databaseId": "11727", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //Coral Star Spawn
+        {"databaseId": "11728", "quantity": 1, "loadGroupId": "sharedRemoved"} //Star Spawn Observer
+      ]
+    },
+    "TDC - The Inescapable": {
+      "hideFromSearch": true,
+      "label": "TDC - The Inescapable",
+      "cards": [
+        {"databaseId": "11744", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //The Inescapable: Tireless Pursuer
+        {"databaseId": "11745", "quantity": 2, "loadGroupId": "sharedEncounterDeck"} //Still Behind You
+      ]
+    },
+    "TDC - Undersea Creatures": {
+      "hideFromSearch": true,
+      "label": "TDC - Undersea Creatures",
+      "cards": [
+        {"databaseId": "11733", "quantity": 1, "loadGroupId": "sharedEncounterDeck"}, //Voltaic Eel
+        {"databaseId": "11734", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}, //Dreaming Migration
+        {"databaseId": "11735", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}  //Undersea Hunt
+      ]
+    },
+    "TDC - Expedition": {
+      "hideFromSearch": true,
+      "label": "TDC - Expedition",
+      "cards": [
+        {"databaseId": "11761", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //Expedition Gear: Tough but Reliable
+        {"databaseId": "11762", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //Laudanum: Desperate Measures
+        {"databaseId": "11763", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //Alien Tablet: Prehistoric Writings
+        {"databaseId": "11764", "quantity": 4, "loadGroupId": "sharedNotInPlay"}  //Diving Suit
+      ]
+    },
     "The Drowned City Chaos Bag - Easy": {
       "hideFromSearch": true,
       "label": "The Drowned City Chaos Bag - Easy",
