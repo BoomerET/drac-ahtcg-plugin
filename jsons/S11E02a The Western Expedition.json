@@ -13,10 +13,10 @@
             "cards": [
                 {"databaseId": "11517","quantity": 1,"loadGroupId": "sharedScenarioReference"},
                 {"databaseId": "11518","quantity": 1,"loadGroupId": "sharedAgendaStory"},//Flooded Paths
-                {"databaseId": "11518","quantity": 1,"loadGroupId": "sharedActStory"},//Descend into the Abyss
-                {"databaseId": "11518","quantity": 1,"loadGroupId": "sharedAgendaStory"},//Ascend the Wall
+                {"databaseId": "11519","quantity": 1,"loadGroupId": "sharedActStory"},//Descend into the Abyss
+                {"databaseId": "11520","quantity": 1,"loadGroupId": "sharedAgendaStory"},//Ascend the Wall
 
-                {"databaseId": "11530","quantity": 1,"loadGroupId": "sharedLocations","left": "45%","top": "5%"}, //Western Wall
+                {"databaseId": "11530","quantity": 1,"loadGroupId": "sharedLocations", "left": "45%","top": "5%"}, //Western Wall
                 //{"databaseId": "01125","quantity": 1,"loadGroupId": "sharedLocations","left": "55%","top": "76%"}, //Rivertown
                 //{"databaseId": "01129","quantity": 1,"loadGroupId": "sharedLocations","left": "35%","top": "76%"}, //Miskatonic University
                 //{"databaseId": "01132","quantity": 1,"loadGroupId": "sharedLocations","left": "75%","top": "43%"}, //Easttown
@@ -36,6 +36,9 @@
             ["DO_LOAD_CARDS_SCN","The Western Expedition"],
             ["DO_REMOVE_CHAOS_TOKENS_SCN", "chaos_tablet", 1],
             ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_cultist", 1],
+            //["DO_FLIP_FACEUP", "$GAME.firstPlayer", "The Western Wall", true, null],
+            ["VAR", "$WESTERN_WALL_ID", ["GET_NAMED_CARD_ID", "11530"]],
+            ["SET", "/cardById/$WESTERN_WALL_ID/currentSide", "A"],
             ["VAR", "$WALKWAY01", ["SHUFFLE_LIST", ["LIST", "11521", "11521", "11522", "11522", "11523", "11524", "11525"]]], 
             // Hold aside $WALKWAY01.[5] and $WALKWAY01.[6]
             ["VAR", "$WALKWAY02", ["SHUFFLE_LIST", ["LIST", "$WALKWAY01.[0]", "$WALKWAY01.[1]", "$WALKWAY01.[2]", "$WALKWAY01.[3]", "$WALKWAY01.[4]", "11527", "11526", "11528"]]],
