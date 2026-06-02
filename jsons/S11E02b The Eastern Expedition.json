@@ -11,16 +11,12 @@
             "hideFromSearch": true,
             "label": "The Eastern Expedition",
             "cards": [
-                {"databaseId": "11517","quantity": 1,"loadGroupId": "sharedScenarioReference"},
+                {"databaseId": "11517","quantity": 1,"loadGroupId": "sharedScenarioReference"}, //Scenario Reference
                 {"databaseId": "11518","quantity": 1,"loadGroupId": "sharedAgendaStory"},//Flooded Paths
-                {"databaseId": "11518","quantity": 1,"loadGroupId": "sharedActStory"},//Descend into the Abyss
-                {"databaseId": "11518","quantity": 1,"loadGroupId": "sharedAgendaStory"},//Ascend the Wall
+                {"databaseId": "11519","quantity": 1,"loadGroupId": "sharedRemoved"},//Descend into the Abyss
+                {"databaseId": "11520","quantity": 1,"loadGroupId": "sharedActStory"},//Ascend the Wall
 
-                {"databaseId": "11509","quantity": 1,"loadGroupId": "sharedLocations","left": "15%","top": "76%"},//Tillinghast Esoterica: Assorted Curiosities
-                {"databaseId": "01125","quantity": 1,"loadGroupId": "sharedLocations","left": "55%","top": "76%"},//Rivertown
-                {"databaseId": "01129","quantity": 1,"loadGroupId": "sharedLocations","left": "35%","top": "76%"},//Miskatonic University
-                {"databaseId": "01132","quantity": 1,"loadGroupId": "sharedLocations","left": "75%","top": "43%"},//Easttown
-                {"databaseId": "01134","quantity": 1,"loadGroupId": "sharedLocations","left": "35%","top": "43%"},//Northside
+                {"databaseId": "11529","quantity": 1,"loadGroupId": "sharedLocations", "left": "45%","top": "81%"}, //Obsidian Foundations
                 {"databaseId": "11765","quantity": 1,"loadGroupId": "sharedNotInPlay"} //Ruby Standish: Master Thief
             ]
         }
@@ -31,16 +27,54 @@
         ],
         "The Eastern Expedition Scenario Init": [
             ["DO_LOAD_CARDS_SCN","The Eastern Expedition"],
-            ["DO_SET_SPAWN_LOCATION","11504b",75,10],
-            ["DO_SET_SPAWN_LOCATION","11505b",55,10],
-            ["ACTION_LIST","Random Midnight Mask Downtown"],
-            ["ACTION_LIST","Choose Random Act 1a"],
-            ["DO_LOAD_CARDS_SCN","TDC - Dreams"],
-            ["DO_LOAD_CARDS_SCN","Chilling Cold"],
-            ["DO_LOAD_CARDS_SCN","Locked Doors"],
-            ["DO_LOAD_CARDS_SCN","Rats"],
-            ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION","Tillinghast Esoterica",5,7,3,0],
+            
+            ["VAR", "$WALKWAY01", ["SHUFFLE_LIST", ["LIST", "11521", "11521", "11522", "11522", "11523", "11524", "11525"]]], 
+            ["VAR", "$LEVELS_2_4", ["SHUFFLE_LIST", ["LIST", "$WALKWAY01.[0]", "$WALKWAY01.[1]", "$WALKWAY01.[2]", "$WALKWAY01.[3]", "$WALKWAY01.[4]", "11526", "11527", "11528"]]],
+
+            // $LEVELS_2_4.[6] and $LEVELS_2_4.[7] are to be removed from the game.
+            // Level 2
+            ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVELS_2_4.[0]", 45, 62],
+            ["DO_SPAWN_FLOODED_AT_LOCATION_ID", "$DO_SPAWN_LOCATION_RESULT", true],
+            // Level 3-1
+            ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVELS_2_4.[1]", 32, 43],
+            ["DO_SPAWN_FLOODED_AT_LOCATION_ID", "$DO_SPAWN_LOCATION_RESULT", false],
+            // Level 3-2
+            ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVELS_2_4.[2]", 57, 43],
+            ["DO_SPAWN_FLOODED_AT_LOCATION_ID", "$DO_SPAWN_LOCATION_RESULT", false],
+            // Level 4-1
+            ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVELS_2_4.[3]", 20, 24],
+            ["DO_SPAWN_FLOODED_AT_LOCATION_ID", "$DO_SPAWN_LOCATION_RESULT", false],
+            // Level 4-2
+            ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVELS_2_4.[4]", 45, 24],
+            ["DO_SPAWN_FLOODED_AT_LOCATION_ID", "$DO_SPAWN_LOCATION_RESULT", false],
+            // Level 4-3
+            ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVELS_2_4.[5]", 70, 24],
+            ["DO_SPAWN_FLOODED_AT_LOCATION_ID", "$DO_SPAWN_LOCATION_RESULT", false],
+            // Level 5-1
+            ["VAR", "$LEVEL5", ["SHUFFLE_LIST", ["LIST", "$LEVELS_2_4.[6]", "$LEVELS_2_4.[7]", "11530"]]],
+            ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVEL5.[0]", 20, 5],
+            // Level 5-2
+            ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVEL5.[1]", 45, 5],
+            // Level 5-3
+            ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVEL5.[2]", 70, 5],
+            //["DO_SPAWN_FLOODED_AT_LOCATION_ID", "$DO_SPAWN_LOCATION_RESULT", true],
+
+            ["DO_LOAD_CARDS_SCN","TDC - The Western Wall"],
+            ["DO_LOAD_CARDS_SCN","TDC - Cosmic Legacy"],
+            ["DO_LOAD_CARDS_SCN","TDC - Deep Ones"],
+            ["DO_LOAD_CARDS_SCN","TDC - Flood"],
+            ["DO_LOAD_CARDS_SCN","TDC - R'lyeh"],
+            ["DO_LOAD_CARDS_SCN","TDC - Star Spawn"],
+            ["DO_LOAD_CARDS_SCN","TDC - The Inescapable"],
+            ["DO_LOAD_CARDS_SCN","TDC - Undersea Creatures"],
+            ["DO_LOAD_CARDS_SCN", "Agents of Cthulhu"],
+            ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION","Obsidian Foundations",5,7,3,0],
+            ["VAR", "$OBSIDIAN_FOUNDATIONS_ID", ["GET_NAMED_CARD_ID", "11529"]],
+            ["DO_SPAWN_FLOODED_AT_LOCATION_ID", "$OBSIDIAN_FOUNDATIONS_ID", true],
+            ["SET", "/cardById/$OBSIDIAN_FOUNDATIONS_ID/currentSide", "B"],
+
+            ["DO_CREATE_CARDS_SCN", "Flooded", "flooded", 16, "sharedTokens"],
             ["SCENARIO_INIT_CONTINUE",null]
         ]
-    }   
+    }
 }

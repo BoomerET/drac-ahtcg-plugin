@@ -34,6 +34,7 @@
             ["VAR", "$WALKWAY01", ["SHUFFLE_LIST", ["LIST", "11521", "11521", "11522", "11522", "11523", "11524", "11525"]]], 
             ["VAR", "$LEVELS_2_4", ["SHUFFLE_LIST", ["LIST", "$WALKWAY01.[0]", "$WALKWAY01.[1]", "$WALKWAY01.[2]", "$WALKWAY01.[3]", "$WALKWAY01.[4]", "11526", "11527", "11528"]]],
 
+            // $LEVELS_2_4.[6] and $LEVELS_2_4.[7] are to be removed from the game.
             // Level 2
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVELS_2_4.[0]", 45, 24],
             ["DO_SPAWN_FLOODED_AT_LOCATION_ID", "$DO_SPAWN_LOCATION_RESULT", false],
@@ -53,7 +54,7 @@
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVELS_2_4.[5]", 70, 62],
             ["DO_SPAWN_FLOODED_AT_LOCATION_ID", "$DO_SPAWN_LOCATION_RESULT", true],
             // Level 5-1
-            ["VAR", "$LEVEL5", ["SHUFFLE_LIST", ["LIST", "$WALKWAY01.[5]", "$WALKWAY01.[6]", "11529"]]],
+            ["VAR", "$LEVEL5", ["SHUFFLE_LIST", ["LIST", "$LEVELS_2_4.[6]", "$LEVELS_2_4.[7]", "11529"]]],
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVEL5.[0]", 20, 81],
             ["DO_SPAWN_FLOODED_AT_LOCATION_ID", "$DO_SPAWN_LOCATION_RESULT", true],
             // Level 5-2
@@ -62,7 +63,6 @@
             // Level 5-3
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVEL5.[2]", 70, 81],
             ["DO_SPAWN_FLOODED_AT_LOCATION_ID", "$DO_SPAWN_LOCATION_RESULT", true],
-
 
             ["DO_LOAD_CARDS_SCN","TDC - The Western Wall"],
             ["DO_LOAD_CARDS_SCN","TDC - Cosmic Legacy"],
@@ -77,7 +77,7 @@
             ["VAR", "$WESTERN_WALL_ID", ["GET_NAMED_CARD_ID", "11530"]],
             ["SET", "/cardById/$WESTERN_WALL_ID/currentSide", "B"],
 
-            //["DO_CREATE_CARDS_SCN", "Flooded", "flooded", 16, "sharedTokens"],
+            ["DO_CREATE_CARDS_SCN", "Flooded", "flooded", 16, "sharedTokens"],
             ["SCENARIO_INIT_CONTINUE",null]
         ]
     }

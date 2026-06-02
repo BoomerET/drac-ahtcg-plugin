@@ -1,5 +1,16 @@
 {
   "preBuiltDecks": {
+    "TDC - One Last Job": {
+      "hideFromSearch": true,
+      "label": "TDC - One Last Job",
+      "cards": [
+        {"databaseId": "11512", "quantity": 3, "loadGroupId": "sharedEncounterDeck"}, //Gang Soldier
+        {"databaseId": "11513", "quantity": 2, "loadGroupId": "sharedNotInPlay"}, //Gang Enforcer
+        {"databaseId": "11514", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}, //Gang Informant
+        {"databaseId": "11515", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}, //Caught in the Crossfire
+        {"databaseId": "11516", "quantity": 2, "loadGroupId": "sharedEncounterDeck"} //End of Negotiations
+      ]
+    },
     "TDC - Dreams": {
       "hideFromSearch": true,
       "label": "TDC - Dreams",
@@ -15,7 +26,7 @@
         {"databaseId": "11531", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //Seafloor Frieze
         {"databaseId": "11532", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //Undersea Vault
         {"databaseId": "11533", "quantity": 1, "loadGroupId": "sharedEncounterDeck"}, //Deep One Matron
-        {"databaseId": "11534", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}, //Look Out
+        {"databaseId": "11534", "quantity": 3, "loadGroupId": "sharedEncounterDeck"}, //Look Out
         {"databaseId": "11535", "quantity": 1, "loadGroupId": "sharedNotInPlay"} //Hunting Parasite
       ]
     },
@@ -68,7 +79,7 @@
       "label": "TDC - The Inescapable",
       "cards": [
         {"databaseId": "11744", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //The Inescapable: Tireless Pursuer
-        {"databaseId": "11745", "quantity": 2, "loadGroupId": "sharedEncounterDeck"} //Still Behind You
+        {"databaseId": "11745", "quantity": 3, "loadGroupId": "sharedEncounterDeck"} //Still Behind You
       ]
     },
     "TDC - Undersea Creatures": {
@@ -160,7 +171,8 @@
     }
   },
   "functions": { 
-    "DO_SPAWN_FLOODED_AT_LOCATION_ID": {
+    // Used in Western and Eastern Expedition
+    "DO_SPAWN_FLOODED_AT_LOCATION_ID": { 
       "args": ["$LOCATION_ID", "$FULLY_FLOODED"],
       "code": [
           ["VAR", "$LOCATION_CARD", ["GET_CARD_AND_VALIDATE", "$LOCATION_ID", "DO_SPAWN_FLOODED_AT_LOCATION_ID.LOCATION_ID"]],

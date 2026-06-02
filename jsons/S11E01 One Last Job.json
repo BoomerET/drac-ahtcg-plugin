@@ -4,14 +4,7 @@
             "label": "One Last Job",
             "cards": [],
             "postLoadActionList": [
-                [
-                    "SCENARIO_INIT",
-                    "The Drowned City",
-                    "The Drowned City",
-                    "One Last Job",
-                    null,
-                    "One Last Job Scenario Init"
-                ]
+                ["SCENARIO_INIT", "The Drowned City", "The Drowned City", "One Last Job", null, "One Last Job Scenario Init"]
             ]
         },
         "One Last Job": {
@@ -48,15 +41,14 @@
             ["DO_LOAD_CARDS_SCN","Chilling Cold"],
             ["DO_LOAD_CARDS_SCN","Locked Doors"],
             ["DO_LOAD_CARDS_SCN","Rats"],
-            ["DO_LOAD_CARDS_SCN","Striking Fear"],// Trying automation start            
-            //["SET","/arkham/oneLastJobAct2Setup",false],// Trying automation end 
-            ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION","Tillinghast Esoterica",5,7,3,0],
-            ["SCENARIO_INIT_CONTINUE",null]
+            ["DO_LOAD_CARDS_SCN","Striking Fear"],
+            ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Tillinghast Esoterica", 5, 7, 3, 0],
+            ["SCENARIO_INIT_CONTINUE", null]
         ],
         "Random Midnight Mask Downtown": [
             // Randomize which Downtown to use
-            ["VAR","$MM_DOWNTOWN",["SHUFFLE_LIST",["LIST","01130","01131"]]],
-            ["DO_SPAWN_LOCATION_SCN","sharedLocations","$MM_DOWNTOWN.[0]",55,43]],
+            ["VAR", "$MM_DOWNTOWN", ["SHUFFLE_LIST", ["LIST", "01130", "01131"]]],
+            ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$MM_DOWNTOWN.[0]", 55, 43]],
         "Choose Random Act 1a": [
             ["VAR","$FIRST_ACT",["SHUFFLE_LIST",["LIST","11504","11505"]]],
             ["DO_CREATE_STORY_CARD_SCN","Questioning the Gangs","$FIRST_ACT.[0]",1,"sharedActStory"],
