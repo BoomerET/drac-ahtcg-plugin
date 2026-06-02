@@ -34,6 +34,16 @@
             ["VAR", "$WALKWAY01", ["SHUFFLE_LIST", ["LIST", "11521", "11521", "11522", "11522", "11523", "11524", "11525"]]], 
             ["VAR", "$LEVELS_2_4", ["SHUFFLE_LIST", ["LIST", "$WALKWAY01.[0]", "$WALKWAY01.[1]", "$WALKWAY01.[2]", "$WALKWAY01.[3]", "$WALKWAY01.[4]", "11526", "11527", "11528"]]],
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVELS_2_4.[0]", 45, 24],
+["VAR", "$MATCHES", ["FILTER_CARDS", "$CARD", ["AND",
+    ["EQUAL", "$CARD.groupId", "sharedLocations"],
+    ["EQUAL", "$CARD.sides.A.databaseId", "$LEVELS_2_4.[0]"]
+]]],
+["VAR", "$LOCATION", null],
+["FOR_EACH_VAL", "$CARD", "$MATCHES", [
+    ["UPDATE_VAR", "$LOCATION", "$CARD"]
+]],
+["DO_SPAWN_ATTACHED_TO_LOCATION_SCN", "Partially Flooded", "flooded", "$LOCATION.currentFace.name"],
+["ATTACH_CARD", "$DO_SPAWN_ATTACHED_TO_LOCATION_RESULT", "$LOCATION.id"],
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVELS_2_4.[1]", 32, 43],
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVELS_2_4.[2]", 57, 43],
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVELS_2_4.[3]", 20, 62],
@@ -43,44 +53,6 @@
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVEL5.[0]", 20, 81],
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVEL5.[1]", 45, 81],
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVEL5.[2]", 70, 81],
-
-
-["VAR", "$FLOODED_LOCATION_DBS", ["LIST",
-    "$LEVELS_2_4.[0]",
-    "$LEVELS_2_4.[1]",
-    "$LEVELS_2_4.[2]",
-    "$LEVELS_2_4.[3]",
-    "$LEVELS_2_4.[4]",
-    "$LEVELS_2_4.[5]",
-    "$LEVEL5.[0]",
-    "$LEVEL5.[1]",
-    "$LEVEL5.[2]"
-]],
-
-["VAR", "$FULLY_FLOODED_DBS", ["LIST",
-    "$LEVELS_2_4.[3]",
-    "$LEVELS_2_4.[4]",
-    "$LEVELS_2_4.[5]",
-    "$LEVEL5.[0]",
-    "$LEVEL5.[1]",
-    "$LEVEL5.[2]"
-]],
-
-["VAR", "$FLOODED_LOCATIONS", ["FILTER_CARDS", "$CARD", ["AND",
-    ["EQUAL", "$CARD.groupId", "sharedLocations"],
-    ["EQUAL", ["IN_LIST", "$FLOODED_LOCATION_DBS", "$CARD.sides.A.databaseId"], true]
-]]],
-
-["FOR_EACH_VAL", "$LOCATION", "$FLOODED_LOCATIONS", [
-    ["DO_SPAWN_ATTACHED_TO_LOCATION_SCN", "Partially Flooded", "flooded", "$LOCATION.currentFace.name"],
-    ["ATTACH_CARD", "$DO_SPAWN_ATTACHED_TO_LOCATION_RESULT", "$LOCATION.id"],
-
-    ["COND",
-        ["EQUAL", ["IN_LIST", "$FULLY_FLOODED_DBS", "$LOCATION.sides.A.databaseId"], true],
-        ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$DO_SPAWN_ATTACHED_TO_LOCATION_RESULT", false, null]
-    ]
-]],
-
 
 
             ["DO_LOAD_CARDS_SCN","TDC - The Western Wall"],
