@@ -33,41 +33,32 @@
             
             ["VAR", "$WALKWAY01", ["SHUFFLE_LIST", ["LIST", "11521", "11521", "11522", "11522", "11523", "11524", "11525"]]], 
             ["VAR", "$LEVELS_2_4", ["SHUFFLE_LIST", ["LIST", "$WALKWAY01.[0]", "$WALKWAY01.[1]", "$WALKWAY01.[2]", "$WALKWAY01.[3]", "$WALKWAY01.[4]", "11526", "11527", "11528"]]],
-            
+
             // Level 2
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVELS_2_4.[0]", 45, 24],
             ["DO_SPAWN_FLOODED_AT_LOCATION_ID", "$DO_SPAWN_LOCATION_RESULT", false],
-
             // Level 3-1
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVELS_2_4.[1]", 32, 43],
             ["DO_SPAWN_FLOODED_AT_LOCATION_ID", "$DO_SPAWN_LOCATION_RESULT", false],
-
             // Level 3-2
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVELS_2_4.[2]", 57, 43],
             ["DO_SPAWN_FLOODED_AT_LOCATION_ID", "$DO_SPAWN_LOCATION_RESULT", false],
-
             // Level 4-1
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVELS_2_4.[3]", 20, 62],
             ["DO_SPAWN_FLOODED_AT_LOCATION_ID", "$DO_SPAWN_LOCATION_RESULT", true],
-
             // Level 4-2
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVELS_2_4.[4]", 45, 62],
             ["DO_SPAWN_FLOODED_AT_LOCATION_ID", "$DO_SPAWN_LOCATION_RESULT", true],
-
             // Level 4-3
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVELS_2_4.[5]", 70, 62],
             ["DO_SPAWN_FLOODED_AT_LOCATION_ID", "$DO_SPAWN_LOCATION_RESULT", true],
-
             // Level 5-1
             ["VAR", "$LEVEL5", ["SHUFFLE_LIST", ["LIST", "$WALKWAY01.[5]", "$WALKWAY01.[6]", "11529"]]],
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVEL5.[0]", 20, 81],
             ["DO_SPAWN_FLOODED_AT_LOCATION_ID", "$DO_SPAWN_LOCATION_RESULT", true],
-
             // Level 5-2
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVEL5.[1]", 45, 81],
             ["DO_SPAWN_FLOODED_AT_LOCATION_ID", "$DO_SPAWN_LOCATION_RESULT", true],
-
-
             // Level 5-3
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVEL5.[2]", 70, 81],
             ["DO_SPAWN_FLOODED_AT_LOCATION_ID", "$DO_SPAWN_LOCATION_RESULT", true],
@@ -85,29 +76,9 @@
             ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION","Western Wall",5,7,3,0],
             ["VAR", "$WESTERN_WALL_ID", ["GET_NAMED_CARD_ID", "11530"]],
             ["SET", "/cardById/$WESTERN_WALL_ID/currentSide", "B"],
-            
-            //["DO_SPAWN_ATTACHED_TO_LOCATION_SCN", "Fully Flooded", "flooded", "Obsidian Foundations"],
-            //["DO_SPAWN_ATTACHED_TO_LOCATION_SCN", "Fully Flooded", "flooded", "Obsidian Foundations"],
-            //["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$DO_SPAWN_ATTACHED_TO_LOCATION_RESULT", false, null],
+
             //["DO_CREATE_CARDS_SCN", "Flooded", "flooded", 16, "sharedTokens"],
             ["SCENARIO_INIT_CONTINUE",null]
         ]
-    },
-    "functions": {
-       
-"DO_SPAWN_FLOODED_AT_LOCATION_ID": {
-    "args": ["$LOCATION_ID", "$FULLY_FLOODED"],
-    "code": [
-        ["VAR", "$LOCATION_CARD", ["GET_CARD_AND_VALIDATE", "$LOCATION_ID", "DO_SPAWN_FLOODED_AT_LOCATION_ID.LOCATION_ID"]],
-
-        ["DO_SPAWN_ATTACHED_TO_LOCATION_SCN", "Partially Flooded", "flooded", "$LOCATION_CARD.sides.A.name"],
-        ["ATTACH_CARD", "$DO_SPAWN_ATTACHED_TO_LOCATION_RESULT", "$LOCATION_ID"],
-
-        ["COND",
-            ["EQUAL", "$FULLY_FLOODED", true],
-            ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$DO_SPAWN_ATTACHED_TO_LOCATION_RESULT", false, null]
-        ]
-    ]
-}
     }
 }

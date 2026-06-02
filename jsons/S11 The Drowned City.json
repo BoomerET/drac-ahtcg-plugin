@@ -158,5 +158,21 @@
         {"databaseId": "chaos_elder_thing", "quantity": 1, "loadGroupId": "sharedChaosBag"}
       ]
     }
-  }
+  },
+  "functions": { 
+    "DO_SPAWN_FLOODED_AT_LOCATION_ID": {
+      "args": ["$LOCATION_ID", "$FULLY_FLOODED"],
+      "code": [
+          ["VAR", "$LOCATION_CARD", ["GET_CARD_AND_VALIDATE", "$LOCATION_ID", "DO_SPAWN_FLOODED_AT_LOCATION_ID.LOCATION_ID"]],
+
+          ["DO_SPAWN_ATTACHED_TO_LOCATION_SCN", "Partially Flooded", "flooded", "$LOCATION_CARD.sides.A.name"],
+          ["ATTACH_CARD", "$DO_SPAWN_ATTACHED_TO_LOCATION_RESULT", "$LOCATION_ID"],
+
+          ["COND",
+            ["EQUAL", "$FULLY_FLOODED", true],
+            ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$DO_SPAWN_ATTACHED_TO_LOCATION_RESULT", false, null]
+          ]
+        ]
+      }
+    }
 }
