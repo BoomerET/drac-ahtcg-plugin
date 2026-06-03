@@ -48,20 +48,20 @@
             "hideFromSearch": true,
             "label": "TDC_Summit deck",
             "cards": [
-                //{"databaseId": "11648","quantity": 1,"loadGroupId": "sharedSummit"}, // R'lyeh Streets
-                {"databaseId": "11649","quantity": 3,"loadGroupId": "sharedNotInPlay"}, // Central Spire
+                //{"databaseId": "11648","quantity": 1,"loadGroupId": "sharedSummit"},  // R'lyeh Streets (Starting location)
+                {"databaseId": "11649","quantity": 1,"loadGroupId": "sharedNotInPlay"}, // Central Spire
                 {"databaseId": "11650","quantity": 1,"loadGroupId": "sharedNotInPlay"}, // Floating Spire
-                {"databaseId": "11651","quantity": 2,"loadGroupId": "sharedNotInPlay"}, // Western Wall
-                {"databaseId": "11652","quantity": 1,"loadGroupId": "sharedDeckB"}, // Ancient Dome
-                {"databaseId": "11653","quantity": 1,"loadGroupId": "sharedDeckB"}, // Eastern Athenaeum
-                {"databaseId": "11654","quantity": 1,"loadGroupId": "sharedDeckB"}, // Western Athenaeum
-                {"databaseId": "11655","quantity": 1,"loadGroupId": "sharedDeckB"}, // Obsidian Cliffs
-                {"databaseId": "11656","quantity": 3,"loadGroupId": "sharedDeckB"}, // Suspended Reef
-                {"databaseId": "11657","quantity": 2,"loadGroupId": "sharedDeckB"}, // Hanging Ship
-                {"databaseId": "11658","quantity": 1,"loadGroupId": "sharedDeckB"}, // Ancient Canyons
-                {"databaseId": "11659","quantity": 3,"loadGroupId": "sharedDeckB"}, // Dazzling SKyline
+                {"databaseId": "11651","quantity": 1,"loadGroupId": "sharedNotInPlay"}, // Western Wall
+                {"databaseId": "11652","quantity": 1,"loadGroupId": "sharedRemoved"},   // Ancient Dome
+                {"databaseId": "11653","quantity": 1,"loadGroupId": "sharedDeckB"},     // Eastern Athenaeum
+                {"databaseId": "11654","quantity": 1,"loadGroupId": "sharedDeckB"},     // Western Athenaeum
+                {"databaseId": "11655","quantity": 1,"loadGroupId": "sharedDeckB"},     // Obsidian Cliffs
+                {"databaseId": "11656","quantity": 3,"loadGroupId": "sharedDeckB"},     // Suspended Reef
+                {"databaseId": "11657","quantity": 2,"loadGroupId": "sharedDeckB"},     // Hanging Ship
+                {"databaseId": "11658","quantity": 1,"loadGroupId": "sharedDeckB"},     // Ancient Canyons
+                {"databaseId": "11659","quantity": 3,"loadGroupId": "sharedDeckB"},     // Dazzling SKyline
                 {"databaseId": "11660","quantity": 1,"loadGroupId": "sharedNotInPlay"}, // Aerial Waterfall
-                {"databaseId": "11661","quantity": 2,"loadGroupId": "sharedDeckB"}, // Magnetic Spires
+                {"databaseId": "11661","quantity": 2,"loadGroupId": "sharedDeckB"},     // Magnetic Spires
                 {"databaseId": "11662","quantity": 1,"loadGroupId": "sharedNotInPlay"}  // Glyph Orrey
             ]
         }
@@ -79,7 +79,27 @@
         "Obsidian Canyons_Westbound Scenario Init": [
             ["DO_LOAD_CARDS_SCN","The Eastern Expedition_Westbound"],
             ["DO_LOAD_CARDS_SCN","TDC_Summit deck"],
-            ["DO_SHUFFLE_GROUP", "$GAME.firstPlayer", "sharedSummit", true, null],
+            ["DO_LOAD_CARDS_SCN","TDC_Open sky deck"],
+            ["VAR", "$OPEN_SKY_COUNT", ["GET_ALL_CARDS_IN_GROUP_COUNT", "sharedDeckA"]],
+            ["VAR", "$SUMMIT_COUNT", ["GET_ALL_CARDS_IN_GROUP_COUNT", "sharedDeckB"]],
+            ["LOGF", "Open Sky count: {0}", "$OPEN_SKY_COUNT"],
+            ["LOGF", "Summit: {0}", "$SUMMIT_COUNT"],
+            ["DO_SHUFFLE_GROUP", "$GAME.firstPlayer", "sharedDeckA", true, null],
+            ["DO_SHUFFLE_GROUP", "$GAME.firstPlayer", "sharedDeckB", true, null],
+            ["VAR", "$OPEN_SKY_1", ["GET_TOP_CARD_ID", "sharedDeckA"]],
+            ["DO_PUT_INTO_PLAY_AT_SCN", "$OPEN_SKY_1", 35, 76],
+            ["SET", "/cardById/$OPEN_SKY_1/currentSide", "B"],
+            ["VAR", "$OPEN_SKY_2", ["GET_TOP_CARD_ID", "sharedDeckA"]],
+            ["DO_PUT_INTO_PLAY_AT_SCN", "$OPEN_SKY_2", 15, 43],
+            ["SET", "/cardById/$OPEN_SKY_2/currentSide", "B"],
+            ["VAR", "$OPEN_SKY_3", ["GET_TOP_CARD_ID", "sharedDeckA"]],
+            ["DO_PUT_INTO_PLAY_AT_SCN", "$OPEN_SKY_3", 55, 43],
+            ["SET", "/cardById/$OPEN_SKY_3/currentSide", "B"],
+            ["VAR", "$OPEN_SKY_4", ["GET_TOP_CARD_ID", "sharedDeckA"]],
+            ["DO_PUT_INTO_PLAY_AT_SCN", "$OPEN_SKY_4", 35, 10],
+            ["SET", "/cardById/$OPEN_SKY_4/currentSide", "B"],
+            //["LOGF", "WHAT'S THIS: {0}", "/groupById/sharedDeckB/stackIds"],
+            ["LOGF", "Deck B stackIds: {0}", "{{$GAME.groupById.sharedDeckB.stackIds}}"],
 
 
             ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION","R'lyeh Streets", 5, 7, 3, 0],
