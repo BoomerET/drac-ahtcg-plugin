@@ -15,7 +15,6 @@
                 {"databaseId": "11518","quantity": 1,"loadGroupId": "sharedAgendaStory"},//Flooded Paths
                 {"databaseId": "11519","quantity": 1,"loadGroupId": "sharedRemoved"},//Descend into the Abyss
                 {"databaseId": "11520","quantity": 1,"loadGroupId": "sharedActStory"},//Ascend the Wall
-
                 {"databaseId": "11529","quantity": 1,"loadGroupId": "sharedLocations", "left": "45%","top": "81%"}, //Obsidian Foundations
                 {"databaseId": "11765","quantity": 1,"loadGroupId": "sharedNotInPlay"} //Ruby Standish: Master Thief
             ]

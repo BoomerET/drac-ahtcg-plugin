@@ -8,7 +8,11 @@
         {"databaseId": "11513", "quantity": 2, "loadGroupId": "sharedNotInPlay"}, //Gang Enforcer
         {"databaseId": "11514", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}, //Gang Informant
         {"databaseId": "11515", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}, //Caught in the Crossfire
-        {"databaseId": "11516", "quantity": 2, "loadGroupId": "sharedEncounterDeck"} //End of Negotiations
+        {"databaseId": "11516", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}, //End of Negotiations
+        {"databaseId": "11510","quantity": 1,"loadGroupId": "sharedNotInPlay"},//Sadie Sheldon
+        {"databaseId": "11511","quantity": 1,"loadGroupId": "sharedNotInPlay"},//Naomi O'Bannion
+        {"databaseId": "11504b","quantity": 1,"loadGroupId": "sharedNotInPlay"},//Hibbs Roadhouse
+        {"databaseId": "11505b","quantity": 1,"loadGroupId": "sharedNotInPlay"} //La Bella Luna
       ]
     },
     "TDC - Dreams": {
