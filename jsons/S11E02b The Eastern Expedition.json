@@ -1,0 +1,97 @@
+{
+    "preBuiltDecks": {
+        "The Eastern Expedition Scenario": {
+            "label": "The Eastern Expedition",
+            "cards": [],
+            "postLoadActionList": [
+                ["SCENARIO_INIT","The Drowned City", "The Drowned City", "The Eastern Expedition", null, "The Eastern Expedition Scenario Early Init 1" ]
+            ]
+        },
+        "The Eastern Expedition_Westbound": {
+            "hideFromSearch": true,
+            "label": "The Eastern Expedition_Westbound",
+            "cards": [
+                {"databaseId": "11639","quantity": 1,"loadGroupId": "sharedScenarioReference"}, // Scenario Reference
+                {"databaseId": "11642","quantity": 1,"loadGroupId": "sharedAgendaStory"},       // Encroaching Storms
+                {"databaseId": "11645","quantity": 1,"loadGroupId": "sharedActStory"},          // Scouring the Spires
+                {"databaseId": "11646","quantity": 1,"loadGroupId": "sharedActStory"},          // Deadly Skies
+                {"databaseId": "11647","quantity": 1,"loadGroupId": "sharedActStory"},          // Return to the Shoreline
+                {"databaseId": "11648","quantity": 1,"loadGroupId": "sharedLocations", "left": "15%","top": "76%"} // R'lyeh Streets
+            ]
+        },
+        "The Eastern Expedition_Eastbound": {
+            "hideFromSearch": true,
+            "label": "The Eastern Expedition_Eastbound",
+            "cards": [
+                {"databaseId": "11639","quantity": 1,"loadGroupId": "sharedScenarioReference"}, // Scenario Reference
+                {"databaseId": "11641","quantity": 1,"loadGroupId": "sharedAgendaStory"},       // Otherworldly Storms
+                {"databaseId": "11652","quantity": 1,"loadGroupId": "sharedRemoved"},           // Ancient Dome
+                {"databaseId": "11643","quantity": 1,"loadGroupId": "sharedActStory"},          // Searching the Spires
+                {"databaseId": "11644","quantity": 1,"loadGroupId": "sharedActStory"},          // To the Ancient Dome
+                {"databaseId": "11648","quantity": 1,"loadGroupId": "sharedLocations", "left": "15%","top": "76%"} // R'lyeh Streets
+            ]
+        },
+        "TDC_Open sky deck": {
+            "hideFromSearch": true,
+            "label": "TDC_Open sky deck",
+            "cards": [
+                // open sky"
+                {"databaseId": "01163","quantity": 3,"loadGroupId": "sharedDeckA"},
+                {"databaseId": "01164","quantity": 2,"loadGroupId": "sharedDeckA"},
+                {"databaseId": "01165","quantity": 2,"loadGroupId": "sharedDeckA"},
+                {"databaseId": "01166","quantity": 3,"loadGroupId": "sharedDeckA"},
+                {"databaseId": "01167","quantity": 2,"loadGroupId": "sharedDeckA"},
+                {"databaseId": "01168","quantity": 2,"loadGroupId": "sharedDeckA"}
+            ]
+        },
+        "TDC_Summit deck": {
+            "hideFromSearch": true,
+            "label": "TDC_Summit deck",
+            "cards": [
+                //{"databaseId": "11648","quantity": 1,"loadGroupId": "sharedSummit"}, // R'lyeh Streets
+                {"databaseId": "11649","quantity": 3,"loadGroupId": "sharedNotInPlay"}, // Central Spire
+                {"databaseId": "11650","quantity": 1,"loadGroupId": "sharedNotInPlay"}, // Floating Spire
+                {"databaseId": "11651","quantity": 2,"loadGroupId": "sharedNotInPlay"}, // Western Wall
+                {"databaseId": "11652","quantity": 1,"loadGroupId": "sharedDeckB"}, // Ancient Dome
+                {"databaseId": "11653","quantity": 1,"loadGroupId": "sharedDeckB"}, // Eastern Athenaeum
+                {"databaseId": "11654","quantity": 1,"loadGroupId": "sharedDeckB"}, // Western Athenaeum
+                {"databaseId": "11655","quantity": 1,"loadGroupId": "sharedDeckB"}, // Obsidian Cliffs
+                {"databaseId": "11656","quantity": 3,"loadGroupId": "sharedDeckB"}, // Suspended Reef
+                {"databaseId": "11657","quantity": 2,"loadGroupId": "sharedDeckB"}, // Hanging Ship
+                {"databaseId": "11658","quantity": 1,"loadGroupId": "sharedDeckB"}, // Ancient Canyons
+                {"databaseId": "11659","quantity": 3,"loadGroupId": "sharedDeckB"}, // Dazzling SKyline
+                {"databaseId": "11660","quantity": 1,"loadGroupId": "sharedNotInPlay"}, // Aerial Waterfall
+                {"databaseId": "11661","quantity": 2,"loadGroupId": "sharedDeckB"}, // Magnetic Spires
+                {"databaseId": "11662","quantity": 1,"loadGroupId": "sharedNotInPlay"}  // Glyph Orrey
+            ]
+        }
+    },
+    "actionLists": {
+        "The Eastern Expedition Scenario Early Init 1": [
+            ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Which Task have you selected?", ["LIST", "No Place Like Home", "Walk in Faith", "Toe the Line", "Good Money", "Prove Your Worth", "Do No Harm", "Dreams of Destruction", "Plumb the Depths"], "The Eastern Expedition Scenario Early Init 2"]
+        ],
+        "The Eastern Expedition Scenario Early Init 2": [
+            ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Check Campaign Log", ["LIST", "The Expedition headed West", "The Expedition headed East"], "Eastern Expedition_Decide East or West"]
+        ],
+        "Eastern Expedition_Decide East or West": [
+            ["COND", ["EQUAL", "$GAME.arkham.scenarioAnswer2", "A"], ["ACTION_LIST", "Obsidian Canyons_Westbound Scenario Init"], ["TRUE"], ["ACTION_LIST", "Obsidian Canyons_Eastbound Scenario Init"] ]
+        ],
+        "Obsidian Canyons_Westbound Scenario Init": [
+            ["DO_LOAD_CARDS_SCN","The Eastern Expedition_Westbound"],
+            ["DO_LOAD_CARDS_SCN","TDC_Summit deck"],
+            ["DO_SHUFFLE_GROUP", "$GAME.firstPlayer", "sharedSummit", true, null],
+
+
+            ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION","R'lyeh Streets", 5, 7, 3, 0],
+
+            ["SCENARIO_INIT_CONTINUE", null]
+        ],
+        "Obsidian Canyons_Eastbound Scenario Init": [
+            ["DO_LOAD_CARDS_SCN","The Eastern Expedition_Eastbound"],
+
+            ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION","R'lyeh Streets", 5, 7, 3, 0],
+
+            ["SCENARIO_INIT_CONTINUE", null]
+        ]
+    }
+}
