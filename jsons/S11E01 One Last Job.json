@@ -27,6 +27,7 @@
             ["SET", "/arkham/advanceStoryOverride", true],
             ["SET", "/arkham/advanceStoryOverrideActionList", "One Last Job Advance Story"],
             ["DO_LOAD_CARDS_SCN","One Last Job"],
+            ["DO_LOAD_CARDS_SCN","TDC - One Last Job"],
             ["DO_SET_SPAWN_LOCATION","11504b",75,10],
             ["DO_SET_SPAWN_LOCATION","11505b",55,10],
             ["ACTION_LIST","Random Midnight Mask Downtown"],
