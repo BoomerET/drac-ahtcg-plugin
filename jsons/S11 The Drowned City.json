@@ -4,105 +4,128 @@
       "hideFromSearch": true,
       "label": "TDC - One Last Job",
       "cards": [
-        {"databaseId": "11512", "quantity": 3, "loadGroupId": "sharedEncounterDeck"}, //Gang Soldier
-        {"databaseId": "11513", "quantity": 2, "loadGroupId": "sharedNotInPlay"}, //Gang Enforcer
-        {"databaseId": "11514", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}, //Gang Informant
-        {"databaseId": "11515", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}, //Caught in the Crossfire
-        {"databaseId": "11516", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}, //End of Negotiations
-        {"databaseId": "11510","quantity": 1,"loadGroupId": "sharedNotInPlay"},//Sadie Sheldon
-        {"databaseId": "11511","quantity": 1,"loadGroupId": "sharedNotInPlay"},//Naomi O'Bannion
-        {"databaseId": "11504b","quantity": 1,"loadGroupId": "sharedNotInPlay"},//Hibbs Roadhouse
-        {"databaseId": "11505b","quantity": 1,"loadGroupId": "sharedNotInPlay"} //La Bella Luna
+        {"databaseId": "11512", "quantity": 3, "loadGroupId": "sharedEncounterDeck"}, // Gang Soldier
+        {"databaseId": "11513", "quantity": 2, "loadGroupId": "sharedNotInPlay"},     // Gang Enforcer
+        {"databaseId": "11514", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}, // Gang Informant
+        {"databaseId": "11515", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}, // Caught in the Crossfire
+        {"databaseId": "11516", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}, // End of Negotiations
+        {"databaseId": "11510","quantity": 1,"loadGroupId": "sharedNotInPlay"},       // Sadie Sheldon
+        {"databaseId": "11511","quantity": 1,"loadGroupId": "sharedNotInPlay"},       // Naomi O'Bannion
+        {"databaseId": "11504b","quantity": 1,"loadGroupId": "sharedNotInPlay"},      // Hibbs Roadhouse
+        {"databaseId": "11505b","quantity": 1,"loadGroupId": "sharedNotInPlay"}       // La Bella Luna
       ]
     },
     "TDC - Dreams": {
       "hideFromSearch": true,
       "label": "TDC - Dreams",
       "cards": [
-        {"databaseId": "11749", "quantity": 3, "loadGroupId": "sharedEncounterDeck"},
-        {"databaseId": "11750", "quantity": 3, "loadGroupId": "sharedEncounterDeck"}
+        {"databaseId": "11749", "quantity": 3, "loadGroupId": "sharedEncounterDeck"}, // Tortured Visions
+        {"databaseId": "11750", "quantity": 3, "loadGroupId": "sharedEncounterDeck"}  // Drawn to Darkness
       ]
     },
     "TDC - The Western Wall": {
       "hideFromSearch": true,
       "label": "TDC - The Western Wall",
       "cards": [
-        {"databaseId": "11531", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //Seafloor Frieze
-        {"databaseId": "11532", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //Undersea Vault
-        {"databaseId": "11533", "quantity": 1, "loadGroupId": "sharedEncounterDeck"}, //Deep One Matron
-        {"databaseId": "11534", "quantity": 3, "loadGroupId": "sharedEncounterDeck"}, //Look Out
-        {"databaseId": "11535", "quantity": 1, "loadGroupId": "sharedNotInPlay"} //Hunting Parasite
+        {"databaseId": "11531", "quantity": 1, "loadGroupId": "sharedNotInPlay"},     // Seafloor Frieze
+        {"databaseId": "11532", "quantity": 1, "loadGroupId": "sharedNotInPlay"},     // Undersea Vault
+        {"databaseId": "11533", "quantity": 1, "loadGroupId": "sharedEncounterDeck"}, // Deep One Matron
+        {"databaseId": "11534", "quantity": 3, "loadGroupId": "sharedEncounterDeck"}, // Look Out
+        {"databaseId": "11535", "quantity": 1, "loadGroupId": "sharedNotInPlay"}      // Hunting Parasite
       ]
     },
     "TDC - Cosmic Legacy": {
       "hideFromSearch": true,
       "label": "TDC - Cosmic Legacy",
       "cards": [
-        {"databaseId": "11729", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
-        {"databaseId": "11730", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}
+        {"databaseId": "11729", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}, // Eye of the Deep
+        {"databaseId": "11730", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}  // Cunning Mimicry
       ]
     },
     "TDC - Deep Ones": {
       "hideFromSearch": true,
       "label": "TDC -Deep Ones",
       "cards": [
-        {"databaseId": "11746", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
-        {"databaseId": "11747", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
-        {"databaseId": "11748", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}
+        {"databaseId": "11746", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}, // Deep One Thrall
+        {"databaseId": "11747", "quantity": 1, "loadGroupId": "sharedEncounterDeck"}, // Elder Deep One
+        {"databaseId": "11748", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}  // Deep One Ambush
       ]
     },
     "TDC - Flood": {
       "hideFromSearch": true,
       "label": "TDC -Flood",
       "cards": [
-        {"databaseId": "11736", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
-        {"databaseId": "11737", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
-        {"databaseId": "11738", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}
+        {"databaseId": "11736", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}, // Deadly Torrent
+        {"databaseId": "11737", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}, // Something in the Water
+        {"databaseId": "11738", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}  // Ominous Silence
       ]
     },
     "TDC - R'lyeh": {
       "hideFromSearch": true,
       "label": "TDC - R'lyeh",
       "cards": [
-        {"databaseId": "11739", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
-        {"databaseId": "11740", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}
+        {"databaseId": "11739", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}, // Cthulhu Architecture
+        {"databaseId": "11740", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}  // Crumbling Masonry
       ]
     },
     "TDC - Star Spawn": {
       "hideFromSearch": true,
       "label": "TDC -Star Spawn",
       "cards": [
-        {"databaseId": "11725", "quantity": 1, "loadGroupId": "sharedRemoved"}, //Monstrous Star Spawn
-        {"databaseId": "11726", "quantity": 1, "loadGroupId": "sharedRemoved"}, //Infected Star Spawn
-        {"databaseId": "11727", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //Coral Star Spawn
-        {"databaseId": "11728", "quantity": 1, "loadGroupId": "sharedRemoved"} //Star Spawn Observer
+        {"databaseId": "11725", "quantity": 1, "loadGroupId": "sharedRemoved"},   // Monstrous Star Spawn
+        {"databaseId": "11726", "quantity": 1, "loadGroupId": "sharedRemoved"},   // Infected Star Spawn
+        {"databaseId": "11727", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, // Coral Star Spawn
+        {"databaseId": "11728", "quantity": 1, "loadGroupId": "sharedRemoved"}    // Star Spawn Observer
       ]
     },
     "TDC - The Inescapable": {
       "hideFromSearch": true,
       "label": "TDC - The Inescapable",
       "cards": [
-        {"databaseId": "11744", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //The Inescapable: Tireless Pursuer
-        {"databaseId": "11745", "quantity": 3, "loadGroupId": "sharedEncounterDeck"} //Still Behind You
+        {"databaseId": "11744", "quantity": 1, "loadGroupId": "sharedNotInPlay"},    // The Inescapable: Tireless Pursuer
+        {"databaseId": "11745", "quantity": 3, "loadGroupId": "sharedEncounterDeck"} // Still Behind You
       ]
     },
     "TDC - Undersea Creatures": {
       "hideFromSearch": true,
       "label": "TDC - Undersea Creatures",
       "cards": [
-        {"databaseId": "11733", "quantity": 1, "loadGroupId": "sharedEncounterDeck"}, //Voltaic Eel
-        {"databaseId": "11734", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}, //Dreaming Migration
-        {"databaseId": "11735", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}  //Undersea Hunt
+        {"databaseId": "11733", "quantity": 1, "loadGroupId": "sharedEncounterDeck"}, // Voltaic Eel
+        {"databaseId": "11734", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}, // Dreaming Migration
+        {"databaseId": "11735", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}  // Undersea Hunt
       ]
     },
     "TDC - Expedition": {
       "hideFromSearch": true,
       "label": "TDC - Expedition",
       "cards": [
-        {"databaseId": "11761", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //Expedition Gear: Tough but Reliable
-        {"databaseId": "11762", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //Laudanum: Desperate Measures
-        {"databaseId": "11763", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, //Alien Tablet: Prehistoric Writings
-        {"databaseId": "11764", "quantity": 4, "loadGroupId": "sharedNotInPlay"}  //Diving Suit
+        {"databaseId": "11761", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, // Expedition Gear: Tough but Reliable
+        {"databaseId": "11762", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, // Laudanum: Desperate Measures
+        {"databaseId": "11763", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, // Alien Tablet: Prehistoric Writings
+        {"databaseId": "11764", "quantity": 4, "loadGroupId": "sharedNotInPlay"}  // Diving Suit
+      ]
+    },
+    "TDC - The Drowned Quarter": {
+      "hideFromSearch": true,
+      "label": "TDC - The Drowned Quarter",
+      "cards": [
+        {"databaseId": "11549", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, // Undersea Parasite
+        {"databaseId": "11551", "quantity": 3, "loadGroupId": "sharedNotInPlay"}  // Medusa
+
+      ]
+    },
+    "TDC - Tasks": {
+      "hideFromSearch": true,
+      "label": "TDC - Tasks",
+      "cards": [
+        {"databaseId": "11753a", "quantity": 1, "loadGroupId": "sharedDeckA"}, // No Place Like Home: Lost and Uncertain
+        {"databaseId": "11754a", "quantity": 1, "loadGroupId": "sharedDeckA"}, // Walk in Faith: Blind Devotion
+        {"databaseId": "11755a", "quantity": 1, "loadGroupId": "sharedDeckA"}, // To the Line: Disavowed and Disgraced
+        {"databaseId": "11756a", "quantity": 1, "loadGroupId": "sharedDeckA"}, // Good Money: The "Quid" Part
+        {"databaseId": "11757a", "quantity": 1, "loadGroupId": "sharedDeckA"}, // Prove Your Worth: Are You a Burden?
+        {"databaseId": "11758a", "quantity": 1, "loadGroupId": "sharedDeckA"}, // Do No Harm: Can You Save Them?
+        {"databaseId": "11759a", "quantity": 1, "loadGroupId": "sharedDeckA"}, // Dreams of Destruction: Visions of a Grim Future
+        {"databaseId": "11760a", "quantity": 1, "loadGroupId": "sharedDeckA"}  // Plumb the Depths: Compulsive Research
       ]
     },
     "The Drowned City Chaos Bag - Easy": {
@@ -175,7 +198,7 @@
     }
   },
   "functions": { 
-    // Used in Western and Eastern Expedition
+    //  Used in Western and Eastern Expedition
     "DO_SPAWN_FLOODED_AT_LOCATION_ID": { 
       "args": ["$LOCATION_ID", "$FULLY_FLOODED"],
       "code": [

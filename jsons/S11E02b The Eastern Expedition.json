@@ -30,7 +30,7 @@
             ["VAR", "$WALKWAY01", ["SHUFFLE_LIST", ["LIST", "11521", "11521", "11522", "11522", "11523", "11524", "11525"]]], 
             ["VAR", "$LEVELS_2_4", ["SHUFFLE_LIST", ["LIST", "$WALKWAY01.[0]", "$WALKWAY01.[1]", "$WALKWAY01.[2]", "$WALKWAY01.[3]", "$WALKWAY01.[4]", "11526", "11527", "11528"]]],
 
-            // $LEVELS_2_4.[6] and $LEVELS_2_4.[7] are to be removed from the game.
+            // $LEVELS_2_4.[6] and $LEVELS_2_4.[7] are to be removed from the game. (Are you sure about this?)
             // Level 2
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVELS_2_4.[0]", 45, 62],
             ["DO_SPAWN_FLOODED_AT_LOCATION_ID", "$DO_SPAWN_LOCATION_RESULT", true],
@@ -56,18 +56,18 @@
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVEL5.[1]", 45, 5],
             // Level 5-3
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$LEVEL5.[2]", 70, 5],
-            //["DO_SPAWN_FLOODED_AT_LOCATION_ID", "$DO_SPAWN_LOCATION_RESULT", true],
 
-            ["DO_LOAD_CARDS_SCN","TDC - The Western Wall"],
-            ["DO_LOAD_CARDS_SCN","TDC - Cosmic Legacy"],
-            ["DO_LOAD_CARDS_SCN","TDC - Deep Ones"],
-            ["DO_LOAD_CARDS_SCN","TDC - Flood"],
-            ["DO_LOAD_CARDS_SCN","TDC - R'lyeh"],
-            ["DO_LOAD_CARDS_SCN","TDC - Star Spawn"],
-            ["DO_LOAD_CARDS_SCN","TDC - The Inescapable"],
-            ["DO_LOAD_CARDS_SCN","TDC - Undersea Creatures"],
+            ["DO_LOAD_CARDS_SCN", "TDC - The Western Wall"],
+            ["DO_LOAD_CARDS_SCN", "TDC - Cosmic Legacy"],
+            ["DO_LOAD_CARDS_SCN", "TDC - Deep Ones"],
+            ["DO_LOAD_CARDS_SCN", "TDC - Flood"],
+            ["DO_LOAD_CARDS_SCN", "TDC - R'lyeh"],
+            ["DO_LOAD_CARDS_SCN", "TDC - Star Spawn"],
+            ["DO_LOAD_CARDS_SCN", "TDC - The Inescapable"],
+            ["DO_LOAD_CARDS_SCN", "TDC - Undersea Creatures"],
             ["DO_LOAD_CARDS_SCN", "Agents of Cthulhu"],
-            ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION","Obsidian Foundations",5,7,3,0],
+            ["DO_LOAD_CARDS_SCN", "TDC - Tasks"],
+            ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION","Obsidian Foundations", 5, 7, 3, 0],
             ["VAR", "$OBSIDIAN_FOUNDATIONS_ID", ["GET_NAMED_CARD_ID", "11529"]],
             ["DO_SPAWN_FLOODED_AT_LOCATION_ID", "$OBSIDIAN_FOUNDATIONS_ID", true],
             ["SET", "/cardById/$OBSIDIAN_FOUNDATIONS_ID/currentSide", "B"],
