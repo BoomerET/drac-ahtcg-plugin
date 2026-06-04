@@ -49,7 +49,7 @@
             "label": "TDC_Summit deck",
             "cards": [
                 //{"databaseId": "11648","quantity": 1,"loadGroupId": "sharedSummit"},  // R'lyeh Streets (Starting location)
-                {"databaseId": "11649","quantity": 1,"loadGroupId": "sharedNotInPlay"}, // Central Spire
+                //{"databaseId": "11649","quantity": 1,"loadGroupId": "sharedNotInPlay"}, // Central Spire
                 {"databaseId": "11650","quantity": 1,"loadGroupId": "sharedNotInPlay"}, // Floating Spire
                 {"databaseId": "11651","quantity": 1,"loadGroupId": "sharedNotInPlay"}, // Western Wall
                 {"databaseId": "11652","quantity": 1,"loadGroupId": "sharedRemoved"},   // Ancient Dome
@@ -96,29 +96,8 @@
             ["VAR", "$OPEN_SKY_4", ["GET_TOP_CARD_ID", "sharedDeckA"]],
             ["DO_PUT_INTO_PLAY_AT_SCN", "$OPEN_SKY_4", 35, 10],
             ["SET", "/cardById/$OPEN_SKY_4/currentSide", "B"],
-            //["LOGF", "WHAT'S THIS: {0}", "/groupById/sharedDeckB/stackIds"],
-            //["LOGF", "Deck B stackIds: {0}", "{{$GAME.groupById.sharedDeckB.stackIds}}"],
-            //["VAR", "$DECK_B_COUNT", ["LENGTH", "$GAME.groupById.sharedDeckB.stackIds"]],
-            //["VAR", "$BOTTOM_INDEX", ["SUBTRACT", "$DECK_B_COUNT", 1]],
-            //["VAR", "$BOTTOM_CARD", "{{$GAME.groupById.sharedDeckB.stackIds.[$BOTTOM_INDEX]}}"],
-            //["VAR", "$BOTTOM_CARD", "{{$GAME.groupById.sharedDeckB.stackIds.[13]}}"],
-            //["LOGF", "Bottom card from Deck B: {0}", "$BOTTOM_CARD"],
-            //["LOGF", "Card exists? {0}", "{{$GAME.cardById.$BOTTOM_CARD}}"],
-            //["LOGF", "Top card: {0}", ["GET_TOP_CARD_ID", "sharedDeckB"]],
-            //["DO_PUT_INTO_PLAY_AT_SCN", "$BOTTOM_CARD", 75, 76],
-            //["SET", "/cardById/$BOTTOM_CARD/currentSide", "B"],
-            //["VAR", "$BOTTOM_STACK_ID", "{{$GAME.groupById.sharedDeckB.stackIds.[13]}}"],
-            //["LOGF", "Bottom stack id: {0}", "$BOTTOM_STACK_ID"],
-            //["LOGF", "Bottom stack object: {0}", "{{$GAME.stackById.$BOTTOM_STACK_ID}}"],
-            //["VAR", "$BOTTOM_STACK_ID", "{{$GAME.groupById.sharedDeckB.stackIds.[-1]}}"],
-            //["VAR", "$BOTTOM_CARD_ID", "{{$GAME.stackById.$BOTTOM_STACK_ID.cardIds.[0]}}"],
-            //["DO_PUT_INTO_PLAY_AT_SCN", "$BOTTOM_CARD_ID", 55, 76],
-            //["SET", "/cardById/$BOTTOM_CARD_ID/currentSide", "A"],
-            
-            //["VAR", "$BOTTOM_STACK_ID", "{{$GAME.groupById.sharedDeckB.stackIds.[-1]}}"],
-            //["VAR", "$BOTTOM_CARD_ID", "{{$GAME.stackById.$BOTTOM_STACK_ID.cardIds.[0]}}"],
-            //["DO_PUT_INTO_PLAY_AT_SCN", "$BOTTOM_CARD_ID", 75, 76],
-            //["SET", "/cardById/$BOTTOM_CARD_ID/currentSide", "A"],
+
+            // Get bottom cards from Summit deck
             ["DO_PLACE_BOTTOM_CARD_FROM_DECK_SCN", "sharedDeckB", 55, 76, "A"],
             ["DO_PLACE_BOTTOM_CARD_FROM_DECK_SCN", "sharedDeckB", 75, 76, "A"],
             ["DO_PLACE_BOTTOM_CARD_FROM_DECK_SCN", "sharedDeckB", 35, 43, "A"],
@@ -126,6 +105,30 @@
             ["DO_PLACE_BOTTOM_CARD_FROM_DECK_SCN", "sharedDeckB", 15, 10, "A"],
             ["DO_PLACE_BOTTOM_CARD_FROM_DECK_SCN", "sharedDeckB", 55, 10, "A"],
             ["DO_PLACE_BOTTOM_CARD_FROM_DECK_SCN", "sharedDeckB", 75, 10, "A"],
+
+
+["DO_CREATE_CARDS", "$GAME.firstPlayer", "Summit", "11649", 1, "sharedDeckB", true, null],
+["VAR", "$CARD_ID", "{{$GAME.lastLoadedCardIds.[0]}}"],
+["VAR", "$CARD_STACK_ID", "{{$GAME.cardById.$CARD_ID.stackId}}"],
+
+["VAR", "$DECK_STACKS", "$GAME.groupById.sharedDeckB.stackIds"],
+["UPDATE_VAR", "$DECK_STACKS", ["REMOVE_FROM_LIST_BY_VALUE", "$DECK_STACKS", "$CARD_STACK_ID"]],
+
+["VAR", "$A", "$DECK_STACKS.[0]"],
+["VAR", "$B", "$DECK_STACKS.[1]"],
+["VAR", "$C", "$DECK_STACKS.[2]"],
+["VAR", "$D", "$DECK_STACKS.[3]"],
+["VAR", "$E", "$DECK_STACKS.[4]"],
+["VAR", "$F", "$DECK_STACKS.[5]"],
+["VAR", "$G", "$DECK_STACKS.[6]"],
+
+["VAR", "$NEW_STACKS", ["LIST", "$A", "$B", "$C", "$D", "$E", "$F", "$CARD_STACK_ID", "$G"]],
+["SET", "/groupById/sharedDeckB/stackIds", "$NEW_STACKS"],
+
+["SHUFFLE_TOP_X", "sharedDeckB", 3],
+
+
+
 
 
             ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION","R'lyeh Streets", 5, 7, 3, 0],
