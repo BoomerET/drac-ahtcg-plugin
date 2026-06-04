@@ -127,15 +127,22 @@
             ]],
             ["VAR", "$NEW_STACKS", ["CONCAT_LISTS", "$TOP_PACKET", "$REST"]],
             ["SET", "/groupById/sharedPileB/stackIds", "$NEW_STACKS"],
+            
+            // Put Eastern/Western Winds Story card on table.
+            ["DO_SPAWN_LOCATION_SCN", "sharedPileC", "11640", 3, 28],
 
-            //["DO_CREATE_CARDS_SCN", "Western Winds", "11640", 1, "sharedPileC"],
-            ["DO_SPAWN_LOCATION_SCN", "sharedPileC", "11640", 5, 5],
+            // Put 1 Resource token on the Scenario card
+            ["SET", "/cardById/$DO_SPAWN_LOCATION_RESULT/currentSide", "B"],
+            ["DO_PLACE_RESOURCES_ON_CARD", "$GAME.firstPlayer", ["GET_SCENARIO_CARD_ID"], 1, true, null],
+            ["ACTION_LIST", "Ask if Creature Defeated"],
 
-
-
+            // Put Mini investigators at locations
             ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION","R'lyeh Streets", 5, 7, 3, 0],
-
             ["SCENARIO_INIT_CONTINUE", null]
+        ],
+        "Ask if Creature Defeated": [
+            //["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Check Campaign Log", ["LIST", "Creature was defeated.", "The above is NOT true."], "Remove Inescapable Encounter"]
+            ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Check Campaign Log", ["LIST", "Creature was defeated.", "The above is NOT true."], null]
         ],
         "Obsidian Canyons_Eastbound Scenario Init": [
             ["DO_LOAD_CARDS_SCN","The Eastern Expedition_Eastbound"],
