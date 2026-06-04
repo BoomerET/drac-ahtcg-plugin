@@ -281,20 +281,6 @@
             ]
           },
           {
-            "label": "id:theHemlockVale",
-            "deckLists": [
-              { "label": "id:preludeWelcomeToHemlockVale", "deckListId": "Prelude - Welcome to Hemlock Vale Scenario" }
-            ]
-          },
-          {
-            "label": "id:theDrownedCity",
-            "deckLists": [
-              { "label": "id:oneLastJob", "deckListId": "One Last Job Scenario" },
-              { "label": "id:theWesternExpedition", "deckListId": "The Western Expedition Scenario" },
-              { "label": "id:theEasternExpedition", "deckListId": "The Eastern Expedition Scenario" }
-            ]
-          },
-          {
             "label": "id:brethrenOfAsh",
             "deckLists": [
               { "label": "id:spreadingFlames", "deckListId": "Spreading Flames Scenario" },
@@ -580,13 +566,6 @@
     "theScarletKeys": { "English": "The Scarlet Keys" },
     "riddlesAndRain": { "English": "Riddles and Rain" },
     "deadHeat": { "English": "Dead Heat" },
-    "theFeastOfHemlockVale": { "English": "The Feast of Hemlock Vale" },
-    "theHemlockVale": { "English": "The Feast of Hemlock Vale" },
-    "preludeWelcomeToHemlockVale": { "English": "Prelude: Welcome to Hemlock Vale" },
-    "theDrownedCity": { "English": "The Drowned City" },
-    "oneLastJob": { "English": "One Last Job" },
-    "theWesternExpedition": { "English": "The Western Expedition" },
-    "theEasternExpedition": { "English": "The Eastern Expedition" },
     "brethrenOfAsh": { "English": "Brethren of Ash" },
     "spreadingFlames": { "English": "Spreading Flames" },
     "smokeAndMirrors": { "English": "Smoke and Mirrors" },
