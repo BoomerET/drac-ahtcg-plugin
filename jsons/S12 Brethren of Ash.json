@@ -1,0 +1,205 @@
+{
+  "preBuiltDecks": {
+    "BoA_Spreading Flames": {
+      "hideFromSearch": true,
+      "label": "BoA_Spreading Flames",
+      "cards": [
+        { "databaseId": "12114", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
+        { "databaseId": "12115", "quantity": 1, "loadGroupId": "sharedNotInPlay" }
+      ]
+    },
+    "BoA_Ashen Pilgrims": {
+      "hideFromSearch": true,
+      "label": "BoA_Ashen Pilgrims",
+      "cards": [
+        { "databaseId": "12121", "quantity": 2, "loadGroupId": "sharedEncounterDeck" },
+        { "databaseId": "12122", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
+      ]
+    },
+    "BoA_Bystanders": {
+      "hideFromSearch": true,
+      "label": "BoA_Bystanders",
+      "cards": [
+        { "databaseId": "12123", "quantity": 3, "loadGroupId": "sharedEncounterDeck" }
+      ]
+    },
+    "BoA_Cosmic Evils": {
+      "hideFromSearch": true,
+      "label": "BoA_Cosmic Evils",
+      "cards": [
+        { "databaseId": "12124", "quantity": 3, "loadGroupId": "sharedEncounterDeck" }
+      ]
+    },
+    "BoA_Eldritch Lore": {
+      "hideFromSearch": true,
+      "label": "BoA_Eldritch Lore",
+      "cards": [
+        { "databaseId": "12125", "quantity": 2, "loadGroupId": "sharedEncounterDeck" },
+        { "databaseId": "12126", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
+      ]
+    },
+    "BoA_Hallucinations": {
+      "hideFromSearch": true,
+      "label": "BoA_Hallucinations",
+      "cards": [
+        { "databaseId": "12127", "quantity": 2, "loadGroupId": "sharedEncounterDeck" },
+        { "databaseId": "12128", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
+      ]
+    },
+    "BoA_Fire": {
+      "hideFromSearch": true,
+      "label": "BoA_Fire",
+      "cards": [
+        { "databaseId": "12129", "quantity": 5, "loadGroupId": "sharedNotInPlay" },
+        { "databaseId": "12130", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
+      ]
+    },
+    "BoA_Mad Science": {
+      "hideFromSearch": true,
+      "label": "BoA_Mad Science",
+      "cards": [
+        { "databaseId": "12131", "quantity": 2, "loadGroupId": "sharedEncounterDeck" },
+        { "databaseId": "12132", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
+      ]
+    },
+    "BoA_Bad Weather": {
+      "hideFromSearch": true,
+      "label": "BoA_Bad Weather",
+      "cards": [
+        { "databaseId": "12158", "quantity": 2, "loadGroupId": "sharedEncounterDeck" },
+        { "databaseId": "12159", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
+      ]
+    },
+    "BoA_Gangs of Arkham": {
+      "hideFromSearch": true,
+      "label": "BoA_Gangs of Arkham",
+      "cards": [
+        { "databaseId": "12164", "quantity": 2, "loadGroupId": "sharedEncounterDeck" },
+        { "databaseId": "12165", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
+      ]
+    },
+    "BoA_Arcane Lock": {
+      "hideFromSearch": true,
+      "label": "BoA_Arcane Lock",
+      "cards": [
+        { "databaseId": "12157", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
+      ]
+    },
+    "BoA_Dead Ends": {
+      "hideFromSearch": true,
+      "label": "BoA_Dead Ends",
+      "cards": [
+        { "databaseId": "12160", "quantity": 2, "loadGroupId": "sharedEncounterDeck" },
+        { "databaseId": "12161", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
+      ]
+    },
+    "BoA_Flying Terrors": {
+      "hideFromSearch": true,
+      "label": "BoA_Flying Terrors",
+      "cards": [
+        { "databaseId": "12162", "quantity": 2, "loadGroupId": "sharedEncounterDeck" },
+        { "databaseId": "12163", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
+      ]
+    },
+    "BoA_Whippoorwills": {
+      "hideFromSearch": true,
+      "label": "BoA_Whippoorwills",
+      "cards": [
+        { "databaseId": "12166", "quantity": 3, "loadGroupId": "sharedEncounterDeck" },
+        { "databaseId": "12167", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
+      ]
+    },
+    "BoA_Queen of Ash": {
+      "hideFromSearch": true,
+      "label": "BoA_Queen of Ash",
+      "cards": [
+        { "databaseId": "12176", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
+      ]
+    },
+    "BoA_Reeking Decay": {
+      "hideFromSearch": true,
+      "label": "BoA_Reeking Decay",
+      "cards": [
+        { "databaseId": "12191", "quantity": 2, "loadGroupId": "sharedEncounterDeck" },
+        { "databaseId": "12192", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
+      ]
+    },
+    "BoA_Torment": {
+      "hideFromSearch": true,
+      "label": "BoA_Torment",
+      "cards": [
+        { "databaseId": "12193", "quantity": 2, "loadGroupId": "sharedEncounterDeck" },
+        { "databaseId": "12194", "quantity": 2, "loadGroupId": "sharedEncounterDeck" },
+        { "databaseId": "12195", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
+      ]
+    },
+    "Brethren of Ash Chaos Bag - Easy": {
+      "hideFromSearch": true,
+      "label": "Brethren of Ash Chaos Bag - Easy",
+      "cards": [
+        { "databaseId": "chaos_p1", "quantity": 2, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_p0", "quantity": 3, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_m1", "quantity": 3, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_m2", "quantity": 2, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_skull", "quantity": 2, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_tablet", "quantity": 1, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_auto_fail", "quantity": 1, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_elder_sign", "quantity": 1, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_elder_thing", "quantity": 1, "loadGroupId": "sharedChaosBag" }
+      ]
+    },
+    "Brethren of Ash Chaos Bag - Standard": {
+      "hideFromSearch": true,
+      "label": "Brethren of Ash Chaos Bag - Standard",
+      "cards": [
+        { "databaseId": "chaos_p1", "quantity": 1, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_p0", "quantity": 2, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_m1", "quantity": 3, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_m2", "quantity": 2, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_m3", "quantity": 1, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_m4", "quantity": 1, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_skull", "quantity": 2, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_tablet", "quantity": 1, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_auto_fail", "quantity": 1, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_elder_sign", "quantity": 1, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_elder_thing", "quantity": 1, "loadGroupId": "sharedChaosBag" }
+      ]
+    },
+    "Brethren of Ash Chaos Bag - Hard": {
+      "hideFromSearch": true,
+      "label": "Brethren of Ash Chaos Bag - Hard",
+      "cards": [
+        { "databaseId": "chaos_p0", "quantity": 3, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_m1", "quantity": 2, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_m2", "quantity": 2, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_m3", "quantity": 2, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_m4", "quantity": 1, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_m5", "quantity": 1, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_skull", "quantity": 2, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_tablet", "quantity": 1, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_auto_fail", "quantity": 1, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_elder_sign", "quantity": 1, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_elder_thing", "quantity": 1, "loadGroupId": "sharedChaosBag" }
+      ]
+    },
+    "Brethren of Ash Chaos Bag - Expert": {
+      "hideFromSearch": true,
+      "label": "Brethren of Ash Chaos Bag - Expert",
+      "cards": [
+        { "databaseId": "chaos_p0", "quantity": 1, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_m1", "quantity": 2, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_m2", "quantity": 2, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_m3", "quantity": 2, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_m4", "quantity": 2, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_m5", "quantity": 1, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_m6", "quantity": 1, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_m8", "quantity": 1, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_skull", "quantity": 2, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_tablet", "quantity": 1, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_auto_fail", "quantity": 1, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_elder_sign", "quantity": 1, "loadGroupId": "sharedChaosBag" },
+        { "databaseId": "chaos_elder_thing", "quantity": 1, "loadGroupId": "sharedChaosBag" }
+      ]
+    }
+  }
+}
