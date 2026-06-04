@@ -75,7 +75,7 @@
             ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Check Campaign Log", ["LIST", "The Expedition headed West", "The Expedition headed East"], "Eastern Expedition_Decide East or West"]
         ],
         "Eastern Expedition_Decide East or West": [
-            ["COND", ["EQUAL", "$GAME.arkham.scenarioAnswer2", "A"], ["ACTION_LIST", "Obsidian Canyons_Westbound Scenario Init"], ["TRUE"], ["ACTION_LIST", "Obsidian Canyons_Eastbound Scenario Init"] ]
+            ["COND", ["EQUAL", "$GAME.arkham.scenarioAnswer2", "A"], ["ACTION_LIST", "Ask if Creature Defeated"], ["TRUE"], ["ACTION_LIST", "Obsidian Canyons_Eastbound Scenario Init"] ]
         ],
         "Obsidian Canyons_Westbound Scenario Init": [
             ["DO_LOAD_CARDS_SCN","The Eastern Expedition_Westbound"],
@@ -134,19 +134,27 @@
             // Put 1 Resource token on the Scenario card
             ["SET", "/cardById/$DO_SPAWN_LOCATION_RESULT/currentSide", "B"],
             ["DO_PLACE_RESOURCES_ON_CARD", "$GAME.firstPlayer", ["GET_SCENARIO_CARD_ID"], 1, true, null],
-            ["ACTION_LIST", "Ask if Creature Defeated"],
+            //["ACTION_LIST", "Ask if Creature Defeated"],
 
             // Put Mini investigators at locations
             ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION","R'lyeh Streets", 5, 7, 3, 0],
             ["SCENARIO_INIT_CONTINUE", null]
         ],
         "Ask if Creature Defeated": [
-            ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Check Campaign Log", ["LIST", "Creature was defeated.", "The above is NOT true."], "Remove Inescapable Encounter"]
+            ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Check Campaign Log", ["LIST", "Creature was defeated.", "The above is NOT true."], "Remove Inescapable Encounter Init"]
+        ],
+        "Remove Inescapable Encounter Init": [
+            //["DO_REMOVE_CARDS_SCN","Inescapable Encounter"]
+            //["SCENARIO_INIT_CONTINUE", null]
+            //["LOG", "We need to remove the inescapable encounter"]
+            ["COND", ["EQUAL", "$GAME.arkham.scenarioAnswer3", "A"], ["ACTION_LIST", "Remove Inescapable Encounter"], ["TRUE"], ["ACTION_LIST", "Obsidian Canyons_Westbound Scenario Init"] ]
         ],
         "Remove Inescapable Encounter": [
             //["DO_REMOVE_CARDS_SCN","Inescapable Encounter"]
             //["SCENARIO_INIT_CONTINUE", null]
-            ["LOG", "We need to remove the inescapable encounter"]
+            ["LOG", "We need to remove the inescapable encounter"],
+            ["ACTION_LIST", "Obsidian Canyons_Westbound Scenario Init"]
+            
         ],
         "Obsidian Canyons_Eastbound Scenario Init": [
             ["DO_LOAD_CARDS_SCN","The Eastern Expedition_Eastbound"],
