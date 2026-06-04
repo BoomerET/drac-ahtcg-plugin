@@ -12,12 +12,12 @@
             "label": "The Eastern Expedition_Westbound",
             "cards": [
                 {"databaseId": "11639","quantity": 1,"loadGroupId": "sharedScenarioReference"}, // Scenario Reference
+                {"databaseId": "11640","quantity": 1,"loadGroupId": "sharedActStory"},          // Eastern/Western Winds
                 {"databaseId": "11642","quantity": 1,"loadGroupId": "sharedAgendaStory"},       // Encroaching Storms
                 {"databaseId": "11645","quantity": 1,"loadGroupId": "sharedActStory"},          // Scouring the Spires
                 {"databaseId": "11646","quantity": 1,"loadGroupId": "sharedActStory"},          // Deadly Skies
                 {"databaseId": "11647","quantity": 1,"loadGroupId": "sharedActStory"},          // Return to the Shoreline
-                {"databaseId": "11648","quantity": 1,"loadGroupId": "sharedLocations", "left": "15%","top": "76%"}, // R'lyeh Streets
-                {"databaseId": "11640","quantity": 1,"loadGroupId": "sharedActStory"}          // Return to the Shoreline
+                {"databaseId": "11648","quantity": 1,"loadGroupId": "sharedLocations", "left": "15%","top": "76%"} // R'lyeh Streets
             ]
         },
         "The Eastern Expedition_Eastbound": {
