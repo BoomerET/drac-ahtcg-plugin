@@ -8,94 +8,94 @@
         { "databaseId": "12115", "quantity": 1, "loadGroupId": "sharedNotInPlay" }
       ]
     },
-    "Cosmic Evils": {
+    "BoA_Ashen Pilgrims": {
       "hideFromSearch": true,
-      "label": "Cosmic Evils",
-      "cards": [
-        { "databaseId": "12124", "quantity": 3, "loadGroupId": "sharedEncounterDeck" }
-      ]
-    },
-    "Hallucinations": {
-      "hideFromSearch": true,
-      "label": "Hallucinations",
-      "cards": [
-        { "databaseId": "12127", "quantity": 2, "loadGroupId": "sharedEncounterDeck" },
-        { "databaseId": "12128", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
-      ]
-    },
-    "Ashen Pilgrims": {
-      "hideFromSearch": true,
-      "label": "Ashen Pilgrims",
+      "label": "BoA_Ashen Pilgrims",
       "cards": [
         { "databaseId": "12121", "quantity": 2, "loadGroupId": "sharedEncounterDeck" },
         { "databaseId": "12122", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
       ]
     },
-    "Eldritch Lore": {
+    "BoA_Bystanders": {
       "hideFromSearch": true,
-      "label": "Eldritch Lore",
+      "label": "BoA_Bystanders",
+      "cards": [
+        { "databaseId": "12123", "quantity": 3, "loadGroupId": "sharedEncounterDeck" }
+      ]
+    },
+    "BoA_Cosmic Evils": {
+      "hideFromSearch": true,
+      "label": "BoA_Cosmic Evils",
+      "cards": [
+        { "databaseId": "12124", "quantity": 3, "loadGroupId": "sharedEncounterDeck" }
+      ]
+    },
+    "BoA_Eldritch Lore": {
+      "hideFromSearch": true,
+      "label": "BoA_Eldritch Lore",
       "cards": [
         { "databaseId": "12125", "quantity": 2, "loadGroupId": "sharedEncounterDeck" },
         { "databaseId": "12126", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
       ]
     },
-    "Mad Science": {
+    "BoA_Hallucinations": {
       "hideFromSearch": true,
-      "label": "Mad Science",
+      "label": "BoA_Hallucinations",
       "cards": [
-        { "databaseId": "12131", "quantity": 2, "loadGroupId": "sharedEncounterDeck" },
-        { "databaseId": "12132", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
+        { "databaseId": "12127", "quantity": 2, "loadGroupId": "sharedEncounterDeck" },
+        { "databaseId": "12128", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
       ]
     },
-    "Fire": {
+    "BoA_Fire": {
       "hideFromSearch": true,
-      "label": "Fire",
+      "label": "BoA_Fire",
       "cards": [
         { "databaseId": "12129", "quantity": 5, "loadGroupId": "sharedNotInPlay" },
         { "databaseId": "12130", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
       ]
     },
-    "Bystanders": {
+    "BoA_Mad Science": {
       "hideFromSearch": true,
-      "label": "Bystanders",
+      "label": "BoA_Mad Science",
       "cards": [
-        { "databaseId": "12123", "quantity": 3, "loadGroupId": "sharedEncounterDeck" }
+        { "databaseId": "12131", "quantity": 2, "loadGroupId": "sharedEncounterDeck" },
+        { "databaseId": "12132", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
       ]
     },
-    "Bad Weather": {
+    "BoA_Bad Weather": {
       "hideFromSearch": true,
-      "label": "Bad Weather",
+      "label": "BoA_Bad Weather",
       "cards": [
         { "databaseId": "12158", "quantity": 2, "loadGroupId": "sharedEncounterDeck" },
         { "databaseId": "12159", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
       ]
     },
-    "Gangs of Arkham": {
+    "BoA_Gangs of Arkham": {
       "hideFromSearch": true,
-      "label": "Gangs of Arkham",
+      "label": "BoA_Gangs of Arkham",
       "cards": [
         { "databaseId": "12164", "quantity": 2, "loadGroupId": "sharedEncounterDeck" },
         { "databaseId": "12165", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
       ]
     },
-    "Arcane Lock": {
+    "BoA_Arcane Lock": {
       "hideFromSearch": true,
-      "label": "Arcane Lock",
+      "label": "BoA_Arcane Lock",
       "cards": [
         { "databaseId": "12157", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
       ]
     },
-    "Dead Ends": {
+    "BoA_Dead Ends": {
       "hideFromSearch": true,
-      "label": "Dead Ends",
+      "label": "BoA_Dead Ends",
       "cards": [
         { "databaseId": "12160", "quantity": 2, "loadGroupId": "sharedEncounterDeck" },
         { "databaseId": "12161", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
       ]
     },
-    "Flying Terrors": {
+    "BoA_Flying Terrors": {
       "hideFromSearch": true,
-      "label": "Flying Terrors",
+      "label": "BoA_Flying Terrors",
       "cards": [
         { "databaseId": "12162", "quantity": 2, "loadGroupId": "sharedEncounterDeck" },
         { "databaseId": "12163", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
@@ -109,13 +109,6 @@
         { "databaseId": "12167", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
       ]
     },
-    "Add 2 Cultists to Chaos Bag": {
-      "hideFromSearch": true,
-      "label": "Add 2 Cultists to Chaos Bag",
-      "cards": [
-        { "databaseId": "chaos_cultist", "quantity": 2, "loadGroupId": "sharedChaosBag" }
-      ]
-    },
     "BoA_Queen of Ash": {
       "hideFromSearch": true,
       "label": "BoA_Queen of Ash",
@@ -123,17 +116,17 @@
         { "databaseId": "12176", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
       ]
     },
-    "Reeking Decay": {
+    "BoA_Reeking Decay": {
       "hideFromSearch": true,
-      "label": "Reeking Decay",
+      "label": "BoA_Reeking Decay",
       "cards": [
         { "databaseId": "12191", "quantity": 2, "loadGroupId": "sharedEncounterDeck" },
         { "databaseId": "12192", "quantity": 2, "loadGroupId": "sharedEncounterDeck" }
       ]
     },
-    "Torment": {
+    "BoA_Torment": {
       "hideFromSearch": true,
-      "label": "Torment",
+      "label": "BoA_Torment",
       "cards": [
         { "databaseId": "12193", "quantity": 2, "loadGroupId": "sharedEncounterDeck" },
         { "databaseId": "12194", "quantity": 2, "loadGroupId": "sharedEncounterDeck" },
@@ -210,4 +203,3 @@
     }
   }
 }
-// kate: syntax Dragnlang; scheme Arkham Dark;

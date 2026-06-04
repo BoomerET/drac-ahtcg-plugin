@@ -44,6 +44,8 @@
       ["DO_LOAD_CARDS_SCN", "Mad Science"],
       ["DO_LOAD_CARDS_SCN", "Bystanders"],
       ["DO_LOAD_CARDS_SCN", "Fire"],
+      ["VAR", "$FRIENDS_ROOM_ID", ["GET_NAMED_CARD_ID", "12113"]],
+      ["SET", "/cardById/$FRIENDS_ROOM_ID/currentSide", "B"],
       ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Your Friend's Room", 5, 7, 3, 0],
       ["SCENARIO_INIT_CONTINUE", null]
     ]

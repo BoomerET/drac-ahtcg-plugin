@@ -33,7 +33,8 @@
     ],
     "Smoke and Mirrors Scenario Init": [
       ["DO_LOAD_CARDS_SCN", "Smoke and Mirrors"],
-      ["LOAD_CARDS", "Add 2 Cultists to Chaos Bag"],
+      //["LOAD_CARDS", "Add 2 Cultists to Chaos Bag"],
+      ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_cultist", 2],
       ["VAR", "$DOWNTOWN", ["SHUFFLE_LIST", ["LIST", "12145", "12146"]]],
       ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$DOWNTOWN.[0]",45, 10],
       ["DO_CREATE_CARDS_SCN", "Set Aside", "$DOWNTOWN.[1]", 1, "sharedRemoved"],
