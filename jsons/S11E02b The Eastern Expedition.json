@@ -81,8 +81,8 @@
             ["DO_LOAD_CARDS_SCN","The Eastern Expedition_Westbound"],
             ["DO_LOAD_CARDS_SCN","TDC_Summit deck"],
             ["DO_LOAD_CARDS_SCN","TDC_Open sky deck"],
-            //["DO_SHUFFLE_GROUP", "$GAME.firstPlayer", "sharedPileA", true, null],
-            //["DO_SHUFFLE_GROUP", "$GAME.firstPlayer", "sharedPileA", true, null],
+
+            // Place 4 Open Sky cards for Act 1
             ["VAR", "$PILE_STACKA", "$GAME.groupById.sharedPileA.stackIds"],
             ["VAR", "$PILE_STACKA", ["SHUFFLE_LIST", "$PILE_STACKA"]],
             ["SET", "/groupById/sharedPileA/stackIds", "$PILE_STACKA"],
@@ -99,13 +99,10 @@
             ["DO_PUT_INTO_PLAY_AT_SCN", "$OPEN_SKY_4", 35, 10],
             ["SET", "/cardById/$OPEN_SKY_4/currentSide", "B"],
 
-            // Get bottom cards from Summit deck
-           
-
+            // Get 7 bottom cards from Summit deck
             ["VAR", "$PILE_STACKB", "$GAME.groupById.sharedPileB.stackIds"],
             ["VAR", "$PILE_STACKB", ["SHUFFLE_LIST", "$PILE_STACKB"]],
             ["SET", "/groupById/sharedPileB/stackIds", "$PILE_STACKB"],
-
             ["DO_PLACE_BOTTOM_CARD_FROM_DECK_SCN", "sharedPileB", 55, 76, "A"],
             ["DO_PLACE_BOTTOM_CARD_FROM_DECK_SCN", "sharedPileB", 75, 76, "A"],
             ["DO_PLACE_BOTTOM_CARD_FROM_DECK_SCN", "sharedPileB", 35, 43, "A"],
@@ -114,15 +111,13 @@
             ["DO_PLACE_BOTTOM_CARD_FROM_DECK_SCN", "sharedPileB", 55, 10, "A"],
             ["DO_PLACE_BOTTOM_CARD_FROM_DECK_SCN", "sharedPileB", 75, 10, "A"],
 
+            // Move Central Spire to random location of top 3 cards.
             ["DO_CREATE_CARDS", "$GAME.firstPlayer", "Summit", "11649", 1, "sharedPileB", false, null],
             ["VAR", "$CARD_ID", "{{$GAME.lastLoadedCardIds.[0]}}"],
             ["VAR", "$CARD_STACK_ID", "{{$GAME.cardById.$CARD_ID.stackId}}"],
-
             ["VAR", "$PILE_STACKS", "$GAME.groupById.sharedPileB.stackIds"],
             ["UPDATE_VAR", "$PILE_STACKS", ["REMOVE_FROM_LIST_BY_VALUE", "$PILE_STACKS", "$CARD_STACK_ID"]],
-
             ["VAR", "$TOP_PACKET", ["SHUFFLE_LIST", ["LIST", "$CARD_STACK_ID", "$PILE_STACKS.[0]", "$PILE_STACKS.[1]"]]],
-
             ["VAR", "$REST", ["LIST",
                 "$PILE_STACKS.[2]",
                 "$PILE_STACKS.[3]",
@@ -133,7 +128,8 @@
             ["VAR", "$NEW_STACKS", ["CONCAT_LISTS", "$TOP_PACKET", "$REST"]],
             ["SET", "/groupById/sharedPileB/stackIds", "$NEW_STACKS"],
 
-
+            //["DO_CREATE_CARDS_SCN", "Western Winds", "11640", 1, "sharedPileC"],
+            ["DO_SPAWN_LOCATION_SCN", "sharedPileC", "11640", 5, 5],
 
 
 
