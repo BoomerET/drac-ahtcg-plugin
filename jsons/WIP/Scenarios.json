@@ -1,0 +1,673 @@
+{
+  "deckMenu": {
+    "subMenus": [
+      {
+        "label": "id:starterDecks",
+        "subMenus": [
+          {
+            "label": "id:coreDecks",
+            "deckLists": [
+              { "label": "id:rolandBanksStarterDeck", "deckListId": "Roland Banks Starter Deck" },
+              { "label": "id:daisyWalkerStarterDeck", "deckListId": "Daisy Walker Starter Deck" },
+              { "label": "id:skidsOTooleStarterDeck", "deckListId": "\"Skids\" O'Toole Starter Deck" },
+              { "label": "id:agnesBakerStarterDeck", "deckListId": "Agnes Baker Starter Deck" },
+              { "label": "id:wendyAdamsStarterDeck", "deckListId": "Wendy Adams Starter Deck" }
+            ]
+          },
+          {
+            "label": "id:revisedCoreDecks",
+            "deckLists": [
+              { "label": "id:rolandBanksStarterDeck", "deckListId": "Revised Roland Banks Starter Deck" },
+              { "label": "id:daisyWalkerStarterDeck", "deckListId": "Revised Daisy Walker Starter Deck" },
+              { "label": "id:skidsOTooleStarterDeck", "deckListId": "Revised \"Skids\" O'Toole Starter Deck" },
+              { "label": "id:agnesBakerStarterDeck", "deckListId": "Revised Agnes Baker Starter Deck" },
+              { "label": "id:wendyAdamsStarterDeck", "deckListId": "Revised Wendy Adams Starter Deck" }
+            ]
+          },
+          {
+            "label": "id:theDunwichLegacy",
+            "deckLists": [
+              { "label": "id:zoeySamarasStarterDeck", "deckListId": "Zoey Samaras Starter Deck" },
+              { "label": "id:rexMurphyStarterDeck", "deckListId": "Rex Murphy Starter Deck" },
+              { "label": "id:jennyBarnesStarterDeck", "deckListId": "Jenny Barnes Starter Deck" },
+              { "label": "id:jimCulverStarterDeck", "deckListId": "Jim Culver Starter Deck" },
+              { "label": "id:ashcanPeteStarterDeck", "deckListId": "\"Ashcan\" Pete Starter Deck" }
+            ]
+          },
+          {
+            "label": "id:thePathToCarcosa",
+            "deckLists": [
+              { "label": "id:markHarriganStarterDeck", "deckListId": "Mark Harrigan Starter Deck" },
+              { "label": "id:minhThiPhanStarterDeck", "deckListId": "Minh Thi Phan Starter Deck" },
+              { "label": "id:sefinaRousseauStarterDeck", "deckListId": "Sefina Rousseau Starter Deck" },
+              { "label": "id:akachiOnyeleStarterDeck", "deckListId": "Akachi Onyele Starter Deck" },
+              { "label": "id:williamYorickStarterDeck", "deckListId": "William Yorick Starter Deck" },
+              { "label": "id:lolaHayesStarterDeck", "deckListId": "Lola Hayes Starter Deck" }
+            ]
+          },
+          {
+            "label": "id:theForgottenAge",
+            "deckLists": [
+              { "label": "id:leoAndersonStarterDeck", "deckListId": "Leo Anderson Starter Deck" },
+              { "label": "id:ursulaDownsStarterDeck", "deckListId": "Ursula Downs Starter Deck" },
+              { "label": "id:finnEdwardsStarterDeck", "deckListId": "Finn Edwards Starter Deck" },
+              { "label": "id:fatherMateoStarterDeck", "deckListId": "Father Mateo Starter Deck" },
+              { "label": "id:calvinWrightStarterDeck", "deckListId": "Calvin Wright Starter Deck" }
+            ]
+          },
+          {
+            "label": "id:theCircleUndone",
+            "deckLists": [
+              { "label": "id:carolynFernStarterDeck", "deckListId": "Carolyn Fern Starter Deck" },
+              { "label": "id:joeDiamondStarterDeck", "deckListId": "Joe Diamond Starter Deck" },
+              { "label": "id:prestonFairmontStarterDeck", "deckListId": "Preston Fairmont Starter Deck" },
+              { "label": "id:dianaStanleyStarterDeck", "deckListId": "Diana Stanley Starter Deck" },
+              { "label": "id:ritaYoungStarterDeck", "deckListId": "Rita Young Starter Deck" },
+              { "label": "id:marieLambeauStarterDeck", "deckListId": "Marie Lambeau Starter Deck" }
+            ]
+          },
+          {
+            "label": "id:theDreamEaters",
+            "deckLists": [
+              { "label": "id:tommyMuldoonStarterDeck", "deckListId": "Tommy Muldoon Starter Deck" },
+              { "label": "id:mandyThompsonStarterDeck", "deckListId": "Mandy Thompson Starter Deck" },
+              { "label": "id:tonyMorganStarterDeck", "deckListId": "Tony Morgan Starter Deck" },
+              { "label": "id:lukeRobinsonStarterDeck", "deckListId": "Luke Robinson Starter Deck" },
+              { "label": "id:patriceHathawayStarterDeck", "deckListId": "Patrice Hathaway Starter Deck" }
+            ]
+          },
+          {
+            "label": "id:theInnsmouthConspiracy",
+            "deckLists": [
+              { "label": "id:sisterMaryStarterDeck", "deckListId": "Sister Mary Starter Deck" },
+              { "label": "id:amandaSharpeStarterDeck", "deckListId": "Amanda Sharpe Starter Deck" },
+              { "label": "id:trishScarboroughStarterDeck", "deckListId": "Trish Scarborough Starter Deck" },
+              { "label": "id:dexterDrakeStarterDeck", "deckListId": "Dexter Drake Starter Deck" },
+              { "label": "id:silasMarshStarterDeck", "deckListId": "Silas Marsh Starter Deck" }
+            ]
+          },
+          {
+            "label": "id:edgeOfTheEarth",
+            "deckLists": [
+              { "label": "id:danielaReyesStarterDeck", "deckListId": "Daniela Reyes Starter Deck" },
+              { "label": "id:normanWithersStarterDeck", "deckListId": "Norman Withers Starter Deck" },
+              { "label": "id:montereyJackStarterDeck", "deckListId": "Monterey Jack Starter Deck" },
+              { "label": "id:lilyChenStarterDeck", "deckListId": "Lily Chen Starter Deck" },
+              { "label": "id:bobJenkinsStarterDeck", "deckListId": "Bob Jenkins Starter Deck" }
+            ]
+          },
+          {
+            "label": "id:theScarletKeys",
+            "deckLists": [
+              { "label": "id:carsonSinclairStarterDeck", "deckListId": "Carson Sinclair Starter Deck" },
+              { "label": "id:vincentLeeStarterDeck", "deckListId": "Vincent Lee Starter Deck" },
+              { "label": "id:kymaniJonesStarterDeck", "deckListId": "Kymani Jones Starter Deck" },
+              { "label": "id:aminaZidaneStarterDeck", "deckListId": "Amina Zidane Starter Deck" },
+              { "label": "id:darrellSimmonsStarterDeck", "deckListId": "Darrell Simmons Starter Deck" },
+              { "label": "id:charlieKaneStarterDeck", "deckListId": "Charlie Kane Starter Deck" }
+            ]
+          },
+          {
+            "label": "id:theFeastOfHemlockVale",
+            "deckLists": [
+              { "label": "id:wilsonRichardsStarterDeck", "deckListId": "Wilson Richards Starter Deck" },
+              { "label": "id:kateWinthropStarterDeck", "deckListId": "Kate Winthrop Starter Deck" },
+              { "label": "id:alessandraZorziStarterDeck", "deckListId": "Alessandra Zorzi Starter Deck" },
+              { "label": "id:kohakuNarukamiStarterDeck", "deckListId": "Kōhaku Narukami Starter Deck" },
+              { "label": "id:hankSamsonStarterDeck", "deckListId": "Hank Samson Starter Deck" }
+            ]
+          },
+          {
+            "label": "id:theDrownedCity",
+            "deckLists": [
+              { "label": "id:marionTavaresStarterDeck", "deckListId": "Marion Tavares Starter Deck" },
+              { "label": "id:luciusGallowayStarterDeck", "deckListId": "Lucius Galloway Starter Deck" },
+              { "label": "id:agathaCraneSeekerStarterDeck", "deckListId": "Agatha Crane (Seeker) Starter Deck" },
+              { "label": "id:agathaCraneMysticStarterDeck", "deckListId": "Agatha Crane (Mystic) Starter Deck" },
+              { "label": "id:michaelMcGlenStarterDeck", "deckListId": "Michael McGlen Starter Deck" },
+              { "label": "id:gloriaGoldbergStarterDeck", "deckListId": "Gloria Goldberg Starter Deck" },
+              { "label": "id:georgeBarnabyStarterDeck", "deckListId": "George Barnaby Starter Deck" }
+            ]
+          },
+          {
+            "label": "id:chapter2CoreDecks",
+            "deckLists": [
+              { "label": "id:danielaReyesChapter2StarterDeck", "deckListId": "Daniela Reyes (Chapter 2) Starter Deck" },
+              { "label": "id:joeDiamondChapter2StarterDeck", "deckListId": "Joe Diamond (Chapter 2) Starter Deck" },
+              { "label": "id:trishScarboroughChapter2StarterDeck", "deckListId": "Trish Scarborough (Chapter 2) Starter Deck" },
+              { "label": "id:dexterDrakeChapter2StarterDeck", "deckListId": "Dexter Drake (Chapter 2) Starter Deck" },
+              { "label": "id:isabelleBarnesChapter2StarterDeck", "deckListId": "Isabelle Barnes (Chapter 2) Starter Deck" }
+            ]
+          },
+          {
+            "label": "id:standaloneDecks",
+            "deckLists": [
+              { "label": "id:nathanielChoStarterDeck", "deckListId": "Nathaniel Cho Starter Deck" },
+              { "label": "id:tommyMuldoonChapter2StarterDeck", "deckListId": "Tommy Muldoon (Chapter 2) Starter Deck" },
+              { "label": "id:harveyWaltersStarterDeck", "deckListId": "Harvey Walters Starter Deck" },
+              { "label": "id:carolynFernChapter2StarterDeck", "deckListId": "Carolyn Fern (Chapter 2) Starter Deck" },
+              { "label": "id:winifredHabbamockStarterDeck", "deckListId": "Winifred Habbamock Starter Deck" },
+              { "label": "id:andrePatelChapter2StarterDeck", "deckListId": "André Patel (Chapter 2) Starter Deck" },
+              { "label": "id:jacquelineFineStarterDeck", "deckListId": "Jacqueline Fine Starter Deck" },
+              { "label": "id:marieLambeauChapter2StarterDeck", "deckListId": "Marie Lambeau (Chapter 2) Starter Deck" },
+              { "label": "id:stellaClarkStarterDeck", "deckListId": "Stella Clark Starter Deck" },
+              { "label": "id:miguelDeLaCruzChapter2StarterDeck", "deckListId": "Miguel de la Cruz (Chapter 2) Starter Deck" }
+            ]
+          },
+          {
+            "label": "id:otherDecks",
+            "deckLists": [
+              { "label": "id:gloriaGoldbergPromoStarterDeck", "deckListId": "Gloria Goldberg (Promo) Starter Deck" },
+              { "label": "id:subject5U21StarterDeck", "deckListId": "Subject 5U-21 Starter Deck" }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "id:campaigns",
+        "subMenus": [
+          {
+            "label": "id:theNightOfTheZealot",
+            "deckLists": [
+              { "label": "id:theGathering", "deckListId": "The Gathering Scenario" },
+              { "label": "id:theMidnightMasks", "deckListId": "The Midnight Masks Scenario" },
+              { "label": "id:theDevourerBelow", "deckListId": "The Devourer Below Scenario" }
+            ]
+          },
+          {
+            "label": "id:theDunwichLegacy",
+            "deckLists": [
+              { "label": "id:extracurricularActivity", "deckListId": "Extracurricular Activity Scenario" },
+              { "label": "id:theHouseAlwaysWins", "deckListId": "The House Always Wins Scenario" },
+              { "label": "id:theMiskatonicMuseum", "deckListId": "The Miskatonic Museum Scenario" },
+              { "label": "id:theEssexCountyExpress", "deckListId": "The Essex County Express Scenario" },
+              { "label": "id:bloodOnTheAltar", "deckListId": "Blood on the Altar Scenario" },
+              { "label": "id:undimensionedAndUnseen", "deckListId": "Undimensioned and Unseen Scenario" },
+              { "label": "id:whereDoomAwaits", "deckListId": "Where Doom Awaits Scenario" },
+              { "label": "id:lostInTimeAndSpace", "deckListId": "Lost in Time and Space Scenario" }
+            ]
+          },
+          {
+            "label": "id:thePathToCarcosa",
+            "deckLists": [
+              { "label": "id:curtainCall", "deckListId": "Curtain Call Scenario" },
+              { "label": "id:theLastKing", "deckListId": "The Last King Scenario" },
+              { "label": "id:echoesOfThePast", "deckListId": "Echoes of the Past Scenario" },
+              { "label": "id:theUnspeakableOath", "deckListId": "The Unspeakable Oath Scenario" },
+              { "label": "id:aPhantomOfTruth", "deckListId": "A Phantom of Truth Scenario" },
+              { "label": "id:thePallidMask", "deckListId": "The Pallid Mask Scenario" },
+              { "label": "id:blackStarsRise", "deckListId": "Black Stars Rise Scenario" },
+              { "label": "id:dimCarcosa", "deckListId": "Dim Carcosa Scenario" }
+            ]
+          },
+          {
+            "label": "id:theForgottenAge",
+            "deckLists": [
+              { "label": "id:theUntamedWilds", "deckListId": "The Untamed Wilds Scenario" },
+              { "label": "id:theDoomOfEztli", "deckListId": "The Doom of Eztli Scenario" },
+              { "label": "id:threadsOfFate", "deckListId": "Threads of Fate Scenario" },
+              { "label": "id:theBoundaryBeyond", "deckListId": "The Boundary Beyond Scenario" },
+              { "label": "id:heartOfTheEldersPt1", "deckListId": "Heart of the Elders Pt 1 Scenario" },
+              { "label": "id:heartOfTheEldersPt2", "deckListId": "Heart of the Elders Pt 2 Scenario" },
+              { "label": "id:theCityOfArchives", "deckListId": "The City of Archives Scenario" },
+              { "label": "id:theDepthsOfYoth", "deckListId": "The Depths of Yoth Scenario" },
+              { "label": "id:shatteredAeons", "deckListId": "Shattered Aeons Scenario" },
+              { "label": "id:turnBackTime", "deckListId": "Turn Back Time Scenario" }
+            ]
+          },
+          {
+            "label": "id:theCircleUndone",
+            "deckLists": [
+              { "label": "id:disappearanceAtTheTwilightEstate", "deckListId": "Disappearance at the Twilight Estate Scenario" },
+              { "label": "id:theWitchingHour", "deckListId": "The Witching Hour Scenario" },
+              { "label": "id:atDeathsDoorstep", "deckListId": "At Death's Doorstep Scenario" },
+              { "label": "id:theSecretName", "deckListId": "The Secret Name Scenario" },
+              { "label": "id:theWagesOfSin", "deckListId": "The Wages of Sin Scenario" },
+              { "label": "id:forTheGreaterGood", "deckListId": "For the Greater Good Scenario" },
+              { "label": "id:unionAndDisillusion", "deckListId": "Union and Disillusion Scenario" },
+              { "label": "id:inTheClutchesOfChaos", "deckListId": "In the Clutches of Chaos Scenario" },
+              { "label": "id:beforeTheBlackThrone", "deckListId": "Before the Black Throne Scenario" }
+            ]
+          },
+          {
+            "label": "id:theDreamQuest",
+            "deckLists": [
+              { "label": "id:beyondTheGatesOfSleep", "deckListId": "Beyond the Gates of Sleep Scenario" },
+              { "label": "id:theSearchForKadath", "deckListId": "The Search for Kadath Scenario" },
+              { "label": "id:darkSideOfTheMoon", "deckListId": "Dark Side of the Moon Scenario" },
+              { "label": "id:whereTheGodsDwell", "deckListId": "Where the Gods Dwell Scenario" }
+            ]
+          },
+          {
+            "label": "id:theWebOfDreams",
+            "deckLists": [
+              { "label": "id:wakingNightmare", "deckListId": "Waking Nightmare Scenario" },
+              { "label": "id:aThousandShapesOfHorror", "deckListId": "A Thousand Shapes of Horror Scenario" },
+              { "label": "id:pointOfNoReturn", "deckListId": "Point of No Return Scenario" },
+              { "label": "id:weaverOfTheCosmos", "deckListId": "Weaver of the Cosmos Scenario" }
+            ]
+          },
+          {
+            "label": "id:theInnsmouthConspiracy",
+            "deckLists": [
+              { "label": "id:thePitOfDespair", "deckListId": "The Pit of Despair Scenario" },
+              { "label": "id:theVanishingOfElinaHarper", "deckListId": "The Vanishing of Elina Harper Scenario" },
+              { "label": "id:inTooDeep", "deckListId": "In Too Deep Scenario" },
+              { "label": "id:devilReef", "deckListId": "Devil Reef Scenario" },
+              { "label": "id:horrorInHighGear", "deckListId": "Horror in High Gear Scenario" },
+              { "label": "id:aLightInTheFog", "deckListId": "A Light in the Fog Scenario" },
+              { "label": "id:theLairOfDagon", "deckListId": "The Lair of Dagon Scenario" },
+              { "label": "id:intoTheMaelstrom", "deckListId": "Into the Maelstrom Scenario" }
+            ]
+          },
+          {
+            "label": "id:edgeOfTheEarth",
+            "deckLists": [
+              { "label": "id:iceAndDeathPt1", "deckListId": "Ice and Death Pt 1 Scenario" },
+              { "label": "id:iceAndDeathPt2", "deckListId": "Ice and Death Pt 2 Scenario" },
+              { "label": "id:iceAndDeathPt3", "deckListId": "Ice and Death Pt 3 Scenario" },
+              { "label": "id:fatalMirage", "deckListId": "Fatal Mirage Scenario" },
+              { "label": "id:toTheForbiddenPeaks", "deckListId": "To the Forbidden Peaks Scenario" },
+              { "label": "id:cityOfTheElderThings", "deckListId": "City of the Elder Things Scenario" },
+              { "label": "id:theHeartOfMadnessPt1", "deckListId": "The Heart of Madness Pt 1 Scenario" },
+              { "label": "id:theHeartOfMadnessPt2", "deckListId": "The Heart of Madness Pt 2 Scenario" }
+            ]
+          },
+          {
+            "label": "id:theScarletKeys",
+            "deckLists": [
+              { "label": "id:riddlesAndRain", "deckListId": "Riddles and Rain Scenario" },
+              { "label": "id:deadHeat", "deckListId": "Dead Heat Scenario" }
+            ]
+          },
+          {
+            "label": "id:theHemlockVale",
+            "deckLists": [
+              { "label": "id:preludeWelcomeToHemlockVale", "deckListId": "Prelude - Welcome to Hemlock Vale Scenario" }
+            ]
+          },
+          {
+            "label": "id:theDrownedCity",
+            "deckLists": [
+              { "label": "id:oneLastJob", "deckListId": "One Last Job Scenario" },
+              { "label": "id:theWesternExpedition", "deckListId": "The Western Expedition Scenario" },
+              { "label": "id:theEasternExpedition", "deckListId": "The Eastern Expedition Scenario" }
+            ]
+          },
+          {
+            "label": "id:brethrenOfAsh",
+            "deckLists": [
+              { "label": "id:spreadingFlames", "deckListId": "Spreading Flames Scenario" },
+              { "label": "id:smokeAndMirrors", "deckListId": "Smoke and Mirrors Scenario" },
+              { "label": "id:queenOfAsh", "deckListId": "Queen of Ash Scenario" }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "id:returnToCampaigns",
+        "subMenus": [
+          {
+            "label": "id:returnToTheNightOfTheZealot",
+            "deckLists": [
+              { "label": "id:returnToTheGathering", "deckListId": "Return to The Gathering Scenario" },
+              { "label": "id:returnToTheMidnightMasks", "deckListId": "Return to The Midnight Masks Scenario" },
+              { "label": "id:returnToTheDevourerBelow", "deckListId": "Return to The Devourer Below Scenario" }
+            ]
+          },
+          {
+            "label": "id:returnToTheDunwichLegacy",
+            "deckLists": [
+              { "label": "id:returnToExtracurricularActivities", "deckListId": "Return to Extracurricular Activities Scenario" },
+              { "label": "id:returnToTheHouseAlwaysWins", "deckListId": "Return to The House Always Wins Scenario" },
+              { "label": "id:returnToTheMiskatonicMuseum", "deckListId": "Return to The Miskatonic Museum Scenario" },
+              { "label": "id:returnToTheEssexCountyExpress", "deckListId": "Return to The Essex County Express Scenario" },
+              { "label": "id:returnToBloodOnTheAltar", "deckListId": "Return to Blood on the Altar Scenario" },
+              { "label": "id:returnToUndimensionedAndUnseen", "deckListId": "Return to Undimensioned and Unseen Scenario" },
+              { "label": "id:returnToWhereDoomAwaits", "deckListId": "Return to Where Doom Awaits Scenario" },
+              { "label": "id:returnToLostInTimeAndSpace", "deckListId": "Return to Lost in Time and Space Scenario" }
+            ]
+          },
+          {
+            "label": "id:returnToThePathToCarcosa",
+            "deckLists": [
+              { "label": "id:returnToCurtainCall", "deckListId": "Return to Curtain Call Scenario" },
+              { "label": "id:returnToTheLastKing", "deckListId": "Return to The Last King Scenario" },
+              { "label": "id:returnToEchoesOfThePast", "deckListId": "Return to Echoes of the Past Scenario" },
+              { "label": "id:returnToTheUnspeakableOath", "deckListId": "Return to The Unspeakable Oath Scenario" },
+              { "label": "id:returnToAPhantomOfTruth", "deckListId": "Return to A Phantom of Truth Scenario" },
+              { "label": "id:returnToThePallidMask", "deckListId": "Return to The Pallid Mask Scenario" },
+              { "label": "id:returnToBlackStarsRise", "deckListId": "Return to Black Stars Rise Scenario" },
+              { "label": "id:returnToDimCarcosa", "deckListId": "Return to Dim Carcosa Scenario" }
+            ]
+          },
+          {
+            "label": "id:returnToTheForgottenAge",
+            "deckLists": [
+              { "label": "id:returnToTheUntamedWilds", "deckListId": "Return to The Untamed Wilds Scenario" },
+              { "label": "id:returnToTheDoomOfEztli", "deckListId": "Return to The Doom of Eztli Scenario" },
+              { "label": "id:returnToThreadsOfFate", "deckListId": "Return to Threads of Fate Scenario" },
+              { "label": "id:returnToTheBoundaryBeyond", "deckListId": "Return to The Boundary Beyond Scenario" },
+              { "label": "id:returnToHeartOfTheEldersPt1", "deckListId": "Return to Heart of the Elders Pt 1 Scenario" },
+              { "label": "id:returnToHeartOfTheEldersPt2", "deckListId": "Return to Heart of the Elders Pt 2 Scenario" },
+              { "label": "id:returnToTheCityOfArchives", "deckListId": "Return to The City of Archives Scenario" },
+              { "label": "id:returnToTheDepthsOfYoth", "deckListId": "Return to The Depths of Yoth Scenario" },
+              { "label": "id:returnToShatteredAeons", "deckListId": "Return to Shattered Aeons Scenario" },
+              { "label": "id:returnToTurnBackTime", "deckListId": "Return to Turn Back Time Scenario" }
+            ]
+          },
+          {
+            "label": "id:returnToTheCircleUndone",
+            "deckLists": [
+              { "label": "id:returnToDisappearanceAtTheTwilightEstate", "deckListId": "Return to Disappearance at the Twilight Estate Scenario" },
+              { "label": "id:returnToTheWitchingHour", "deckListId": "Return to The Witching Hour Scenario" },
+              { "label": "id:returnToAtDeathsDoorstep", "deckListId": "Return to At Death's Doorstep Scenario" },
+              { "label": "id:returnToTheSecretName", "deckListId": "Return to The Secret Name Scenario" },
+              { "label": "id:returnToTheWagesOfSin", "deckListId": "Return to The Wages of Sin Scenario" },
+              { "label": "id:returnToForTheGreaterGood", "deckListId": "Return to For the Greater Good Scenario" },
+              { "label": "id:returnToUnionAndDisillusion", "deckListId": "Return to Union and Disillusion Scenario" },
+              { "label": "id:returnToInTheClutchesOfChaos", "deckListId": "Return to In the Clutches of Chaos Scenario" },
+              { "label": "id:returnToBeforeTheBlackThrone", "deckListId": "Return to Before the Black Throne Scenario" }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "id:sideStories",
+        "deckLists": [
+          { "label": "id:curseOfTheRougarou", "deckListId": "Curse of the Rougarou Scenario" },
+          { "label": "id:carnevaleOfHorrors", "deckListId": "Carnevale of Horrors Scenario" },
+          { "label": "id:theLabyrinthsOfLunacy", "deckListId": "The Labyrinths of Lunacy Scenario" },
+          { "label": "id:theEternalSlumber", "deckListId": "The Eternal Slumber Scenario" },
+          { "label": "id:theNightsUsurper", "deckListId": "The Night's Usurper Scenario" },
+          { "label": "id:murderAtTheExcelsiorHotel", "deckListId": "Murder at the Excelsior Hotel Scenario" },
+          { "label": "id:theBlobThatAteEverything", "deckListId": "The Blob That Ate Everything Scenario" },
+          { "label": "id:warOfTheOuterGods", "deckListId": "War of the Outer Gods Scenario" },
+          { "label": "id:machinationsThroughTime", "deckListId": "Machinations Through Time Scenario" },
+          { "label": "id:fortuneAndFollyPt1", "deckListId": "Fortune and Folly Pt 1 Scenario" },
+          { "label": "id:fortuneAndFollyPt2", "deckListId": "Fortune and Folly Pt 2 Scenario" },
+          { "label": "id:theBlobThatAteEverythingElse", "deckListId": "The Blob That Ate Everything Else Scenario" },
+          { "label": "id:theMidwinterGala", "deckListId": "The Midwinter Gala Scenario" },
+          { "label": "id:filmFatale", "deckListId": "Film Fatale Scenario" }
+        ]
+      },
+      {
+        "label": "id:challengeScenarios",
+        "deckLists": [
+          { "label": "id:readOrDie", "deckListId": "Read or Die Scenario" },
+          { "label": "id:allOrNothing", "deckListId": "All or Nothing Scenario" },
+          { "label": "id:badBlood", "deckListId": "Bad Blood Scenario" },
+          { "label": "id:byTheBook", "deckListId": "By the Book Scenario" },
+          { "label": "id:redTideRising", "deckListId": "Red Tide Rising Scenario" },
+          { "label": "id:laidToRest", "deckListId": "Laid to Rest Scenario" },
+          { "label": "id:relicsOfThePast", "deckListId": "Relics of the Past Scenario" },
+          { "label": "id:enthrallingEncore", "deckListId": "Enthralling Encore Scenario" }
+        ]
+      },
+      {
+        "label": "id:miscellaneous",
+        "deckLists": [
+          { "label": "id:standardTokens", "deckListId": "Standard Tokens" },
+          { "label": "id:keyTokens", "deckListId": "Key Tokens" },
+          { "label": "id:chaosKeyTokens", "deckListId": "Chaos Key Tokens" },
+          { "label": "id:floodedToken", "deckListId": "Flooded Token" },
+          { "label": "id:sealTokens", "deckListId": "Seal Tokens" },
+          { "label": "id:theForgottenAgeSupplies", "deckListId": "The Forgotten Age Supplies" },
+          { "label": "id:returnToTheForgottenAgeSupplies", "deckListId": "Return to The Forgotten Age Supplies" },
+          { "label": "id:tarotCardsDeckC", "deckListId": "Tarot Cards - Deck C" },
+          { "label": "id:tarotCardsPileE", "deckListId": "Tarot Cards - Pile E" }
+        ]
+      }
+    ]
+  },
+  "labels": {
+    "starterDecks": { "English": "Starter Decks" },
+    "coreDecks": { "English": "Core Decks" },
+    "rolandBanksStarterDeck": { "English": "Roland Banks Starter Deck" },
+    "daisyWalkerStarterDeck": { "English": "Daisy Walker Starter Deck" },
+    "skidsOTooleStarterDeck": { "English": "\"Skids\" O'Toole Starter Deck" },
+    "agnesBakerStarterDeck": { "English": "Agnes Baker Starter Deck" },
+    "wendyAdamsStarterDeck": { "English": "Wendy Adams Starter Deck" },
+    "revisedCoreDecks": { "English": "Revised Core Decks" },
+    "zoeySamarasStarterDeck": { "English": "Zoey Samaras Starter Deck" },
+    "rexMurphyStarterDeck": { "English": "Rex Murphy Starter Deck" },
+    "jennyBarnesStarterDeck": { "English": "Jenny Barnes Starter Deck" },
+    "jimCulverStarterDeck": { "English": "Jim Culver Starter Deck" },
+    "ashcanPeteStarterDeck": { "English": "\"Ashcan\" Pete Starter Deck" },
+    "markHarriganStarterDeck": { "English": "Mark Harrigan Starter Deck" },
+    "minhThiPhanStarterDeck": { "English": "Minh Thi Phan Starter Deck" },
+    "sefinaRousseauStarterDeck": { "English": "Sefina Rousseau Starter Deck" },
+    "akachiOnyeleStarterDeck": { "English": "Akachi Onyele Starter Deck" },
+    "williamYorickStarterDeck": { "English": "William Yorick Starter Deck" },
+    "lolaHayesStarterDeck": { "English": "Lola Hayes Starter Deck" },
+    "leoAndersonStarterDeck": { "English": "Leo Anderson Starter Deck" },
+    "ursulaDownsStarterDeck": { "English": "Ursula Downs Starter Deck" },
+    "finnEdwardsStarterDeck": { "English": "Finn Edwards Starter Deck" },
+    "fatherMateoStarterDeck": { "English": "Father Mateo Starter Deck" },
+    "calvinWrightStarterDeck": { "English": "Calvin Wright Starter Deck" },
+    "carolynFernStarterDeck": { "English": "Carolyn Fern Starter Deck" },
+    "joeDiamondStarterDeck": { "English": "Joe Diamond Starter Deck" },
+    "prestonFairmontStarterDeck": { "English": "Preston Fairmont Starter Deck" },
+    "dianaStanleyStarterDeck": { "English": "Diana Stanley Starter Deck" },
+    "ritaYoungStarterDeck": { "English": "Rita Young Starter Deck" },
+    "marieLambeauStarterDeck": { "English": "Marie Lambeau Starter Deck" },
+    "tommyMuldoonStarterDeck": { "English": "Tommy Muldoon Starter Deck" },
+    "mandyThompsonStarterDeck": { "English": "Mandy Thompson Starter Deck" },
+    "tonyMorganStarterDeck": { "English": "Tony Morgan Starter Deck" },
+    "lukeRobinsonStarterDeck": { "English": "Luke Robinson Starter Deck" },
+    "patriceHathawayStarterDeck": { "English": "Patrice Hathaway Starter Deck" },
+    "sisterMaryStarterDeck": { "English": "Sister Mary Starter Deck" },
+    "amandaSharpeStarterDeck": { "English": "Amanda Sharpe Starter Deck" },
+    "trishScarboroughStarterDeck": { "English": "Trish Scarborough Starter Deck" },
+    "dexterDrakeStarterDeck": { "English": "Dexter Drake Starter Deck" },
+    "silasMarshStarterDeck": { "English": "Silas Marsh Starter Deck" },
+    "danielaReyesStarterDeck": { "English": "Daniela Reyes Starter Deck" },
+    "normanWithersStarterDeck": { "English": "Norman Withers Starter Deck" },
+    "montereyJackStarterDeck": { "English": "Monterey Jack Starter Deck" },
+    "lilyChenStarterDeck": { "English": "Lily Chen Starter Deck" },
+    "bobJenkinsStarterDeck": { "English": "Bob Jenkins Starter Deck" },
+    "carsonSinclairStarterDeck": { "English": "Carson Sinclair Starter Deck" },
+    "vincentLeeStarterDeck": { "English": "Vincent Lee Starter Deck" },
+    "kymaniJonesStarterDeck": { "English": "Kymani Jones Starter Deck" },
+    "aminaZidaneStarterDeck": { "English": "Amina Zidane Starter Deck" },
+    "darrellSimmonsStarterDeck": { "English": "Darrell Simmons Starter Deck" },
+    "charlieKaneStarterDeck": { "English": "Charlie Kane Starter Deck" },
+    "wilsonRichardsStarterDeck": { "English": "Wilson Richards Starter Deck" },
+    "kateWinthropStarterDeck": { "English": "Kate Winthrop Starter Deck" },
+    "alessandraZorziStarterDeck": { "English": "Alessandra Zorzi Starter Deck" },
+    "kohakuNarukamiStarterDeck": { "English": "Kōhaku Narukami Starter Deck" },
+    "hankSamsonStarterDeck": { "English": "Hank Samson Starter Deck" },
+    "marionTavaresStarterDeck": { "English": "Marion Tavares Starter Deck" },
+    "luciusGallowayStarterDeck": { "English": "Lucius Galloway Starter Deck" },
+    "agathaCraneSeekerStarterDeck": { "English": "Agatha Crane (Seeker) Starter Deck" },
+    "agathaCraneMysticStarterDeck": { "English": "Agatha Crane (Mystic) Starter Deck" },
+    "michaelMcGlenStarterDeck": { "English": "Michael McGlen Starter Deck" },
+    "gloriaGoldbergStarterDeck": { "English": "Gloria Goldberg Starter Deck" },
+    "georgeBarnabyStarterDeck": { "English": "George Barnaby Starter Deck" },
+    "chapter2CoreDecks": { "English": "Chapter 2 Core Decks" },
+    "danielaReyesChapter2StarterDeck": { "English": "Daniela Reyes (Chapter 2) Starter Deck" },
+    "joeDiamondChapter2StarterDeck": { "English": "Joe Diamond (Chapter 2) Starter Deck" },
+    "trishScarboroughChapter2StarterDeck": { "English": "Trish Scarborough (Chapter 2) Starter Deck" },
+    "dexterDrakeChapter2StarterDeck": { "English": "Dexter Drake (Chapter 2) Starter Deck" },
+    "isabelleBarnesChapter2StarterDeck": { "English": "Isabelle Barnes (Chapter 2) Starter Deck" },
+    "standaloneDecks": { "English": "Standalone Decks" },
+    "nathanielChoStarterDeck": { "English": "Nathaniel Cho Starter Deck" },
+    "tommyMuldoonChapter2StarterDeck": { "English": "Tommy Muldoon (Chapter 2) Starter Deck" },
+    "harveyWaltersStarterDeck": { "English": "Harvey Walters Starter Deck" },
+    "carolynFernChapter2StarterDeck": { "English": "Carolyn Fern (Chapter 2) Starter Deck" },
+    "winifredHabbamockStarterDeck": { "English": "Winifred Habbamock Starter Deck" },
+    "andrePatelChapter2StarterDeck": { "English": "André Patel (Chapter 2) Starter Deck" },
+    "jacquelineFineStarterDeck": { "English": "Jacqueline Fine Starter Deck" },
+    "marieLambeauChapter2StarterDeck": { "English": "Marie Lambeau (Chapter 2) Starter Deck" },
+    "stellaClarkStarterDeck": { "English": "Stella Clark Starter Deck" },
+    "miguelDeLaCruzChapter2StarterDeck": { "English": "Miguel de la Cruz (Chapter 2) Starter Deck" },
+    "otherDecks": { "English": "Other Decks" },
+    "gloriaGoldbergPromoStarterDeck": { "English": "Gloria Goldberg (Promo) Starter Deck" },
+    "subject5U21StarterDeck": { "English": "Subject 5U-21 Starter Deck" },
+    "campaigns": { "English": "Campaigns" },
+    "theNightOfTheZealot": { "English": "The Night of the Zealot" },
+    "theGathering": { "English": "The Gathering" },
+    "theMidnightMasks": { "English": "The Midnight Masks" },
+    "theDevourerBelow": { "English": "The Devourer Below" },
+    "theDunwichLegacy": { "English": "The Dunwich Legacy" },
+    "extracurricularActivity": { "English": "Extracurricular Activity" },
+    "theHouseAlwaysWins": { "English": "The House Always Wins" },
+    "theMiskatonicMuseum": { "English": "The Miskatonic Museum" },
+    "theEssexCountyExpress": { "English": "The Essex County Express" },
+    "bloodOnTheAltar": { "English": "Blood on the Altar" },
+    "undimensionedAndUnseen": { "English": "Undimensioned and Unseen" },
+    "whereDoomAwaits": { "English": "Where Doom Awaits" },
+    "lostInTimeAndSpace": { "English": "Lost in Time and Space" },
+    "thePathToCarcosa": { "English": "The Path to Carcosa" },
+    "curtainCall": { "English": "Curtain Call" },
+    "theLastKing": { "English": "The Last King" },
+    "echoesOfThePast": { "English": "Echoes of the Past" },
+    "theUnspeakableOath": { "English": "The Unspeakable Oath" },
+    "aPhantomOfTruth": { "English": "A Phantom of Truth" },
+    "thePallidMask": { "English": "The Pallid Mask" },
+    "blackStarsRise": { "English": "Black Stars Rise" },
+    "dimCarcosa": { "English": "Dim Carcosa" },
+    "theForgottenAge": { "English": "The Forgotten Age" },
+    "theUntamedWilds": { "English": "The Untamed Wilds" },
+    "theDoomOfEztli": { "English": "The Doom of Eztli" },
+    "threadsOfFate": { "English": "Threads of Fate" },
+    "theBoundaryBeyond": { "English": "The Boundary Beyond" },
+    "heartOfTheEldersPt1": { "English": "Heart of the Elders, Part 1" },
+    "heartOfTheEldersPt2": { "English": "Heart of the Elders, Part 2" },
+    "theCityOfArchives": { "English": "The City of Archives" },
+    "theDepthsOfYoth": { "English": "The Depths of Yoth" },
+    "shatteredAeons": { "English": "Shattered Aeons" },
+    "turnBackTime": { "English": "Secret Scenario IX" },
+    "theCircleUndone": { "English": "The Circle Undone" },
+    "disappearanceAtTheTwilightEstate": { "English": "Disappearance at the Twilight Estate" },
+    "theWitchingHour": { "English": "The Witching Hour" },
+    "atDeathsDoorstep": { "English": "At Death's Doorstep" },
+    "theSecretName": { "English": "The Secret Name" },
+    "theWagesOfSin": { "English": "The Wages of Sin" },
+    "forTheGreaterGood": { "English": "For the Greater Good" },
+    "unionAndDisillusion": { "English": "Union and Disillusion" },
+    "inTheClutchesOfChaos": { "English": "In the Clutches of Chaos" },
+    "beforeTheBlackThrone": { "English": "Before the Black Throne" },
+    "theDreamEaters": { "English": "The Dream-Eaters" },
+    "theDreamQuest": { "English": "The Dream-Quest (The Dream-Eaters A)" },
+    "theWebOfDreams": { "English": "The Web of Dreams (The Dream-Eaters B)" },
+    "beyondTheGatesOfSleep": { "English": "Beyond the Gates of Sleep" },
+    "wakingNightmare": { "English": "Waking Nightmare" },
+    "theSearchForKadath": { "English": "The Search for Kadath" },
+    "aThousandShapesOfHorror": { "English": "A Thousand Shapes of Horror" },
+    "darkSideOfTheMoon": { "English": "Dark Side of the Moon" },
+    "pointOfNoReturn": { "English": "Point of No Return" },
+    "whereTheGodsDwell": { "English": "Where the Gods Dwell" },
+    "weaverOfTheCosmos": { "English": "Weaver of the Cosmos" },
+    "theInnsmouthConspiracy": { "English": "The Innsmouth Conspiracy" },
+    "thePitOfDespair": { "English": "The Pit of Despair" },
+    "theVanishingOfElinaHarper": { "English": "The Vanishing of Elina Harper" },
+    "inTooDeep": { "English": "In Too Deep" },
+    "devilReef": { "English": "Devil Reef" },
+    "horrorInHighGear": { "English": "Horror in High Gear" },
+    "aLightInTheFog": { "English": "A Light in the Fog" },
+    "theLairOfDagon": { "English": "The Lair of Dagon" },
+    "intoTheMaelstrom": { "English": "Into the Maelstrom" },
+    "edgeOfTheEarth": { "English": "Edge of the Earth" },
+    "iceAndDeathPt1": { "English": "Ice and Death, Part I" },
+    "iceAndDeathPt2": { "English": "Ice and Death, Part II" },
+    "iceAndDeathPt3": { "English": "Ice and Death, Part III" },
+    "fatalMirage": { "English": "Fatal Mirage" },
+    "toTheForbiddenPeaks": { "English": "To the Forbidden Peaks" },
+    "cityOfTheElderThings": { "English": "City of the Elder Things" },
+    "theHeartOfMadnessPt1": { "English": "The Heart of Madness, Part I" },
+    "theHeartOfMadnessPt2": { "English": "The Heart of Madness, Part II" },
+    "theScarletKeys": { "English": "The Scarlet Keys" },
+    "riddlesAndRain": { "English": "Riddles and Rain" },
+    "deadHeat": { "English": "Dead Heat" },
+    "theFeastOfHemlockVale": { "English": "The Feast of Hemlock Vale" },
+    "theHemlockVale": { "English": "The Feast of Hemlock Vale" },
+    "preludeWelcomeToHemlockVale": { "English": "Prelude: Welcome to Hemlock Vale" },
+    "theDrownedCity": { "English": "The Drowned City" },
+    "oneLastJob": { "English": "One Last Job" },
+    "theWesternExpedition": { "English": "The Western Expedition" },
+    "theEasternExpedition": { "English": "The Eastern Expedition" },
+    "brethrenOfAsh": { "English": "Brethren of Ash" },
+    "spreadingFlames": { "English": "Spreading Flames" },
+    "smokeAndMirrors": { "English": "Smoke and Mirrors" },
+    "queenOfAsh": { "English": "Queen of Ash" },
+    "returnToCampaigns": { "English": "Return to... Campaigns" },
+    "returnToTheNightOfTheZealot": { "English": "Return to The Night of the Zealot" },
+    "returnToTheGathering": { "English": "Return to The Gathering" },
+    "returnToTheMidnightMasks": { "English": "Return to The Midnight Masks" },
+    "returnToTheDevourerBelow": { "English": "Return to The Devourer Below" },
+    "returnToTheDunwichLegacy": { "English": "Return to The Dunwich Legacy" },
+    "returnToExtracurricularActivities": { "English": "Return to Extracurricular Activities" },
+    "returnToTheHouseAlwaysWins": { "English": "Return to The House Always Wins" },
+    "returnToTheMiskatonicMuseum": { "English": "Return to The Miskatonic Museum" },
+    "returnToTheEssexCountyExpress": { "English": "Return to The Essex County Express" },
+    "returnToBloodOnTheAltar": { "English": "Return to Blood on the Altar" },
+    "returnToUndimensionedAndUnseen": { "English": "Return to Undimensioned and Unseen" },
+    "returnToWhereDoomAwaits": { "English": "Return to Where Doom Awaits" },
+    "returnToLostInTimeAndSpace": { "English": "Return to Lost in Time and Space" },
+    "returnToThePathToCarcosa": { "English": "Return to The Path to Carcosa" },
+    "returnToCurtainCall": { "English": "Return to Curtain Call" },
+    "returnToTheLastKing": { "English": "Return to The Last King" },
+    "returnToEchoesOfThePast": { "English": "Return to Echoes of the Past" },
+    "returnToTheUnspeakableOath": { "English": "Return to The Unspeakable Oath" },
+    "returnToAPhantomOfTruth": { "English": "Return to A Phantom of Truth" },
+    "returnToThePallidMask": { "English": "Return to The Pallid Mask" },
+    "returnToBlackStarsRise": { "English": "Return to Black Stars Rise" },
+    "returnToDimCarcosa": { "English": "Return to Dim Carcosa" },
+    "returnToTheForgottenAge": { "English": "Return to the Forgotten Age" },
+    "returnToTheUntamedWilds": { "English": "Return to The Untamed Wilds" },
+    "returnToTheDoomOfEztli": { "English": "Return to The Doom of Eztli" },
+    "returnToThreadsOfFate": { "English": "Return to Threads of Fate" },
+    "returnToTheBoundaryBeyond": { "English": "Return to The Boundary Beyond" },
+    "returnToHeartOfTheEldersPt1": { "English": "Return to Heart of the Elders, Part 1" },
+    "returnToHeartOfTheEldersPt2": { "English": "Return to Heart of the Elders, Part 2" },
+    "returnToTheCityOfArchives": { "English": "Return to The City of Archives" },
+    "returnToTheDepthsOfYoth": { "English": "Return to The Depths of Yoth" },
+    "returnToShatteredAeons": { "English": "Return to Shattered Aeons" },
+    "returnToTurnBackTime": { "English": "Return to Secret Scenario IX" },
+    "returnToTheCircleUndone": { "English": "Return to The Circle Undone" },
+    "returnToDisappearanceAtTheTwilightEstate": { "English": "Return to Disappearance at the Twilight Estate" },
+    "returnToTheWitchingHour": { "English": "Return to The Witching Hour" },
+    "returnToAtDeathsDoorstep": { "English": "Return to At Death's Doorstep" },
+    "returnToTheSecretName": { "English": "Return to The Secret Name" },
+    "returnToTheWagesOfSin": { "English": "Return to The Wages of Sin" },
+    "returnToForTheGreaterGood": { "English": "Return to For the Greater Good" },
+    "returnToUnionAndDisillusion": { "English": "Return to Union and Disillusion" },
+    "returnToInTheClutchesOfChaos": { "English": "Return to In the Clutches of Chaos" },
+    "returnToBeforeTheBlackThrone": { "English": "Return to Before the Black Throne" },
+    "sideStories": { "English": "Side Stories" },
+    "curseOfTheRougarou": { "English": "Curse of the Rougarou" },
+    "carnevaleOfHorrors": { "English": "Carnevale of Horrors" },
+    "theLabyrinthsOfLunacy": { "English": "The Labyrinths of Lunacy" },
+    "theEternalSlumber": { "English": "The Eternal Slumber (Guardians of the Abyss A)" },
+    "theNightsUsurper": { "English": "The Night's Usurper (Guardians of the Abyss B)" },
+    "murderAtTheExcelsiorHotel": { "English": "Murder at the Excelsior Hotel" },
+    "theBlobThatAteEverything": { "English": "The Blob That Ate Everything" },
+    "warOfTheOuterGods": { "English": "War of the Outer Gods" },
+    "machinationsThroughTime": { "English": "Machinations Through Time" },
+    "fortuneAndFollyPt1": { "English": "Fortune and Folly, Part 1" },
+    "fortuneAndFollyPt2": { "English": "Fortune and Folly, Part 2" },
+    "theBlobThatAteEverythingElse": { "English": "The Blob That Ate Everything Else" },
+    "theMidwinterGala": { "English": "The Midwinter Gala" },
+    "filmFatale": { "English": "Film Fatale" },
+    "challengeScenarios": { "English": "Challenge Scenarios" },
+    "readOrDie": { "English": "Read or Die" },
+    "allOrNothing": { "English": "All or Nothing" },
+    "badBlood": { "English": "Bad Blood" },
+    "byTheBook": { "English": "By the Book" },
+    "redTideRising": { "English": "Red Tide Rising" },
+    "laidToRest": { "English": "Laid to Rest" },
+    "relicsOfThePast": { "English": "Relics of the Past" },
+    "enthrallingEncore": { "English": "Enthralling Encore" },
+    "miscellaneous": { "English": "Miscellaneous" },
+    "standardTokens": { "English": "Standard Tokens" },
+    "keyTokens": { "English": "Key Tokens" },
+    "chaosKeyTokens": { "English": "Chaos Key Tokens" },
+    "floodedToken": { "English": "Flooded Token" },
+    "sealTokens": { "English": "Seal Tokens" },
+    "theForgottenAgeSupplies": { "English": "The Forgotten Age Supplies" },
+    "returnToTheForgottenAgeSupplies": { "English": "Return to The Forgotten Age Supplies" },
+    "tarotCardsDeckC": { "English": "Tarot Cards - Deck C" },
+    "tarotCardsPileE": { "English": "Tarot Cards - Pile E" }
+  }
+}
