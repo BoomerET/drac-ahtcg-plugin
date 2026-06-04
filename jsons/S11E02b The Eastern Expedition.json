@@ -36,12 +36,12 @@
             "label": "TDC_Open sky deck",
             "cards": [
                 // open sky"
-                {"databaseId": "01163","quantity": 3,"loadGroupId": "sharedDeckA"},
-                {"databaseId": "01164","quantity": 2,"loadGroupId": "sharedDeckA"},
-                {"databaseId": "01165","quantity": 2,"loadGroupId": "sharedDeckA"},
-                {"databaseId": "01166","quantity": 3,"loadGroupId": "sharedDeckA"},
-                {"databaseId": "01167","quantity": 2,"loadGroupId": "sharedDeckA"},
-                {"databaseId": "01168","quantity": 2,"loadGroupId": "sharedDeckA"}
+                {"databaseId": "01163","quantity": 3,"loadGroupId": "sharedPileA"},
+                {"databaseId": "01164","quantity": 2,"loadGroupId": "sharedPileA"},
+                {"databaseId": "01165","quantity": 2,"loadGroupId": "sharedPileA"},
+                {"databaseId": "01166","quantity": 3,"loadGroupId": "sharedPileA"},
+                {"databaseId": "01167","quantity": 2,"loadGroupId": "sharedPileA"},
+                {"databaseId": "01168","quantity": 2,"loadGroupId": "sharedPileA"}
             ]
         },
         "TDC_Summit deck": {
@@ -53,15 +53,15 @@
                 {"databaseId": "11650","quantity": 1,"loadGroupId": "sharedNotInPlay"}, // Floating Spire
                 {"databaseId": "11651","quantity": 1,"loadGroupId": "sharedNotInPlay"}, // Western Wall
                 {"databaseId": "11652","quantity": 1,"loadGroupId": "sharedRemoved"},   // Ancient Dome
-                {"databaseId": "11653","quantity": 1,"loadGroupId": "sharedDeckB"},     // Eastern Athenaeum
-                {"databaseId": "11654","quantity": 1,"loadGroupId": "sharedDeckB"},     // Western Athenaeum
-                {"databaseId": "11655","quantity": 1,"loadGroupId": "sharedDeckB"},     // Obsidian Cliffs
-                {"databaseId": "11656","quantity": 3,"loadGroupId": "sharedDeckB"},     // Suspended Reef
-                {"databaseId": "11657","quantity": 2,"loadGroupId": "sharedDeckB"},     // Hanging Ship
-                {"databaseId": "11658","quantity": 1,"loadGroupId": "sharedDeckB"},     // Ancient Canyons
-                {"databaseId": "11659","quantity": 3,"loadGroupId": "sharedDeckB"},     // Dazzling SKyline
+                {"databaseId": "11653","quantity": 1,"loadGroupId": "sharedPileB"},     // Eastern Athenaeum
+                {"databaseId": "11654","quantity": 1,"loadGroupId": "sharedPileB"},     // Western Athenaeum
+                {"databaseId": "11655","quantity": 1,"loadGroupId": "sharedPileB"},     // Obsidian Cliffs
+                {"databaseId": "11656","quantity": 3,"loadGroupId": "sharedPileB"},     // Suspended Reef
+                {"databaseId": "11657","quantity": 2,"loadGroupId": "sharedPileB"},     // Hanging Ship
+                {"databaseId": "11658","quantity": 1,"loadGroupId": "sharedPileB"},     // Ancient Canyons
+                {"databaseId": "11659","quantity": 3,"loadGroupId": "sharedPileB"},     // Dazzling SKyline
                 {"databaseId": "11660","quantity": 1,"loadGroupId": "sharedNotInPlay"}, // Aerial Waterfall
-                {"databaseId": "11661","quantity": 2,"loadGroupId": "sharedDeckB"},     // Magnetic Spires
+                {"databaseId": "11661","quantity": 2,"loadGroupId": "sharedPileB"},     // Magnetic Spires
                 {"databaseId": "11662","quantity": 1,"loadGroupId": "sharedNotInPlay"}  // Glyph Orrey
             ]
         }
@@ -80,52 +80,57 @@
             ["DO_LOAD_CARDS_SCN","The Eastern Expedition_Westbound"],
             ["DO_LOAD_CARDS_SCN","TDC_Summit deck"],
             ["DO_LOAD_CARDS_SCN","TDC_Open sky deck"],
-            ["DO_SHUFFLE_GROUP", "$GAME.firstPlayer", "sharedDeckA", true, null],
-            ["DO_SHUFFLE_GROUP", "$GAME.firstPlayer", "sharedDeckA", true, null],
-            ["DO_SHUFFLE_GROUP", "$GAME.firstPlayer", "sharedDeckB", true, null],
-            ["DO_SHUFFLE_GROUP", "$GAME.firstPlayer", "sharedDeckB", true, null],
-            ["VAR", "$OPEN_SKY_1", ["GET_TOP_CARD_ID", "sharedDeckA"]],
+            //["DO_SHUFFLE_GROUP", "$GAME.firstPlayer", "sharedPileA", true, null],
+            //["DO_SHUFFLE_GROUP", "$GAME.firstPlayer", "sharedPileA", true, null],
+            ["VAR", "$PILE_STACKA", "$GAME.groupById.sharedPileA.stackIds"],
+            ["VAR", "$PILE_STACKA", ["SHUFFLE_LIST", "$PILE_STACKA"]],
+            ["SET", "/groupById/sharedPileA/stackIds", "$PILE_STACKA"],
+            ["VAR", "$OPEN_SKY_1", ["GET_TOP_CARD_ID", "sharedPileA"]],
             ["DO_PUT_INTO_PLAY_AT_SCN", "$OPEN_SKY_1", 35, 76],
             ["SET", "/cardById/$OPEN_SKY_1/currentSide", "B"],
-            ["VAR", "$OPEN_SKY_2", ["GET_TOP_CARD_ID", "sharedDeckA"]],
+            ["VAR", "$OPEN_SKY_2", ["GET_TOP_CARD_ID", "sharedPileA"]],
             ["DO_PUT_INTO_PLAY_AT_SCN", "$OPEN_SKY_2", 15, 43],
             ["SET", "/cardById/$OPEN_SKY_2/currentSide", "B"],
-            ["VAR", "$OPEN_SKY_3", ["GET_TOP_CARD_ID", "sharedDeckA"]],
+            ["VAR", "$OPEN_SKY_3", ["GET_TOP_CARD_ID", "sharedPileA"]],
             ["DO_PUT_INTO_PLAY_AT_SCN", "$OPEN_SKY_3", 55, 43],
             ["SET", "/cardById/$OPEN_SKY_3/currentSide", "B"],
-            ["VAR", "$OPEN_SKY_4", ["GET_TOP_CARD_ID", "sharedDeckA"]],
+            ["VAR", "$OPEN_SKY_4", ["GET_TOP_CARD_ID", "sharedPileA"]],
             ["DO_PUT_INTO_PLAY_AT_SCN", "$OPEN_SKY_4", 35, 10],
             ["SET", "/cardById/$OPEN_SKY_4/currentSide", "B"],
 
             // Get bottom cards from Summit deck
-            ["DO_PLACE_BOTTOM_CARD_FROM_DECK_SCN", "sharedDeckB", 55, 76, "A"],
-            ["DO_PLACE_BOTTOM_CARD_FROM_DECK_SCN", "sharedDeckB", 75, 76, "A"],
-            ["DO_PLACE_BOTTOM_CARD_FROM_DECK_SCN", "sharedDeckB", 35, 43, "A"],
-            ["DO_PLACE_BOTTOM_CARD_FROM_DECK_SCN", "sharedDeckB", 75, 43, "A"],
-            ["DO_PLACE_BOTTOM_CARD_FROM_DECK_SCN", "sharedDeckB", 15, 10, "A"],
-            ["DO_PLACE_BOTTOM_CARD_FROM_DECK_SCN", "sharedDeckB", 55, 10, "A"],
-            ["DO_PLACE_BOTTOM_CARD_FROM_DECK_SCN", "sharedDeckB", 75, 10, "A"],
+           
 
+            ["VAR", "$PILE_STACKB", "$GAME.groupById.sharedPileB.stackIds"],
+            ["VAR", "$PILE_STACKB", ["SHUFFLE_LIST", "$PILE_STACKB"]],
+            ["SET", "/groupById/sharedPileB/stackIds", "$PILE_STACKB"],
 
-["DO_CREATE_CARDS", "$GAME.firstPlayer", "Summit", "11649", 1, "sharedDeckB", true, null],
-["VAR", "$CARD_ID", "{{$GAME.lastLoadedCardIds.[0]}}"],
-["VAR", "$CARD_STACK_ID", "{{$GAME.cardById.$CARD_ID.stackId}}"],
+            ["DO_PLACE_BOTTOM_CARD_FROM_DECK_SCN", "sharedPileB", 55, 76, "A"],
+            ["DO_PLACE_BOTTOM_CARD_FROM_DECK_SCN", "sharedPileB", 75, 76, "A"],
+            ["DO_PLACE_BOTTOM_CARD_FROM_DECK_SCN", "sharedPileB", 35, 43, "A"],
+            ["DO_PLACE_BOTTOM_CARD_FROM_DECK_SCN", "sharedPileB", 75, 43, "A"],
+            ["DO_PLACE_BOTTOM_CARD_FROM_DECK_SCN", "sharedPileB", 15, 10, "A"],
+            ["DO_PLACE_BOTTOM_CARD_FROM_DECK_SCN", "sharedPileB", 55, 10, "A"],
+            ["DO_PLACE_BOTTOM_CARD_FROM_DECK_SCN", "sharedPileB", 75, 10, "A"],
 
-["VAR", "$DECK_STACKS", "$GAME.groupById.sharedDeckB.stackIds"],
-["UPDATE_VAR", "$DECK_STACKS", ["REMOVE_FROM_LIST_BY_VALUE", "$DECK_STACKS", "$CARD_STACK_ID"]],
+            ["DO_CREATE_CARDS", "$GAME.firstPlayer", "Summit", "11649", 1, "sharedPileB", false, null],
+            ["VAR", "$CARD_ID", "{{$GAME.lastLoadedCardIds.[0]}}"],
+            ["VAR", "$CARD_STACK_ID", "{{$GAME.cardById.$CARD_ID.stackId}}"],
 
-["VAR", "$A", "$DECK_STACKS.[0]"],
-["VAR", "$B", "$DECK_STACKS.[1]"],
-["VAR", "$C", "$DECK_STACKS.[2]"],
-["VAR", "$D", "$DECK_STACKS.[3]"],
-["VAR", "$E", "$DECK_STACKS.[4]"],
-["VAR", "$F", "$DECK_STACKS.[5]"],
-["VAR", "$G", "$DECK_STACKS.[6]"],
+            ["VAR", "$PILE_STACKS", "$GAME.groupById.sharedPileB.stackIds"],
+            ["UPDATE_VAR", "$PILE_STACKS", ["REMOVE_FROM_LIST_BY_VALUE", "$PILE_STACKS", "$CARD_STACK_ID"]],
 
-["VAR", "$NEW_STACKS", ["LIST", "$A", "$B", "$C", "$D", "$E", "$F", "$CARD_STACK_ID", "$G"]],
-["SET", "/groupById/sharedDeckB/stackIds", "$NEW_STACKS"],
+            ["VAR", "$TOP_PACKET", ["SHUFFLE_LIST", ["LIST", "$CARD_STACK_ID", "$PILE_STACKS.[0]", "$PILE_STACKS.[1]"]]],
 
-["SHUFFLE_TOP_X", "sharedDeckB", 3],
+            ["VAR", "$REST", ["LIST",
+                "$PILE_STACKS.[2]",
+                "$PILE_STACKS.[3]",
+                "$PILE_STACKS.[4]",
+                "$PILE_STACKS.[5]",
+                "$PILE_STACKS.[6]"
+            ]],
+            ["VAR", "$NEW_STACKS", ["CONCAT_LISTS", "$TOP_PACKET", "$REST"]],
+            ["SET", "/groupById/sharedPileB/stackIds", "$NEW_STACKS"],
 
 
 
