@@ -221,6 +221,15 @@
             ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$DO_SPAWN_ATTACHED_TO_LOCATION_RESULT", false, null]
           ]
         ]
-      }
+      },
+    "DO_PLACE_BOTTOM_CARD_FROM_DECK_SCN": {
+      "args": ["$GROUP_ID", "$LEFT", "$TOP", "$SIDE"],
+      "code": [
+        ["VAR", "$BOTTOM_STACK_ID", "{{$GAME.groupById.$GROUP_ID.stackIds.[-1]}}"],
+        ["VAR", "$BOTTOM_CARD_ID", "{{$GAME.stackById.$BOTTOM_STACK_ID.cardIds.[0]}}"],
+        ["DO_PUT_INTO_PLAY_AT_SCN", "$BOTTOM_CARD_ID", "$LEFT", "$TOP"],
+        ["SET", "/cardById/$BOTTOM_CARD_ID/currentSide", "$SIDE"]
+      ]
     }
+  }
 }
