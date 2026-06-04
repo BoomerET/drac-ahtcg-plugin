@@ -141,8 +141,12 @@
             ["SCENARIO_INIT_CONTINUE", null]
         ],
         "Ask if Creature Defeated": [
-            //["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Check Campaign Log", ["LIST", "Creature was defeated.", "The above is NOT true."], "Remove Inescapable Encounter"]
-            ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Check Campaign Log", ["LIST", "Creature was defeated.", "The above is NOT true."], null]
+            ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Check Campaign Log", ["LIST", "Creature was defeated.", "The above is NOT true."], "Remove Inescapable Encounter"]
+        ],
+        "Remove Inescapable Encounter": [
+            //["DO_REMOVE_CARDS_SCN","Inescapable Encounter"]
+            //["SCENARIO_INIT_CONTINUE", null]
+            ["LOG", "We need to remove the inescapable encounter"]
         ],
         "Obsidian Canyons_Eastbound Scenario Init": [
             ["DO_LOAD_CARDS_SCN","The Eastern Expedition_Eastbound"],
