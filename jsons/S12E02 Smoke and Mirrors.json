@@ -57,11 +57,11 @@
       ["ACTION_LIST", "Smoke and Mirrors - Attach Hidden Card to French Hill"],
       ["ACTION_LIST", "Smoke and Mirrors - Attach Hidden Card to Uptown"],
       ["ACTION_LIST", "Smoke and Mirrors - Attach Hidden Card to Waterfront District"],
-      ["DO_LOAD_CARDS_SCN", "Bad Weather"],
-      ["DO_LOAD_CARDS_SCN", "Gangs of Arkham"],
-      ["DO_LOAD_CARDS_SCN", "Arcane Lock"],
-      ["DO_LOAD_CARDS_SCN", "Dead Ends"],
-      ["DO_LOAD_CARDS_SCN", "Flying Terrors"],
+      ["DO_LOAD_CARDS_SCN", "BoA_Bad Weather"],
+      ["DO_LOAD_CARDS_SCN", "BoA_Gangs of Arkham"],
+      ["DO_LOAD_CARDS_SCN", "BoA_Arcane Lock"],
+      ["DO_LOAD_CARDS_SCN", "BoA_Dead Ends"],
+      ["DO_LOAD_CARDS_SCN", "BoA_Flying Terrors"],
       ["DO_LOAD_CARDS_SCN", "BoA_Whippoorwills"],
       ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Miskatonic University", 5, 7, 3, 0],
       ["ACTION_LIST", "Smoke and Mirrors - Add Doom Per Investigator"],
@@ -123,7 +123,10 @@
       ["DEFINE", "$INVESTIGATOR_ID",["GET_CARD_ID", "player3Investigator", 0, 0]],
       ["COND",["NOT_EQUAL", "$INVESTIGATOR_ID", null],["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1]],
       ["DEFINE", "$INVESTIGATOR_ID",["GET_CARD_ID", "player4Investigator", 0, 0]],
-      ["COND",["NOT_EQUAL", "$INVESTIGATOR_ID", null],["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1]]
+      ["COND",["NOT_EQUAL", "$INVESTIGATOR_ID", null],["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1]],
+      // Could this be done by the following:
+      ["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", "$GAME.arkham.numPlayers"]
+
     ]
   }
 }
