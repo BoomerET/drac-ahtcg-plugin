@@ -64,7 +64,7 @@
       ["DO_LOAD_CARDS_SCN", "BoA_Flying Terrors"],
       ["DO_LOAD_CARDS_SCN", "BoA_Whippoorwills"],
       ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Miskatonic University", 5, 7, 3, 0],
-      ["ACTION_LIST", "Smoke and Mirrors - Add Doom Per Investigator"],
+      ["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", "$GAME.arkham.numPlayers"],
       ["SCENARIO_INIT_CONTINUE", null]
     ],
     "Smoke and Mirrors Scenario University Status": [
@@ -114,20 +114,6 @@
       ["DO_SPAWN_LOCATION_SCN", "Miskatonic University Quiet", "12156", 20, 43],
       ["DO_CREATE_CARDS_SCN", "Set Aside", "12155", 1, "sharedRemoved"],
       ["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1]
-    ],
-    "Smoke and Mirrors - Add Doom Per Investigator": [
-      ["DEFINE", "$INVESTIGATOR_ID",["GET_CARD_ID", "player1Investigator", 0, 0]],
-      ["COND",["NOT_EQUAL", "$INVESTIGATOR_ID", null],["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1]],
-      ["DEFINE", "$INVESTIGATOR_ID",["GET_CARD_ID", "player2Investigator", 0, 0]],
-      ["COND",["NOT_EQUAL", "$INVESTIGATOR_ID", null],["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1]],
-      ["DEFINE", "$INVESTIGATOR_ID",["GET_CARD_ID", "player3Investigator", 0, 0]],
-      ["COND",["NOT_EQUAL", "$INVESTIGATOR_ID", null],["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1]],
-      ["DEFINE", "$INVESTIGATOR_ID",["GET_CARD_ID", "player4Investigator", 0, 0]],
-      ["COND",["NOT_EQUAL", "$INVESTIGATOR_ID", null],["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1]],
-      // Could this be done by the following:
-      ["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", "$GAME.arkham.numPlayers"]
-
     ]
   }
 }
-// kate: syntax Dragnlang; scheme Arkham Dark;
