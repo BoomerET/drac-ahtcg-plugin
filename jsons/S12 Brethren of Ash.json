@@ -4,8 +4,8 @@
       "hideFromSearch": true,
       "label": "BoA_Spreading Flames",
       "cards": [
-        { "databaseId": "12114", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
-        { "databaseId": "12115", "quantity": 1, "loadGroupId": "sharedNotInPlay" }
+        { "databaseId": "12114", "quantity": 1, "loadGroupId": "sharedNotInPlay" }, // Servant of Flame: Raging Fury
+        { "databaseId": "12115", "quantity": 1, "loadGroupId": "sharedNotInPlay" }  // Dr. Henry Armitage: Head Librarian
       ]
     },
     "BoA_Ashen Pilgrims": {

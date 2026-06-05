@@ -25,7 +25,8 @@
         { "databaseId": "12177", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
         { "databaseId": "12178", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
         { "databaseId": "12179", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
-        { "databaseId": "12181", "quantity": 2, "loadGroupId": "sharedNotInPlay" }
+        { "databaseId": "12181", "quantity": 2, "loadGroupId": "sharedNotInPlay" },
+        { "databaseId": "12122", "quantity": 2, "loadGroupId": "sharedEncounterDeck" } // Hellhound, from Ashen Pilgrims
       ]
     }
   },
@@ -48,10 +49,13 @@
     "Queen of Ash Scenario Init": [
       ["DO_LOAD_CARDS_SCN", "Queen of Ash"],
       ["DO_LOAD_CARDS_SCN", "BoA_Queen of Ash"],
-      ["LOAD_CARDS", "Add 2 Cultists to Chaos Bag"],
+      ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_cultist", 2],
       ["DO_SET_SPAWN_LOCATION", "12182", 45, 43],
-      ["DO_LOAD_CARDS_SCN", "Reeking Decay"],
-      ["DO_LOAD_CARDS_SCN", "Torment"],
+      ["DO_LOAD_CARDS_SCN", "BoA_Reeking Decay"],
+      ["DO_LOAD_CARDS_SCN", "BoA_Torment"],
+      //["DO_LOAD_CARDS_SCN", "BoA_Ashen Pilgrims"],
+      ["DO_LOAD_CARDS_SCN", "BoA_Cosmic Evils"],
+      ["DO_LOAD_CARDS_SCN", "BoA_Fire"],
       ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Sewer Culvert", 5, 7, 3, 0],
       [
         "COND",
