@@ -108,12 +108,16 @@
     ],
     "Smoke and Mirrors - Miskatonic In Flames": [
       ["DO_SPAWN_LOCATION_SCN", "Miskatonic University In Flames", "12155", 20, 43],
-      ["DO_CREATE_CARDS_SCN", "Set Aside", "12156", 1, "sharedRemoved"]
+      ["DO_CREATE_CARDS_SCN", "Set Aside", "12156", 1, "sharedRemoved"],
+      ["VAR", "$MU_BURNING_ID", ["GET_NAMED_CARD_ID", "12155"]],
+      ["SET", "/cardById/$MU_BURNING_ID/currentSide", "A"]
     ],
     "Smoke and Mirrors - Miskatonic Quiet": [
       ["DO_SPAWN_LOCATION_SCN", "Miskatonic University Quiet", "12156", 20, 43],
       ["DO_CREATE_CARDS_SCN", "Set Aside", "12155", 1, "sharedRemoved"],
-      ["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1]
+      ["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1],
+      ["VAR", "$MU_QUIET_ID", ["GET_NAMED_CARD_ID", "12156"]],
+      ["SET", "/cardById/$MU_QUIET_ID/currentSide", "A"]
     ]
   }
 }

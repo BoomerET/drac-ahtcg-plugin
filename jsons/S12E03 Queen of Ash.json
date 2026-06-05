@@ -11,22 +11,22 @@
       "hideFromSearch": true,
       "label": "Queen of Ash",
       "cards": [
-        { "databaseId": "12168", "quantity": 1, "loadGroupId": "sharedScenarioReference" },
-        { "databaseId": "12169", "quantity": 1, "loadGroupId": "sharedAgendaStory" },
-        { "databaseId": "12170", "quantity": 1, "loadGroupId": "sharedAgendaStory" },
-        { "databaseId": "12171", "quantity": 1, "loadGroupId": "sharedAgendaStory" },
-        { "databaseId": "12172", "quantity": 1, "loadGroupId": "sharedActStory" },
-        { "databaseId": "12173", "quantity": 1, "loadGroupId": "sharedActStory" },
-        { "databaseId": "12182", "quantity": 1, "loadGroupId": "sharedLocations", "left": "35%", "top": "75%" },
-        { "databaseId": "12174", "quantity": 1, "loadGroupId": "sharedLocations", "left": "35%", "top": "10%" },
-        { "databaseId": "12180", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
-        { "databaseId": "12129", "quantity": 5, "loadGroupId": "sharedNotInPlay" },
-        { "databaseId": "12175", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
-        { "databaseId": "12177", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
-        { "databaseId": "12178", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
-        { "databaseId": "12179", "quantity": 1, "loadGroupId": "sharedNotInPlay" },
-        { "databaseId": "12181", "quantity": 2, "loadGroupId": "sharedNotInPlay" },
-        { "databaseId": "12122", "quantity": 2, "loadGroupId": "sharedEncounterDeck" } // Hellhound, from Ashen Pilgrims
+        { "databaseId": "12168", "quantity": 1, "loadGroupId": "sharedScenarioReference"},  // Scenario Reference
+        { "databaseId": "12169", "quantity": 1, "loadGroupId": "sharedAgendaStory"},        // A Gathering
+        { "databaseId": "12170", "quantity": 1, "loadGroupId": "sharedAgendaStory"},        // A Ritual
+        { "databaseId": "12171", "quantity": 1, "loadGroupId": "sharedAgendaStory"},        // Brethren of Ash, Queen of Flame
+        { "databaseId": "12172", "quantity": 1, "loadGroupId": "sharedActStory"},           // Search the Sewers
+        { "databaseId": "12173", "quantity": 1, "loadGroupId": "sharedActStory"},           // Stop the Rite
+        { "databaseId": "12182", "quantity": 1, "loadGroupId": "sharedLocations", "left": "35%", "top": "75%"}, // Sewer Culvert
+        { "databaseId": "12174", "quantity": 1, "loadGroupId": "sharedLocations", "left": "35%", "top": "10%"}, // Underground Cistern
+        { "databaseId": "12180", "quantity": 1, "loadGroupId": "sharedNotInPlay"},          // Servant of Flame: A Willing Sacrifice
+        { "databaseId": "12175", "quantity": 1, "loadGroupId": "sharedNotInPlay"},          // Sluice Control
+        { "databaseId": "12177", "quantity": 1, "loadGroupId": "sharedNotInPlay"},          // Queen's Knight
+        { "databaseId": "12178", "quantity": 1, "loadGroupId": "sharedNotInPlay"},          // Herald of Flame
+        { "databaseId": "12179", "quantity": 1, "loadGroupId": "sharedNotInPlay"},          // Elokoss: Faint Embers
+        { "databaseId": "12181", "quantity": 2, "loadGroupId": "sharedNotInPlay"},          // Collector
+        { "databaseId": "12122", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}, // Hellhound, from Ashen Pilgrims
+        { "databaseId": "12190", "quantity": 2, "loadGroupId": "sharedEncounterDeck"} // Blasphemous Invocation
       ]
     }
   },
@@ -49,14 +49,12 @@
     "Queen of Ash Scenario Init": [
       ["DO_LOAD_CARDS_SCN", "Queen of Ash"],
       ["DO_LOAD_CARDS_SCN", "BoA_Queen of Ash"],
-      ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_cultist", 2],
-      ["DO_SET_SPAWN_LOCATION", "12182", 45, 43],
       ["DO_LOAD_CARDS_SCN", "BoA_Reeking Decay"],
       ["DO_LOAD_CARDS_SCN", "BoA_Torment"],
-      //["DO_LOAD_CARDS_SCN", "BoA_Ashen Pilgrims"],
       ["DO_LOAD_CARDS_SCN", "BoA_Cosmic Evils"],
       ["DO_LOAD_CARDS_SCN", "BoA_Fire"],
-      ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Sewer Culvert", 5, 7, 3, 0],
+      ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_cultist", 2],
+      ["DO_SET_SPAWN_LOCATION", "12182", 45, 43],
       [
         "COND",
         ["EQUAL", "$GAME.arkham.scenarioDifficulty", "Easy"],
@@ -68,16 +66,19 @@
         ["EQUAL", "$GAME.arkham.scenarioDifficulty", "Expert"],
         ["ACTION_LIST", "Add Expert Chaos Tokens"]
       ],
-      ["ACTION_LIST", "Elegant place random sewers"],
+      ["ACTION_LIST", "Queen of Ash - Random Sewers"],
       ["ACTION_LIST", "Queen of Ash - Arkham Scoured"],
       ["ACTION_LIST", "Stirred up trouble"],
       ["ACTION_LIST", "Remove Servant of Flame"],
       //["ACTION_LIST", "Who is the Harbinger of Elokoss"],
       ["ACTION_LIST", "Queen of Ash Cult Unknown Whereabouts"],
       ["ACTION_LIST", "Queen of Ash - Add Doom For 3+ Players"],
+      ["VAR", "$SEWER_CULVERT_ID", ["GET_NAMED_CARD_ID", "12182"]],
+      ["SET", "/cardById/$SEWER_CULVERT_ID/currentSide", "A"],
+      ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Sewer Culvert", 5, 7, 3, 0],
       ["SCENARIO_INIT_CONTINUE", null]
     ],
-    "Elegant place random cultists": [
+    "Queen of Ash - Random Cultists": [
       ["VAR", "$CULTISTS", ["SHUFFLE_LIST", ["LIST", "12121", "12121", "12188", "12188", "12188", "12189"]]],
       ["VAR", "$NUM_INVESTIGATORS", "$GAME.arkham.numPlayers"],
       ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$CULTISTS.[0]", 5, 30],
@@ -96,7 +97,7 @@
       ["DO_CREATE_CARDS_SCN", "Cultist", "$CULTISTS.[4]", 1, "sharedEncounterDeck"],
       ["DO_CREATE_CARDS_SCN", "Cultist", "$CULTISTS.[5]", 1, "sharedEncounterDeck"]
     ],
-    "Elegant place random sewers": [
+    "Queen of Ash - Random Sewers": [
       ["VAR", "$SEWERS", ["SHUFFLE_LIST", ["LIST", "12183", "12184", "12185", "12186", "12187"]]],  //Infested Pipes, Overgrown Tunnels, Flooded Crypt, Smuggler's Cache, Toxic Waste Pit
       ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$SEWERS.[0]", 5, 50],
       ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$SEWERS.[1]", 20, 50],
@@ -115,8 +116,15 @@
       [
         "COND",
         ["EQUAL", "$GAME.arkham.scenarioAnswer2", "A"],
-        ["ACTION_LIST", "Elegant place random cultists"]
+        ["ACTION_LIST", "Queen of Ash - Random Cultists"],
+        ["TRUE"],
+        ["ACTION_LIST", "Cultists to Encounter Deck"]
       ]
+    ],
+    "Cultists to Encounter Deck": [
+      ["DO_CREATE_CARDS_SCN", "Cultist", "12121", 2, "sharedEncounterDeck"],
+      ["DO_CREATE_CARDS_SCN", "Cultist", "12188", 3, "sharedEncounterDeck"],
+      ["DO_CREATE_CARDS_SCN", "Cultist", "12189", 1, "sharedEncounterDeck"]
     ],
     "Remove Servant of Flame": [
       [
