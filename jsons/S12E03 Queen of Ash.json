@@ -17,8 +17,8 @@
         { "databaseId": "12171", "quantity": 1, "loadGroupId": "sharedAgendaStory"},        // Brethren of Ash, Queen of Flame
         { "databaseId": "12172", "quantity": 1, "loadGroupId": "sharedActStory"},           // Search the Sewers
         { "databaseId": "12173", "quantity": 1, "loadGroupId": "sharedActStory"},           // Stop the Rite
-        { "databaseId": "12182", "quantity": 1, "loadGroupId": "sharedLocations", "left": "35%", "top": "75%"}, // Sewer Culvert
-        { "databaseId": "12174", "quantity": 1, "loadGroupId": "sharedLocations", "left": "35%", "top": "10%"}, // Underground Cistern
+        { "databaseId": "12182", "quantity": 1, "loadGroupId": "sharedLocations", "left": "45%", "top": "79%"}, // Sewer Culvert
+        { "databaseId": "12174", "quantity": 1, "loadGroupId": "sharedLocations", "left": "45%", "top": "7%"}, // Underground Cistern
         { "databaseId": "12180", "quantity": 1, "loadGroupId": "sharedNotInPlay"},          // Servant of Flame: A Willing Sacrifice
         { "databaseId": "12175", "quantity": 1, "loadGroupId": "sharedNotInPlay"},          // Sluice Control
         { "databaseId": "12177", "quantity": 1, "loadGroupId": "sharedNotInPlay"},          // Queen's Knight
@@ -32,19 +32,24 @@
   },
   "actionLists": {
     "Queen of Ash Scenario Early Init 1": [
-      ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Check Campaign Log.", ["LIST", "Scoured Arkham for answers.", "The above is NOT true."], "Queen of Ash Scenario Early Init 2"]
+      ["ASK_SCENARIO_QUESTION_AND_CONTINUE", 
+        "Check Campaign Log.", ["LIST", "Scoured Arkham for answers.", "The above is NOT true."], "Queen of Ash Scenario Early Init 2"]
     ],
     "Queen of Ash Scenario Early Init 2": [
-      ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Check Campaign Log.", ["LIST", "Stirred up trouble.", "The above is NOT true."], "Queen of Ash Scenario Early Init 3"]
+      ["ASK_SCENARIO_QUESTION_AND_CONTINUE", 
+        "Check Campaign Log.", ["LIST", "Stirred up trouble.", "The above is NOT true."], "Queen of Ash Scenario Early Init 3"]
     ],
     "Queen of Ash Scenario Early Init 3": [
-      ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Check Campaign Log.", ["LIST", "Killed the Servant of Flame.", "The above is NOT true."], "Queen of Ash Scenario Early Init 4"]
+      ["ASK_SCENARIO_QUESTION_AND_CONTINUE", 
+        "Check Campaign Log.", ["LIST", "Killed the Servant of Flame.", "The above is NOT true."], "Queen of Ash Scenario Early Init 4"]
     ],
     "Queen of Ash Scenario Early Init 4": [
-      ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Who is the Harbinger of Elokoss.", ["LIST", "David Renfield", "Cornelia Akely", "Naomi O'Bannion", "Sgt. Earl Monroe", "Abigail Foreman", "Margaret Lui"], "Queen of Ash Scenario Early Init 5"]
+      ["ASK_SCENARIO_QUESTION_AND_CONTINUE", 
+        "Who is the Harbinger of Elokoss.", ["LIST", "David Renfield", "Cornelia Akely", "Naomi O'Bannion", "Sgt. Earl Monroe", "Abigail Foreman", "Margaret Lui"], "Queen of Ash Scenario Early Init 5"]
     ],
     "Queen of Ash Scenario Early Init 5": [
-      ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Check Campaign Log.", ["LIST", "Discovered cult's whereabouts.", "The above is NOT true."], "Queen of Ash Scenario Init"]
+      ["ASK_SCENARIO_QUESTION_AND_CONTINUE", 
+        "Check Campaign Log.", ["LIST", "Discovered cult's whereabouts.", "The above is NOT true."], "Queen of Ash Scenario Init"]
     ],
     "Queen of Ash Scenario Init": [
       ["DO_LOAD_CARDS_SCN", "Queen of Ash"],
@@ -58,18 +63,18 @@
       [
         "COND",
         ["EQUAL", "$GAME.arkham.scenarioDifficulty", "Easy"],
-        ["ACTION_LIST", "Add Easy Chaos Tokens"],
+        ["ACTION_LIST", "BoA - Add Easy Chaos Tokens"],
         ["EQUAL", "$GAME.arkham.scenarioDifficulty", "Standard"],
-        ["ACTION_LIST", "Add Standard Chaos Tokens"],
+        ["ACTION_LIST", "BoA - Add Standard Chaos Tokens"],
         ["EQUAL", "$GAME.arkham.scenarioDifficulty", "Hard"],
-        ["ACTION_LIST", "Add Hard Chaos Tokens"],
+        ["ACTION_LIST", "BoA - Add Hard Chaos Tokens"],
         ["EQUAL", "$GAME.arkham.scenarioDifficulty", "Expert"],
-        ["ACTION_LIST", "Add Expert Chaos Tokens"]
+        ["ACTION_LIST", "BoA - Add Expert Chaos Tokens"]
       ],
       ["ACTION_LIST", "Queen of Ash - Random Sewers"],
       ["ACTION_LIST", "Queen of Ash - Arkham Scoured"],
-      ["ACTION_LIST", "Stirred up trouble"],
-      ["ACTION_LIST", "Remove Servant of Flame"],
+      ["ACTION_LIST", "Queen of Ash - Stirred up trouble"],
+      ["ACTION_LIST", "Queen of Ash - Remove Servant of Flame"],
       //["ACTION_LIST", "Who is the Harbinger of Elokoss"],
       ["ACTION_LIST", "Queen of Ash Cult Unknown Whereabouts"],
       ["ACTION_LIST", "Queen of Ash - Add Doom For 3+ Players"],
@@ -81,12 +86,12 @@
     "Queen of Ash - Random Cultists": [
       ["VAR", "$CULTISTS", ["SHUFFLE_LIST", ["LIST", "12121", "12121", "12188", "12188", "12188", "12189"]]],
       ["VAR", "$NUM_INVESTIGATORS", "$GAME.arkham.numPlayers"],
-      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$CULTISTS.[0]", 5, 30],
-      ["COND", ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 2], ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$CULTISTS.[1]", 20, 30]],
-      ["COND", ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 3], ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$CULTISTS.[2]", 50, 30]],
-      ["COND", ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 4], ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$CULTISTS.[3]", 65, 30]],
+      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$CULTISTS.[0]", 10, 58],
+      ["COND", ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 2], ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$CULTISTS.[1]", 29, 58]],
+      ["COND", ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 3], ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$CULTISTS.[2]", 67, 58]],
+      ["COND", ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 4], ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$CULTISTS.[3]", 86, 58]],
       ["COND", ["LESS_THAN", "$NUM_INVESTIGATORS", 2], [
-      ["DO_CREATE_CARDS_SCN", "Cultist", "$CULTISTS.[1]", 1, "sharedEncounterDeck"]
+        ["DO_CREATE_CARDS_SCN", "Cultist", "$CULTISTS.[1]", 1, "sharedEncounterDeck"]
       ]],
       ["COND", ["LESS_THAN", "$NUM_INVESTIGATORS", 3], [
         ["DO_CREATE_CARDS_SCN", "Cultist", "$CULTISTS.[2]", 1, "sharedEncounterDeck"]
@@ -99,34 +104,34 @@
     ],
     "Queen of Ash - Random Sewers": [
       ["VAR", "$SEWERS", ["SHUFFLE_LIST", ["LIST", "12183", "12184", "12185", "12186", "12187"]]],  //Infested Pipes, Overgrown Tunnels, Flooded Crypt, Smuggler's Cache, Toxic Waste Pit
-      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$SEWERS.[0]", 5, 50],
-      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$SEWERS.[1]", 20, 50],
-      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$SEWERS.[2]", 35, 50],
-      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$SEWERS.[3]", 50, 50],
-      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$SEWERS.[4]", 65, 50]
+      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$SEWERS.[0]", 7, 55],
+      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$SEWERS.[1]", 26, 55],
+      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$SEWERS.[2]", 45, 55],
+      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$SEWERS.[3]", 64, 55],
+      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$SEWERS.[4]", 83, 55]
     ],
     "Queen of Ash - Arkham Scoured": [
       [
         "COND",
         ["EQUAL", "$GAME.arkham.scenarioAnswer1", "A"],
-        ["ACTION_LIST", "Add 1 Clue to Each Investigator"]
+        ["ACTION_LIST", "BoA - Add 1 Clue to Each Investigator"]
       ]
     ],
-    "Stirred up trouble": [
+    "Queen of Ash - Stirred up trouble": [
       [
         "COND",
         ["EQUAL", "$GAME.arkham.scenarioAnswer2", "A"],
         ["ACTION_LIST", "Queen of Ash - Random Cultists"],
         ["TRUE"],
-        ["ACTION_LIST", "Cultists to Encounter Deck"]
+        ["ACTION_LIST", "Queen of Ash - Cultists to Encounter Deck"]
       ]
     ],
-    "Cultists to Encounter Deck": [
+    "Queen of Ash - Cultists to Encounter Deck": [
       ["DO_CREATE_CARDS_SCN", "Cultist", "12121", 2, "sharedEncounterDeck"],
       ["DO_CREATE_CARDS_SCN", "Cultist", "12188", 3, "sharedEncounterDeck"],
       ["DO_CREATE_CARDS_SCN", "Cultist", "12189", 1, "sharedEncounterDeck"]
     ],
-    "Remove Servant of Flame": [
+    "Queen of Ash - Remove Servant of Flame": [
       [
         "COND",
         ["EQUAL", "$GAME.arkham.scenarioAnswer3", "A"],
@@ -175,25 +180,25 @@
     //"Margaret is HoE": [
     //  ["LOG", "Margaret is the Harbinger of Elokoss."]
     //],
-    "Add Easy Chaos Tokens": [
+    "BoA - Add Easy Chaos Tokens": [
       ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_elder_thing", 1]
     ],
-    "Add Standard Chaos Tokens": [
+    "BoA - Add Standard Chaos Tokens": [
       ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_elder_thing", 1],
       ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_tablet", 1]
     ],
-    "Add Hard Chaos Tokens": [
+    "BoA - Add Hard Chaos Tokens": [
       ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_elder_thing", 1],
       ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_tablet", 1],
       ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_skull", 1]
     ],
-    "Add Expert Chaos Tokens": [
+    "BoA - Add Expert Chaos Tokens": [
       ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_elder_thing", 1],
       ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_tablet", 1],
       ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_skull", 1],
       ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_cultist", 1]
     ],
-    "Add 1 Clue to Each Investigator": [
+    "BoA - Add 1 Clue to Each Investigator": [
       ["FOR_EACH_VAL", "$PLAYER_I", "$PLAYER_ORDER", [
         ["VAR", "$INVESTIGATOR", ["GET_INVESTIGATOR", "$PLAYER_I"]],
         ["DO_PLACE_CLUES_ON_CARD", "$PLAYER_I", "$INVESTIGATOR.id", 1, true, null]]
