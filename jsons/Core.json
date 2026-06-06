@@ -79,6 +79,7 @@
         "Agenda":                 {"width": 1.00, "height": 0.69, "tokens": ["resource","clue","damage","horror","doom"]},
         "Act":                    {"width": 1.00, "height": 0.69, "tokens": ["resource","clue","damage","horror","doom"]},
         "Location":               {"width": 0.69, "height": 1.00, "tokens": ["resource","clue","damage","horror","doom","freeze"]},
+        "Enemy-Location":         {"width": 0.69, "height": 1.00, "tokens": ["resource","clue","damage","horror","doom","freeze"]},
         "Story":                  {"width": 0.69, "height": 1.00, "tokens": ["resource","clue","damage","horror","doom","freeze"]},
         "Key":                    {"width": 0.69, "height": 1.00, "tokens": ["resource","clue","damage","horror","doom","freeze"]},
         "Upgrade":                {"width": 0.69, "height": 1.00, "tokens": []},
@@ -174,7 +175,7 @@
     },
     "imageUrlPrefix": {
         "Default": "https://dragncards-ahlcg.s3.amazonaws.com/images/",
-        "English": "https://dragncards-ahlcg.s3.amazonaws.com/images/",
+	    "English": "https://dragncards-ahlcg.s3.amazonaws.com/images/",
         "Italian": "https://arkham-horror-lcg-dragncards.s3.eu-north-1.amazonaws.com/"
     },
     "saveGame": {
@@ -218,3 +219,4 @@
         }
     }
 }
+// kate: syntax Dragnlang; scheme Arkham Dark;
