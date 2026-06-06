@@ -29,7 +29,7 @@
   },
   "actionLists": {
     "Smoke and Mirrors Scenario Early Init": [
-      ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Check Campaign Log.", ["LIST", "Miskatonic University burned.", "The above is NOT true."], "Smoke and Mirrors Scenario Init"]
+      ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Check Campaign Log please.", ["LIST", "Miskatonic University burned.", "The above is NOT true."], "Smoke and Mirrors Scenario Init"]
     ],
     "Smoke and Mirrors Scenario Init": [
       ["DO_LOAD_CARDS_SCN", "Smoke and Mirrors"],
