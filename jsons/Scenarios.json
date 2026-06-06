@@ -160,7 +160,6 @@
               { "label": "id:gloriaGoldbergPromoStarterDeck", "deckListId": "Gloria Goldberg (Promo) Starter Deck" },
               { "label": "id:subject5U21StarterDeck", "deckListId": "Subject 5U-21 Starter Deck" },
               { "label": "id:barkHarriganStarterDeck", "deckListId": "Bark Harrigan Starter Deck" }
-
             ]
           }
         ]
@@ -493,6 +492,7 @@
     "otherDecks": { "English": "Other Decks" },
     "gloriaGoldbergPromoStarterDeck": { "English": "Gloria Goldberg (Promo) Starter Deck" },
     "subject5U21StarterDeck": { "English": "Subject 5U-21 Starter Deck" },
+    "barkHarriganStarterDeck": { "English": "Bark Harrigan Starter Deck" },
     "campaigns": { "English": "Campaigns" },
     "theNightOfTheZealot": { "English": "The Night of the Zealot" },
     "theGathering": { "English": "The Gathering" },
