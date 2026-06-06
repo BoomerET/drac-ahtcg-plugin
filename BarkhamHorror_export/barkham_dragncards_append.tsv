@@ -1,0 +1,57 @@
+zbh_00001	Bark Harrigan	investigator	guardian			1	images/zbh_00001.webp	images/zbh_00001b.webp	0.74	1
+zbh_00002	Catling Gun	asset	neutral			1	images/zbh_00002.webp		0.74	1
+zbh_00003	More Bark Than Bite	treachery	neutral			1	images/zbh_00003.webp		0.74	1
+zbh_00004	Kate Winthpup	investigator	seeker			1	images/zbh_00004.webp	images/zbh_00004b.webp	0.74	1
+zbh_00005	Feline Discombobulator	asset	neutral			1	images/zbh_00005.webp		0.74	1
+zbh_00006	Foul Odor	treachery	neutral			1	images/zbh_00006.webp		0.74	1
+zbh_00007	"""Skids"" O'Drool"	investigator	rogue			1	images/zbh_00007.webp	images/zbh_00007b.webp	0.74	1
+zbh_00008	Take the Wheel	event	neutral			1	images/zbh_00008.webp		0.74	1
+zbh_00009	Dogcatchers	enemy	neutral			1	images/zbh_00009.webp		0.74	1
+zbh_00010	Jacqueline Canine	investigator	mystic			1	images/zbh_00010.webp	images/zbh_00010b.webp	0.74	1
+zbh_00011	Chew Toy of Nightmares	asset	neutral			1	images/zbh_00011.webp		0.74	1
+zbh_00012	No Sense of Space or Time	treachery	neutral			1	images/zbh_00012.webp		0.74	1
+zbh_00013	Duke	investigator	survivor			1	images/zbh_00013.webp	images/zbh_00013b.webp	0.74	1
+zbh_00014	Friendly Human	asset	neutral			1	images/zbh_00014.webp		0.74	1
+zbh_00015	Out of Doggie Treats	treachery	neutral			1	images/zbh_00015.webp		0.74	1
+zbh_00016	Spiked Collar	asset	guardian			2	images/zbh_00016.webp		0.74	1
+zbh_00017	Dog Monocle	asset	seeker			2	images/zbh_00017.webp		0.74	1
+zbh_00018	Hired Dogs	asset	rogue			2	images/zbh_00018.webp		0.74	1
+zbh_00019	Howl of Clyhf'ford	event	mystic			2	images/zbh_00019.webp		0.74	1
+zbh_00020	Old Shoe	asset	survivor			2	images/zbh_00020.webp		0.74	1
+zbh_00021	Hair of the Dog	skill	neutral			2	images/zbh_00021.webp		0.74	1
+zbh_00022	The Meddling of Meowlathotep	scenario	mythos	meddling_of_meowlathotep	1	1	images/zbh_00022.webp	images/zbh_00022b.webp	0.74	1
+zbh_00023	Of Cats and Dogs	agenda	mythos	meddling_of_meowlathotep	2	1	images/zbh_00023.webp	images/zbh_00023b.webp	0.74	1
+zbh_00024	Meowlathotep's Scheme	agenda	mythos	meddling_of_meowlathotep	3	1	images/zbh_00024.webp	images/zbh_00024b.webp	0.74	1
+zbh_00025	Nine Lives	act	mythos	meddling_of_meowlathotep	4	1	images/zbh_00025.webp	images/zbh_00025b.webp	0.74	1
+zbh_00026	The Cat and the Mouse	act	mythos	meddling_of_meowlathotep	5	1	images/zbh_00026.webp	images/zbh_00026b.webp	0.74	1
+zbh_00027	Beasttown	location	mythos	meddling_of_meowlathotep	6	1	images/zbh_00027.webp	images/zbh_00027b.webp	0.74	1
+zbh_00028	Tailside	location	mythos	meddling_of_meowlathotep	7	1	images/zbh_00028.webp	images/zbh_00028b.webp	0.74	1
+zbh_00029	Snoutside	location	mythos	meddling_of_meowlathotep	8	1	images/zbh_00029.webp	images/zbh_00029b.webp	0.74	1
+zbh_00030	Slobbertown	location	mythos	meddling_of_meowlathotep	9	1	images/zbh_00030.webp	images/zbh_00030b.webp	0.74	1
+zbh_00031	Barkham Asylum	location	mythos	meddling_of_meowlathotep	10	1	images/zbh_00031.webp	images/zbh_00031b.webp	0.74	1
+zbh_00032	Boneyard	location	mythos	meddling_of_meowlathotep	11	1	images/zbh_00032.webp	images/zbh_00032b.webp	0.74	1
+zbh_00033	Muttskatonic University	location	mythos	meddling_of_meowlathotep	12	1	images/zbh_00033.webp	images/zbh_00033b.webp	0.74	1
+zbh_00034	Barkham City Pound	location	mythos	meddling_of_meowlathotep	13	1	images/zbh_00034.webp	images/zbh_00034b.webp	0.74	1
+zbh_00035	St. Mary's Animal Hospital	location	mythos	meddling_of_meowlathotep	14	1	images/zbh_00035.webp	images/zbh_00035b.webp	0.74	1
+zbh_00036	Velma's Doghouse	location	mythos	meddling_of_meowlathotep	15	1	images/zbh_00036.webp	images/zbh_00036b.webp	0.74	1
+zbh_00037	Meowlathotep	enemy	mythos	meddling_of_meowlathotep	16	1	images/zbh_00037.webp		0.74	1
+zbh_00038	The Hisser in the Dark	enemy	mythos	meddling_of_meowlathotep	17	1	images/zbh_00038.webp		0.74	1
+zbh_00039	Cat of Tindalos	enemy	mythos	meddling_of_meowlathotep	18	1	images/zbh_00039.webp		0.74	1
+zbh_00040	The Dweller in the Deep	enemy	mythos	meddling_of_meowlathotep	19	1	images/zbh_00040.webp		0.74	1
+zbh_00041	The Mewling Hunger	enemy	mythos	meddling_of_meowlathotep	20	1	images/zbh_00041.webp		0.74	1
+zbh_00042	GHOST CAT!	enemy	mythos	meddling_of_meowlathotep	21	1	images/zbh_00042.webp		0.74	1
+zbh_00043	Cat Riding on a Byakat	enemy	mythos	meddling_of_meowlathotep	22	1	images/zbh_00043.webp		0.74	1
+zbh_00044	Pouncer in the Night	enemy	mythos	meddling_of_meowlathotep	23	1	images/zbh_00044.webp		0.74	1
+zbh_00045	Estranged Cat	enemy	mythos	meddling_of_meowlathotep	24	3	images/zbh_00045.webp		0.74	1
+zbh_00046	Rodent-Killer	enemy	mythos	meddling_of_meowlathotep	27	2	images/zbh_00046.webp		0.74	1
+zbh_00047	Order Cultist	enemy	mythos	meddling_of_meowlathotep	29	1	images/zbh_00047.webp		0.74	1
+zbh_00048	Servant of Dog-Sothoth	enemy	mythos	meddling_of_meowlathotep	30	2	images/zbh_00048.webp		0.74	1
+zbh_00049	SQUIRREL!	treachery	mythos	meddling_of_meowlathotep	32	2	images/zbh_00049.webp		0.74	1
+zbh_00050	Hunted by Byakats	treachery	mythos	meddling_of_meowlathotep	34	2	images/zbh_00050.webp		0.74	1
+zbh_00051	On Your Tail	treachery	mythos	meddling_of_meowlathotep	36	2	images/zbh_00051.webp		0.74	1
+zbh_00052	Cats in the Mist	treachery	mythos	meddling_of_meowlathotep	38	3	images/zbh_00052.webp		0.74	1
+zbh_00053	Scratching Paws	treachery	mythos	meddling_of_meowlathotep	41	3	images/zbh_00053.webp		0.74	1
+zbh_00054	Meowsks of Meowlathotep	treachery	mythos	meddling_of_meowlathotep	44	2	images/zbh_00054.webp		0.74	1
+zbh_00055	Stubborn Cat	treachery	mythos	meddling_of_meowlathotep	46	2	images/zbh_00055.webp		0.74	1
+zbh_00056	Mischief and Chaos	treachery	mythos	meddling_of_meowlathotep	48	2	images/zbh_00056.webp		0.74	1
+zbh_00057	Gaze of the Ceiling Cat	treachery	mythos	meddling_of_meowlathotep	50	2	images/zbh_00057.webp		0.74	1
