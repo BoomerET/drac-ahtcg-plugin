@@ -65,6 +65,7 @@
       ["DO_LOAD_CARDS_SCN", "BoA_Whippoorwills"],
       ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Miskatonic University", 5, 7, 3, 0],
       ["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", "$GAME.arkham.numPlayers"],
+
       ["SCENARIO_INIT_CONTINUE", null]
     ],
     "Smoke and Mirrors Scenario University Status": [
