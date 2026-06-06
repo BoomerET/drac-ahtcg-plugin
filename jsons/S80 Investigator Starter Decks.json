@@ -49,6 +49,56 @@
             "postLoadActionList": [
                 ["LOG", "Unofficial Subject 5U-21 starter deck by: https://arkhamdb.com/user/profile/7346/Turbinismo"]
             ]
+        },
+        "Bark Harrigan Starter Deck": {
+            "label": "Bark Harrigan Starter Deck",
+            "cards": [
+                {"databaseId": "zbh_00001", "quantity": 1, "loadGroupId": "playerNInvestigator"},
+                {"databaseId": "10023", "quantity": 1, "loadGroupId": "playerNDeck"},
+                {"databaseId": "10108", "quantity": 2, "loadGroupId": "playerNDeck"},
+                {"databaseId": "10116", "quantity": 2, "loadGroupId": "playerNDeck"},
+                {"databaseId": "60110", "quantity": 2, "loadGroupId": "playerNDeck"},
+                {"databaseId": "60115", "quantity": 2, "loadGroupId": "playerNDeck"},
+                {"databaseId": "89002", "quantity": 1, "loadGroupId": "playerNDeck"},
+                {"databaseId": "89003", "quantity": 3, "loadGroupId": "playerNDeck"},
+                {"databaseId": "89004", "quantity": 3, "loadGroupId": "playerNDeck"},
+                {"databaseId": "01000", "quantity": 2, "loadGroupId": "playerNDeck"},
+                {"databaseId": "01020", "quantity": 2, "loadGroupId": "playerNDeck"},
+                {"databaseId": "01025", "quantity": 2, "loadGroupId": "playerNDeck"},
+                {"databaseId": "01030", "quantity": 2, "loadGroupId": "playerNDeck"},
+                {"databaseId": "01039", "quantity": 2, "loadGroupId": "playerNDeck"},
+                {"databaseId": "01044", "quantity": 2, "loadGroupId": "playerNDeck"},
+                {"databaseId": "02188", "quantity": 1, "loadGroupId": "playerNDeck"},
+                {"databaseId": "02229", "quantity": 2, "loadGroupId": "playerNDeck"},
+                {"databaseId": "03112", "quantity": 2, "loadGroupId": "playerNDeck"},
+                {"databaseId": "03149", "quantity": 2, "loadGroupId": "playerNDeck"},
+                {"databaseId": "03231", "quantity": 2, "loadGroupId": "playerNDeck"},
+                {"databaseId": "04037", "quantity": 2, "loadGroupId": "playerNDeck"},
+                {"databaseId": "04107", "quantity": 2, "loadGroupId": "playerNDeck"},
+                {"databaseId": "05116", "quantity": 2, "loadGroupId": "playerNDeck"},
+                {"databaseId": "05118", "quantity": 2, "loadGroupId": "playerNDeck"},
+                {"databaseId": "06020", "quantity": 2, "loadGroupId": "playerNDeck"},
+                {"databaseId": "06117", "quantity": 2, "loadGroupId": "playerNDeck"},
+                {"databaseId": "06201", "quantity": 2, "loadGroupId": "playerNDeck"},
+                {"databaseId": "08072", "quantity": 2, "loadGroupId": "playerNDeck"},
+                {"databaseId": "08116", "quantity": 2, "loadGroupId": "playerNDeck"},
+                {"databaseId": "09061", "quantity": 2, "loadGroupId": "playerNDeck"},
+                {"databaseId": "09067", "quantity": 2, "loadGroupId": "playerNDeck"},
+                {"databaseId": "10031", "quantity": 2, "loadGroupId": "playerNSideDeck"},
+                {"databaseId": "10081", "quantity": 2, "loadGroupId": "playerNSideDeck"},
+                {"databaseId": "52008", "quantity": 2, "loadGroupId": "playerNSideDeck"},
+                {"databaseId": "60429", "quantity": 2, "loadGroupId": "playerNSideDeck"},
+                {"databaseId": "02150", "quantity": 2, "loadGroupId": "playerNSideDeck"},
+                {"databaseId": "02299", "quantity": 2, "loadGroupId": "playerNSideDeck"},
+                {"databaseId": "03197", "quantity": 2, "loadGroupId": "playerNSideDeck"},
+                {"databaseId": "04111", "quantity": 1, "loadGroupId": "playerNSideDeck"},
+                {"databaseId": "06204", "quantity": 2, "loadGroupId": "playerNSideDeck"},
+                {"databaseId": "09057", "quantity": 2, "loadGroupId": "playerNSideDeck"},
+                {"databaseId": "09061", "quantity": 2, "loadGroupId": "playerNSideDeck"}
+            ],
+            "postLoadActionList": [
+                ["LOG", "Bark Harrigan starter deck by: AI6K"]
+            ]
         }
     },
     "automation": {

@@ -77,6 +77,7 @@
     "actionLists": {
         "Barkham Horror Scenario Early Init": [
             ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Decide.", ["LIST", "Play in Epic Multiplayer Mode.", "Play in Single Group Mode."], "Barkham Horror Scenario Question 1"]
+            //["LOG", "Skipping Ask Epic Multiplayer"]
         ],
         "Barkham Horror Scenario Question 1": [
             ["LOG", "└── Decision: {{$GAME.arkham.scenarioAnswer1Text}}"],
@@ -92,19 +93,19 @@
             ["VAR", "$CLUES", ["MULTIPLY", "$GAME.arkham.scenariobarkhamHorrorNumberOfPlayers", 2]],
             ["VAR", "$COUNTERMEASURES", ["HALF_ROUNDING_UP", "$GAME.arkham.scenariobarkhamHorrorNumberOfPlayers"]],
             ["DO_LOAD_CARDS_SCN", "Barkham Horror"],
-            ["COND",
-                ["EQUAL", "$GAME.arkham.scenarioAnswer1", "A"],
-                [
-                    ["DO_LOAD_CARDS_SCN", "Barkham Horror - Epic Multiplayer Mode"],
-                    ["VAR", "$ANOMALY_ID", ["GET_NAMED_CARD_ID", "Expose the Anomaly"]],
-                    ["SET", "/cardById/$ANOMALY_ID/sides/A/clues", "$CLUES"]
-                ],
-                ["TRUE"],
-                [
+            //["COND",
+            //    ["EQUAL", "$GAME.arkham.scenarioAnswer1", "A"],
+            //    [
+            //        ["DO_LOAD_CARDS_SCN", "Barkham Horror - Epic Multiplayer Mode"],
+            //        ["VAR", "$ANOMALY_ID", ["GET_NAMED_CARD_ID", "Expose the Anomaly"]],
+            //        ["SET", "/cardById/$ANOMALY_ID/sides/A/clues", "$CLUES"]
+            //    ],
+            //    ["TRUE"],
+            //    [
                     ["DO_LOAD_CARDS_SCN", "Barkham Horror - Single Group Mode"],
-                    ["INCREASE_VAR", "$HEALTH", 15]
-                ]
-            ],
+                    ["INCREASE_VAR", "$HEALTH", 15],
+            //    ]
+            //],
             ["VAR", "$SUBJECT_ID", ["GET_NAMED_CARD_ID", "Subject 8L-08"]],
             ["SET", "/cardById/$SUBJECT_ID/sides/A/health", "$HEALTH"],
             ["SET", "/cardById/$SUBJECT_ID/sides/A/healthPerInvestigator", 0],
