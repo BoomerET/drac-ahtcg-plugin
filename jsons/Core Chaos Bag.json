@@ -38,12 +38,6 @@
         "removeBlessToken": [
             ["DO_REMOVE_CHAOS_TOKEN_ACTION", "$PLAYER_N", "chaos_bless", true, "$PLAYER_N"]
         ],
-        "addBloodToken": [
-            ["DO_ADD_CHAOS_TOKEN_ACTION", "$PLAYER_N", "chaos_blood", true, "$PLAYER_N"]
-        ],
-        "removeBloodToken": [
-            ["DO_REMOVE_CHAOS_TOKEN_ACTION", "$PLAYER_N", "chaos_blood", true, "$PLAYER_N"]
-        ],
         "exportChaosBag": [
             ["PROMPT", "$PLAYER_N", "saveChaosBag", ["EXPORT_CHAOS_BAG_TO_ENCODED_VALUE"]]
         ]
@@ -92,8 +86,6 @@
                     "Curse",
                     ["EQUAL", "$CHAOS_TOKEN_DATABASE_ID", "chaos_frost"],
                     "Frost",
-                    ["EQUAL", "$CHAOS_TOKEN_DATABASE_ID", "chaos_blood"],
-		            "Blood",
                     ["TRUE"],
                     null
                 ]
@@ -142,8 +134,6 @@
                     10,
                     ["EQUAL", "$CHAOS_TOKEN_DATABASE_ID", "chaos_frost"],
                     8,
-		            ["EQUAL", "$CHAOS_TOKEN_DATABASE_ID", "chaos_blood"],
-		            3,
                     ["TRUE"],
                     0
                 ]
@@ -253,7 +243,6 @@
                 ["DO_APPEND_CHAOS_TOKEN_COUNT", "Frost"],
                 ["DO_APPEND_CHAOS_TOKEN_COUNT", "Auto Fail"],
                 ["DO_APPEND_CHAOS_TOKEN_COUNT", "Elder Sign"],
-                ["DO_APPEND_CHAOS_TOKEN_COUNT", "Blood"],
                 ["COND",
                     ["EQUAL", "$MESSAGE", ""],
                     ["UPDATE_VAR", "$MESSAGE", "none"]
@@ -447,7 +436,7 @@
                     ["DO_LOAD_CARDS", "$TARGET_PLAYER", "$DEFAULT_BAG_TO_LOAD", true, null],
                     ["TRUE"],
                     [
-                        ["VAR", "$MAPPING", {"p1": "chaos_p1", "p0": "chaos_p0", "m1": "chaos_m1", "m2": "chaos_m2", "m3": "chaos_m3", "m4": "chaos_m4", "m5": "chaos_m5", "m6": "chaos_m6", "m7": "chaos_m7", "m8": "chaos_m8", "sk": "chaos_skull", "cl": "chaos_cultist", "tb": "chaos_tablet", "et": "chaos_elder_thing", "es": "chaos_elder_sign", "af": "chaos_auto_fail", "bl": "chaos_bless", "cr": "chaos_curse", "fr": "chaos_frost", "bd": "chaos_blood"}],
+                        ["VAR", "$MAPPING", {"p1": "chaos_p1", "p0": "chaos_p0", "m1": "chaos_m1", "m2": "chaos_m2", "m3": "chaos_m3", "m4": "chaos_m4", "m5": "chaos_m5", "m6": "chaos_m6", "m7": "chaos_m7", "m8": "chaos_m8", "sk": "chaos_skull", "cl": "chaos_cultist", "tb": "chaos_tablet", "et": "chaos_elder_thing", "es": "chaos_elder_sign", "af": "chaos_auto_fail", "bl": "chaos_bless", "cr": "chaos_curse", "fr": "chaos_frost"}],
                         ["VAR", "$TOKENS", ["SPLIT_STRING", ["BASE64_DECODE", "$CONTENTS"], ","]],
                         ["FOR_EACH_VAL", "$TOKEN", "$TOKENS", [
                             ["COND",
@@ -462,7 +451,7 @@
         "EXPORT_CHAOS_BAG_TO_ENCODED_VALUE": {
             "args": [],
             "code": [
-                ["VAR", "$MAPPING", {"chaos_p1": "p1", "chaos_p0": "p0", "chaos_m1": "m1", "chaos_m2": "m2", "chaos_m3": "m3", "chaos_m4": "m4", "chaos_m5": "m5", "chaos_m6": "m6", "chaos_m7": "m7", "chaos_m8": "m8", "chaos_skull": "sk", "chaos_cultist": "cl", "chaos_tablet": "tb", "chaos_elder_thing": "et", "chaos_elder_sign": "es", "chaos_auto_fail": "af", "chaos_bless": "bl", "chaos_curse": "cr", "chaos_frost": "fr", "bd": "chaos_blood"}],
+                ["VAR", "$MAPPING", {"chaos_p1": "p1", "chaos_p0": "p0", "chaos_m1": "m1", "chaos_m2": "m2", "chaos_m3": "m3", "chaos_m4": "m4", "chaos_m5": "m5", "chaos_m6": "m6", "chaos_m7": "m7", "chaos_m8": "m8", "chaos_skull": "sk", "chaos_cultist": "cl", "chaos_tablet": "tb", "chaos_elder_thing": "et", "chaos_elder_sign": "es", "chaos_auto_fail": "af", "chaos_bless": "bl", "chaos_curse": "cr", "chaos_frost": "fr"}],
                 ["VAR", "$TOKENS", ""],
                 ["FOR_EACH_KEY_VAL", "$DATABASE_ID", "$TOKEN", "$MAPPING", [
                     ["VAR", "$COUNT", ["LENGTH", ["FILTER_CARDS", "$CARD", ["AND",
@@ -548,13 +537,6 @@
                         ["PROMPT", "$PLAYER_N", "nameChaosTokenNumeric"]
                     ]
                 },
-		        {
-		            "label": "Blood.",
-		            "hotkey": "R",
-		            "code": [
-		                ["DO_NAME_CHAOS_TOKEN", "$PLAYER_N", "chaos_blood", true, "$PLAYER_N"]
-		            ]
-		        },
                 {
                     "label": "Cancel.",
                     "hotkey": "X"
@@ -692,13 +674,6 @@
                     "hotkey": "F",
                     "code": [
                         ["DO_ADD_CHAOS_TOKEN_ACTION", "$PLAYER_N", "chaos_frost", true, "$PLAYER_N"]
-                    ]
-                },
-                {
-                    "label": "Blood.",
-                    "hotkey": "R",
-                    "code": [
-                        ["DO_ADD_CHAOS_TOKEN_ACTION", "$PLAYER_N", "chaos_blood", true, "$PLAYER_N"]
                     ]
                 },
                 {
@@ -845,14 +820,6 @@
                     "hotkey": "F",
                     "code": [
                         ["DO_REMOVE_CHAOS_TOKEN_ACTION", "$PLAYER_N", "chaos_frost", true, "$PLAYER_N"]
-                    ]
-                },
-                
-                {
-                    "label": "Blood.",
-                    "hotkey": "R",
-                    "code": [
-                        ["DO_REMOVE_CHAOS_TOKEN_ACTION", "$PLAYER_N", "chaos_blood", true, "$PLAYER_N"]
                     ]
                 },
                 {
@@ -1016,18 +983,6 @@
         },
         "removeBlessTokenMenu": {
             "English": "Remove Bless (Shift+Y)"
-        },
-        "addBloodToken": {
-            "English": "Add Blood Chaos Token"
-        },
-        "addBloodTokenMenu": {
-            "English": "Add Blood (R)"
-        },
-        "removeBloodToken": {
-            "English": "Remove Blood Chaos Token"
-        },
-        "removeBloodTokenMenu": {
-            "English": "Remove Blood (Shift+R)"
         },
         "exportChaosBagMenu": {
             "English": "Export Chaos Bag"
