@@ -405,19 +405,7 @@
                 {"databaseId": "06201", "quantity": 2, "loadGroupId": "playerNDeck"},
                 {"databaseId": "08072", "quantity": 2, "loadGroupId": "playerNDeck"},
                 {"databaseId": "08116", "quantity": 2, "loadGroupId": "playerNDeck"},
-                {"databaseId": "09061", "quantity": 2, "loadGroupId": "playerNDeck"},
-                {"databaseId": "09067", "quantity": 2, "loadGroupId": "playerNDeck"},
-                {"databaseId": "10031", "quantity": 2, "loadGroupId": "playerNSideDeck"},
-                {"databaseId": "10081", "quantity": 2, "loadGroupId": "playerNSideDeck"},
-                {"databaseId": "52008", "quantity": 2, "loadGroupId": "playerNSideDeck"},
-                {"databaseId": "60429", "quantity": 2, "loadGroupId": "playerNSideDeck"},
-                {"databaseId": "02150", "quantity": 2, "loadGroupId": "playerNSideDeck"},
-                {"databaseId": "02299", "quantity": 2, "loadGroupId": "playerNSideDeck"},
-                {"databaseId": "03197", "quantity": 2, "loadGroupId": "playerNSideDeck"},
-                {"databaseId": "04111", "quantity": 1, "loadGroupId": "playerNSideDeck"},
-                {"databaseId": "06204", "quantity": 2, "loadGroupId": "playerNSideDeck"},
-                {"databaseId": "09057", "quantity": 2, "loadGroupId": "playerNSideDeck"},
-                {"databaseId": "09061", "quantity": 2, "loadGroupId": "playerNSideDeck"}
+                {"databaseId": "09067", "quantity": 2, "loadGroupId": "playerNDeck"}
             ],
             "postLoadActionList": [
                 ["LOG", "Bark Harrigan starter deck by: AI6K"]
