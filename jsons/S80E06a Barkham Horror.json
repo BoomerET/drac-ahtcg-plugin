@@ -118,7 +118,7 @@
         "Barkham Horror - Confront the Barfy Cat": [
             ["LOG", "Confront the Barfy Cat"],
             ["SET", "/cardById/$SLOBBERTOWN/currentSide", "B"],
-            ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Slobbertown", 5, 7, 3, 0],
+            ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Slobbertown", 5, 7, 3, 0]
             //["SET", "/cardById/$BEASTTOWN/currentSide", "B"]
         ],
         "Barkham Horror - Follow the Cat": [
