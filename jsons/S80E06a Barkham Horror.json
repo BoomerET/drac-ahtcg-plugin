@@ -13,44 +13,38 @@
             "hideFromSearch": true,
             "label": "Barkham Horror",
             "cards": [
-                {"databaseId": "zbh_00022", "quantity": 1, "loadGroupId": "sharedScenarioReference"},                       //Barkham Horror
-                {"databaseId": "85002", "quantity": 1, "loadGroupId": "sharedAgendaStory"},                             //The Anomaly Spreads
-                {"databaseId": "85003", "quantity": 1, "loadGroupId": "sharedAgendaStory"},                             //The Anomaly Swells
-                {"databaseId": "85004", "quantity": 1, "loadGroupId": "sharedAgendaStory"},                             //The Anomaly Consumes
-                {"databaseId": "85010", "quantity": 1, "loadGroupId": "sharedLocations", "left": "45%", "top": "43%"},  //The Crater
-                {"databaseId": "85025", "quantity": 1, "loadGroupId": "sharedNotInPlay"},                               //University Chemist
-                {"databaseId": "85026", "quantity": 1, "loadGroupId": "sharedNotInPlay"},                               //Meteorite Sample
-                {"databaseId": "85027", "quantity": 1, "loadGroupId": "sharedNotInPlay"},                               //Mi-Go General
-                {"databaseId": "85028", "quantity": 1, "loadGroupId": "sharedNotInPlay"},                               //The Military's Plan
-                {"databaseId": "85029", "quantity": 1, "loadGroupId": "sharedNotInPlay"},                               //Universal Solvent
-                {"databaseId": "85030", "quantity": 1, "loadGroupId": "sharedNotInPlay"},                               //Pet Oozeling
-                {"databaseId": "85031", "quantity": 1, "loadGroupId": "sharedNotInPlay"},                               //Mi-Go Weapon
-                {"databaseId": "85032", "quantity": 1, "loadGroupId": "sharedNotInPlay"},                               //Lt. Wilson Stewart: Logistical Genius
-                {"databaseId": "85033", "quantity": 3, "loadGroupId": "sharedNotInPlay"},                               //Mi-Go Drone
-                {"databaseId": "85034", "quantity": 1, "loadGroupId": "sharedNotInPlay"},                               //Mi-Go Harvester
-                {"databaseId": "85035", "quantity": 1, "loadGroupId": "sharedNotInPlay"},                               //Mi-Go Meddler
-                {"databaseId": "85036", "quantity": 1, "loadGroupId": "sharedNotInPlay"},                               //Mi-Go Abductor
-                {"databaseId": "85043", "quantity": 1, "loadGroupId": "sharedNotInPlay"},                               //Vulnerable Heart
-                {"databaseId": "85040", "quantity": 1, "loadGroupId": "sharedNotInPlay"},                               //Grasping Ooze
-                {"databaseId": "85041", "quantity": 1, "loadGroupId": "sharedNotInPlay"},                               //Cubic Ooze
-                {"databaseId": "85042", "quantity": 2, "loadGroupId": "sharedNotInPlay"},                               //Oozewraith
-                {"databaseId": "85021", "quantity": 1, "loadGroupId": "sharedPileA"},                                   //Rescue the Chemist
-                {"databaseId": "85022", "quantity": 1, "loadGroupId": "sharedPileA"},                                   //Recover the Sample
-                {"databaseId": "85023", "quantity": 1, "loadGroupId": "sharedPileA"},                                   //Drive Off the Mi-Go
-                {"databaseId": "85024", "quantity": 1, "loadGroupId": "sharedPileA"},                                   //Defuse the Explosives
-                {"databaseId": "85039", "quantity": 4, "loadGroupId": "sharedEncounterDeck"},                           //Oozeling
-                {"databaseId": "85040", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},                           //Grasping Ooze
-                {"databaseId": "85041", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},                           //Cubic Ooze
-                {"databaseId": "85044", "quantity": 4, "loadGroupId": "sharedEncounterDeck"},                           //Reality Acid
-                {"databaseId": "85045", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},                           //Devouring Ooze
-                {"databaseId": "85046", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},                           //Corrosive Slime
-                {"databaseId": "85047", "quantity": 3, "loadGroupId": "sharedEncounterDeck"},                           //Consuming Maw
-                {"databaseId": "85048", "quantity": 3, "loadGroupId": "sharedEncounterDeck"},                           //Wave of Ooze
-                {"databaseId": "85049", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},                           //Caustic Dissemination
-                {"databaseId": "85050", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},                           //Sticky Feet
-                {"databaseId": "85051", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},                           //Replication
-                {"databaseId": "85052", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},                           //"It's got me!"
-                {"databaseId": "85053", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}                            //Alien Food Chain
+                {"databaseId": "zbh_00022", "quantity": 1, "loadGroupId": "sharedScenarioReference"},                       
+                {"databaseId": "zbh_00023", "quantity": 1, "loadGroupId": "sharedAgendaStory"},                             
+                {"databaseId": "zbh_00024", "quantity": 1, "loadGroupId": "sharedAgendaStory"},
+                {"databaseId": "zbh_00023", "quantity": 1, "loadGroupId": "sharedActStory"},                             
+                {"databaseId": "zbh_00024", "quantity": 1, "loadGroupId": "sharedActStory"},                             
+                {"databaseId": "zbh_00025", "quantity": 1, "loadGroupId": "sharedActStory"},                             
+                {"databaseId": "zbh_00026", "quantity": 1, "loadGroupId": "sharedActStory"},         
+                {"databaseId": "zbh_00027", "quantity": 1, "loadGroupId": "sharedLocations", "left": "45%", "top": "43%"},
+                {"databaseId": "zbh_00028", "quantity": 1, "loadGroupId": "sharedLocations", "left": "45%", "top": "43%"},
+                {"databaseId": "zbh_00029", "quantity": 1, "loadGroupId": "sharedLocations", "left": "45%", "top": "43%"},
+                {"databaseId": "zbh_00030", "quantity": 1, "loadGroupId": "sharedLocations", "left": "45%", "top": "43%"},
+                {"databaseId": "zbh_00031", "quantity": 1, "loadGroupId": "sharedLocations", "left": "45%", "top": "43%"},
+                {"databaseId": "zbh_00032", "quantity": 1, "loadGroupId": "sharedLocations", "left": "45%", "top": "43%"},
+                {"databaseId": "zbh_00033", "quantity": 1, "loadGroupId": "sharedLocations", "left": "45%", "top": "43%"},
+                {"databaseId": "zbh_00034", "quantity": 1, "loadGroupId": "sharedLocations", "left": "45%", "top": "43%"},
+                {"databaseId": "zbh_00035", "quantity": 1, "loadGroupId": "sharedLocations", "left": "45%", "top": "43%"},
+                {"databaseId": "zbh_00036", "quantity": 1, "loadGroupId": "sharedLocations", "left": "45%", "top": "43%"},
+                {"databaseId": "zbh_00037", "quantity": 4, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00038", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00039", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00040", "quantity": 4, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00041", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00042", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00043", "quantity": 3, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00044", "quantity": 3, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00045", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00046", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00047", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00048", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00049", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00050", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00051", "quantity": 2, "loadGroupId": "sharedEncounterDeck"} 
             ]
         },
         "Barkham Horror - Epic Multiplayer Mode": {
