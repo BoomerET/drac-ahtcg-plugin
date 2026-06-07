@@ -6,7 +6,7 @@
 
             ],
             "postLoadActionList": [
-                ["SCENARIO_INIT", "Barkham Horror", "Side Stories", "Barkham Horror", "Barkham Horror Scenario Init", "Barkham Horror Scenario Init"]
+                ["SCENARIO_INIT", "Barkham Horror", "Side Stories", "Barkham Horror", "Barkham Horror Pre-Scenario Init 1", "Barkham Horror Pre-Scenario Init 1"]
             ]
         },
         "Barkham Horror": {
@@ -15,9 +15,7 @@
             "cards": [
                 {"databaseId": "zbh_00022", "quantity": 1, "loadGroupId": "sharedScenarioReference"},                       
                 {"databaseId": "zbh_00023", "quantity": 1, "loadGroupId": "sharedAgendaStory"},                             
-                {"databaseId": "zbh_00024", "quantity": 1, "loadGroupId": "sharedAgendaStory"},
-                {"databaseId": "zbh_00023", "quantity": 1, "loadGroupId": "sharedActStory"},                             
-                {"databaseId": "zbh_00024", "quantity": 1, "loadGroupId": "sharedActStory"},                             
+                {"databaseId": "zbh_00024", "quantity": 1, "loadGroupId": "sharedAgendaStory"},                          
                 {"databaseId": "zbh_00025", "quantity": 1, "loadGroupId": "sharedActStory"},                             
                 {"databaseId": "zbh_00026", "quantity": 1, "loadGroupId": "sharedActStory"},         
                 {"databaseId": "zbh_00027", "quantity": 1, "loadGroupId": "sharedLocations", "left": "55%", "top": "31%"}, // Beasttown
@@ -49,11 +47,15 @@
         }
     },
     "actionLists": {
+        "Barkham Horror Pre-Scenario Init 1": [
+            ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Where to Begin?", ["LIST", "Confront the barfy cat.", "Follow the cat to its lair.", "Nope, food.", "Oh yea, investigating the Order"], "Barkham Horror Scenario Init"]
+        ],
         "Barkham Horror Scenario Init": [
             //["VAR", "$HEALTH", ["MULTIPLY", "$GAME.arkham.scenariobarkhamHorrorNumberOfPlayers", 15]],
             //["VAR", "$CLUES", ["MULTIPLY", "$GAME.arkham.scenariobarkhamHorrorNumberOfPlayers", 2]],
             //["VAR", "$COUNTERMEASURES", ["HALF_ROUNDING_UP", "$GAME.arkham.scenariobarkhamHorrorNumberOfPlayers"]],
             ["DO_LOAD_CARDS_SCN", "Barkham Horror"],
+            ["ACTION_LIST", "Barkham Horror Scenario - Where to Start"],
             //["COND",
             //    ["EQUAL", "$GAME.arkham.scenarioAnswer1", "A"],
             //    [
@@ -80,6 +82,33 @@
             //["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Temporary HQ", 3, 3, 3, 0],
             //["SET", "/arkham/finalScenarioMessage", ["FORMAT", "Mi-Go Incursion story cards are in Pile A. Subject 8L-08's health: {0}. Act 1's clue threshold: {1}. Countermeasures: {2}.", "$HEALTH", "$CLUES", "$COUNTERMEASURES"]],
             ["SCENARIO_INIT_CONTINUE", null]
+        ],
+        "Barkham Horror Scenario - Where to Start": [
+            ["COND", 
+              ["EQUAL", "$GAME.arkham.scenarioAnswer1", "A"], 
+              ["ACTION_LIST", "Barkham Horror - Confront the Barfy Cat"], 
+              ["EQUAL", "$GAME.arkham.scenarioAnswer1", "B"],
+              ["ACTION_LIST", "Barkham Horror - Follow the Cat"],
+              ["EQUAL", "$GAME.arkham.scenarioAnswer1", "C"], 
+              ["ACTION_LIST", "Barkham Horror - Food"], 
+              ["EQUAL", "$GAME.arkham.scenarioAnswer1", "D"],
+              ["ACTION_LIST", "Barkham Horror - Investigate the Order"] 
+            ]
+        ],
+        "Barkham Horror - Confront the Barfy Cat": [
+            ["LOG", "Confront the Barfy Cat"]
+        ],
+        "Barkham Horror - Follow the Cat": [
+            ["LOG", "Follow the cat to it's lair"]
+
+        ],
+        "Barkham Horror - Food": [
+            ["LOG", "FOOD"]
+
+        ],
+        "Barkham Horror - Investigate the Order": [
+            ["LOG", "Investigate the Order"]
+
         ]
     }
 }
