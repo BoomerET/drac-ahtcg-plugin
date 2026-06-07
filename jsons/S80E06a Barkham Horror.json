@@ -68,6 +68,8 @@
             ["SET", "/cardById/$BARKHAM_ASYLUM/currentSide", "B"],
             ["VAR", "$BONEYARD", ["GET_NAMED_CARD_ID", "zbh_00032"]],
             ["SET", "/cardById/$BONEYARD/currentSide", "B"],
+            ["MOVE_CARD", "$BONEYARD", "sharedLocations", -1],
+
             ["VAR", "$MUTTSKATONIC_UNIVERSITY", ["GET_NAMED_CARD_ID", "zbh_00033"]],
             ["SET", "/cardById/$MUTTSKATONIC_UNIVERSITY/currentSide", "B"],
             ["VAR", "$BARKHAM_CITY_POLICE", ["GET_NAMED_CARD_ID", "zbh_00034"]],
