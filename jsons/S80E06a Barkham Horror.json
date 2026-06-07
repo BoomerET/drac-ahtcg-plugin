@@ -130,7 +130,6 @@
             ["LOG", "FOOD"],
             ["SET", "/cardById/$BEASTTOWN/currentSide", "B"],
             ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Beasttown", 5, 7, 3, 0]
-
         ],
         "Barkham Horror - Investigate the Order": [
             ["LOG", "Investigate the Order"],
