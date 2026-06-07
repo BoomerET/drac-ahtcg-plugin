@@ -18,16 +18,16 @@
                 {"databaseId": "zbh_00024", "quantity": 1, "loadGroupId": "sharedAgendaStory"},                          
                 {"databaseId": "zbh_00025", "quantity": 1, "loadGroupId": "sharedActStory"},                             
                 {"databaseId": "zbh_00026", "quantity": 1, "loadGroupId": "sharedActStory"},         
-                //{"databaseId": "zbh_00027", "quantity": 1, "loadGroupId": "sharedNotInPlay", "left": "55%", "top": "31%"}, // Beasttown
-                //{"databaseId": "zbh_00028", "quantity": 1, "loadGroupId": "sharedNotInPlay", "left": "35%", "top": "31%"}, // Tailside
-                //{"databaseId": "zbh_00029", "quantity": 1, "loadGroupId": "sharedNotInPlay", "left": "35%", "top": "55%"}, // Snoutside
-                //{"databaseId": "zbh_00030", "quantity": 1, "loadGroupId": "sharedNotInPlay", "left": "55%", "top": "55%"}, // Slobbertown
-                //{"databaseId": "zbh_00031", "quantity": 1, "loadGroupId": "sharedNotInPlay", "left": "55%", "top": "7%"},  // Barkham Asylum
-                //{"databaseId": "zbh_00032", "quantity": 1, "loadGroupId": "sharedNotInPlay", "left": "35%", "top": "79%"}, // Boneyard
-                //{"databaseId": "zbh_00033", "quantity": 1, "loadGroupId": "sharedNotInPlay", "left": "15%", "top": "55%"}, // Muttskatonic University
-                //{"databaseId": "zbh_00034", "quantity": 1, "loadGroupId": "sharedNotInPlay", "left": "75%", "top": "31%"}, // Barkham City Pound
-                //{"databaseId": "zbh_00035", "quantity": 1, "loadGroupId": "sharedNotInPlay", "left": "15%", "top": "79%"}, // St. Mary's Animal Hospital
-                //{"databaseId": "zbh_00036", "quantity": 1, "loadGroupId": "sharedNotInPlay", "left": "75%", "top": "7%"},  // Velma's Doghouse
+                {"databaseId": "zbh_00027", "quantity": 1, "loadGroupId": "sharedLocation", "left": "55%", "top": "31%"}, // Beasttown
+                {"databaseId": "zbh_00028", "quantity": 1, "loadGroupId": "sharedLocation", "left": "35%", "top": "31%"}, // Tailside
+                {"databaseId": "zbh_00029", "quantity": 1, "loadGroupId": "sharedLocation", "left": "35%", "top": "55%"}, // Snoutside
+                {"databaseId": "zbh_00030", "quantity": 1, "loadGroupId": "sharedLocation", "left": "55%", "top": "55%"}, // Slobbertown
+                {"databaseId": "zbh_00031", "quantity": 1, "loadGroupId": "sharedLocation", "left": "55%", "top": "7%"},  // Barkham Asylum
+                {"databaseId": "zbh_00032", "quantity": 1, "loadGroupId": "sharedLocation", "left": "35%", "top": "79%"}, // Boneyard
+                {"databaseId": "zbh_00033", "quantity": 1, "loadGroupId": "sharedLocation", "left": "15%", "top": "55%"}, // Muttskatonic University
+                {"databaseId": "zbh_00034", "quantity": 1, "loadGroupId": "sharedLocation", "left": "75%", "top": "31%"}, // Barkham City Pound
+                {"databaseId": "zbh_00035", "quantity": 1, "loadGroupId": "sharedLocation", "left": "15%", "top": "79%"}, // St. Mary's Animal Hospital
+                {"databaseId": "zbh_00036", "quantity": 1, "loadGroupId": "sharedLocation", "left": "75%", "top": "7%"},  // Velma's Doghouse
                 {"databaseId": "zbh_00037", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
                 {"databaseId": "zbh_00038", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
                 {"databaseId": "zbh_00039", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
@@ -55,16 +55,26 @@
             //["VAR", "$CLUES", ["MULTIPLY", "$GAME.arkham.scenariobarkhamHorrorNumberOfPlayers", 2]],
             //["VAR", "$COUNTERMEASURES", ["HALF_ROUNDING_UP", "$GAME.arkham.scenariobarkhamHorrorNumberOfPlayers"]],
             ["DO_LOAD_CARDS_SCN", "Barkham Horror"],
-            ["DO_SET_SPAWN_LOCATION", "zbh_00027", 55, 31], // Beasttown
-            ["DO_SET_SPAWN_LOCATION", "zbh_00028", 35, 31], // Tailside
-            ["DO_SET_SPAWN_LOCATION", "zbh_00029", 35, 55], // Snoutside
-            ["DO_SET_SPAWN_LOCATION", "zbh_00030", 55, 55], // Slobbertown
-            ["DO_SET_SPAWN_LOCATION", "zbh_00031", 55, 7],  // Barkham Asylum
-            ["DO_SET_SPAWN_LOCATION", "zbh_00032", 35, 79], // Boneyard
-            ["DO_SET_SPAWN_LOCATION", "zbh_00033", 15, 55], // Muttskatonic University
-            ["DO_SET_SPAWN_LOCATION", "zbh_00034", 75, 31], // Barkham City Police
-            ["DO_SET_SPAWN_LOCATION", "zbh_00035", 15, 79], // St. Mary's Animal Hospital
-            ["DO_SET_SPAWN_LOCATION", "zbh_00036", 75, 7],  // Velma's Doghouse
+            ["VAR", "$BEASTTOWN", ["GET_NAMED_CARD_ID", "zbh_00027"]],
+            ["VAR", "$TAILSIDE", ["GET_NAMED_CARD_ID", "zbh_00028"]],
+            ["VAR", "$SNOUTSIDE", ["GET_NAMED_CARD_ID", "zbh_00029"]],
+            ["VAR", "$SLOBBERTOWN", ["GET_NAMED_CARD_ID", "zbh_00030"]],
+            ["VAR", "$BARKHAM_ASYLUM", ["GET_NAMED_CARD_ID", "zbh_00031"]],
+            ["VAR", "$BONEYARD", ["GET_NAMED_CARD_ID", "zbh_00032"]],
+            ["VAR", "$MUTTSKATONIC_UNIVERSITY", ["GET_NAMED_CARD_ID", "zbh_00033"]],
+            ["VAR", "$BARKHAM_CITY_POLICE", ["GET_NAMED_CARD_ID", "zbh_00034"]],
+            ["VAR", "$ST_MARYS_ANIMAL_HOSPITAL", ["GET_NAMED_CARD_ID", "zbh_00035"]],
+            ["VAR", "$VELMAS_DOGHOUSE", ["GET_NAMED_CARD_ID", "zbh_00036"]],
+            //["DO_SET_SPAWN_LOCATION", "zbh_00027", 55, 31], // Beasttown
+            //["DO_SET_SPAWN_LOCATION", "zbh_00028", 35, 31], // Tailside
+            //["DO_SET_SPAWN_LOCATION", "zbh_00029", 35, 55], // Snoutside
+            //["DO_SET_SPAWN_LOCATION", "zbh_00030", 55, 55], // Slobbertown
+            //["DO_SET_SPAWN_LOCATION", "zbh_00031", 55, 7],  // Barkham Asylum
+            //["DO_SET_SPAWN_LOCATION", "zbh_00032", 35, 79], // Boneyard
+            //["DO_SET_SPAWN_LOCATION", "zbh_00033", 15, 55], // Muttskatonic University
+            //["DO_SET_SPAWN_LOCATION", "zbh_00034", 75, 31], // Barkham City Police
+            //["DO_SET_SPAWN_LOCATION", "zbh_00035", 15, 79], // St. Mary's Animal Hospital
+            //["DO_SET_SPAWN_LOCATION", "zbh_00036", 75, 7],  // Velma's Doghouse
             ["ACTION_LIST", "Barkham Horror Scenario - Where to Start"],
             //["COND",
             //    ["EQUAL", "$GAME.arkham.scenarioAnswer1", "A"],
@@ -107,28 +117,24 @@
         ],
         "Barkham Horror - Confront the Barfy Cat": [
             ["LOG", "Confront the Barfy Cat"],
-            ["VAR", "$SLOBBERTOWN", ["GET_NAMED_CARD_ID", "zbh_00030"]],
-            ["SET", "/cardById/$SLOBBERTOWN/currentSide", "A"],
-            ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Slobbertown", 5, 7, 3, 0]
+            ["SET", "/cardById/$SLOBBERTOWN/currentSide", "B"],
+            ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Slobbertown", 5, 7, 3, 0],
+            //["SET", "/cardById/$BEASTTOWN/currentSide", "B"]
         ],
         "Barkham Horror - Follow the Cat": [
             ["LOG", "Follow the cat to it's lair"],
-            ["VAR", "$SNOUTSIDE", ["GET_NAMED_CARD_ID", "zbh_00029"]],
-            ["SET", "/cardById/$SNOUTSIDE/currentSide", "A"],
+            ["SET", "/cardById/$SNOUTSIDE/currentSide", "B"],
             ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Snoutside", 5, 7, 3, 0]
-
         ],
         "Barkham Horror - Food": [
             ["LOG", "FOOD"],
-            ["VAR", "$BEASTTOWN", ["GET_NAMED_CARD_ID", "zbh_00027"]],
-            ["SET", "/cardById/$BEASTTOWN/currentSide", "A"],
+            ["SET", "/cardById/$BEASTTOWN/currentSide", "B"],
             ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Beasttown", 5, 7, 3, 0]
 
         ],
         "Barkham Horror - Investigate the Order": [
             ["LOG", "Investigate the Order"],
-            ["VAR", "$TAILSIDE", ["GET_NAMED_CARD_ID", "zbh_00028"]],
-            ["SET", "/cardById/$TAILSIDE/currentSide", "A"],
+            ["SET", "/cardById/$TAILSIDE/currentSide", "B"],
             ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Tailside", 5, 7, 3, 0]
         ]
     }
