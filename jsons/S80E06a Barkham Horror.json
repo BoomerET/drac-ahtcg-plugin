@@ -46,47 +46,14 @@
                 {"databaseId": "zbh_00050", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
                 {"databaseId": "zbh_00051", "quantity": 2, "loadGroupId": "sharedEncounterDeck"} 
             ]
-        },
-        "Barkham Horror - Epic Multiplayer Mode": {
-            "hideFromSearch": true,
-            "label": "Barkham Horror - Epic Multiplayer Mode",
-            "cards": [
-                {"databaseId": "85005", "quantity": 1, "loadGroupId": "sharedActStory"},                            //Expose the Anomaly (Epic)
-                {"databaseId": "85007", "quantity": 1, "loadGroupId": "sharedActStory"},                            //Extraterrestrial Physiology
-                {"databaseId": "85008", "quantity": 1, "loadGroupId": "sharedActStory"},                            //Blackwater's Bane (Epic)
-                {"databaseId": "85037", "quantity": 1, "loadGroupId": "sharedLocations", "left": "1%", "top": "4%"} //Subject 8L-08: Extraspacial Anomaly (Epic)
-            ]
-        },
-        "Barkham Horror - Single Group Mode": {
-            "hideFromSearch": true,
-            "label": "Barkham Horror - Single Group Mode",
-            "cards": [
-                {"databaseId": "85006", "quantity": 1, "loadGroupId": "sharedActStory"},                            //Expose the Anomaly (Single)
-                {"databaseId": "85007", "quantity": 1, "loadGroupId": "sharedActStory"},                            //Extraterrestrial Physiology
-                {"databaseId": "85009", "quantity": 1, "loadGroupId": "sharedActStory"},                            //Blackwater's Bane (Single)
-                {"databaseId": "85038", "quantity": 1, "loadGroupId": "sharedLocations", "left": "1%", "top": "4%"} //Subject 8L-08: Extraspacial Anomaly (Single)
-            ]
         }
     },
     "actionLists": {
-        "Barkham Horror Scenario Early Init": [
-            ["ASK_SCENARIO_QUESTION_AND_CONTINUE", "Decide.", ["LIST", "Play in Epic Multiplayer Mode.", "Play in Single Group Mode."], "Barkham Horror Scenario Question 1"]
-            //["LOG", "Skipping Ask Epic Multiplayer"]
-        ],
-        "Barkham Horror Scenario Question 1": [
-            ["LOG", "└── Decision: {{$GAME.arkham.scenarioAnswer1Text}}"],
-            ["COND",
-                ["EQUAL", "$GAME.arkham.scenarioAnswer1", "A"],
-                ["CALCULATOR_PROMPT", "$GAME.firstPlayer", "Enter number of players", ["ADD", "$GAME.arkham.numPlayers", 1], 1000, 0, "BARKHAM_HORROR_PLAYERS_CALLBACK", "$GAME.firstPlayer", "", ""],
-                ["TRUE"],
-                ["BARKHAM_HORROR_PLAYERS_CALLBACK", "$GAME.firstPlayer", "", "└── ", "$GAME.firstPlayer", "{{$GAME.arkham.numPlayers}}"]
-            ]
-        ],
         "Barkham Horror Scenario Init": [
-            ["VAR", "$HEALTH", ["MULTIPLY", "$GAME.arkham.scenariobarkhamHorrorNumberOfPlayers", 15]],
-            ["VAR", "$CLUES", ["MULTIPLY", "$GAME.arkham.scenariobarkhamHorrorNumberOfPlayers", 2]],
-            ["VAR", "$COUNTERMEASURES", ["HALF_ROUNDING_UP", "$GAME.arkham.scenariobarkhamHorrorNumberOfPlayers"]],
-            ["DO_LOAD_CARDS_SCN", "Barkham Horror"],
+            //["VAR", "$HEALTH", ["MULTIPLY", "$GAME.arkham.scenariobarkhamHorrorNumberOfPlayers", 15]],
+            //["VAR", "$CLUES", ["MULTIPLY", "$GAME.arkham.scenariobarkhamHorrorNumberOfPlayers", 2]],
+            //["VAR", "$COUNTERMEASURES", ["HALF_ROUNDING_UP", "$GAME.arkham.scenariobarkhamHorrorNumberOfPlayers"]],
+            //["DO_LOAD_CARDS_SCN", "Barkham Horror"],
             //["COND",
             //    ["EQUAL", "$GAME.arkham.scenarioAnswer1", "A"],
             //    [
@@ -96,38 +63,23 @@
             //    ],
             //    ["TRUE"],
             //    [
-                    ["DO_LOAD_CARDS_SCN", "Barkham Horror - Single Group Mode"],
-                    ["INCREASE_VAR", "$HEALTH", 15],
+            //        ["DO_LOAD_CARDS_SCN", "Barkham Horror - Single Group Mode"],
+            //        ["INCREASE_VAR", "$HEALTH", 15],
             //    ]
             //],
-            ["VAR", "$SUBJECT_ID", ["GET_NAMED_CARD_ID", "Subject 8L-08"]],
-            ["SET", "/cardById/$SUBJECT_ID/sides/A/health", "$HEALTH"],
-            ["SET", "/cardById/$SUBJECT_ID/sides/A/healthPerInvestigator", 0],
-            ["DO_PLACE_RESOURCES_ON_CARD", "$GAME.firstPlayer", ["GET_SCENARIO_CARD_ID"], "$COUNTERMEASURES", true, null],
-            ["VAR", "$QUARANTINE_ZONES", ["SHUFFLE_LIST", ["LIST", "85014", "85015", "85016", "85017", "85018", "85018", "85019", "85019", "85020", "85020"]]],  //Sewer, Bridge, Water Tower, Church, Oozy Lakebed (2), Slimy Streets (2), Desiccated Farmland (2)
-            ["VAR", "$INNER_RING", ["SHUFFLE_LIST", ["LIST", "$QUARANTINE_ZONES.[0]", "$QUARANTINE_ZONES.[1]", "85011", "85012"]]],  //Research Site, Temporary HQ
-            ["VAR", "$OUTER_RING", ["SHUFFLE_LIST", ["LIST", "$QUARANTINE_ZONES.[2]", "$QUARANTINE_ZONES.[3]", "$QUARANTINE_ZONES.[4]", "85013"]]],  //Fungus Mound
-            ["DO_SPAWN_LOCATIONS_SCN", null, "$INNER_RING", ["LIST", 45, 64, 45, 26], ["LIST", 24, 43, 62, 43], 0, 4, 0],
-            ["DO_SPAWN_LOCATIONS_SCN", null, "$OUTER_RING", ["LIST", 45, 83, 45, 7], ["LIST", 5, 43, 81, 43], 0, 4, 0],
-            ["DO_SPAWN_LOCATIONS_SCN", "Quarantine Zone", "$QUARANTINE_ZONES", ["LIST", 64, 64, 26, 26], ["LIST", 24, 62, 62, 24], 5, 4, -5],
-            ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Temporary HQ", 3, 3, 3, 0],
-            ["SET", "/arkham/finalScenarioMessage", ["FORMAT", "Mi-Go Incursion story cards are in Pile A. Subject 8L-08's health: {0}. Act 1's clue threshold: {1}. Countermeasures: {2}.", "$HEALTH", "$CLUES", "$COUNTERMEASURES"]],
+            //["VAR", "$SUBJECT_ID", ["GET_NAMED_CARD_ID", "Subject 8L-08"]],
+            //["SET", "/cardById/$SUBJECT_ID/sides/A/health", "$HEALTH"],
+            //["SET", "/cardById/$SUBJECT_ID/sides/A/healthPerInvestigator", 0],
+            //["DO_PLACE_RESOURCES_ON_CARD", "$GAME.firstPlayer", ["GET_SCENARIO_CARD_ID"], "$COUNTERMEASURES", true, null],
+            //["VAR", "$QUARANTINE_ZONES", ["SHUFFLE_LIST", ["LIST", "85014", "85015", "85016", "85017", "85018", "85018", "85019", "85019", "85020", "85020"]]],  //Sewer, Bridge, Water Tower, Church, Oozy Lakebed (2), Slimy Streets (2), Desiccated Farmland (2)
+            //["VAR", "$INNER_RING", ["SHUFFLE_LIST", ["LIST", "$QUARANTINE_ZONES.[0]", "$QUARANTINE_ZONES.[1]", "85011", "85012"]]],  //Research Site, Temporary HQ
+            //["VAR", "$OUTER_RING", ["SHUFFLE_LIST", ["LIST", "$QUARANTINE_ZONES.[2]", "$QUARANTINE_ZONES.[3]", "$QUARANTINE_ZONES.[4]", "85013"]]],  //Fungus Mound
+            //["DO_SPAWN_LOCATIONS_SCN", null, "$INNER_RING", ["LIST", 45, 64, 45, 26], ["LIST", 24, 43, 62, 43], 0, 4, 0],
+            //["DO_SPAWN_LOCATIONS_SCN", null, "$OUTER_RING", ["LIST", 45, 83, 45, 7], ["LIST", 5, 43, 81, 43], 0, 4, 0],
+            //["DO_SPAWN_LOCATIONS_SCN", "Quarantine Zone", "$QUARANTINE_ZONES", ["LIST", 64, 64, 26, 26], ["LIST", 24, 62, 62, 24], 5, 4, -5],
+            //["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Temporary HQ", 3, 3, 3, 0],
+            //["SET", "/arkham/finalScenarioMessage", ["FORMAT", "Mi-Go Incursion story cards are in Pile A. Subject 8L-08's health: {0}. Act 1's clue threshold: {1}. Countermeasures: {2}.", "$HEALTH", "$CLUES", "$COUNTERMEASURES"]],
             ["SCENARIO_INIT_CONTINUE", null]
         ]
-    },
-    "functions": {
-        "BARKHAM_HORROR_PLAYERS_CALLBACK": {
-            "args": ["$TARGET_PLAYER", "$TARGET_CARD_ID", "$ARGS", "$ACTOR_PLAYER", "$SELECTED_VALUE"],
-            "code": [
-                ["VALIDATE_PLAYER", "$TARGET_PLAYER", "BARKHAM_HORROR_PLAYERS_CALLBACK.TARGET_PLAYER"],
-                ["VALIDATE_NOT_NULL", "$ARGS", "BARKHAM_HORROR_PLAYERS_CALLBACK.ARGS"],
-                ["VALIDATE_NOT_EMPTY", "$SELECTED_VALUE", "BARKHAM_HORROR_PLAYERS_CALLBACK.SELECTED_VALUE"],
-                ["VAR", "$VALUE", ["CALC", "{{$SELECTED_VALUE}}"]],
-                ["VALIDATE_GT0", "$VALUE", "BARKHAM_HORROR_PLAYERS_CALLBACK.SELECTED_VALUE"],
-                ["SET", "/arkham/scenariobarkhamHorrorNumberOfPlayers", "$VALUE"],
-                ["LOGF", "{0}{1} set number of players to {2}.", "$ARGS", "$TARGET_PLAYER", "$VALUE"],
-                ["SCENARIO_INIT_RESUME", "Barkham Horror Scenario Init"]
-            ]
-        }
     }
 }
