@@ -53,7 +53,7 @@
             //["VAR", "$HEALTH", ["MULTIPLY", "$GAME.arkham.scenariobarkhamHorrorNumberOfPlayers", 15]],
             //["VAR", "$CLUES", ["MULTIPLY", "$GAME.arkham.scenariobarkhamHorrorNumberOfPlayers", 2]],
             //["VAR", "$COUNTERMEASURES", ["HALF_ROUNDING_UP", "$GAME.arkham.scenariobarkhamHorrorNumberOfPlayers"]],
-            //["DO_LOAD_CARDS_SCN", "Barkham Horror"],
+            ["DO_LOAD_CARDS_SCN", "Barkham Horror"],
             //["COND",
             //    ["EQUAL", "$GAME.arkham.scenarioAnswer1", "A"],
             //    [
