@@ -20,7 +20,7 @@
                 {"databaseId": "zbh_00026", "quantity": 1, "loadGroupId": "sharedActStory"},         
                 {"databaseId": "zbh_00027", "quantity": 1, "loadGroupId": "sharedLocations", "left": "55%", "top": "31%"}, // Beasttown
                 {"databaseId": "zbh_00028", "quantity": 1, "loadGroupId": "sharedLocations", "left": "35%", "top": "31%"}, // Tailside
-                {"databaseId": "zbh_00029", "quantity": 1, "loadGroupId": "sharedLocations", "left": "35%", "top": "55%"}, // Snotside
+                {"databaseId": "zbh_00029", "quantity": 1, "loadGroupId": "sharedLocations", "left": "35%", "top": "55%"}, // Snoutside
                 {"databaseId": "zbh_00030", "quantity": 1, "loadGroupId": "sharedLocations", "left": "55%", "top": "55%"}, // Slobbertown
                 {"databaseId": "zbh_00031", "quantity": 1, "loadGroupId": "sharedLocations", "left": "55%", "top": "7%"}, // Barkham Asylum
                 {"databaseId": "zbh_00032", "quantity": 1, "loadGroupId": "sharedLocations", "left": "35%", "top": "79%"}, // Boneyard
@@ -96,18 +96,22 @@
             ]
         ],
         "Barkham Horror - Confront the Barfy Cat": [
-            ["LOG", "Confront the Barfy Cat"]
+            ["LOG", "Confront the Barfy Cat"],
+            ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Slobbertownm", 5, 7, 3, 0]
         ],
         "Barkham Horror - Follow the Cat": [
-            ["LOG", "Follow the cat to it's lair"]
+            ["LOG", "Follow the cat to it's lair"],
+            ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Snoutside", 5, 7, 3, 0]
 
         ],
         "Barkham Horror - Food": [
-            ["LOG", "FOOD"]
+            ["LOG", "FOOD"],
+            ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Beasttown", 5, 7, 3, 0]
 
         ],
         "Barkham Horror - Investigate the Order": [
-            ["LOG", "Investigate the Order"]
+            ["LOG", "Investigate the Order"],
+            ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Tailside", 5, 7, 3, 0]
 
         ]
     }
