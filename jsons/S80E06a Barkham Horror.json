@@ -56,15 +56,25 @@
             //["VAR", "$COUNTERMEASURES", ["HALF_ROUNDING_UP", "$GAME.arkham.scenariobarkhamHorrorNumberOfPlayers"]],
             ["DO_LOAD_CARDS_SCN", "Barkham Horror"],
             ["VAR", "$BEASTTOWN", ["GET_NAMED_CARD_ID", "zbh_00027"]],
+            ["SET", "/cardById/$BEASTTOWN/currentSide", "B"],
             ["VAR", "$TAILSIDE", ["GET_NAMED_CARD_ID", "zbh_00028"]],
+            ["SET", "/cardById/$TAILSIDE/currentSide", "B"],
             ["VAR", "$SNOUTSIDE", ["GET_NAMED_CARD_ID", "zbh_00029"]],
+            ["SET", "/cardById/$SNOUTSIDE/currentSide", "B"],
             ["VAR", "$SLOBBERTOWN", ["GET_NAMED_CARD_ID", "zbh_00030"]],
+            ["SET", "/cardById/$SLOBBERTOWN/currentSide", "B"],
             ["VAR", "$BARKHAM_ASYLUM", ["GET_NAMED_CARD_ID", "zbh_00031"]],
+            ["SET", "/cardById/$BARKHAM_ASYLUM/currentSide", "B"],
             ["VAR", "$BONEYARD", ["GET_NAMED_CARD_ID", "zbh_00032"]],
+            ["SET", "/cardById/$BONEYARD/currentSide", "B"],
             ["VAR", "$MUTTSKATONIC_UNIVERSITY", ["GET_NAMED_CARD_ID", "zbh_00033"]],
+            ["SET", "/cardById/$MUTTSKATONIC_UNIVERSITY/currentSide", "B"],
             ["VAR", "$BARKHAM_CITY_POLICE", ["GET_NAMED_CARD_ID", "zbh_00034"]],
+            ["SET", "/cardById/$BARKHAM_CITY_POLICE/currentSide", "B"],
             ["VAR", "$ST_MARYS_ANIMAL_HOSPITAL", ["GET_NAMED_CARD_ID", "zbh_00035"]],
+            ["SET", "/cardById/$ST_MARYS_ANIMAL_HOSPITAL/currentSide", "B"],
             ["VAR", "$VELMAS_DOGHOUSE", ["GET_NAMED_CARD_ID", "zbh_00036"]],
+            ["SET", "/cardById/$VELMAS_DOGHOUSE/currentSide", "B"],
             //["DO_SET_SPAWN_LOCATION", "zbh_00027", 55, 31], // Beasttown
             //["DO_SET_SPAWN_LOCATION", "zbh_00028", 35, 31], // Tailside
             //["DO_SET_SPAWN_LOCATION", "zbh_00029", 35, 55], // Snoutside
@@ -123,17 +133,17 @@
         ],
         "Barkham Horror - Follow the Cat": [
             ["LOG", "Follow the cat to it's lair"],
-            ["SET", "/cardById/$SNOUTSIDE/currentSide", "B"],
+            ["SET", "/cardById/$SNOUTSIDE/currentSide", "A"],
             ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Snoutside", 5, 7, 3, 0]
         ],
         "Barkham Horror - Food": [
             ["LOG", "FOOD"],
-            ["SET", "/cardById/$BEASTTOWN/currentSide", "B"],
+            ["SET", "/cardById/$BEASTTOWN/currentSide", "A"],
             ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Beasttown", 5, 7, 3, 0]
         ],
         "Barkham Horror - Investigate the Order": [
             ["LOG", "Investigate the Order"],
-            ["SET", "/cardById/$TAILSIDE/currentSide", "B"],
+            ["SET", "/cardById/$TAILSIDE/currentSide", "A"],
             ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Tailside", 5, 7, 3, 0]
         ]
     }
