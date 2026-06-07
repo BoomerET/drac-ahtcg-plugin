@@ -6,7 +6,7 @@
 
             ],
             "postLoadActionList": [
-                ["SCENARIO_INIT", "Barkham Horror", "Side Stories", "Barkham Horror", "Barkham Horror Scenario Early Init", "Barkham Horror Scenario Init"]
+                ["SCENARIO_INIT", "Barkham Horror", "Side Stories", "Barkham Horror", "Barkham Horror Scenario Init", "Barkham Horror Scenario Init"]
             ]
         },
         "Barkham Horror": {
