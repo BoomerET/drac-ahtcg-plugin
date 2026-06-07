@@ -70,7 +70,7 @@
             //["SET", "/cardById/$BONEYARD/currentSide", "B"],
             
             ["DO_SET_CARD_LOCATION", "$BONEYARD", 35, 79],
-            ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$BONEYARD", false, null],
+            ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$BONEYARD", true, null],
 
             ["MOVE_CARD", "$BONEYARD", "sharedLocations", 0],
 
