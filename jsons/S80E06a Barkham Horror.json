@@ -29,14 +29,19 @@
                 {"databaseId": "zbh_00035", "quantity": 1, "loadGroupId": "sharedLocations", "left": "15%", "top": "79%"}, // St. Mary's Animal Hospital
                 {"databaseId": "zbh_00036", "quantity": 1, "loadGroupId": "sharedLocations", "left": "75%", "top": "7%"},  // Velma's Doghouse
                 {"databaseId": "zbh_00037", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, // Meowlathotep
-                {"databaseId": "zbh_00044", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
                 {"databaseId": "zbh_00045", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
                 {"databaseId": "zbh_00046", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
                 {"databaseId": "zbh_00047", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
                 {"databaseId": "zbh_00048", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
                 {"databaseId": "zbh_00049", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
                 {"databaseId": "zbh_00050", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
-                {"databaseId": "zbh_00051", "quantity": 1, "loadGroupId": "sharedEncounterDeck"} 
+                {"databaseId": "zbh_00051", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00052", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00053", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00054", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00055", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00056", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00057", "quantity": 1, "loadGroupId": "sharedEncounterDeck"} 
             ]
         }
     },
@@ -81,31 +86,40 @@
             ["ACTION_LIST", "Barkham Horror Scenario - Where to Start"],
             ["VAR", "$MEOWSK_ENEMIES", ["SHUFFLE_LIST", ["LIST", "zbh_00038", "zbh_00039", "zbh_00040", "zbh_00041", "zbh_00042", "zbh_00043", "zbh_00044"]]],
             
+            // Remove 1 from the game
+            ["DO_CREATE_CARDS_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[6]", 1, "sharedRemoved"],
+
+            // Barkham Asylum
             ["DO_CREATE_CARDS_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[0]", 1, "sharedNotInPlay"],
             ["VAR", "$MEOWSK_ID1", "$GAME.lastLoadedCardIds.[0]"],
             ["DO_PUT_INTO_PLAY_AT_SCN", "$MEOWSK_ID1", 58, 10],
             ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ID1", false, null],
             
+            // Barkham City Pound
             ["DO_CREATE_CARDS_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[1]", 1, "sharedNotInPlay"],
             ["VAR", "$MEOWSK_ID2", "$GAME.lastLoadedCardIds.[0]"],
             ["DO_PUT_INTO_PLAY_AT_SCN", "$MEOWSK_ID2", 78, 34],
             ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ID2", false, null],
             
+            // Velma's Doghouse
             ["DO_CREATE_CARDS_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[2]", 1, "sharedNotInPlay"],
             ["VAR", "$MEOWSK_ID3", "$GAME.lastLoadedCardIds.[0]"],
             ["DO_PUT_INTO_PLAY_AT_SCN", "$MEOWSK_ID3", 78, 10],
             ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ID3", false, null],
             
+            // Muttskatonic University
             ["DO_CREATE_CARDS_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[3]", 1, "sharedNotInPlay"],
             ["VAR", "$MEOWSK_ID4", "$GAME.lastLoadedCardIds.[0]"],
             ["DO_PUT_INTO_PLAY_AT_SCN", "$MEOWSK_ID4", 18, 58],
             ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ID4", false, null],
             
+            // Boneyard
             ["DO_CREATE_CARDS_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[4]", 1, "sharedNotInPlay"],
             ["VAR", "$MEOWSK_ID5", "$GAME.lastLoadedCardIds.[0]"],
             ["DO_PUT_INTO_PLAY_AT_SCN", "$MEOWSK_ID5", 38, 82],
             ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ID5", false, null],
             
+            // St. Mary's Animal Hospital
             ["DO_CREATE_CARDS_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[5]", 1, "sharedNotInPlay"],
             ["VAR", "$MEOWSK_ID6", "$GAME.lastLoadedCardIds.[0]"],
             ["DO_PUT_INTO_PLAY_AT_SCN", "$MEOWSK_ID6", 18, 82],
