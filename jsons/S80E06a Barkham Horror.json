@@ -63,7 +63,12 @@
             ["VAR", "$SLOBBERTOWN", ["GET_NAMED_CARD_ID", "zbh_00030"]],
             ["SET", "/cardById/$SLOBBERTOWN/currentSide", "B"],
             ["VAR", "$BARKHAM_ASYLUM", ["GET_NAMED_CARD_ID", "zbh_00031"]],
-            //["SET", "/cardById/$BARKHAM_ASYLUM/currentSide", "B"],
+            ["SET", "/cardById/$BARKHAM_ASYLUM/currentSide", "B"],
+
+            ["VAR", "$BARKHAM_ASYLUM_CARD", ["GET_CARD_AND_VALIDATE", "zbh_00031"]],
+            ["VAR", "$BARKHAM_ASYLUM_ID", "$BARKHAM_ASYLUM_CARD.id"],
+            ["LOGF", "Barkham Asylum ID: {0}", "$BARKHAM_ASYLUM_ID"],
+
             ["VAR", "$BARKHAM_ASYLUM_ID", ["GET_NAMED_MAP_LOCATION", "$BARKHAM_ASYLUM"]],
             ["LOGF", "Barkham Asylum ID: {0}", "$BARKHAM_ASYLUM_ID"],
             ["VAR", "$BONEYARD", ["GET_NAMED_CARD_ID", "zbh_00032"]],
@@ -92,12 +97,15 @@
             ["DO_CREATE_CARDS_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[6]", 1, "sharedRemoved"],
 
             // Barkham Asylum
-            ["DO_CREATE_CARDS_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[0]", 1, "sharedNotInPlay"],
-            ["VAR", "$MEOWSK_ID1", "$GAME.lastLoadedCardIds.[0]"],
-            ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ID1", false, null],
-            ["DO_ATTACH_CARD", "$GAME.firstPlayer", "$MEOWSK_ID1", "$BARKHAM_ASYLUM", false, null],
+            //["DO_CREATE_CARDS_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[0]", 1, "sharedNotInPlay"],
+            //["VAR", "$MEOWSK_ID1", "$GAME.lastLoadedCardIds.[0]"],
+            //["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ID1", false, null],
+            //["DO_ATTACH_CARD", "$GAME.firstPlayer", "$MEOWSK_ID1", "$BARKHAM_ASYLUM", false, null],
             //["DO_PUT_INTO_PLAY_AT_SCN", "$MEOWSK_ID1", 58, 10],
             //["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ID1", false, null],
+            ["DO_CREATE_CARDS_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[0]", 1, "sharedNotInPlay"],
+            ["VAR", "$MEOWSK_ID1", "$GAME.lastLoadedCardIds.[0]"],
+            ["DO_ATTACH_CARD_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ID1", "$BARKHAM_ASYLUM_ID", false, null],
             
             // Barkham City Pound
             ["DO_CREATE_CARDS_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[1]", 1, "sharedNotInPlay"],
