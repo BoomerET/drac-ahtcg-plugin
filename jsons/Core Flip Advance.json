@@ -461,10 +461,13 @@
                 ["VALIDATE_PLAYER", "$TARGET_PLAYER", "DO_ADVANCE_STORY.TARGET_PLAYER"],
                 ["VAR", "$TARGET_GROUP", ["GET_GROUP_AND_VALIDATE", "$TARGET_GROUP_ID", "DO_ADVANCE_STORY.TARGET_GROUP_ID"]],
                 ["VALIDATE_BOOLEAN", "$LOG_EVENT", "DO_ADVANCE_STORY.LOG_EVENT"],
+                ["DEFINE", "$USE_FULL_ADVANCE", false],
                 ["COND",
                     ["CAN_ADVANCE_STORY", "$TARGET_PLAYER", "$TARGET_GROUP_ID", "$ACTOR_PLAYER"],
                     [
                         ["VAR", "$TOP_CARD", ["GET_TOP_CARD", "$TARGET_GROUP_ID"]],
+                        ["DEFINE", "$ADVANCE_FUNCTION", "$TOP_CARD.currentFace.name"],
+                        ["DEFINE", "$ADVANCE_FUNCTION", ["CONCAT", "DO_ADVANCE_STORY_OVERRIDE_", "$ADVANCE_FUNCTION"]],
                         ["COND",
                             ["AND",
                                 ["EQUAL", "$TOP_CARD.currentFace.type", "Agenda"],

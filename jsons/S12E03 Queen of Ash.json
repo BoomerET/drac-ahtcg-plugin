@@ -224,5 +224,25 @@
         ["DO_PLACE_DOOM_ON_CURRENT_AGENDA_SCN", 1]
       ]
     ]
+  },
+  "functions": {
+    "DO_ADVANCE_STORY_OVERRIDE_Agenda 2b Name Here": {
+      "args": ["$TARGET_PLAYER", "$TARGET_GROUP_ID", "$TOP_CARD_ID", "$LOG_EVENT", "$ACTOR_PLAYER"],
+      "code": [
+        ["DO_ADVANCE_STORY_FINAL", "$TARGET_PLAYER", "$TARGET_GROUP_ID", "$TOP_CARD_ID", "$LOG_EVENT", "$ACTOR_PLAYER"],
+    
+        ["VAR", "$NEW_AGENDA", ["GET_TOP_CARD", "sharedAgendaStory"]],
+    
+        ["DO_CREATE_CARDS",
+          "$TARGET_PLAYER",
+          "$NEW_AGENDA.currentFace.name",
+          "$NEW_AGENDA.currentFace.databaseId",
+          1,
+          "sharedActStory",
+          true,
+          null
+        ]
+      ]
+    }
   }
 }
