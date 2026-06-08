@@ -80,10 +80,12 @@
       //["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
     ],
     "Smoke and Mirrors - Attach Hidden Card to Downtown": [
-      ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[1]", 1, "sharedNotInPlay"],
-      ["VAR", "$ENEMY_ID", "$GAME.lastLoadedCardIds.[0]"],
-      ["DO_PUT_INTO_PLAY_AT_SCN", "$ENEMY_ID", 48, 13],
-      ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
+      //["VAR", "$DOWNTOWN", ["GET_NAMED_CARD_ID", "12149"]],
+      ["DO_SPAWN_ATTACHED_FACEDOWN_TO_LOCATION_SCN", "Arkham Citizen", "$ARKPEEPS.[1]", "$DOWNTOWN"]
+      //["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[1]", 1, "sharedNotInPlay"],
+      //["VAR", "$ENEMY_ID", "$GAME.lastLoadedCardIds.[0]"],
+      //["DO_PUT_INTO_PLAY_AT_SCN", "$ENEMY_ID", 48, 13],
+      //["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
     ],
     "Smoke and Mirrors - Attach Hidden Card to Southside": [
       ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[2]", 1, "sharedNotInPlay"],
@@ -98,10 +100,12 @@
       ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
     ],
     "Smoke and Mirrors - Attach Hidden Card to Uptown": [
-      ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[4]", 1, "sharedNotInPlay"],
-      ["VAR", "$ENEMY_ID", "$GAME.lastLoadedCardIds.[0]"],
-      ["DO_PUT_INTO_PLAY_AT_SCN", "$ENEMY_ID", 23, 79],
-      ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
+      //["VAR", "$UPTOWN", ["GET_NAMED_CARD_ID", "12149"]],
+      ["DO_SPAWN_ATTACHED_FACEDOWN_TO_LOCATION_SCN", "Arkham Citizen", "$ARKPEEPS.[4]", "$UPTOWN"]
+      //["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[4]", 1, "sharedNotInPlay"],
+      //["VAR", "$ENEMY_ID", "$GAME.lastLoadedCardIds.[0]"],
+      //["DO_PUT_INTO_PLAY_AT_SCN", "$ENEMY_ID", 23, 79],
+      //["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
     ],
     "Smoke and Mirrors - Attach Hidden Card to Waterfront District": [
       ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[5]", 1, "sharedNotInPlay"],
