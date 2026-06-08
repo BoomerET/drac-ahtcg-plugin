@@ -82,9 +82,34 @@
             ["VAR", "$MEOWSK_ENEMIES", ["SHUFFLE_LIST", ["LIST", "zbh_00038", "zbh_00039", "zbh_00040", "zbh_00041", "zbh_00042", "zbh_00043", "zbh_00044"]]],
             
             ["DO_CREATE_CARDS_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[0]", 1, "sharedNotInPlay"],
-            ["VAR", "$MEOWSK_ID", "$GAME.lastLoadedCardIds.[0]"],
-            ["DO_PUT_INTO_PLAY_AT_SCN", "$MEOWSK_ID", 58, 10],
-            ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ID", false, null],
+            ["VAR", "$MEOWSK_ID1", "$GAME.lastLoadedCardIds.[0]"],
+            ["DO_PUT_INTO_PLAY_AT_SCN", "$MEOWSK_ID1", 58, 10],
+            ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ID1", false, null],
+            
+            ["DO_CREATE_CARDS_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[1]", 1, "sharedNotInPlay"],
+            ["VAR", "$MEOWSK_ID2", "$GAME.lastLoadedCardIds.[0]"],
+            ["DO_PUT_INTO_PLAY_AT_SCN", "$MEOWSK_ID2", 78, 34],
+            ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ID2", false, null],
+            
+            ["DO_CREATE_CARDS_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[2]", 1, "sharedNotInPlay"],
+            ["VAR", "$MEOWSK_ID3", "$GAME.lastLoadedCardIds.[0]"],
+            ["DO_PUT_INTO_PLAY_AT_SCN", "$MEOWSK_ID3", 78, 10],
+            ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ID3", false, null],
+            
+            ["DO_CREATE_CARDS_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[3]", 1, "sharedNotInPlay"],
+            ["VAR", "$MEOWSK_ID4", "$GAME.lastLoadedCardIds.[0]"],
+            ["DO_PUT_INTO_PLAY_AT_SCN", "$MEOWSK_ID4", 18, 58],
+            ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ID4", false, null],
+            
+            ["DO_CREATE_CARDS_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[4]", 1, "sharedNotInPlay"],
+            ["VAR", "$MEOWSK_ID5", "$GAME.lastLoadedCardIds.[0]"],
+            ["DO_PUT_INTO_PLAY_AT_SCN", "$MEOWSK_ID5", 38, 82],
+            ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ID5", false, null],
+            
+            ["DO_CREATE_CARDS_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[5]", 1, "sharedNotInPlay"],
+            ["VAR", "$MEOWSK_ID6", "$GAME.lastLoadedCardIds.[0]"],
+            ["DO_PUT_INTO_PLAY_AT_SCN", "$MEOWSK_ID6", 18, 82],
+            ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ID6", false, null],
             
             // Set one aside, so we'll only use 0-5
             //["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$MEOWSK_ENEMIES.[0]", 58, 10],
