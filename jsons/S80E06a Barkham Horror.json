@@ -92,8 +92,9 @@
             // Barkham Asylum
             ["DO_CREATE_CARDS_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[0]", 1, "sharedNotInPlay"],
             ["VAR", "$MEOWSK_ID1", "$GAME.lastLoadedCardIds.[0]"],
-            ["DO_PUT_INTO_PLAY_AT_SCN", "$MEOWSK_ID1", 58, 10],
-            ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ID1", false, null],
+            //["DO_PUT_INTO_PLAY_AT_SCN", "$MEOWSK_ID1", 58, 10],
+            //["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ID1", false, null],
+            ["DO_ATTACH_CARD_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ID1", "$BARKHAM_ASYLUM", false, null]
             
             // Barkham City Pound
             ["DO_CREATE_CARDS_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[1]", 1, "sharedNotInPlay"],
