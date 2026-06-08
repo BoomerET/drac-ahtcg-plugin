@@ -87,7 +87,7 @@
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$MEOWSK_ENEMIES.[3]", 18, 58],
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$MEOWSK_ENEMIES.[4]", 38, 82],
             ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$MEOWSK_ENEMIES.[5]", 18, 82],
-            ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ENEMIES.[0]", false, null]
+            ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ENEMIES.[0]", false, null],
             ["SCENARIO_INIT_CONTINUE", null]
         ],
         "Barkham Horror Scenario - Where to Start": [
