@@ -71,6 +71,8 @@
         ["EQUAL", "$GAME.arkham.scenarioDifficulty", "Expert"],
         ["ACTION_LIST", "BoA - Add Expert Chaos Tokens"]
       ],
+      ["VAR", "$SEWERS", ["SHUFFLE_LIST", ["LIST", "12183", "12184", "12185", "12186", "12187"]]],
+      ["VAR", "$CULTISTS", ["SHUFFLE_LIST", ["LIST", "12121", "12121", "12188", "12188", "12188", "12189"]]],
       ["ACTION_LIST", "Queen of Ash - Random Sewers"],
       ["ACTION_LIST", "Queen of Ash - Arkham Scoured"],
       ["ACTION_LIST", "Queen of Ash - Stirred up trouble"],
@@ -84,36 +86,33 @@
       ["SCENARIO_INIT_CONTINUE", null]
     ],
     "Queen of Ash - Random Sewers": [
-      ["VAR", "$SEWERS", ["SHUFFLE_LIST", ["LIST", "12183", "12184", "12185", "12186", "12187"]]],  //Infested Pipes, Overgrown Tunnels, Flooded Crypt, Smuggler's Cache, Toxic Waste Pit
+        //Infested Pipes, Overgrown Tunnels, Flooded Crypt, Smuggler's Cache, Toxic Waste Pit
       ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$SEWERS.[0]", 7, 55],
-      ["VAR", "$CULTISTS", ["SHUFFLE_LIST", ["LIST", "12121", "12121", "12188", "12188", "12188", "12189"]]],
-      ["DO_SPAWN_ATTACHED_FACEDOWN_TO_LOCATION_SCN", "Cultist", "$CULTISTS.[0]", "$SEWERS.[0]"],
-      
-      
+      //["VAR", "$CULTISTS", ["SHUFFLE_LIST", ["LIST", "12121", "12121", "12188", "12188", "12188", "12189"]]],
+      //
       ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$SEWERS.[1]", 26, 55],
       ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$SEWERS.[2]", 45, 55],
       ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$SEWERS.[3]", 64, 55],
       ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$SEWERS.[4]", 83, 55]
     ], 
     "Queen of Ash - Random Cultists": [
-      ["VAR", "$CULTISTS", ["SHUFFLE_LIST", ["LIST", "12121", "12121", "12188", "12188", "12188", "12189"]]],
       ["VAR", "$NUM_INVESTIGATORS", "$GAME.arkham.numPlayers"],
-      
       //["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$CULTISTS.[0]", 10, 58],
-      ["COND", ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 2], ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$CULTISTS.[1]", 29, 58]],
-      ["COND", ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 3], ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$CULTISTS.[2]", 67, 58]],
-      ["COND", ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 4], ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$CULTISTS.[3]", 86, 58]],
-      ["COND", ["LESS_THAN", "$NUM_INVESTIGATORS", 2], [
-        ["DO_CREATE_CARDS_SCN", "Cultist", "$CULTISTS.[1]", 1, "sharedEncounterDeck"]
-      ]],
-      ["COND", ["LESS_THAN", "$NUM_INVESTIGATORS", 3], [
-        ["DO_CREATE_CARDS_SCN", "Cultist", "$CULTISTS.[2]", 1, "sharedEncounterDeck"]
-      ]],
-      ["COND", ["LESS_THAN", "$NUM_INVESTIGATORS", 4], [
-        ["DO_CREATE_CARDS_SCN", "Cultist", "$CULTISTS.[3]", 1, "sharedEncounterDeck"]
-      ]],
-      ["DO_CREATE_CARDS_SCN", "Cultist", "$CULTISTS.[4]", 1, "sharedEncounterDeck"],
-      ["DO_CREATE_CARDS_SCN", "Cultist", "$CULTISTS.[5]", 1, "sharedEncounterDeck"]
+      ["DO_SPAWN_ATTACHED_FACEDOWN_TO_LOCATION_SCN", "Cultist", "$CULTISTS.[0]", "$SEWERS.[0]"]
+      //["COND", ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 2], ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$CULTISTS.[1]", 29, 58]],
+      //["COND", ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 3], ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$CULTISTS.[2]", 67, 58]],
+      //["COND", ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 4], ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$CULTISTS.[3]", 86, 58]],
+      //["COND", ["LESS_THAN", "$NUM_INVESTIGATORS", 2], [
+      //  ["DO_CREATE_CARDS_SCN", "Cultist", "$CULTISTS.[1]", 1, "sharedEncounterDeck"]
+      //]],
+      //["COND", ["LESS_THAN", "$NUM_INVESTIGATORS", 3], [
+      //  ["DO_CREATE_CARDS_SCN", "Cultist", "$CULTISTS.[2]", 1, "sharedEncounterDeck"]
+      //]],
+      //["COND", ["LESS_THAN", "$NUM_INVESTIGATORS", 4], [
+      //  ["DO_CREATE_CARDS_SCN", "Cultist", "$CULTISTS.[3]", 1, "sharedEncounterDeck"]
+      //]],
+      //["DO_CREATE_CARDS_SCN", "Cultist", "$CULTISTS.[4]", 1, "sharedEncounterDeck"],
+      //["DO_CREATE_CARDS_SCN", "Cultist", "$CULTISTS.[5]", 1, "sharedEncounterDeck"]
     ],
     "Queen of Ash - Arkham Scoured": [
       [
