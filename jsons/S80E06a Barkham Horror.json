@@ -23,8 +23,7 @@
                 {"databaseId": "zbh_00029", "quantity": 1, "loadGroupId": "sharedLocations", "left": "35%", "top": "55%"}, // Snoutside
                 {"databaseId": "zbh_00030", "quantity": 1, "loadGroupId": "sharedLocations", "left": "55%", "top": "55%"}, // Slobbertown
                 {"databaseId": "zbh_00031", "quantity": 1, "loadGroupId": "sharedLocations", "left": "55%", "top": "7%"},  // Barkham Asylum
-                //{"databaseId": "zbh_00032", "quantity": 1, "loadGroupId": "sharedLocations", "left": "35%", "top": "79%"}, // 
-                {"databaseId": "zbh_00032", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, // Boneyard
+                {"databaseId": "zbh_00032", "quantity": 1, "loadGroupId": "sharedLocations", "left": "35%", "top": "79%"}, // Boneyard
                 {"databaseId": "zbh_00033", "quantity": 1, "loadGroupId": "sharedLocations", "left": "15%", "top": "55%"}, // Muttskatonic University
                 {"databaseId": "zbh_00034", "quantity": 1, "loadGroupId": "sharedLocations", "left": "75%", "top": "31%"}, // Barkham City Pound
                 {"databaseId": "zbh_00035", "quantity": 1, "loadGroupId": "sharedLocations", "left": "15%", "top": "79%"}, // St. Mary's Animal Hospital
@@ -67,14 +66,6 @@
             ["VAR", "$BARKHAM_ASYLUM", ["GET_NAMED_CARD_ID", "zbh_00031"]],
             ["SET", "/cardById/$BARKHAM_ASYLUM/currentSide", "B"],
             ["VAR", "$BONEYARD", ["GET_NAMED_CARD_ID", "zbh_00032"]],
-            ["MOVE_CARD", "$BONEYARD", "sharedLocations", 0],
-            //["SET", "/cardById/$BONEYARD/currentSide", "B"],
-            
-            ["DO_SET_CARD_LOCATION", "$BONEYARD", 35, 79],
-            ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$BONEYARD", false, null],
-
-            
-
             ["VAR", "$MUTTSKATONIC_UNIVERSITY", ["GET_NAMED_CARD_ID", "zbh_00033"]],
             ["SET", "/cardById/$MUTTSKATONIC_UNIVERSITY/currentSide", "B"],
             ["VAR", "$BARKHAM_CITY_POLICE", ["GET_NAMED_CARD_ID", "zbh_00034"]],
@@ -137,7 +128,6 @@
             ["LOG", "Confront the Barfy Cat"],
             ["SET", "/cardById/$SLOBBERTOWN/currentSide", "A"],
             ["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Slobbertown", 5, 7, 3, 0]
-            //["SET", "/cardById/$BEASTTOWN/currentSide", "B"]
         ],
         "Barkham Horror - Follow the Cat": [
             ["LOG", "Follow the cat to it's lair"],
