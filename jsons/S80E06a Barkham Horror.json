@@ -68,8 +68,8 @@
             ["SET", "/cardById/$BONEYARD/currentSide", "B"],
             ["VAR", "$MUTTSKATONIC_UNIVERSITY", ["GET_NAMED_CARD_ID", "zbh_00033"]],
             ["SET", "/cardById/$MUTTSKATONIC_UNIVERSITY/currentSide", "B"],
-            ["VAR", "$BARKHAM_CITY_POLICE", ["GET_NAMED_CARD_ID", "zbh_00034"]],
-            ["SET", "/cardById/$BARKHAM_CITY_POLICE/currentSide", "B"],
+            ["VAR", "$BARKHAM_CITY_POUND", ["GET_NAMED_CARD_ID", "zbh_00034"]],
+            ["SET", "/cardById/$BARKHAM_CITY_POUND/currentSide", "B"],
             ["VAR", "$ST_MARYS_ANIMAL_HOSPITAL", ["GET_NAMED_CARD_ID", "zbh_00035"]],
             ["SET", "/cardById/$ST_MARYS_ANIMAL_HOSPITAL/currentSide", "B"],
             ["VAR", "$VELMAS_DOGHOUSE", ["GET_NAMED_CARD_ID", "zbh_00036"]],
@@ -103,34 +103,39 @@
             //["DO_ATTACH_CARD_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ID1", "$BARKHAM_ASYLUM_ID", false, null],
             
             // Barkham City Pound
-            ["DO_CREATE_CARDS_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[1]", 1, "sharedNotInPlay"],
-            ["VAR", "$MEOWSK_ID2", "$GAME.lastLoadedCardIds.[0]"],
-            ["DO_PUT_INTO_PLAY_AT_SCN", "$MEOWSK_ID2", 78, 34],
-            ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ID2", false, null],
+            ["DO_SPAWN_ATTACHED_FACEDOWN_TO_LOCATION_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[1]", "$BARKHAM_CITY_POUND"],
+            //["DO_CREATE_CARDS_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[1]", 1, "sharedNotInPlay"],
+            //["VAR", "$MEOWSK_ID2", "$GAME.lastLoadedCardIds.[0]"],
+            //["DO_PUT_INTO_PLAY_AT_SCN", "$MEOWSK_ID2", 78, 34],
+            //["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ID2", false, null],
             
             // Velma's Doghouse
-            ["DO_CREATE_CARDS_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[2]", 1, "sharedNotInPlay"],
-            ["VAR", "$MEOWSK_ID3", "$GAME.lastLoadedCardIds.[0]"],
-            ["DO_PUT_INTO_PLAY_AT_SCN", "$MEOWSK_ID3", 78, 10],
-            ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ID3", false, null],
+            ["DO_SPAWN_ATTACHED_FACEDOWN_TO_LOCATION_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[2]", "$VELMAS_DOGHOUSE"],
+            //["DO_CREATE_CARDS_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[2]", 1, "sharedNotInPlay"],
+            //["VAR", "$MEOWSK_ID3", "$GAME.lastLoadedCardIds.[0]"],
+            //["DO_PUT_INTO_PLAY_AT_SCN", "$MEOWSK_ID3", 78, 10],
+            //["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ID3", false, null],
             
             // Muttskatonic University
-            ["DO_CREATE_CARDS_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[3]", 1, "sharedNotInPlay"],
-            ["VAR", "$MEOWSK_ID4", "$GAME.lastLoadedCardIds.[0]"],
-            ["DO_PUT_INTO_PLAY_AT_SCN", "$MEOWSK_ID4", 18, 58],
-            ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ID4", false, null],
+            ["DO_SPAWN_ATTACHED_FACEDOWN_TO_LOCATION_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[3]", "$MUTTSKATONIC_UNIVERSITY"],
+            //["DO_CREATE_CARDS_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[3]", 1, "sharedNotInPlay"],
+            //["VAR", "$MEOWSK_ID4", "$GAME.lastLoadedCardIds.[0]"],
+            //["DO_PUT_INTO_PLAY_AT_SCN", "$MEOWSK_ID4", 18, 58],
+            //["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ID4", false, null],
             
             // Boneyard
-            ["DO_CREATE_CARDS_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[4]", 1, "sharedNotInPlay"],
-            ["VAR", "$MEOWSK_ID5", "$GAME.lastLoadedCardIds.[0]"],
-            ["DO_PUT_INTO_PLAY_AT_SCN", "$MEOWSK_ID5", 38, 82],
-            ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ID5", false, null],
+            ["DO_SPAWN_ATTACHED_FACEDOWN_TO_LOCATION_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[4]", "$BONEYARD"],
+            //["DO_CREATE_CARDS_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[4]", 1, "sharedNotInPlay"],
+            //["VAR", "$MEOWSK_ID5", "$GAME.lastLoadedCardIds.[0]"],
+            //["DO_PUT_INTO_PLAY_AT_SCN", "$MEOWSK_ID5", 38, 82],
+            //["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ID5", false, null],
             
             // St. Mary's Animal Hospital
-            ["DO_CREATE_CARDS_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[5]", 1, "sharedNotInPlay"],
-            ["VAR", "$MEOWSK_ID6", "$GAME.lastLoadedCardIds.[0]"],
-            ["DO_PUT_INTO_PLAY_AT_SCN", "$MEOWSK_ID6", 18, 82],
-            ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ID6", false, null],
+            ["DO_SPAWN_ATTACHED_FACEDOWN_TO_LOCATION_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[5]", "$ST_MARYS_ANIMAL_HOSPITAL"],
+            //["DO_CREATE_CARDS_SCN", "Meowsk Enemy", "$MEOWSK_ENEMIES.[5]", 1, "sharedNotInPlay"],
+            //["VAR", "$MEOWSK_ID6", "$GAME.lastLoadedCardIds.[0]"],
+            //["DO_PUT_INTO_PLAY_AT_SCN", "$MEOWSK_ID6", 18, 82],
+            //["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$MEOWSK_ID6", false, null],
             
             // Set one aside, so we'll only use 0-5
             //["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$MEOWSK_ENEMIES.[0]", 58, 10],
