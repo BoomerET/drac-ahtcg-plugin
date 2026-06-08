@@ -159,7 +159,11 @@
             "deckLists": [
               { "label": "id:gloriaGoldbergPromoStarterDeck", "deckListId": "Gloria Goldberg (Promo) Starter Deck" },
               { "label": "id:subject5U21StarterDeck", "deckListId": "Subject 5U-21 Starter Deck" },
-              { "label": "id:barkHarriganStarterDeck", "deckListId": "Bark Harrigan Starter Deck" }
+              { "label": "id:barkHarriganStarterDeck", "deckListId": "Bark Harrigan Starter Deck" },
+              { "label": "id:kateWinthrupStarterDeck", "deckListId": "Kate Winthrup Starter Deck" },
+              { "label": "id:skidsODroolStarterDeck", "deckListId": "Skids O'Drool Starter Deck" },
+              { "label": "id:jacquelineCanineStarterDeck", "deckListId": "Jacqueline Canine Starter Deck" },
+              { "label": "id:dukeStarterDeck", "deckListId": "Duke Starter Deck" }
             ]
           }
         ]
@@ -493,6 +497,10 @@
     "gloriaGoldbergPromoStarterDeck": { "English": "Gloria Goldberg (Promo) Starter Deck" },
     "subject5U21StarterDeck": { "English": "Subject 5U-21 Starter Deck" },
     "barkHarriganStarterDeck": { "English": "Bark Harrigan Starter Deck" },
+    "kateWinthrupStarterDeck": { "English": "Kate Winthrup Starter Deck" },
+    "skidsODroolStarterDeck": { "English": "Skids O'Drool Starter Deck" },
+    "jacquelineCanineStarterDeck": { "English": "Jacqueline Canine Starter Deck" },
+    "dukeStarterDeck": { "English": "Duke Starter Deck" },
     "campaigns": { "English": "Campaigns" },
     "theNightOfTheZealot": { "English": "The Night of the Zealot" },
     "theGathering": { "English": "The Gathering" },
