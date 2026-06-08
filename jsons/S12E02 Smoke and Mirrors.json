@@ -74,44 +74,36 @@
     "Smoke and Mirrors - Attach Hidden Card to Northside": [
       ["VAR", "$NORTHSIDE", ["GET_NAMED_CARD_ID", "12149"]],
       ["DO_SPAWN_ATTACHED_FACEDOWN_TO_LOCATION_SCN", "Arkham Citizen", "$ARKPEEPS.[0]", "$NORTHSIDE"]
-      //["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[0]", 1, "sharedNotInPlay"],
-      //["VAR", "$ENEMY_ID", "$GAME.lastLoadedCardIds.[0]"],
-      //["DO_PUT_INTO_PLAY_AT_SCN", "$ENEMY_ID", 23, 13],
-      //["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
     ],
     "Smoke and Mirrors - Attach Hidden Card to Downtown": [
-      //["VAR", "$DOWNTOWN", ["GET_NAMED_CARD_ID", "12149"]],
       ["DO_SPAWN_ATTACHED_FACEDOWN_TO_LOCATION_SCN", "Arkham Citizen", "$ARKPEEPS.[1]", "$DOWNTOWN.[0]"]
-      //["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[1]", 1, "sharedNotInPlay"],
-      //["VAR", "$ENEMY_ID", "$GAME.lastLoadedCardIds.[0]"],
-      //["DO_PUT_INTO_PLAY_AT_SCN", "$ENEMY_ID", 48, 13],
-      //["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
     ],
     "Smoke and Mirrors - Attach Hidden Card to Southside": [
-      ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[2]", 1, "sharedNotInPlay"],
-      ["VAR", "$ENEMY_ID", "$GAME.lastLoadedCardIds.[0]"],
-      ["DO_PUT_INTO_PLAY_AT_SCN", "$ENEMY_ID", 48, 79],
-      ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
-    ],
-    "Smoke and Mirrors - Attach Hidden Card to French Hill": [
-      ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[3]", 1, "sharedNotInPlay"],
-      ["VAR", "$ENEMY_ID", "$GAME.lastLoadedCardIds.[0]"],
-      ["DO_PUT_INTO_PLAY_AT_SCN", "$ENEMY_ID", 73, 79],
-      ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
-    ],
-    "Smoke and Mirrors - Attach Hidden Card to Uptown": [
-      //["VAR", "$UPTOWN", ["GET_NAMED_CARD_ID", "12149"]],
-      ["DO_SPAWN_ATTACHED_FACEDOWN_TO_LOCATION_SCN", "Arkham Citizen", "$ARKPEEPS.[4]", "$UPTOWN.[0]"]
-      //["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[4]", 1, "sharedNotInPlay"],
+      ["VAR", "$SOUTHSIDE", ["GET_NAMED_CARD_ID", "12153"]],
+      ["DO_SPAWN_ATTACHED_FACEDOWN_TO_LOCATION_SCN", "Arkham Citizen", "$ARKPEEPS.[2]", "$SOUTHSIDE"]
+      //["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[2]", 1, "sharedNotInPlay"],
       //["VAR", "$ENEMY_ID", "$GAME.lastLoadedCardIds.[0]"],
-      //["DO_PUT_INTO_PLAY_AT_SCN", "$ENEMY_ID", 23, 79],
+      //["DO_PUT_INTO_PLAY_AT_SCN", "$ENEMY_ID", 48, 79],
       //["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
     ],
+    "Smoke and Mirrors - Attach Hidden Card to French Hill": [
+      ["VAR", "$FRENCH_HILL", ["GET_NAMED_CARD_ID", "12154"]],
+      ["DO_SPAWN_ATTACHED_FACEDOWN_TO_LOCATION_SCN", "Arkham Citizen", "$ARKPEEPS.[3]", "$FRENCH_HILL"]
+      //["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[3]", 1, "sharedNotInPlay"],
+      //["VAR", "$ENEMY_ID", "$GAME.lastLoadedCardIds.[0]"],
+      //["DO_PUT_INTO_PLAY_AT_SCN", "$ENEMY_ID", 73, 79],
+      //["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
+    ],
+    "Smoke and Mirrors - Attach Hidden Card to Uptown": [
+      ["DO_SPAWN_ATTACHED_FACEDOWN_TO_LOCATION_SCN", "Arkham Citizen", "$ARKPEEPS.[4]", "$UPTOWN.[0]"]
+    ],
     "Smoke and Mirrors - Attach Hidden Card to Waterfront District": [
-      ["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[5]", 1, "sharedNotInPlay"],
-      ["VAR", "$ENEMY_ID", "$GAME.lastLoadedCardIds.[0]"],
-      ["DO_PUT_INTO_PLAY_AT_SCN", "$ENEMY_ID", 73, 46],
-      ["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
+      ["VAR", "$WATERFRONT", ["GET_NAMED_CARD_ID", "12152"]],
+      ["DO_SPAWN_ATTACHED_FACEDOWN_TO_LOCATION_SCN", "Arkham Citizen", "$ARKPEEPS.[5]", "$WATERFRONT"]
+      //["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[5]", 1, "sharedNotInPlay"],
+      //["VAR", "$ENEMY_ID", "$GAME.lastLoadedCardIds.[0]"],
+      //["DO_PUT_INTO_PLAY_AT_SCN", "$ENEMY_ID", 73, 46],
+      //["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
     ],
     "Smoke and Mirrors - Miskatonic In Flames": [
       ["DO_SPAWN_LOCATION_SCN", "Miskatonic University In Flames", "12155", 20, 43],
