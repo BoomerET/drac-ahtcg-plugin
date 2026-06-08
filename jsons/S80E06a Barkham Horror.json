@@ -28,13 +28,7 @@
                 {"databaseId": "zbh_00034", "quantity": 1, "loadGroupId": "sharedLocations", "left": "75%", "top": "31%"}, // Barkham City Pound
                 {"databaseId": "zbh_00035", "quantity": 1, "loadGroupId": "sharedLocations", "left": "15%", "top": "79%"}, // St. Mary's Animal Hospital
                 {"databaseId": "zbh_00036", "quantity": 1, "loadGroupId": "sharedLocations", "left": "75%", "top": "7%"},  // Velma's Doghouse
-                {"databaseId": "zbh_00037", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
-                {"databaseId": "zbh_00038", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
-                {"databaseId": "zbh_00039", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
-                {"databaseId": "zbh_00040", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
-                {"databaseId": "zbh_00041", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
-                {"databaseId": "zbh_00042", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
-                {"databaseId": "zbh_00043", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00037", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, // Meowlathotep
                 {"databaseId": "zbh_00044", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
                 {"databaseId": "zbh_00045", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
                 {"databaseId": "zbh_00046", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
@@ -81,35 +75,18 @@
             //["DO_SET_SPAWN_LOCATION", "zbh_00031", 55, 7],  // Barkham Asylum
             //["DO_SET_SPAWN_LOCATION", "zbh_00032", 35, 79], // Boneyard
             //["DO_SET_SPAWN_LOCATION", "zbh_00033", 15, 55], // Muttskatonic University
-            //["DO_SET_SPAWN_LOCATION", "zbh_00034", 75, 31], // Barkham City Police
+            //["DO_SET_SPAWN_LOCATION", "zbh_00034", 75, 31], // Barkham City Pound
             //["DO_SET_SPAWN_LOCATION", "zbh_00035", 15, 79], // St. Mary's Animal Hospital
             //["DO_SET_SPAWN_LOCATION", "zbh_00036", 75, 7],  // Velma's Doghouse
             ["ACTION_LIST", "Barkham Horror Scenario - Where to Start"],
-            //["COND",
-            //    ["EQUAL", "$GAME.arkham.scenarioAnswer1", "A"],
-            //    [
-            //        ["DO_LOAD_CARDS_SCN", "Barkham Horror - Epic Multiplayer Mode"],
-            //        ["VAR", "$ANOMALY_ID", ["GET_NAMED_CARD_ID", "Expose the Anomaly"]],
-            //        ["SET", "/cardById/$ANOMALY_ID/sides/A/clues", "$CLUES"]
-            //    ],
-            //    ["TRUE"],
-            //    [
-            //        ["DO_LOAD_CARDS_SCN", "Barkham Horror - Single Group Mode"],
-            //        ["INCREASE_VAR", "$HEALTH", 15],
-            //    ]
-            //],
-            //["VAR", "$SUBJECT_ID", ["GET_NAMED_CARD_ID", "Subject 8L-08"]],
-            //["SET", "/cardById/$SUBJECT_ID/sides/A/health", "$HEALTH"],
-            //["SET", "/cardById/$SUBJECT_ID/sides/A/healthPerInvestigator", 0],
-            //["DO_PLACE_RESOURCES_ON_CARD", "$GAME.firstPlayer", ["GET_SCENARIO_CARD_ID"], "$COUNTERMEASURES", true, null],
-            //["VAR", "$QUARANTINE_ZONES", ["SHUFFLE_LIST", ["LIST", "85014", "85015", "85016", "85017", "85018", "85018", "85019", "85019", "85020", "85020"]]],  //Sewer, Bridge, Water Tower, Church, Oozy Lakebed (2), Slimy Streets (2), Desiccated Farmland (2)
-            //["VAR", "$INNER_RING", ["SHUFFLE_LIST", ["LIST", "$QUARANTINE_ZONES.[0]", "$QUARANTINE_ZONES.[1]", "85011", "85012"]]],  //Research Site, Temporary HQ
-            //["VAR", "$OUTER_RING", ["SHUFFLE_LIST", ["LIST", "$QUARANTINE_ZONES.[2]", "$QUARANTINE_ZONES.[3]", "$QUARANTINE_ZONES.[4]", "85013"]]],  //Fungus Mound
-            //["DO_SPAWN_LOCATIONS_SCN", null, "$INNER_RING", ["LIST", 45, 64, 45, 26], ["LIST", 24, 43, 62, 43], 0, 4, 0],
-            //["DO_SPAWN_LOCATIONS_SCN", null, "$OUTER_RING", ["LIST", 45, 83, 45, 7], ["LIST", 5, 43, 81, 43], 0, 4, 0],
-            //["DO_SPAWN_LOCATIONS_SCN", "Quarantine Zone", "$QUARANTINE_ZONES", ["LIST", 64, 64, 26, 26], ["LIST", 24, 62, 62, 24], 5, 4, -5],
-            //["DO_SPAWN_MINI_INVESTIGATORS_AT_LOCATION", "Temporary HQ", 3, 3, 3, 0],
-            //["SET", "/arkham/finalScenarioMessage", ["FORMAT", "Mi-Go Incursion story cards are in Pile A. Subject 8L-08's health: {0}. Act 1's clue threshold: {1}. Countermeasures: {2}.", "$HEALTH", "$CLUES", "$COUNTERMEASURES"]],
+            ["VAR", "$MEOWSK_ENEMIES", ["SHUFFLE_LIST", ["LIST", "zbh_00038", "zbh_00039", "zbh_00040", "zbh_00041", "zbh_00042", "zbh_00043", "zbh_00044"]]],
+            // Set one aside, so we'll only use 0-5
+            ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$MEOWSK_ENEMIES.[0]", 58, 10],
+            ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$MEOWSK_ENEMIES.[1]", 78, 34],
+            ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$MEOWSK_ENEMIES.[2]", 78, 10],
+            ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$MEOWSK_ENEMIES.[3]", 18, 58],
+            ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$MEOWSK_ENEMIES.[4]", 38, 82],
+            ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$MEOWSK_ENEMIES.[5]", 18, 82],
             ["SCENARIO_INIT_CONTINUE", null]
         ],
         "Barkham Horror Scenario - Where to Start": [
