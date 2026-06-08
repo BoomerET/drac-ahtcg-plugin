@@ -97,7 +97,6 @@
     ], 
     "Queen of Ash - Random Cultists": [
       ["VAR", "$NUM_INVESTIGATORS", "$GAME.arkham.numPlayers"],
-      //["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$CULTISTS.[0]", 10, 58],
       ["DO_SPAWN_ATTACHED_FACEDOWN_TO_LOCATION_SCN", "Cultist", "$CULTISTS.[0]", "$SEWERS.[0]"],
       ["COND", 
         ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 2], 
@@ -110,18 +109,18 @@
       ["COND", 
         ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 4], 
         ["DO_SPAWN_ATTACHED_FACEDOWN_TO_LOCATION_SCN", "Cultist", "$CULTISTS.[3]", "$SEWERS.[4]"]
-      ]
-      //["COND", ["LESS_THAN", "$NUM_INVESTIGATORS", 2], [
-      //  ["DO_CREATE_CARDS_SCN", "Cultist", "$CULTISTS.[1]", 1, "sharedEncounterDeck"]
-      //]],
-      //["COND", ["LESS_THAN", "$NUM_INVESTIGATORS", 3], [
-      //  ["DO_CREATE_CARDS_SCN", "Cultist", "$CULTISTS.[2]", 1, "sharedEncounterDeck"]
-      //]],
-      //["COND", ["LESS_THAN", "$NUM_INVESTIGATORS", 4], [
-      //  ["DO_CREATE_CARDS_SCN", "Cultist", "$CULTISTS.[3]", 1, "sharedEncounterDeck"]
-      //]],
-      //["DO_CREATE_CARDS_SCN", "Cultist", "$CULTISTS.[4]", 1, "sharedEncounterDeck"],
-      //["DO_CREATE_CARDS_SCN", "Cultist", "$CULTISTS.[5]", 1, "sharedEncounterDeck"]
+      ],
+      ["COND", ["LESS_THAN", "$NUM_INVESTIGATORS", 2], [
+        ["DO_CREATE_CARDS_SCN", "Cultist", "$CULTISTS.[1]", 1, "sharedEncounterDeck"]
+      ]],
+      ["COND", ["LESS_THAN", "$NUM_INVESTIGATORS", 3], [
+        ["DO_CREATE_CARDS_SCN", "Cultist", "$CULTISTS.[2]", 1, "sharedEncounterDeck"]
+      ]],
+      ["COND", ["LESS_THAN", "$NUM_INVESTIGATORS", 4], [
+        ["DO_CREATE_CARDS_SCN", "Cultist", "$CULTISTS.[3]", 1, "sharedEncounterDeck"]
+      ]],
+      ["DO_CREATE_CARDS_SCN", "Cultist", "$CULTISTS.[4]", 1, "sharedEncounterDeck"],
+      ["DO_CREATE_CARDS_SCN", "Cultist", "$CULTISTS.[5]", 1, "sharedEncounterDeck"]
     ],
     "Queen of Ash - Arkham Scoured": [
       [
