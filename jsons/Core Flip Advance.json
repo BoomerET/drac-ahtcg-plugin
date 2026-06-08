@@ -461,7 +461,6 @@
                 ["VALIDATE_PLAYER", "$TARGET_PLAYER", "DO_ADVANCE_STORY.TARGET_PLAYER"],
                 ["VAR", "$TARGET_GROUP", ["GET_GROUP_AND_VALIDATE", "$TARGET_GROUP_ID", "DO_ADVANCE_STORY.TARGET_GROUP_ID"]],
                 ["VALIDATE_BOOLEAN", "$LOG_EVENT", "DO_ADVANCE_STORY.LOG_EVENT"],
-                ["DEFINE", "$USE_FULL_ADVANCE", false],
                 ["COND",
                     ["CAN_ADVANCE_STORY", "$TARGET_PLAYER", "$TARGET_GROUP_ID", "$ACTOR_PLAYER"],
                     [
@@ -488,7 +487,7 @@
                                     ],
                                     ["PROMPT", "$TARGET_PLAYER", "notEnoughDoom", "$TARGET_GROUP_ID", "$TOP_CARD.id", "$LOG_EVENT", "$ACTOR_PLAYER", "$DOOM_REQUIRED", "$DOOM_ACCRUED"],
                                     ["TRUE"],
-                                    ["DO_ADVANCE_STORY_FINAL", "$TARGET_PLAYER", "$TARGET_GROUP_ID", "$TOP_CARD.id", "$LOG_EVENT", "$ACTOR_PLAYER"]
+                                    ["DO_ADVANCE_STORY_ROUTER", "$TARGET_PLAYER", "$TARGET_GROUP_ID", "$TOP_CARD.id", "$LOG_EVENT", "$ACTOR_PLAYER"]
                                 ]
                             ],
                             ["AND",
@@ -511,12 +510,29 @@
                                     ],
                                     ["PROMPT", "$TARGET_PLAYER", "notEnoughClues", "$TARGET_GROUP_ID", "$TOP_CARD.id", "$LOG_EVENT", "$ACTOR_PLAYER", "$CLUES_REQUIRED", "$CLUES_PRESENT", "$CLUES_COLLECTED"],
                                     ["TRUE"],
-                                    ["DO_ADVANCE_STORY_FINAL", "$TARGET_PLAYER", "$TARGET_GROUP_ID", "$TOP_CARD.id", "$LOG_EVENT", "$ACTOR_PLAYER"]
+                                    ["DO_ADVANCE_STORY_ROUTER", "$TARGET_PLAYER", "$TARGET_GROUP_ID", "$TOP_CARD.id", "$LOG_EVENT", "$ACTOR_PLAYER"]
                                 ]
                             ],
                             ["TRUE"],
-                            ["DO_ADVANCE_STORY_FINAL", "$TARGET_PLAYER", "$TARGET_GROUP_ID", "$TOP_CARD.id", "$LOG_EVENT", "$ACTOR_PLAYER"]
+                            ["DO_ADVANCE_STORY_ROUTER", "$TARGET_PLAYER", "$TARGET_GROUP_ID", "$TOP_CARD.id", "$LOG_EVENT", "$ACTOR_PLAYER"]
                         ]
+                    ]
+                ]
+            ]
+        },
+        "DO_ADVANCE_STORY_ROUTER": {
+            "args": ["$TARGET_PLAYER", "$TARGET_GROUP_ID", "$TOP_CARD_ID", "$LOG_EVENT", "$ACTOR_PLAYER"],
+            "code": [
+                ["VAR", "$TOP_CARD", ["GET_CARD_AND_VALIDATE", "$TOP_CARD_ID", "DO_ADVANCE_STORY_ROUTER.TOP_CARD_ID"]],
+                ["VAR", "$OVERRIDE_FUNCTION", ["CONCAT", "DO_ADVANCE_STORY_OVERRIDE_", "$TOP_CARD.currentFace.name"]],
+                ["COND",
+                    ["FUNCTION_EXISTS", "$OVERRIDE_FUNCTION"],
+                    [
+                        ["$OVERRIDE_FUNCTION", "$TARGET_PLAYER", "$TARGET_GROUP_ID", "$TOP_CARD_ID", "$LOG_EVENT", "$ACTOR_PLAYER"]
+                    ],
+                    ["TRUE"],
+                    [
+                        ["DO_ADVANCE_STORY_FINAL", "$TARGET_PLAYER", "$TARGET_GROUP_ID", "$TOP_CARD_ID", "$LOG_EVENT", "$ACTOR_PLAYER"]
                     ]
                 ]
             ]
