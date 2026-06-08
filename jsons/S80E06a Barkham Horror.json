@@ -65,7 +65,7 @@
             ["VAR", "$BARKHAM_ASYLUM", ["GET_NAMED_CARD_ID", "zbh_00031"]],
             ["SET", "/cardById/$BARKHAM_ASYLUM/currentSide", "B"],
 
-            ["VAR", "$BARKHAM_ASYLUM_CARD", ["GET_CARD_AND_VALIDATE", "zbh_00031"]],
+            ["VAR", "$BARKHAM_ASYLUM_CARD", ["GET_CARD_AND_VALIDATE", "$GAME.firstPlayer", "$BARKHAM_ASYLUM"]],
             ["VAR", "$BARKHAM_ASYLUM_ID", "$BARKHAM_ASYLUM_CARD.id"],
             ["LOGF", "Barkham Asylum ID: {0}", "$BARKHAM_ASYLUM_ID"],
 
