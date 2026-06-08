@@ -86,7 +86,8 @@
     "Queen of Ash - Random Cultists": [
       ["VAR", "$CULTISTS", ["SHUFFLE_LIST", ["LIST", "12121", "12121", "12188", "12188", "12188", "12189"]]],
       ["VAR", "$NUM_INVESTIGATORS", "$GAME.arkham.numPlayers"],
-      ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$CULTISTS.[0]", 10, 58],
+      ["DO_SPAWN_ATTACHED_FACEDOWN_TO_LOCATION_SCN", "Cultist", "$CULTISTS.[0]", "$SEWERS.[0]"],
+      //["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$CULTISTS.[0]", 10, 58],
       ["COND", ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 2], ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$CULTISTS.[1]", 29, 58]],
       ["COND", ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 3], ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$CULTISTS.[2]", 67, 58]],
       ["COND", ["GREATER_EQUAL", "$NUM_INVESTIGATORS", 4], ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$CULTISTS.[3]", 86, 58]],

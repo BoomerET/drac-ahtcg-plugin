@@ -42,7 +42,7 @@
       ["DO_SPAWN_LOCATION_SCN", "sharedLocations", "$UPTOWN.[0]", 20, 76],
       ["DO_CREATE_CARDS_SCN", "Set Aside", "$UPTOWN.[1]", 1, "sharedRemoved"],
       ["VAR", "$ARKPEEPS", ["SHUFFLE_LIST", ["LIST", "12139", "12140", "12141", "12142", "12143", "12144", "12138"]]],
-      // This ensure that Harbinger is always last in the list, so that we can move it to Not In Play and spawn the other 6 Arkham Citizens before it.
+      // This ensures that Harbinger is always last in the list, so that we can move it to Not In Play and spawn the other 6 Arkham Citizens before it.
       ["COND", 
         ["EQUAL", "$ARKPEEPS.[6]", "12138"], [
           ["VAR", "$ARKPEEPS", ["LIST", "$ARKPEEPS.[6]", "$ARKPEEPS.[1]", "$ARKPEEPS.[2]", "$ARKPEEPS.[3]", "$ARKPEEPS.[4]", "$ARKPEEPS.[5]", "$ARKPEEPS.[0]"]]
@@ -81,18 +81,10 @@
     "Smoke and Mirrors - Attach Hidden Card to Southside": [
       ["VAR", "$SOUTHSIDE", ["GET_NAMED_CARD_ID", "12153"]],
       ["DO_SPAWN_ATTACHED_FACEDOWN_TO_LOCATION_SCN", "Arkham Citizen", "$ARKPEEPS.[2]", "$SOUTHSIDE"]
-      //["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[2]", 1, "sharedNotInPlay"],
-      //["VAR", "$ENEMY_ID", "$GAME.lastLoadedCardIds.[0]"],
-      //["DO_PUT_INTO_PLAY_AT_SCN", "$ENEMY_ID", 48, 79],
-      //["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
     ],
     "Smoke and Mirrors - Attach Hidden Card to French Hill": [
       ["VAR", "$FRENCH_HILL", ["GET_NAMED_CARD_ID", "12154"]],
       ["DO_SPAWN_ATTACHED_FACEDOWN_TO_LOCATION_SCN", "Arkham Citizen", "$ARKPEEPS.[3]", "$FRENCH_HILL"]
-      //["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[3]", 1, "sharedNotInPlay"],
-      //["VAR", "$ENEMY_ID", "$GAME.lastLoadedCardIds.[0]"],
-      //["DO_PUT_INTO_PLAY_AT_SCN", "$ENEMY_ID", 73, 79],
-      //["DO_FLIP_FACEDOWN", "$GAME.firstPlayer", "$ENEMY_ID", false, null]
     ],
     "Smoke and Mirrors - Attach Hidden Card to Uptown": [
       ["DO_SPAWN_ATTACHED_FACEDOWN_TO_LOCATION_SCN", "Arkham Citizen", "$ARKPEEPS.[4]", "$UPTOWN.[0]"]
