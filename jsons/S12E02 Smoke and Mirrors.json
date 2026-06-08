@@ -81,7 +81,7 @@
     ],
     "Smoke and Mirrors - Attach Hidden Card to Downtown": [
       //["VAR", "$DOWNTOWN", ["GET_NAMED_CARD_ID", "12149"]],
-      ["DO_SPAWN_ATTACHED_FACEDOWN_TO_LOCATION_SCN", "Arkham Citizen", "$ARKPEEPS.[1]", "$DOWNTOWN"]
+      ["DO_SPAWN_ATTACHED_FACEDOWN_TO_LOCATION_SCN", "Arkham Citizen", "$ARKPEEPS.[1]", "$DOWNTOWN.[0]"]
       //["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[1]", 1, "sharedNotInPlay"],
       //["VAR", "$ENEMY_ID", "$GAME.lastLoadedCardIds.[0]"],
       //["DO_PUT_INTO_PLAY_AT_SCN", "$ENEMY_ID", 48, 13],
@@ -101,7 +101,7 @@
     ],
     "Smoke and Mirrors - Attach Hidden Card to Uptown": [
       //["VAR", "$UPTOWN", ["GET_NAMED_CARD_ID", "12149"]],
-      ["DO_SPAWN_ATTACHED_FACEDOWN_TO_LOCATION_SCN", "Arkham Citizen", "$ARKPEEPS.[4]", "$UPTOWN"]
+      ["DO_SPAWN_ATTACHED_FACEDOWN_TO_LOCATION_SCN", "Arkham Citizen", "$ARKPEEPS.[4]", "$UPTOWN.[0]"]
       //["DO_CREATE_CARDS_SCN", "Arkham Citizen", "$ARKPEEPS.[4]", 1, "sharedNotInPlay"],
       //["VAR", "$ENEMY_ID", "$GAME.lastLoadedCardIds.[0]"],
       //["DO_PUT_INTO_PLAY_AT_SCN", "$ENEMY_ID", 23, 79],
