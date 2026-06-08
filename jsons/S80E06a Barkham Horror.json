@@ -29,19 +29,19 @@
                 {"databaseId": "zbh_00035", "quantity": 1, "loadGroupId": "sharedLocations", "left": "15%", "top": "79%"}, // St. Mary's Animal Hospital
                 {"databaseId": "zbh_00036", "quantity": 1, "loadGroupId": "sharedLocations", "left": "75%", "top": "7%"},  // Velma's Doghouse
                 {"databaseId": "zbh_00037", "quantity": 1, "loadGroupId": "sharedNotInPlay"}, // Meowlathotep
-                {"databaseId": "zbh_00045", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
-                {"databaseId": "zbh_00046", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
-                {"databaseId": "zbh_00047", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
-                {"databaseId": "zbh_00048", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
-                {"databaseId": "zbh_00049", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
-                {"databaseId": "zbh_00050", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
-                {"databaseId": "zbh_00051", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
-                {"databaseId": "zbh_00052", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
-                {"databaseId": "zbh_00053", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
-                {"databaseId": "zbh_00054", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
-                {"databaseId": "zbh_00055", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
-                {"databaseId": "zbh_00056", "quantity": 1, "loadGroupId": "sharedEncounterDeck"},
-                {"databaseId": "zbh_00057", "quantity": 1, "loadGroupId": "sharedEncounterDeck"} 
+                {"databaseId": "zbh_00045", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00046", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00047", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00048", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00049", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00050", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00051", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00052", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00053", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00054", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00055", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00056", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},
+                {"databaseId": "zbh_00057", "quantity": 2, "loadGroupId": "sharedEncounterDeck"} 
             ]
         }
     },
