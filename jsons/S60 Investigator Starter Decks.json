@@ -378,23 +378,84 @@
             "cards": [
                 {"databaseId": "zbh_00001", "quantity": 1, "loadGroupId": "playerNInvestigator"},
                 {"databaseId": "zbh_00002", "quantity": 1, "loadGroupId": "playerNDeck"},
-                {"databaseId": "zbh_00003", "quantity": 2, "loadGroupId": "playerNDeck"},
-                {"databaseId": "zbh_00005", "quantity": 2, "loadGroupId": "playerNDeck"},
-                {"databaseId": "zbh_00006", "quantity": 2, "loadGroupId": "playerNDeck"},
-                {"databaseId": "zbh_00008", "quantity": 2, "loadGroupId": "playerNDeck"},
-                {"databaseId": "zbh_00009", "quantity": 1, "loadGroupId": "playerNDeck"},
-                {"databaseId": "zbh_00011", "quantity": 3, "loadGroupId": "playerNDeck"},
-                {"databaseId": "zbh_00012", "quantity": 3, "loadGroupId": "playerNDeck"},
-                {"databaseId": "zbh_00014", "quantity": 2, "loadGroupId": "playerNDeck"},
-                {"databaseId": "zbh_00015", "quantity": 2, "loadGroupId": "playerNDeck"},
-                {"databaseId": "zbh_00016", "quantity": 2, "loadGroupId": "playerNDeck"},
-                {"databaseId": "zbh_00017", "quantity": 2, "loadGroupId": "playerNDeck"},
-                {"databaseId": "zbh_00018", "quantity": 2, "loadGroupId": "playerNDeck"},
-                {"databaseId": "zbh_00019", "quantity": 2, "loadGroupId": "playerNDeck"},
-                {"databaseId": "zbh_00020", "quantity": 1, "loadGroupId": "playerNDeck"}
+                {"databaseId": "zbh_00003", "quantity": 1, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00016", "quantity": 5, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00017", "quantity": 5, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00018", "quantity": 5, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00019", "quantity": 5, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00020", "quantity": 5, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00021", "quantity": 5, "loadGroupId": "playerNDeck"}
             ],
             "postLoadActionList": [
-                ["LOG", "Bark Harrigan starter deck by: AI6K"]
+                ["LOG", "Bark Harrigan starter deck"]
+            ]
+        },
+        "Kate Winthrup Starter Deck": {
+            "label": "Kate Winthrup Starter Deck",
+            "cards": [
+                {"databaseId": "zbh_00004", "quantity": 1, "loadGroupId": "playerNInvestigator"},
+                {"databaseId": "zbh_00005", "quantity": 1, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00006", "quantity": 1, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00016", "quantity": 5, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00017", "quantity": 5, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00018", "quantity": 5, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00019", "quantity": 5, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00020", "quantity": 5, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00021", "quantity": 5, "loadGroupId": "playerNDeck"}
+            ],
+            "postLoadActionList": [
+                ["LOG", "Kate Winthrup starter deck"]
+            ]
+        },
+        "Skids O'Drool Starter Deck": {
+            "label": "Skids O'Drool Starter Deck",
+            "cards": [
+                {"databaseId": "zbh_00007", "quantity": 1, "loadGroupId": "playerNInvestigator"},
+                {"databaseId": "zbh_00008", "quantity": 1, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00009", "quantity": 1, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00016", "quantity": 5, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00017", "quantity": 5, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00018", "quantity": 5, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00019", "quantity": 5, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00020", "quantity": 5, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00021", "quantity": 5, "loadGroupId": "playerNDeck"}
+            ],
+            "postLoadActionList": [
+                ["LOG", "Skids O'Drool starter deck"]
+            ]
+        },
+        "Jacqueline Canine Starter Deck": {
+            "label": "Jacqueline Canine Starter Deck",
+            "cards": [
+                {"databaseId": "zbh_00010", "quantity": 1, "loadGroupId": "playerNInvestigator"},
+                {"databaseId": "zbh_00011", "quantity": 1, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00012", "quantity": 1, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00016", "quantity": 5, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00017", "quantity": 5, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00018", "quantity": 5, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00019", "quantity": 5, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00020", "quantity": 5, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00021", "quantity": 5, "loadGroupId": "playerNDeck"}
+            ],
+            "postLoadActionList": [
+                ["LOG", "Jacqueline Canine starter deck"]
+            ]
+        },
+        "Duke Starter Deck": {
+            "label": "Duke Starter Deck",
+            "cards": [
+                {"databaseId": "zbh_00013", "quantity": 1, "loadGroupId": "playerNInvestigator"},
+                {"databaseId": "zbh_00014", "quantity": 1, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00015", "quantity": 1, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00016", "quantity": 5, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00017", "quantity": 5, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00018", "quantity": 5, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00019", "quantity": 5, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00020", "quantity": 5, "loadGroupId": "playerNDeck"},
+                {"databaseId": "zbh_00021", "quantity": 5, "loadGroupId": "playerNDeck"}
+            ],
+            "postLoadActionList": [
+                ["LOG", "Duke starter deck"]
             ]
         }
     },
