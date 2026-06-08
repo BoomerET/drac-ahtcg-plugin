@@ -190,6 +190,9 @@
     //"Margaret is HoE": [
     //  ["LOG", "Margaret is the Harbinger of Elokoss."]
     //],
+    "QoA - Advance Act to Agenda 3b": [
+      ["LOG", "Agenda was advanced to 3b, so now the current Act is also Agenda 3a"],
+    ],
     "BoA - Add Easy Chaos Tokens": [
       ["DO_ADD_CHAOS_TOKENS_SCN", "chaos_elder_thing", 1]
     ],
