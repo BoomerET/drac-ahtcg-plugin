@@ -233,15 +233,7 @@
     
         ["VAR", "$NEW_AGENDA", ["GET_TOP_CARD", "sharedAgendaStory"]],
     
-        ["DO_CREATE_CARDS",
-          "$TARGET_PLAYER",
-          "$NEW_AGENDA.currentFace.name",
-          "$NEW_AGENDA.currentFace.databaseId",
-          1,
-          "sharedActStory",
-          true,
-          null
-        ]
+        ["DO_CREATE_CARDS", "$TARGET_PLAYER", "$NEW_AGENDA.currentFace.name", "$NEW_AGENDA.currentFace.databaseId", 1, "sharedActStory", true, null]
       ]
     }
   }
