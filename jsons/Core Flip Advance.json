@@ -465,8 +465,6 @@
                     ["CAN_ADVANCE_STORY", "$TARGET_PLAYER", "$TARGET_GROUP_ID", "$ACTOR_PLAYER"],
                     [
                         ["VAR", "$TOP_CARD", ["GET_TOP_CARD", "$TARGET_GROUP_ID"]],
-                        ["DEFINE", "$ADVANCE_FUNCTION", "$TOP_CARD.currentFace.name"],
-                        ["DEFINE", "$ADVANCE_FUNCTION", ["CONCAT", "DO_ADVANCE_STORY_OVERRIDE_", "$ADVANCE_FUNCTION"]],
                         ["COND",
                             ["AND",
                                 ["EQUAL", "$TOP_CARD.currentFace.type", "Agenda"],
@@ -487,7 +485,7 @@
                                     ],
                                     ["PROMPT", "$TARGET_PLAYER", "notEnoughDoom", "$TARGET_GROUP_ID", "$TOP_CARD.id", "$LOG_EVENT", "$ACTOR_PLAYER", "$DOOM_REQUIRED", "$DOOM_ACCRUED"],
                                     ["TRUE"],
-                                    ["DO_ADVANCE_STORY_ROUTER", "$TARGET_PLAYER", "$TARGET_GROUP_ID", "$TOP_CARD.id", "$LOG_EVENT", "$ACTOR_PLAYER"]
+                                    ["DO_ADVANCE_STORY_FINAL", "$TARGET_PLAYER", "$TARGET_GROUP_ID", "$TOP_CARD.id", "$LOG_EVENT", "$ACTOR_PLAYER"]
                                 ]
                             ],
                             ["AND",
@@ -510,29 +508,12 @@
                                     ],
                                     ["PROMPT", "$TARGET_PLAYER", "notEnoughClues", "$TARGET_GROUP_ID", "$TOP_CARD.id", "$LOG_EVENT", "$ACTOR_PLAYER", "$CLUES_REQUIRED", "$CLUES_PRESENT", "$CLUES_COLLECTED"],
                                     ["TRUE"],
-                                    ["DO_ADVANCE_STORY_ROUTER", "$TARGET_PLAYER", "$TARGET_GROUP_ID", "$TOP_CARD.id", "$LOG_EVENT", "$ACTOR_PLAYER"]
+                                    ["DO_ADVANCE_STORY_FINAL", "$TARGET_PLAYER", "$TARGET_GROUP_ID", "$TOP_CARD.id", "$LOG_EVENT", "$ACTOR_PLAYER"]
                                 ]
                             ],
                             ["TRUE"],
-                            ["DO_ADVANCE_STORY_ROUTER", "$TARGET_PLAYER", "$TARGET_GROUP_ID", "$TOP_CARD.id", "$LOG_EVENT", "$ACTOR_PLAYER"]
+                            ["DO_ADVANCE_STORY_FINAL", "$TARGET_PLAYER", "$TARGET_GROUP_ID", "$TOP_CARD.id", "$LOG_EVENT", "$ACTOR_PLAYER"]
                         ]
-                    ]
-                ]
-            ]
-        },
-        "DO_ADVANCE_STORY_ROUTER": {
-            "args": ["$TARGET_PLAYER", "$TARGET_GROUP_ID", "$TOP_CARD_ID", "$LOG_EVENT", "$ACTOR_PLAYER"],
-            "code": [
-                ["VAR", "$TOP_CARD", ["GET_CARD_AND_VALIDATE", "$TOP_CARD_ID", "DO_ADVANCE_STORY_ROUTER.TOP_CARD_ID"]],
-                ["VAR", "$OVERRIDE_FUNCTION", ["CONCAT", "DO_ADVANCE_STORY_OVERRIDE_", "$TOP_CARD.currentFace.name"]],
-                ["COND",
-                    ["FUNCTION_EXISTS", "$OVERRIDE_FUNCTION"],
-                    [
-                        ["$OVERRIDE_FUNCTION", "$TARGET_PLAYER", "$TARGET_GROUP_ID", "$TOP_CARD_ID", "$LOG_EVENT", "$ACTOR_PLAYER"]
-                    ],
-                    ["TRUE"],
-                    [
-                        ["DO_ADVANCE_STORY_FINAL", "$TARGET_PLAYER", "$TARGET_GROUP_ID", "$TOP_CARD_ID", "$LOG_EVENT", "$ACTOR_PLAYER"]
                     ]
                 ]
             ]
@@ -697,3 +678,4 @@
         }
     }
 }
+// kate: syntax Dragnlang; scheme Arkham Dark;
