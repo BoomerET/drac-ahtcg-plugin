@@ -53,6 +53,7 @@
         "Check Campaign Log.", ["LIST", "Discovered cult's whereabouts.", "The above is NOT true."], "Queen of Ash Scenario Init"]
     ],
     "Queen of Ash Scenario Init": [
+      ["DO_CREATE_CARDS_SCN", "Sluice Control", "12175", 1, "sharedOffMap"],
       ["DO_LOAD_CARDS_SCN", "Queen of Ash"],
       ["DO_LOAD_CARDS_SCN", "BoA_Queen of Ash"],
       ["DO_LOAD_CARDS_SCN", "BoA_Reeking Decay"],
