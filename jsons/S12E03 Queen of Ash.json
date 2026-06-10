@@ -19,7 +19,7 @@
         { "databaseId": "12172", "quantity": 1, "loadGroupId": "sharedActStory"},                               // Search the Sewers
         { "databaseId": "12173", "quantity": 1, "loadGroupId": "sharedActStory"},                               // Stop the Rite
         { "databaseId": "12182", "quantity": 1, "loadGroupId": "sharedLocations", "left": "45%", "top": "79%"}, // Sewer Culvert
-        { "databaseId": "12174", "quantity": 1, "loadGroupId": "sharedLocations", "left": "45%", "top": "7%"},  // Underground Cistern
+        { "databaseId": "12174", "quantity": 1, "loadGroupId": "sharedLocations", "left": "45%", "top": "31%"},  // Underground Cistern
         { "databaseId": "12180", "quantity": 1, "loadGroupId": "sharedNotInPlay"},                              // Servant of Flame: A Willing Sacrifice
         //{ "databaseId": "12175", "quantity": 1, "loadGroupId": "sharedNotInPlay"},                              // Sluice Control
         { "databaseId": "12177", "quantity": 1, "loadGroupId": "sharedNotInPlay"},                              // Queen's Knight
