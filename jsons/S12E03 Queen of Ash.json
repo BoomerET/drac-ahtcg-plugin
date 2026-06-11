@@ -42,15 +42,15 @@
     ],
     "Queen of Ash Scenario Early Init 3": [
       ["ASK_SCENARIO_QUESTION_AND_CONTINUE", 
-        "Check Campaign Log.", ["LIST", "Killed the Servant of Flame.", "The above is NOT true."], "Queen of Ash Scenario Early Init 4"]
+        "Check Campaign Log.", ["LIST", "Killed the Servant of Flame.", "The above is NOT true."], "Queen of Ash Scenario Early Init 5"]
     ],
     "Queen of Ash Scenario Early Init 4": [
       ["ASK_SCENARIO_QUESTION_AND_CONTINUE", 
-        "Who is the Harbinger of Elokoss.", ["LIST", "David Renfield", "Cornelia Akely", "Naomi O'Bannion", "Sgt. Earl Monroe", "Abigail Foreman", "Margaret Lui"], "Queen of Ash Scenario Early Init 5"]
+        "Who is the Harbinger of Elokoss.", ["LIST", "David Renfield", "Cornelia Akely", "Naomi O'Bannion", "Sgt. Earl Monroe", "Abigail Foreman", "Margaret Lui"], "Queen of Ash Scenario Init"]
     ],
     "Queen of Ash Scenario Early Init 5": [
       ["ASK_SCENARIO_QUESTION_AND_CONTINUE", 
-        "Check Campaign Log.", ["LIST", "Discovered cult's whereabouts.", "The above is NOT true."], "Queen of Ash Scenario Init"]
+        "Check Campaign Log.", ["LIST", "Discovered cult's whereabouts.", "The above is NOT true."], "Queen of Ash Scenario Early Init 4"]
     ],
     "Queen of Ash Scenario Init": [
       ["DO_CREATE_CARDS_SCN", "Sluice Control", "12175", 1, "sharedOffMap"],
