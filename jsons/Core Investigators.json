@@ -577,7 +577,8 @@
                                             ["EQUAL", "$CARD.currentFace.name", "Elder Thing"],
                                             ["EQUAL", "$CARD.currentFace.name", "Skull"],
                                             ["EQUAL", "$CARD.currentFace.name", "Tablet"],
-                                            ["EQUAL", "$CARD.currentFace.name", "Frost"]
+                                            ["EQUAL", "$CARD.currentFace.name", "Frost"],
+                                            ["EQUAL", "$CARD.currentFace.name", "Blood"]
                                         ],
                                         [
                                             ["UPDATE_VAR", "$CHAOS_TOKENS", "{{$CHAOS_TOKENS}}{{$CHAOS_TOKENS_SEPARATOR}}{{$CARD.currentFace.name}}"],
