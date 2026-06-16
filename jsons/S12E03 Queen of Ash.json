@@ -27,7 +27,7 @@
         { "databaseId": "12179", "quantity": 1, "loadGroupId": "sharedNotInPlay"},                              // Elokoss: Faint Embers
         { "databaseId": "12181", "quantity": 2, "loadGroupId": "sharedNotInPlay"},                              // Collector
         { "databaseId": "12122", "quantity": 2, "loadGroupId": "sharedEncounterDeck"},                          // Hellhound, from Ashen Pilgrims
-        { "databaseId": "12190", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}                           // Blasphemous Invocations
+        { "databaseId": "12190", "quantity": 2, "loadGroupId": "sharedEncounterDeck"}                           // Blasphemous Invocation
       ]
     }
   },
